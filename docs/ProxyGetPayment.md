@@ -1,0 +1,42 @@
+# SwaggerClient::ProxyGetPayment
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**account_id** | **String** | The unique account ID for the customer that the payment is for.  | [optional] 
+**accounting_code** | **String** | The aacccounting code for the payment. Accounting codes group transactions that contain similar accounting attributes.  | [optional] 
+**amount** | **Float** | The amount of the payment.  | [optional] 
+**applied_credit_balance_amount** | **Float** | The amount of the payment to apply to a credit balance.  | [optional] 
+**auth_transaction_id** | **String** | The authorization transaction ID from the payment gateway.   | [optional] 
+**bank_identification_number** | **String** | The first six digits of the credit card or debit card used for the payment, when applicable.   | [optional] 
+**cancelled_on** | **DateTime** | The date and time when the payment was canceled.  | [optional] 
+**comment** | **String** | Additional information related to the payment.  | [optional] 
+**created_by_id** | **String** | The ID of the Zuora user who created the payment.  | [optional] 
+**created_date** | **DateTime** | The date and time when the payment was created.  | [optional] 
+**effective_date** | **Date** | The date when the payment takes effect.  | [optional] 
+**gateway** | **String** | The name of the gateway instance that processes the payment.   | [optional] 
+**gateway_order_id** | **String** | A merchant-specified natural key value that can be passed to the electronic payment gateway when a payment is created. If not specified, the payment number will be passed in instead.  | [optional] 
+**gateway_response** | **String** | The message returned from the payment gateway for the payment. This message is gateway-dependent.  | [optional] 
+**gateway_response_code** | **String** | The code returned from the payment gateway for the payment. This code is gateway-dependent.  | [optional] 
+**gateway_state** | **String** | The status of the payment in the gateway; use for reconciliation.  | [optional] 
+**id** | **String** | The unique ID of a payment. For example, 2c92c095592623ea01596621ada84352.  | [optional] 
+**marked_for_submission_on** | **DateTime** | The date and time when a payment was marked and waiting for batch submission to the payment process.   | [optional] 
+**payment_method_id** | **String** | The ID of the payment method used for the payment.   | [optional] 
+**payment_method_snapshot_id** | **String** | The unique ID of the payment method snapshot which is a copy of the particular payment method used in a transaction.  | [optional] 
+**payment_number** | **String** | The unique identification number of the payment. For example, P-00000028.  | [optional] 
+**reference_id** | **String** | The transaction ID returned by the payment gateway. Use this field to reconcile payments between your gateway and Zuora Payments.  | [optional] 
+**refund_amount** | **Float** | The amount of the payment that is refunded. The value of this field is &#x60;0&#x60; if no refund is made against the payment.  | [optional] 
+**second_payment_reference_id** | **String** | The transaction ID returned by the payment gateway if there is an additional transaction for the payment. Use this field to reconcile payments between your gateway and Zuora Payments.  | [optional] 
+**settled_on** | **DateTime** | The date and time when the payment was settled in the payment processor. This field is used by the Spectrum gateway only and not applicable to other gateways.  | [optional] 
+**soft_descriptor** | **String** | A payment gateway-specific field that maps to Zuora for the gateways, Orbital, Vantiv and Verifi.   | [optional] 
+**soft_descriptor_phone** | **String** | A payment gateway-specific field that maps to Zuora for the gateways, Orbital, Vantiv and Verifi.  | [optional] 
+**source** | **String** | How the payment was created, whether through the API, manually, import, or payment run.  | [optional] 
+**source_name** | **String** | The name of the source. The value is a Payment Run number or a file name.  | [optional] 
+**status** | **String** | The status of the payment in Zuora. The value depends on the type of payment.  For electronic payments, the status can be &#x60;Processed&#x60;, &#x60;Error&#x60;, or &#x60;Voided&#x60;. For external payments, the status can be &#x60;Processed&#x60; or &#x60;Canceled&#x60;.  | [optional] 
+**submitted_on** | **DateTime** | The date and time when the payment was submitted.  | [optional] 
+**transferred_to_accounting** | **String** | Indicates if the payment was transferred to an external accounting system. Use this field for integration with accounting systems, such as NetSuite.  | [optional] 
+**type** | **String** | The type of the payment, whether the payment is external or electronic.  | [optional] 
+**updated_by_id** | **String** | The ID of the Zuora user who last updated the payment.  | [optional] 
+**updated_date** | **DateTime** | The date and time when the payment was last updated.  | [optional] 
+
+
