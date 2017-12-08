@@ -1,4 +1,4 @@
-# SwaggerClient::SubscriptionProductFeaturesApi
+# Zuora::SubscriptionProductFeaturesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -17,9 +17,9 @@ CRUD: Retrieve SubscriptionProductFeature
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionProductFeaturesApi.new
+api_instance = Zuora::SubscriptionProductFeaturesApi.new
 
 id = "id_example" # String | Object id
 
@@ -33,7 +33,7 @@ begin
   #CRUD: Retrieve SubscriptionProductFeature
   result = api_instance.object_get_subscription_product_feature(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling SubscriptionProductFeaturesApi->object_get_subscription_product_feature: #{e}"
 end
 ```

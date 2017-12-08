@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyGetAccount
+# Zuora::ProxyGetAccount
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::PUTRSBasicInfoType
+# Zuora::PUTRSBasicInfoType
 
 ## Properties
 Name | Type | Description | Notes

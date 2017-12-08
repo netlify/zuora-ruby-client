@@ -1,4 +1,4 @@
-# SwaggerClient::GETSubscriptionWrapper
+# Zuora::GETSubscriptionWrapper
 
 ## Properties
 Name | Type | Description | Notes

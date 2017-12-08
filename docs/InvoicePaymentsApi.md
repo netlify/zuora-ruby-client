@@ -1,4 +1,4 @@
-# SwaggerClient::InvoicePaymentsApi
+# Zuora::InvoicePaymentsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -19,9 +19,9 @@ CRUD: Retrieve InvoicePayment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoicePaymentsApi.new
+api_instance = Zuora::InvoicePaymentsApi.new
 
 id = "id_example" # String | Object id
 
@@ -35,7 +35,7 @@ begin
   #CRUD: Retrieve InvoicePayment
   result = api_instance.object_get_invoice_payment(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoicePaymentsApi->object_get_invoice_payment: #{e}"
 end
 ```
@@ -74,11 +74,11 @@ CRUD: Create InvoicePayment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoicePaymentsApi.new
+api_instance = Zuora::InvoicePaymentsApi.new
 
-create_request = SwaggerClient::ProxyCreateInvoicePayment.new # ProxyCreateInvoicePayment | 
+create_request = Zuora::ProxyCreateInvoicePayment.new # ProxyCreateInvoicePayment | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -89,7 +89,7 @@ begin
   #CRUD: Create InvoicePayment
   result = api_instance.object_post_invoice_payment(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoicePaymentsApi->object_post_invoice_payment: #{e}"
 end
 ```
@@ -127,13 +127,13 @@ CRUD: Update InvoicePayment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoicePaymentsApi.new
+api_instance = Zuora::InvoicePaymentsApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifyInvoicePayment.new # ProxyModifyInvoicePayment | 
+modify_request = Zuora::ProxyModifyInvoicePayment.new # ProxyModifyInvoicePayment | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -144,7 +144,7 @@ begin
   #CRUD: Update InvoicePayment
   result = api_instance.object_put_invoice_payment(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoicePaymentsApi->object_put_invoice_payment: #{e}"
 end
 ```

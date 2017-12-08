@@ -1,4 +1,4 @@
-# SwaggerClient::PUTPaymentMethodResponseType
+# Zuora::PUTPaymentMethodResponseType
 
 ## Properties
 Name | Type | Description | Notes

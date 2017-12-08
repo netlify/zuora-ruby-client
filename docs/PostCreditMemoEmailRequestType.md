@@ -1,4 +1,4 @@
-# SwaggerClient::PostCreditMemoEmailRequestType
+# Zuora::PostCreditMemoEmailRequestType
 
 ## Properties
 Name | Type | Description | Notes

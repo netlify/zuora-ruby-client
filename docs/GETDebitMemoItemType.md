@@ -1,4 +1,4 @@
-# SwaggerClient::GETDebitMemoItemType
+# Zuora::GETDebitMemoItemType
 
 ## Properties
 Name | Type | Description | Notes

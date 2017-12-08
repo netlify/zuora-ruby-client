@@ -1,16 +1,16 @@
-# SwaggerClient::MassUpdaterApi
+# Zuora::MassUpdaterApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_mass_updater**](MassUpdaterApi.md#g_et_mass_updater) | **GET** /v1/bulk/{bulk-key} | Get mass action result
-[**p_ost_mass_updater**](MassUpdaterApi.md#p_ost_mass_updater) | **POST** /v1/bulk | Perform mass action
-[**p_ut_mass_updater**](MassUpdaterApi.md#p_ut_mass_updater) | **PUT** /v1/bulk/{bulk-key}/stop | Stop mass action
+[**get_mass_updater**](MassUpdaterApi.md#get_mass_updater) | **GET** /v1/bulk/{bulk-key} | Get mass action result
+[**post_mass_updater**](MassUpdaterApi.md#post_mass_updater) | **POST** /v1/bulk | Perform mass action
+[**put_mass_updater**](MassUpdaterApi.md#put_mass_updater) | **PUT** /v1/bulk/{bulk-key}/stop | Stop mass action
 
 
-# **g_et_mass_updater**
-> GETMassUpdateType g_et_mass_updater(bulk_key, opts)
+# **get_mass_updater**
+> GETMassUpdateType get_mass_updater(bulk_key, opts)
 
 Get mass action result
 
@@ -19,9 +19,9 @@ This reference describes how to get information about the result of a mass actio
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::MassUpdaterApi.new
+api_instance = Zuora::MassUpdaterApi.new
 
 bulk_key = "bulk_key_example" # String | String of 32 characters that identifies a mass action. You get the bulk-key after performing a mass action through the REST API. 
 
@@ -32,10 +32,10 @@ opts = {
 
 begin
   #Get mass action result
-  result = api_instance.g_et_mass_updater(bulk_key, opts)
+  result = api_instance.get_mass_updater(bulk_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling MassUpdaterApi->g_et_mass_updater: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling MassUpdaterApi->get_mass_updater: #{e}"
 end
 ```
 
@@ -62,8 +62,8 @@ No authorization required
 
 
 
-# **p_ost_mass_updater**
-> POSTMassUpdateResponseType p_ost_mass_updater(content_type, request, opts)
+# **post_mass_updater**
+> POSTMassUpdateResponseType post_mass_updater(content_type, request, opts)
 
 Perform mass action
 
@@ -72,13 +72,13 @@ This reference describes how to perform a mass action through the REST API.   Us
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::MassUpdaterApi.new
+api_instance = Zuora::MassUpdaterApi.new
 
 content_type = "content_type_example" # String | Must be multipart/form-data. 
 
-request = SwaggerClient::POSTMassUpdateType.new # POSTMassUpdateType | 
+request = Zuora::POSTMassUpdateType.new # POSTMassUpdateType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -87,10 +87,10 @@ opts = {
 
 begin
   #Perform mass action
-  result = api_instance.p_ost_mass_updater(content_type, request, opts)
+  result = api_instance.post_mass_updater(content_type, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling MassUpdaterApi->p_ost_mass_updater: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling MassUpdaterApi->post_mass_updater: #{e}"
 end
 ```
 
@@ -118,8 +118,8 @@ No authorization required
 
 
 
-# **p_ut_mass_updater**
-> CommonResponseType p_ut_mass_updater(bulk_key, opts)
+# **put_mass_updater**
+> CommonResponseType put_mass_updater(bulk_key, opts)
 
 Stop mass action
 
@@ -128,9 +128,9 @@ This reference describes how to stop a mass action through the REST API. You can
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::MassUpdaterApi.new
+api_instance = Zuora::MassUpdaterApi.new
 
 bulk_key = "bulk_key_example" # String | String of 32 characters that identifies a mass action. You get the bulk-key after performing a mass action through the REST API. 
 
@@ -141,10 +141,10 @@ opts = {
 
 begin
   #Stop mass action
-  result = api_instance.p_ut_mass_updater(bulk_key, opts)
+  result = api_instance.put_mass_updater(bulk_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling MassUpdaterApi->p_ut_mass_updater: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling MassUpdaterApi->put_mass_updater: #{e}"
 end
 ```
 

@@ -1,4 +1,4 @@
-# SwaggerClient::OrderMetricsInner
+# Zuora::OrderMetricsInner
 
 ## Properties
 Name | Type | Description | Notes

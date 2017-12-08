@@ -1,4 +1,4 @@
-# SwaggerClient::UsagePerUnitPricingUpdate
+# Zuora::UsagePerUnitPricingUpdate
 
 ## Properties
 Name | Type | Description | Notes

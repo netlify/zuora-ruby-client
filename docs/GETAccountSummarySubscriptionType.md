@@ -1,4 +1,4 @@
-# SwaggerClient::GETAccountSummarySubscriptionType
+# Zuora::GETAccountSummarySubscriptionType
 
 ## Properties
 Name | Type | Description | Notes

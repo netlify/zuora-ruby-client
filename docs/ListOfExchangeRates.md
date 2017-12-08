@@ -1,4 +1,4 @@
-# SwaggerClient::ListOfExchangeRates
+# Zuora::ListOfExchangeRates
 
 ## Properties
 Name | Type | Description | Notes

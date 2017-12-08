@@ -1,4 +1,4 @@
-# SwaggerClient::PUTSrpRemoveType
+# Zuora::PUTSrpRemoveType
 
 ## Properties
 Name | Type | Description | Notes

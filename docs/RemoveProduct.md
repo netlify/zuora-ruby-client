@@ -1,4 +1,4 @@
-# SwaggerClient::RemoveProduct
+# Zuora::RemoveProduct
 
 ## Properties
 Name | Type | Description | Notes

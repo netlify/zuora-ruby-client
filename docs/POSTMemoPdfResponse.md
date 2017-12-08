@@ -1,4 +1,4 @@
-# SwaggerClient::POSTMemoPdfResponse
+# Zuora::POSTMemoPdfResponse
 
 ## Properties
 Name | Type | Description | Notes

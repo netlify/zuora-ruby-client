@@ -1,4 +1,4 @@
-# SwaggerClient::GETRSDetailsByProductChargeType
+# Zuora::GETRSDetailsByProductChargeType
 
 ## Properties
 Name | Type | Description | Notes

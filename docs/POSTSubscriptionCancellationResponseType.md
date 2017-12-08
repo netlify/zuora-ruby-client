@@ -1,4 +1,4 @@
-# SwaggerClient::POSTSubscriptionCancellationResponseType
+# Zuora::POSTSubscriptionCancellationResponseType
 
 ## Properties
 Name | Type | Description | Notes

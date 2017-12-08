@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyGetImport
+# Zuora::ProxyGetImport
 
 ## Properties
 Name | Type | Description | Notes

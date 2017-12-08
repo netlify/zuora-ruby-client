@@ -1,4 +1,4 @@
-# SwaggerClient::ExecuteResult
+# Zuora::ExecuteResult
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::PostOrderResponseType
+# Zuora::PostOrderResponseType
 
 ## Properties
 Name | Type | Description | Notes

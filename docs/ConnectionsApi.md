@@ -1,14 +1,14 @@
-# SwaggerClient::ConnectionsApi
+# Zuora::ConnectionsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**p_ost_connections**](ConnectionsApi.md#p_ost_connections) | **POST** /v1/connections | Establish connection to Zuora REST API service
+[**post_connections**](ConnectionsApi.md#post_connections) | **POST** /v1/connections | Establish connection to Zuora REST API service
 
 
-# **p_ost_connections**
-> CommonResponseType p_ost_connections(api_access_key_id, api_secret_access_key, content_type, opts)
+# **post_connections**
+> CommonResponseType post_connections(api_access_key_id, api_secret_access_key, content_type, opts)
 
 Establish connection to Zuora REST API service
 
@@ -17,9 +17,9 @@ Establishes a connection to the Zuora REST API service based on a valid user cre
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ConnectionsApi.new
+api_instance = Zuora::ConnectionsApi.new
 
 api_access_key_id = "api_access_key_id_example" # String | Account username 
 
@@ -34,10 +34,10 @@ opts = {
 
 begin
   #Establish connection to Zuora REST API service
-  result = api_instance.p_ost_connections(api_access_key_id, api_secret_access_key, content_type, opts)
+  result = api_instance.post_connections(api_access_key_id, api_secret_access_key, content_type, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling ConnectionsApi->p_ost_connections: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling ConnectionsApi->post_connections: #{e}"
 end
 ```
 

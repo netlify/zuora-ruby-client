@@ -1,4 +1,4 @@
-# SwaggerClient::POSTBillingPreviewCreditMemoItem
+# Zuora::POSTBillingPreviewCreditMemoItem
 
 ## Properties
 Name | Type | Description | Notes

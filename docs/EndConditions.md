@@ -1,4 +1,4 @@
-# SwaggerClient::EndConditions
+# Zuora::EndConditions
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,34 +1,34 @@
-# SwaggerClient::RevenueSchedulesApi
+# Zuora::RevenueSchedulesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_eleters**](RevenueSchedulesApi.md#d_eleters) | **DELETE** /v1/revenue-schedules/{rs-number} | Delete revenue schedule
-[**g_etr_sby_credit_memo_item**](RevenueSchedulesApi.md#g_etr_sby_credit_memo_item) | **GET** /v1/revenue-schedules/credit-memo-items/{cmi-id} | Get revenue schedule by credit memo item ID 
-[**g_etr_sby_debit_memo_item**](RevenueSchedulesApi.md#g_etr_sby_debit_memo_item) | **GET** /v1/revenue-schedules/debit-memo-items/{dmi-id} | Get revenue schedule by debit memo item ID 
-[**g_etr_sby_invoice_item**](RevenueSchedulesApi.md#g_etr_sby_invoice_item) | **GET** /v1/revenue-schedules/invoice-items/{invoice-item-id} | Get revenue schedule by invoice item ID
-[**g_etr_sby_invoice_item_adjustment**](RevenueSchedulesApi.md#g_etr_sby_invoice_item_adjustment) | **GET** /v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-id}/ | Get revenue schedule by invoice item adjustment
-[**g_etr_sby_product_charge_and_billing_account**](RevenueSchedulesApi.md#g_etr_sby_product_charge_and_billing_account) | **GET** /v1/revenue-schedules/product-charges/{charge-key}/{account-key} | Get all revenue schedules of product charge by charge ID and billing account ID 
-[**g_etr_sfor_subsc_charge**](RevenueSchedulesApi.md#g_etr_sfor_subsc_charge) | **GET** /v1/revenue-schedules/subscription-charges/{charge-key} | Get revenue schedule by subscription charge
-[**g_etrs**](RevenueSchedulesApi.md#g_etrs) | **GET** /v1/revenue-schedules/{rs-number} | Get revenue schedule details
-[**p_ostr_sfor_credit_memo_item_distribute_by_date_range**](RevenueSchedulesApi.md#p_ostr_sfor_credit_memo_item_distribute_by_date_range) | **POST** /v1/revenue-schedules/credit-memo-items/{cmi-id}/distribute-revenue-with-date-range | Create revenue schedule for credit memo item (distribute by date range) 
-[**p_ostr_sfor_credit_memo_item_manual_distribution**](RevenueSchedulesApi.md#p_ostr_sfor_credit_memo_item_manual_distribution) | **POST** /v1/revenue-schedules/credit-memo-items/{cmi-id} | Create revenue schedule for credit memo item (manual distribution) 
-[**p_ostr_sfor_debit_memo_item_distribute_by_date_range**](RevenueSchedulesApi.md#p_ostr_sfor_debit_memo_item_distribute_by_date_range) | **POST** /v1/revenue-schedules/debit-memo-items/{dmi-id}/distribute-revenue-with-date-range | Create revenue schedule for debit memo item (distribute by date range) 
-[**p_ostr_sfor_debit_memo_item_manual_distribution**](RevenueSchedulesApi.md#p_ostr_sfor_debit_memo_item_manual_distribution) | **POST** /v1/revenue-schedules/debit-memo-items/{dmi-id} | Create revenue schedule for debit memo item (manual distribution) 
-[**p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range**](RevenueSchedulesApi.md#p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range) | **POST** /v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}/distribute-revenue-with-date-range | Create revenue schedule for Invoice Item Adjustment (distribute by date range)
-[**p_ostr_sfor_invoice_item_adjustment_manual_distribution**](RevenueSchedulesApi.md#p_ostr_sfor_invoice_item_adjustment_manual_distribution) | **POST** /v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key} | Create revenue schedule for Invoice Item Adjustment (manual distribution)
-[**p_ostr_sfor_invoice_item_distribute_by_date_range**](RevenueSchedulesApi.md#p_ostr_sfor_invoice_item_distribute_by_date_range) | **POST** /v1/revenue-schedules/invoice-items/{invoice-item-id}/distribute-revenue-with-date-range | Create revenue schedule for Invoice Item (distribute by date range)
-[**p_ostr_sfor_invoice_item_manual_distribution**](RevenueSchedulesApi.md#p_ostr_sfor_invoice_item_manual_distribution) | **POST** /v1/revenue-schedules/invoice-items/{invoice-item-id} | Create revenue schedule for Invoice Item (manual distribution)
-[**p_ostr_sfor_subsc_charge**](RevenueSchedulesApi.md#p_ostr_sfor_subsc_charge) | **POST** /v1/revenue-schedules/subscription-charges/{charge-key} | Create revenue schedule on subscription charge
-[**p_ut_revenue_across_ap**](RevenueSchedulesApi.md#p_ut_revenue_across_ap) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-across-accounting-periods | Distribute revenue across accounting periods
-[**p_ut_revenue_by_recognition_startand_end_dates**](RevenueSchedulesApi.md#p_ut_revenue_by_recognition_startand_end_dates) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-with-date-range | Distribute revenue by recognition start and end dates
-[**p_ut_revenue_specific_date**](RevenueSchedulesApi.md#p_ut_revenue_specific_date) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-on-specific-date | Distribute revenue on specific date
-[**p_utrs_basic_info**](RevenueSchedulesApi.md#p_utrs_basic_info) | **PUT** /v1/revenue-schedules/{rs-number}/basic-information | Update revenue schedule basic information
+[**delete_rs**](RevenueSchedulesApi.md#delete_rs) | **DELETE** /v1/revenue-schedules/{rs-number} | Delete revenue schedule
+[**get_r_sby_credit_memo_item**](RevenueSchedulesApi.md#get_r_sby_credit_memo_item) | **GET** /v1/revenue-schedules/credit-memo-items/{cmi-id} | Get revenue schedule by credit memo item ID 
+[**get_r_sby_debit_memo_item**](RevenueSchedulesApi.md#get_r_sby_debit_memo_item) | **GET** /v1/revenue-schedules/debit-memo-items/{dmi-id} | Get revenue schedule by debit memo item ID 
+[**get_r_sby_invoice_item**](RevenueSchedulesApi.md#get_r_sby_invoice_item) | **GET** /v1/revenue-schedules/invoice-items/{invoice-item-id} | Get revenue schedule by invoice item ID
+[**get_r_sby_invoice_item_adjustment**](RevenueSchedulesApi.md#get_r_sby_invoice_item_adjustment) | **GET** /v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-id}/ | Get revenue schedule by invoice item adjustment
+[**get_r_sby_product_charge_and_billing_account**](RevenueSchedulesApi.md#get_r_sby_product_charge_and_billing_account) | **GET** /v1/revenue-schedules/product-charges/{charge-key}/{account-key} | Get all revenue schedules of product charge by charge ID and billing account ID 
+[**get_r_sfor_subsc_charge**](RevenueSchedulesApi.md#get_r_sfor_subsc_charge) | **GET** /v1/revenue-schedules/subscription-charges/{charge-key} | Get revenue schedule by subscription charge
+[**get_rs**](RevenueSchedulesApi.md#get_rs) | **GET** /v1/revenue-schedules/{rs-number} | Get revenue schedule details
+[**post_r_sfor_credit_memo_item_distribute_by_date_range**](RevenueSchedulesApi.md#post_r_sfor_credit_memo_item_distribute_by_date_range) | **POST** /v1/revenue-schedules/credit-memo-items/{cmi-id}/distribute-revenue-with-date-range | Create revenue schedule for credit memo item (distribute by date range) 
+[**post_r_sfor_credit_memo_item_manual_distribution**](RevenueSchedulesApi.md#post_r_sfor_credit_memo_item_manual_distribution) | **POST** /v1/revenue-schedules/credit-memo-items/{cmi-id} | Create revenue schedule for credit memo item (manual distribution) 
+[**post_r_sfor_debit_memo_item_distribute_by_date_range**](RevenueSchedulesApi.md#post_r_sfor_debit_memo_item_distribute_by_date_range) | **POST** /v1/revenue-schedules/debit-memo-items/{dmi-id}/distribute-revenue-with-date-range | Create revenue schedule for debit memo item (distribute by date range) 
+[**post_r_sfor_debit_memo_item_manual_distribution**](RevenueSchedulesApi.md#post_r_sfor_debit_memo_item_manual_distribution) | **POST** /v1/revenue-schedules/debit-memo-items/{dmi-id} | Create revenue schedule for debit memo item (manual distribution) 
+[**post_r_sfor_invoice_item_adjustment_distribute_by_date_range**](RevenueSchedulesApi.md#post_r_sfor_invoice_item_adjustment_distribute_by_date_range) | **POST** /v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}/distribute-revenue-with-date-range | Create revenue schedule for Invoice Item Adjustment (distribute by date range)
+[**post_r_sfor_invoice_item_adjustment_manual_distribution**](RevenueSchedulesApi.md#post_r_sfor_invoice_item_adjustment_manual_distribution) | **POST** /v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key} | Create revenue schedule for Invoice Item Adjustment (manual distribution)
+[**post_r_sfor_invoice_item_distribute_by_date_range**](RevenueSchedulesApi.md#post_r_sfor_invoice_item_distribute_by_date_range) | **POST** /v1/revenue-schedules/invoice-items/{invoice-item-id}/distribute-revenue-with-date-range | Create revenue schedule for Invoice Item (distribute by date range)
+[**post_r_sfor_invoice_item_manual_distribution**](RevenueSchedulesApi.md#post_r_sfor_invoice_item_manual_distribution) | **POST** /v1/revenue-schedules/invoice-items/{invoice-item-id} | Create revenue schedule for Invoice Item (manual distribution)
+[**post_r_sfor_subsc_charge**](RevenueSchedulesApi.md#post_r_sfor_subsc_charge) | **POST** /v1/revenue-schedules/subscription-charges/{charge-key} | Create revenue schedule on subscription charge
+[**put_revenue_across_ap**](RevenueSchedulesApi.md#put_revenue_across_ap) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-across-accounting-periods | Distribute revenue across accounting periods
+[**put_revenue_by_recognition_startand_end_dates**](RevenueSchedulesApi.md#put_revenue_by_recognition_startand_end_dates) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-with-date-range | Distribute revenue by recognition start and end dates
+[**put_revenue_specific_date**](RevenueSchedulesApi.md#put_revenue_specific_date) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-on-specific-date | Distribute revenue on specific date
+[**put_rs_basic_info**](RevenueSchedulesApi.md#put_rs_basic_info) | **PUT** /v1/revenue-schedules/{rs-number}/basic-information | Update revenue schedule basic information
 
 
-# **d_eleters**
-> CommonResponseType d_eleters(rs_number, opts)
+# **delete_rs**
+> CommonResponseType delete_rs(rs_number, opts)
 
 Delete revenue schedule
 
@@ -37,9 +37,9 @@ Deletes a revenue schedule by specifying its revenue schedule number ## Prerequi
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 rs_number = "rs_number_example" # String |  Revenue schedule number of the revenue schedule you want to delete, for example, RS-00000256. To be deleted, the revenue schedule: * Must be using a custom unlimited recognition rule. * Cannot have any revenue in a closed accounting period. * Cannot be included in a summary journal entry. * Cannot have a revenue schedule date in a closed accounting period. 
 
@@ -50,10 +50,10 @@ opts = {
 
 begin
   #Delete revenue schedule
-  result = api_instance.d_eleters(rs_number, opts)
+  result = api_instance.delete_rs(rs_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->d_eleters: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->delete_rs: #{e}"
 end
 ```
 
@@ -80,8 +80,8 @@ No authorization required
 
 
 
-# **g_etr_sby_credit_memo_item**
-> GETRSDetailType g_etr_sby_credit_memo_item(cmi_id)
+# **get_r_sby_credit_memo_item**
+> GETRSDetailType get_r_sby_credit_memo_item(cmi_id)
 
 Get revenue schedule by credit memo item ID 
 
@@ -90,19 +90,19 @@ Get revenue schedule by credit memo item ID
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 cmi_id = "cmi_id_example" # String | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 
 
 begin
   #Get revenue schedule by credit memo item ID 
-  result = api_instance.g_etr_sby_credit_memo_item(cmi_id)
+  result = api_instance.get_r_sby_credit_memo_item(cmi_id)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->g_etr_sby_credit_memo_item: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->get_r_sby_credit_memo_item: #{e}"
 end
 ```
 
@@ -127,8 +127,8 @@ No authorization required
 
 
 
-# **g_etr_sby_debit_memo_item**
-> GETRSDetailType g_etr_sby_debit_memo_item(dmi_id)
+# **get_r_sby_debit_memo_item**
+> GETRSDetailType get_r_sby_debit_memo_item(dmi_id)
 
 Get revenue schedule by debit memo item ID 
 
@@ -137,19 +137,19 @@ Get revenue schedule by debit memo item ID
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 dmi_id = "dmi_id_example" # String | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
 
 
 begin
   #Get revenue schedule by debit memo item ID 
-  result = api_instance.g_etr_sby_debit_memo_item(dmi_id)
+  result = api_instance.get_r_sby_debit_memo_item(dmi_id)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->g_etr_sby_debit_memo_item: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->get_r_sby_debit_memo_item: #{e}"
 end
 ```
 
@@ -174,8 +174,8 @@ No authorization required
 
 
 
-# **g_etr_sby_invoice_item**
-> GETRSDetailType g_etr_sby_invoice_item(invoice_item_id, opts)
+# **get_r_sby_invoice_item**
+> GETRSDetailType get_r_sby_invoice_item(invoice_item_id, opts)
 
 Get revenue schedule by invoice item ID
 
@@ -184,9 +184,9 @@ Retrieves the details of a revenue schedule by specifying the invoice item ID.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 invoice_item_id = "invoice_item_id_example" # String | A valid Invoice Item ID.
 
@@ -197,10 +197,10 @@ opts = {
 
 begin
   #Get revenue schedule by invoice item ID
-  result = api_instance.g_etr_sby_invoice_item(invoice_item_id, opts)
+  result = api_instance.get_r_sby_invoice_item(invoice_item_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->g_etr_sby_invoice_item: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->get_r_sby_invoice_item: #{e}"
 end
 ```
 
@@ -227,8 +227,8 @@ No authorization required
 
 
 
-# **g_etr_sby_invoice_item_adjustment**
-> GETRSDetailType g_etr_sby_invoice_item_adjustment(invoice_item_adj_id, opts)
+# **get_r_sby_invoice_item_adjustment**
+> GETRSDetailType get_r_sby_invoice_item_adjustment(invoice_item_adj_id, opts)
 
 Get revenue schedule by invoice item adjustment
 
@@ -237,9 +237,9 @@ Retrieves the details of a revenue schedule by specifying a valid invoice item a
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 invoice_item_adj_id = "invoice_item_adj_id_example" # String | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72.
 
@@ -250,10 +250,10 @@ opts = {
 
 begin
   #Get revenue schedule by invoice item adjustment
-  result = api_instance.g_etr_sby_invoice_item_adjustment(invoice_item_adj_id, opts)
+  result = api_instance.get_r_sby_invoice_item_adjustment(invoice_item_adj_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->g_etr_sby_invoice_item_adjustment: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->get_r_sby_invoice_item_adjustment: #{e}"
 end
 ```
 
@@ -280,8 +280,8 @@ No authorization required
 
 
 
-# **g_etr_sby_product_charge_and_billing_account**
-> GETRSDetailsByProductChargeType g_etr_sby_product_charge_and_billing_account(account_key, charge_key, opts)
+# **get_r_sby_product_charge_and_billing_account**
+> GETRSDetailsByProductChargeType get_r_sby_product_charge_and_billing_account(account_key, charge_key, opts)
 
 Get all revenue schedules of product charge by charge ID and billing account ID 
 
@@ -290,9 +290,9 @@ Get all revenue schedules of product charge by charge ID and billing account ID
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 account_key = "account_key_example" # String | The account number or account ID. 
 
@@ -304,10 +304,10 @@ opts = {
 
 begin
   #Get all revenue schedules of product charge by charge ID and billing account ID 
-  result = api_instance.g_etr_sby_product_charge_and_billing_account(account_key, charge_key, opts)
+  result = api_instance.get_r_sby_product_charge_and_billing_account(account_key, charge_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->g_etr_sby_product_charge_and_billing_account: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->get_r_sby_product_charge_and_billing_account: #{e}"
 end
 ```
 
@@ -334,8 +334,8 @@ No authorization required
 
 
 
-# **g_etr_sfor_subsc_charge**
-> GETRSDetailsByChargeType g_etr_sfor_subsc_charge(charge_key, opts)
+# **get_r_sfor_subsc_charge**
+> GETRSDetailsByChargeType get_r_sfor_subsc_charge(charge_key, opts)
 
 Get revenue schedule by subscription charge
 
@@ -344,9 +344,9 @@ Retrieves the revenue schedule details by specifying subscription charge ID. Req
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 charge_key = "charge_key_example" # String | ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012.
 
@@ -358,10 +358,10 @@ opts = {
 
 begin
   #Get revenue schedule by subscription charge
-  result = api_instance.g_etr_sfor_subsc_charge(charge_key, opts)
+  result = api_instance.get_r_sfor_subsc_charge(charge_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->g_etr_sfor_subsc_charge: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->get_r_sfor_subsc_charge: #{e}"
 end
 ```
 
@@ -389,8 +389,8 @@ No authorization required
 
 
 
-# **g_etrs**
-> GETRSDetailType g_etrs(rs_number, opts)
+# **get_rs**
+> GETRSDetailType get_rs(rs_number, opts)
 
 Get revenue schedule details
 
@@ -399,9 +399,9 @@ Retrieves the details of a revenue schedule by specifying the revenue schedule n
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 rs_number = "rs_number_example" # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 
@@ -412,10 +412,10 @@ opts = {
 
 begin
   #Get revenue schedule details
-  result = api_instance.g_etrs(rs_number, opts)
+  result = api_instance.get_rs(rs_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->g_etrs: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->get_rs: #{e}"
 end
 ```
 
@@ -442,8 +442,8 @@ No authorization required
 
 
 
-# **p_ostr_sfor_credit_memo_item_distribute_by_date_range**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_credit_memo_item_distribute_by_date_range(cmi_id, body)
+# **post_r_sfor_credit_memo_item_distribute_by_date_range**
+> POSTRevenueScheduleByTransactionResponseType post_r_sfor_credit_memo_item_distribute_by_date_range(cmi_id, body)
 
 Create revenue schedule for credit memo item (distribute by date range) 
 
@@ -452,21 +452,21 @@ Create revenue schedule for credit memo item (distribute by date range)
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 cmi_id = "cmi_id_example" # String | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 
-body = SwaggerClient::POSTRevenueScheduleByTransactionRatablyType.new # POSTRevenueScheduleByTransactionRatablyType | 
+body = Zuora::POSTRevenueScheduleByTransactionRatablyType.new # POSTRevenueScheduleByTransactionRatablyType | 
 
 
 begin
   #Create revenue schedule for credit memo item (distribute by date range) 
-  result = api_instance.p_ostr_sfor_credit_memo_item_distribute_by_date_range(cmi_id, body)
+  result = api_instance.post_r_sfor_credit_memo_item_distribute_by_date_range(cmi_id, body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_credit_memo_item_distribute_by_date_range: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_credit_memo_item_distribute_by_date_range: #{e}"
 end
 ```
 
@@ -492,8 +492,8 @@ No authorization required
 
 
 
-# **p_ostr_sfor_credit_memo_item_manual_distribution**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_credit_memo_item_manual_distribution(cmi_id, body)
+# **post_r_sfor_credit_memo_item_manual_distribution**
+> POSTRevenueScheduleByTransactionResponseType post_r_sfor_credit_memo_item_manual_distribution(cmi_id, body)
 
 Create revenue schedule for credit memo item (manual distribution) 
 
@@ -502,21 +502,21 @@ Create revenue schedule for credit memo item (manual distribution)
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 cmi_id = "cmi_id_example" # String | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 
-body = SwaggerClient::POSTRevenueScheduleByTransactionType.new # POSTRevenueScheduleByTransactionType | 
+body = Zuora::POSTRevenueScheduleByTransactionType.new # POSTRevenueScheduleByTransactionType | 
 
 
 begin
   #Create revenue schedule for credit memo item (manual distribution) 
-  result = api_instance.p_ostr_sfor_credit_memo_item_manual_distribution(cmi_id, body)
+  result = api_instance.post_r_sfor_credit_memo_item_manual_distribution(cmi_id, body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_credit_memo_item_manual_distribution: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_credit_memo_item_manual_distribution: #{e}"
 end
 ```
 
@@ -542,8 +542,8 @@ No authorization required
 
 
 
-# **p_ostr_sfor_debit_memo_item_distribute_by_date_range**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_debit_memo_item_distribute_by_date_range(dmi_id, body)
+# **post_r_sfor_debit_memo_item_distribute_by_date_range**
+> POSTRevenueScheduleByTransactionResponseType post_r_sfor_debit_memo_item_distribute_by_date_range(dmi_id, body)
 
 Create revenue schedule for debit memo item (distribute by date range) 
 
@@ -552,21 +552,21 @@ Create revenue schedule for debit memo item (distribute by date range)
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 dmi_id = "dmi_id_example" # String | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
 
-body = SwaggerClient::POSTRevenueScheduleByTransactionRatablyType.new # POSTRevenueScheduleByTransactionRatablyType | 
+body = Zuora::POSTRevenueScheduleByTransactionRatablyType.new # POSTRevenueScheduleByTransactionRatablyType | 
 
 
 begin
   #Create revenue schedule for debit memo item (distribute by date range) 
-  result = api_instance.p_ostr_sfor_debit_memo_item_distribute_by_date_range(dmi_id, body)
+  result = api_instance.post_r_sfor_debit_memo_item_distribute_by_date_range(dmi_id, body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_debit_memo_item_distribute_by_date_range: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_debit_memo_item_distribute_by_date_range: #{e}"
 end
 ```
 
@@ -592,8 +592,8 @@ No authorization required
 
 
 
-# **p_ostr_sfor_debit_memo_item_manual_distribution**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_debit_memo_item_manual_distribution(dmi_id, body)
+# **post_r_sfor_debit_memo_item_manual_distribution**
+> POSTRevenueScheduleByTransactionResponseType post_r_sfor_debit_memo_item_manual_distribution(dmi_id, body)
 
 Create revenue schedule for debit memo item (manual distribution) 
 
@@ -602,21 +602,21 @@ Create revenue schedule for debit memo item (manual distribution)
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 dmi_id = "dmi_id_example" # String | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
 
-body = SwaggerClient::POSTRevenueScheduleByTransactionType.new # POSTRevenueScheduleByTransactionType | 
+body = Zuora::POSTRevenueScheduleByTransactionType.new # POSTRevenueScheduleByTransactionType | 
 
 
 begin
   #Create revenue schedule for debit memo item (manual distribution) 
-  result = api_instance.p_ostr_sfor_debit_memo_item_manual_distribution(dmi_id, body)
+  result = api_instance.post_r_sfor_debit_memo_item_manual_distribution(dmi_id, body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_debit_memo_item_manual_distribution: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_debit_memo_item_manual_distribution: #{e}"
 end
 ```
 
@@ -642,8 +642,8 @@ No authorization required
 
 
 
-# **p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range(invoice_item_adj_key, request, opts)
+# **post_r_sfor_invoice_item_adjustment_distribute_by_date_range**
+> POSTRevenueScheduleByTransactionResponseType post_r_sfor_invoice_item_adjustment_distribute_by_date_range(invoice_item_adj_key, request, opts)
 
 Create revenue schedule for Invoice Item Adjustment (distribute by date range)
 
@@ -652,13 +652,13 @@ Creates a revenue schedule for an Invoice Item Adjustment and distribute the rev
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 invoice_item_adj_key = "invoice_item_adj_key_example" # String | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail. 
 
-request = SwaggerClient::POSTRevenueScheduleByDateRangeType.new # POSTRevenueScheduleByDateRangeType | 
+request = Zuora::POSTRevenueScheduleByDateRangeType.new # POSTRevenueScheduleByDateRangeType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -667,10 +667,10 @@ opts = {
 
 begin
   #Create revenue schedule for Invoice Item Adjustment (distribute by date range)
-  result = api_instance.p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range(invoice_item_adj_key, request, opts)
+  result = api_instance.post_r_sfor_invoice_item_adjustment_distribute_by_date_range(invoice_item_adj_key, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_invoice_item_adjustment_distribute_by_date_range: #{e}"
 end
 ```
 
@@ -698,8 +698,8 @@ No authorization required
 
 
 
-# **p_ostr_sfor_invoice_item_adjustment_manual_distribution**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_adjustment_manual_distribution(invoice_item_adj_key, request, opts)
+# **post_r_sfor_invoice_item_adjustment_manual_distribution**
+> POSTRevenueScheduleByTransactionResponseType post_r_sfor_invoice_item_adjustment_manual_distribution(invoice_item_adj_key, request, opts)
 
 Create revenue schedule for Invoice Item Adjustment (manual distribution)
 
@@ -708,13 +708,13 @@ Creates a revenue schedule for an Invoice Item Adjustment and manually distribut
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 invoice_item_adj_key = "invoice_item_adj_key_example" # String | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail. 
 
-request = SwaggerClient::POSTRevenueScheduleByTransactionType.new # POSTRevenueScheduleByTransactionType | 
+request = Zuora::POSTRevenueScheduleByTransactionType.new # POSTRevenueScheduleByTransactionType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -723,10 +723,10 @@ opts = {
 
 begin
   #Create revenue schedule for Invoice Item Adjustment (manual distribution)
-  result = api_instance.p_ostr_sfor_invoice_item_adjustment_manual_distribution(invoice_item_adj_key, request, opts)
+  result = api_instance.post_r_sfor_invoice_item_adjustment_manual_distribution(invoice_item_adj_key, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_invoice_item_adjustment_manual_distribution: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_invoice_item_adjustment_manual_distribution: #{e}"
 end
 ```
 
@@ -754,8 +754,8 @@ No authorization required
 
 
 
-# **p_ostr_sfor_invoice_item_distribute_by_date_range**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_distribute_by_date_range(invoice_item_id, request, opts)
+# **post_r_sfor_invoice_item_distribute_by_date_range**
+> POSTRevenueScheduleByTransactionResponseType post_r_sfor_invoice_item_distribute_by_date_range(invoice_item_id, request, opts)
 
 Create revenue schedule for Invoice Item (distribute by date range)
 
@@ -764,13 +764,13 @@ Creates a revenue schedule for an Invoice Item and distribute the revenue by spe
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 invoice_item_id = "invoice_item_id_example" # String | ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail. 
 
-request = SwaggerClient::POSTRevenueScheduleByDateRangeType.new # POSTRevenueScheduleByDateRangeType | 
+request = Zuora::POSTRevenueScheduleByDateRangeType.new # POSTRevenueScheduleByDateRangeType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -779,10 +779,10 @@ opts = {
 
 begin
   #Create revenue schedule for Invoice Item (distribute by date range)
-  result = api_instance.p_ostr_sfor_invoice_item_distribute_by_date_range(invoice_item_id, request, opts)
+  result = api_instance.post_r_sfor_invoice_item_distribute_by_date_range(invoice_item_id, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_invoice_item_distribute_by_date_range: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_invoice_item_distribute_by_date_range: #{e}"
 end
 ```
 
@@ -810,8 +810,8 @@ No authorization required
 
 
 
-# **p_ostr_sfor_invoice_item_manual_distribution**
-> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_manual_distribution(invoice_item_id, request, opts)
+# **post_r_sfor_invoice_item_manual_distribution**
+> POSTRevenueScheduleByTransactionResponseType post_r_sfor_invoice_item_manual_distribution(invoice_item_id, request, opts)
 
 Create revenue schedule for Invoice Item (manual distribution)
 
@@ -820,13 +820,13 @@ Creates a revenue schedule for an Invoice Item and manually distribute the reven
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 invoice_item_id = "invoice_item_id_example" # String | ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail. 
 
-request = SwaggerClient::POSTRevenueScheduleByTransactionType.new # POSTRevenueScheduleByTransactionType | 
+request = Zuora::POSTRevenueScheduleByTransactionType.new # POSTRevenueScheduleByTransactionType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -835,10 +835,10 @@ opts = {
 
 begin
   #Create revenue schedule for Invoice Item (manual distribution)
-  result = api_instance.p_ostr_sfor_invoice_item_manual_distribution(invoice_item_id, request, opts)
+  result = api_instance.post_r_sfor_invoice_item_manual_distribution(invoice_item_id, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_invoice_item_manual_distribution: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_invoice_item_manual_distribution: #{e}"
 end
 ```
 
@@ -866,8 +866,8 @@ No authorization required
 
 
 
-# **p_ostr_sfor_subsc_charge**
-> POSTRevenueScheduleByChargeResponseType p_ostr_sfor_subsc_charge(charge_key, request, opts)
+# **post_r_sfor_subsc_charge**
+> POSTRevenueScheduleByChargeResponseType post_r_sfor_subsc_charge(charge_key, request, opts)
 
 Create revenue schedule on subscription charge
 
@@ -876,13 +876,13 @@ Creates a revenue schedule by specifying the subscription charge. This method is
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 charge_key = "charge_key_example" # String | ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012.
 
-request = SwaggerClient::POSTRevenueScheduleByChargeType.new # POSTRevenueScheduleByChargeType | 
+request = Zuora::POSTRevenueScheduleByChargeType.new # POSTRevenueScheduleByChargeType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -891,10 +891,10 @@ opts = {
 
 begin
   #Create revenue schedule on subscription charge
-  result = api_instance.p_ostr_sfor_subsc_charge(charge_key, request, opts)
+  result = api_instance.post_r_sfor_subsc_charge(charge_key, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_subsc_charge: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_subsc_charge: #{e}"
 end
 ```
 
@@ -922,8 +922,8 @@ No authorization required
 
 
 
-# **p_ut_revenue_across_ap**
-> PUTRevenueScheduleResponseType p_ut_revenue_across_ap(rs_number, request, opts)
+# **put_revenue_across_ap**
+> PUTRevenueScheduleResponseType put_revenue_across_ap(rs_number, request, opts)
 
 Distribute revenue across accounting periods
 
@@ -932,13 +932,13 @@ Distributes revenue by specifying the revenue schedule number. Request and respo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 rs_number = "rs_number_example" # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 
-request = SwaggerClient::PUTAllocateManuallyType.new # PUTAllocateManuallyType | 
+request = Zuora::PUTAllocateManuallyType.new # PUTAllocateManuallyType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -947,10 +947,10 @@ opts = {
 
 begin
   #Distribute revenue across accounting periods
-  result = api_instance.p_ut_revenue_across_ap(rs_number, request, opts)
+  result = api_instance.put_revenue_across_ap(rs_number, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_ut_revenue_across_ap: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->put_revenue_across_ap: #{e}"
 end
 ```
 
@@ -978,8 +978,8 @@ No authorization required
 
 
 
-# **p_ut_revenue_by_recognition_startand_end_dates**
-> PUTRevenueScheduleResponseType p_ut_revenue_by_recognition_startand_end_dates(rs_number, request, opts)
+# **put_revenue_by_recognition_startand_end_dates**
+> PUTRevenueScheduleResponseType put_revenue_by_recognition_startand_end_dates(rs_number, request, opts)
 
 Distribute revenue by recognition start and end dates
 
@@ -988,13 +988,13 @@ Distributes revenue by specifying the recognition start and end dates. Request a
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 rs_number = "rs_number_example" # String | Revenue schedule number. Specify the revenue schedule whose revenue you want to distribute.    The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 
-request = SwaggerClient::PUTRSTermType.new # PUTRSTermType | 
+request = Zuora::PUTRSTermType.new # PUTRSTermType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -1003,10 +1003,10 @@ opts = {
 
 begin
   #Distribute revenue by recognition start and end dates
-  result = api_instance.p_ut_revenue_by_recognition_startand_end_dates(rs_number, request, opts)
+  result = api_instance.put_revenue_by_recognition_startand_end_dates(rs_number, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_ut_revenue_by_recognition_startand_end_dates: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->put_revenue_by_recognition_startand_end_dates: #{e}"
 end
 ```
 
@@ -1034,8 +1034,8 @@ No authorization required
 
 
 
-# **p_ut_revenue_specific_date**
-> PUTRevenueScheduleResponseType p_ut_revenue_specific_date(rs_number, request, opts)
+# **put_revenue_specific_date**
+> PUTRevenueScheduleResponseType put_revenue_specific_date(rs_number, request, opts)
 
 Distribute revenue on specific date
 
@@ -1044,13 +1044,13 @@ Distributes revenue on a specific recognition date. Request and response field d
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 rs_number = "rs_number_example" # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 
-request = SwaggerClient::PUTSpecificDateAllocationType.new # PUTSpecificDateAllocationType | 
+request = Zuora::PUTSpecificDateAllocationType.new # PUTSpecificDateAllocationType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -1059,10 +1059,10 @@ opts = {
 
 begin
   #Distribute revenue on specific date
-  result = api_instance.p_ut_revenue_specific_date(rs_number, request, opts)
+  result = api_instance.put_revenue_specific_date(rs_number, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_ut_revenue_specific_date: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->put_revenue_specific_date: #{e}"
 end
 ```
 
@@ -1090,8 +1090,8 @@ No authorization required
 
 
 
-# **p_utrs_basic_info**
-> CommonResponseType p_utrs_basic_info(rs_number, request, opts)
+# **put_rs_basic_info**
+> CommonResponseType put_rs_basic_info(rs_number, request, opts)
 
 Update revenue schedule basic information
 
@@ -1100,13 +1100,13 @@ Retrieves basic information of a revenue schedule by specifying the revenue sche
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueSchedulesApi.new
+api_instance = Zuora::RevenueSchedulesApi.new
 
 rs_number = "rs_number_example" # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 
-request = SwaggerClient::PUTRSBasicInfoType.new # PUTRSBasicInfoType | 
+request = Zuora::PUTRSBasicInfoType.new # PUTRSBasicInfoType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -1115,10 +1115,10 @@ opts = {
 
 begin
   #Update revenue schedule basic information
-  result = api_instance.p_utrs_basic_info(rs_number, request, opts)
+  result = api_instance.put_rs_basic_info(rs_number, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->p_utrs_basic_info: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueSchedulesApi->put_rs_basic_info: #{e}"
 end
 ```
 

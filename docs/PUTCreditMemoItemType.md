@@ -1,4 +1,4 @@
-# SwaggerClient::PUTCreditMemoItemType
+# Zuora::PUTCreditMemoItemType
 
 ## Properties
 Name | Type | Description | Notes

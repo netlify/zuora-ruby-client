@@ -1,22 +1,22 @@
-# SwaggerClient::AccountsApi
+# Zuora::AccountsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_account**](AccountsApi.md#g_et_account) | **GET** /v1/accounts/{account-key} | Get account
-[**g_et_account_summary**](AccountsApi.md#g_et_account_summary) | **GET** /v1/accounts/{account-key}/summary | Get account summary
+[**get_account**](AccountsApi.md#get_account) | **GET** /v1/accounts/{account-key} | Get account
+[**get_account_summary**](AccountsApi.md#get_account_summary) | **GET** /v1/accounts/{account-key}/summary | Get account summary
 [**object_delete_account**](AccountsApi.md#object_delete_account) | **DELETE** /v1/object/account/{id} | CRUD: Delete Account
 [**object_get_account**](AccountsApi.md#object_get_account) | **GET** /v1/object/account/{id} | CRUD: Retrieve Account
 [**object_post_account**](AccountsApi.md#object_post_account) | **POST** /v1/object/account | CRUD: Create Account
 [**object_put_account**](AccountsApi.md#object_put_account) | **PUT** /v1/object/account/{id} | CRUD: Update Account
-[**p_ost_account**](AccountsApi.md#p_ost_account) | **POST** /v1/accounts | Create account
-[**p_ost_generate_billing_documents**](AccountsApi.md#p_ost_generate_billing_documents) | **POST** /v1/accounts/{id}/billing-documents/generate | Generate billing documents by account
-[**p_ut_account**](AccountsApi.md#p_ut_account) | **PUT** /v1/accounts/{account-key} | Update account
+[**post_account**](AccountsApi.md#post_account) | **POST** /v1/accounts | Create account
+[**post_generate_billing_documents**](AccountsApi.md#post_generate_billing_documents) | **POST** /v1/accounts/{id}/billing-documents/generate | Generate billing documents by account
+[**put_account**](AccountsApi.md#put_account) | **PUT** /v1/accounts/{account-key} | Update account
 
 
-# **g_et_account**
-> GETAccountType g_et_account(account_key, opts)
+# **get_account**
+> GETAccountType get_account(account_key, opts)
 
 Get account
 
@@ -25,9 +25,9 @@ This REST API reference describes how to retrieve basic information about a cust
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = Zuora::AccountsApi.new
 
 account_key = "account_key_example" # String | Account number or account ID.
 
@@ -38,10 +38,10 @@ opts = {
 
 begin
   #Get account
-  result = api_instance.g_et_account(account_key, opts)
+  result = api_instance.get_account(account_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountsApi->g_et_account: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountsApi->get_account: #{e}"
 end
 ```
 
@@ -68,8 +68,8 @@ No authorization required
 
 
 
-# **g_et_account_summary**
-> GETAccountSummaryType g_et_account_summary(account_key, opts)
+# **get_account_summary**
+> GETAccountSummaryType get_account_summary(account_key, opts)
 
 Get account summary
 
@@ -78,9 +78,9 @@ This REST API reference describes how to retrieve detailed information about the
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = Zuora::AccountsApi.new
 
 account_key = "account_key_example" # String | Account number or account ID.
 
@@ -91,10 +91,10 @@ opts = {
 
 begin
   #Get account summary
-  result = api_instance.g_et_account_summary(account_key, opts)
+  result = api_instance.get_account_summary(account_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountsApi->g_et_account_summary: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountsApi->get_account_summary: #{e}"
 end
 ```
 
@@ -131,9 +131,9 @@ CRUD: Delete Account
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = Zuora::AccountsApi.new
 
 id = "id_example" # String | Object id
 
@@ -146,7 +146,7 @@ begin
   #CRUD: Delete Account
   result = api_instance.object_delete_account(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling AccountsApi->object_delete_account: #{e}"
 end
 ```
@@ -184,9 +184,9 @@ CRUD: Retrieve Account
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = Zuora::AccountsApi.new
 
 id = "id_example" # String | Object id
 
@@ -200,7 +200,7 @@ begin
   #CRUD: Retrieve Account
   result = api_instance.object_get_account(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling AccountsApi->object_get_account: #{e}"
 end
 ```
@@ -239,11 +239,11 @@ CRUD: Create Account
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = Zuora::AccountsApi.new
 
-create_request = SwaggerClient::ProxyCreateAccount.new # ProxyCreateAccount | 
+create_request = Zuora::ProxyCreateAccount.new # ProxyCreateAccount | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -254,7 +254,7 @@ begin
   #CRUD: Create Account
   result = api_instance.object_post_account(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling AccountsApi->object_post_account: #{e}"
 end
 ```
@@ -292,13 +292,13 @@ CRUD: Update Account
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = Zuora::AccountsApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifyAccount.new # ProxyModifyAccount | 
+modify_request = Zuora::ProxyModifyAccount.new # ProxyModifyAccount | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -309,7 +309,7 @@ begin
   #CRUD: Update Account
   result = api_instance.object_put_account(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling AccountsApi->object_put_account: #{e}"
 end
 ```
@@ -338,8 +338,8 @@ No authorization required
 
 
 
-# **p_ost_account**
-> POSTAccountResponseType p_ost_account(request, opts)
+# **post_account**
+> POSTAccountResponseType post_account(request, opts)
 
 Create account
 
@@ -348,11 +348,11 @@ This REST API reference describes how to create a customer account with a credit
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = Zuora::AccountsApi.new
 
-request = SwaggerClient::POSTAccountType.new # POSTAccountType | 
+request = Zuora::POSTAccountType.new # POSTAccountType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -362,10 +362,10 @@ opts = {
 
 begin
   #Create account
-  result = api_instance.p_ost_account(request, opts)
+  result = api_instance.post_account(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountsApi->p_ost_account: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountsApi->post_account: #{e}"
 end
 ```
 
@@ -393,8 +393,8 @@ No authorization required
 
 
 
-# **p_ost_generate_billing_documents**
-> GenerateBillingDocumentResponseType p_ost_generate_billing_documents(body, id, opts)
+# **post_generate_billing_documents**
+> GenerateBillingDocumentResponseType post_generate_billing_documents(body, id, opts)
 
 Generate billing documents by account
 
@@ -403,11 +403,11 @@ Generates draft or posted billing documents for a specified account. You can als
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = Zuora::AccountsApi.new
 
-body = SwaggerClient::PostGenerateBillingDocumentType.new # PostGenerateBillingDocumentType | 
+body = Zuora::PostGenerateBillingDocumentType.new # PostGenerateBillingDocumentType | 
 
 id = "id_example" # String | The ID of the customer account that billing documents are generated for. For example, 8a8082e65b27f6c3015ba3e326b26419. 
 
@@ -418,10 +418,10 @@ opts = {
 
 begin
   #Generate billing documents by account
-  result = api_instance.p_ost_generate_billing_documents(body, id, opts)
+  result = api_instance.post_generate_billing_documents(body, id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountsApi->p_ost_generate_billing_documents: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountsApi->post_generate_billing_documents: #{e}"
 end
 ```
 
@@ -449,8 +449,8 @@ No authorization required
 
 
 
-# **p_ut_account**
-> CommonResponseType p_ut_account(account_key, request, opts)
+# **put_account**
+> CommonResponseType put_account(account_key, request, opts)
 
 Update account
 
@@ -459,13 +459,13 @@ This REST API reference describes how to update a customer account by specifying
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountsApi.new
+api_instance = Zuora::AccountsApi.new
 
 account_key = "account_key_example" # String | Account number or account ID.
 
-request = SwaggerClient::PUTAccountType.new # PUTAccountType | 
+request = Zuora::PUTAccountType.new # PUTAccountType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -474,10 +474,10 @@ opts = {
 
 begin
   #Update account
-  result = api_instance.p_ut_account(account_key, request, opts)
+  result = api_instance.put_account(account_key, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountsApi->p_ut_account: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountsApi->put_account: #{e}"
 end
 ```
 

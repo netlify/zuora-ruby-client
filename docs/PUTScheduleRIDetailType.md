@@ -1,4 +1,4 @@
-# SwaggerClient::PUTScheduleRIDetailType
+# Zuora::PUTScheduleRIDetailType
 
 ## Properties
 Name | Type | Description | Notes

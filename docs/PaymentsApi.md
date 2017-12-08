@@ -1,31 +1,31 @@
-# SwaggerClient::PaymentsApi
+# Zuora::PaymentsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_elete_payment**](PaymentsApi.md#d_elete_payment) | **DELETE** /v1/payments/{paymentId} | Delete payment
-[**g_et_payment**](PaymentsApi.md#g_et_payment) | **GET** /v1/payments/{paymentId} | Get payment
-[**g_et_payment_item_part**](PaymentsApi.md#g_et_payment_item_part) | **GET** /v1/payments/{paymentId}/parts/{partid}/itemparts/{itempartid} | Get payment part item
-[**g_et_payment_item_parts**](PaymentsApi.md#g_et_payment_item_parts) | **GET** /v1/payments/{paymentId}/parts/{partid}/itemparts | Get payment part items
-[**g_et_payment_part**](PaymentsApi.md#g_et_payment_part) | **GET** /v1/payments/{paymentId}/parts/{partid} | Get payment part
-[**g_et_payment_parts**](PaymentsApi.md#g_et_payment_parts) | **GET** /v1/payments/{paymentId}/parts | Get payment parts
-[**g_et_retrieve_all_payments**](PaymentsApi.md#g_et_retrieve_all_payments) | **GET** /v1/payments | Get all payments
+[**delete_payment**](PaymentsApi.md#delete_payment) | **DELETE** /v1/payments/{paymentId} | Delete payment
+[**get_payment**](PaymentsApi.md#get_payment) | **GET** /v1/payments/{paymentId} | Get payment
+[**get_payment_item_part**](PaymentsApi.md#get_payment_item_part) | **GET** /v1/payments/{paymentId}/parts/{partid}/itemparts/{itempartid} | Get payment part item
+[**get_payment_item_parts**](PaymentsApi.md#get_payment_item_parts) | **GET** /v1/payments/{paymentId}/parts/{partid}/itemparts | Get payment part items
+[**get_payment_part**](PaymentsApi.md#get_payment_part) | **GET** /v1/payments/{paymentId}/parts/{partid} | Get payment part
+[**get_payment_parts**](PaymentsApi.md#get_payment_parts) | **GET** /v1/payments/{paymentId}/parts | Get payment parts
+[**get_retrieve_all_payments**](PaymentsApi.md#get_retrieve_all_payments) | **GET** /v1/payments | Get all payments
 [**object_delete_payment**](PaymentsApi.md#object_delete_payment) | **DELETE** /v1/object/payment/{id} | CRUD: Delete payment
 [**object_get_payment**](PaymentsApi.md#object_get_payment) | **GET** /v1/object/payment/{id} | CRUD: Get payment
 [**object_post_payment**](PaymentsApi.md#object_post_payment) | **POST** /v1/object/payment | CRUD: Create payment
 [**object_put_payment**](PaymentsApi.md#object_put_payment) | **PUT** /v1/object/payment/{id} | CRUD: Update payment
-[**p_ost_create_payment**](PaymentsApi.md#p_ost_create_payment) | **POST** /v1/payments | Create payment
-[**p_ost_refund_payment**](PaymentsApi.md#p_ost_refund_payment) | **POST** /v1/payments/{paymentId}/refunds | Refund payment
-[**p_ut_apply_payment**](PaymentsApi.md#p_ut_apply_payment) | **PUT** /v1/payments/{paymentId}/apply | Apply payment
-[**p_ut_cancel_payment**](PaymentsApi.md#p_ut_cancel_payment) | **PUT** /v1/payments/{paymentId}/cancel | Cancel payment
-[**p_ut_transfer_payment**](PaymentsApi.md#p_ut_transfer_payment) | **PUT** /v1/payments/{paymentId}/transfer | Transfer payment
-[**p_ut_unapply_payment**](PaymentsApi.md#p_ut_unapply_payment) | **PUT** /v1/payments/{paymentId}/unapply | Unapply payment
-[**p_ut_update_payment**](PaymentsApi.md#p_ut_update_payment) | **PUT** /v1/payments/{paymentId} | Update payment
+[**post_create_payment**](PaymentsApi.md#post_create_payment) | **POST** /v1/payments | Create payment
+[**post_refund_payment**](PaymentsApi.md#post_refund_payment) | **POST** /v1/payments/{paymentId}/refunds | Refund payment
+[**put_apply_payment**](PaymentsApi.md#put_apply_payment) | **PUT** /v1/payments/{paymentId}/apply | Apply payment
+[**put_cancel_payment**](PaymentsApi.md#put_cancel_payment) | **PUT** /v1/payments/{paymentId}/cancel | Cancel payment
+[**put_transfer_payment**](PaymentsApi.md#put_transfer_payment) | **PUT** /v1/payments/{paymentId}/transfer | Transfer payment
+[**put_unapply_payment**](PaymentsApi.md#put_unapply_payment) | **PUT** /v1/payments/{paymentId}/unapply | Unapply payment
+[**put_update_payment**](PaymentsApi.md#put_update_payment) | **PUT** /v1/payments/{paymentId} | Update payment
 
 
-# **d_elete_payment**
-> CommonResponseType d_elete_payment(payment_id, opts)
+# **delete_payment**
+> CommonResponseType delete_payment(payment_id, opts)
 
 Delete payment
 
@@ -34,9 +34,9 @@ Delete payment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
 payment_id = "payment_id_example" # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
@@ -47,10 +47,10 @@ opts = {
 
 begin
   #Delete payment
-  result = api_instance.d_elete_payment(payment_id, opts)
+  result = api_instance.delete_payment(payment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->d_elete_payment: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->delete_payment: #{e}"
 end
 ```
 
@@ -77,8 +77,8 @@ No authorization required
 
 
 
-# **g_et_payment**
-> GETARPaymentType g_et_payment(payment_id, opts)
+# **get_payment**
+> GETARPaymentType get_payment(payment_id, opts)
 
 Get payment
 
@@ -87,9 +87,9 @@ Get payment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
 payment_id = "payment_id_example" # String | The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
@@ -100,10 +100,10 @@ opts = {
 
 begin
   #Get payment
-  result = api_instance.g_et_payment(payment_id, opts)
+  result = api_instance.get_payment(payment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->g_et_payment: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->get_payment: #{e}"
 end
 ```
 
@@ -130,8 +130,8 @@ No authorization required
 
 
 
-# **g_et_payment_item_part**
-> GETPaymentItemPartType g_et_payment_item_part(partid, itempartid, payment_id, opts)
+# **get_payment_item_part**
+> GETPaymentItemPartType get_payment_item_part(partid, itempartid, payment_id, opts)
 
 Get payment part item
 
@@ -140,9 +140,9 @@ Get payment part item
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
 partid = "partid_example" # String | The unique ID of a specific payment part. You can get the payment part ID from the response of [Get payment parts](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts). 
 
@@ -157,10 +157,10 @@ opts = {
 
 begin
   #Get payment part item
-  result = api_instance.g_et_payment_item_part(partid, itempartid, payment_id, opts)
+  result = api_instance.get_payment_item_part(partid, itempartid, payment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->g_et_payment_item_part: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->get_payment_item_part: #{e}"
 end
 ```
 
@@ -189,8 +189,8 @@ No authorization required
 
 
 
-# **g_et_payment_item_parts**
-> GETPaymentItemPartCollectionType g_et_payment_item_parts(partid, payment_id, opts)
+# **get_payment_item_parts**
+> GETPaymentItemPartCollectionType get_payment_item_parts(partid, payment_id, opts)
 
 Get payment part items
 
@@ -199,9 +199,9 @@ Get payment part items
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
 partid = "partid_example" # String | The unique ID of a specific payment part. You can get the payment part ID from the response of [Get payment parts](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts). 
 
@@ -215,10 +215,10 @@ opts = {
 
 begin
   #Get payment part items
-  result = api_instance.g_et_payment_item_parts(partid, payment_id, opts)
+  result = api_instance.get_payment_item_parts(partid, payment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->g_et_payment_item_parts: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->get_payment_item_parts: #{e}"
 end
 ```
 
@@ -247,8 +247,8 @@ No authorization required
 
 
 
-# **g_et_payment_part**
-> GETPaymentPartType g_et_payment_part(partid, payment_id, opts)
+# **get_payment_part**
+> GETPaymentPartType get_payment_part(partid, payment_id, opts)
 
 Get payment part
 
@@ -257,9 +257,9 @@ Get payment part
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
 partid = "partid_example" # String | The unique ID of a specific payment part. You can get the payment part ID from the response of [Get payment parts](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts). 
 
@@ -272,10 +272,10 @@ opts = {
 
 begin
   #Get payment part
-  result = api_instance.g_et_payment_part(partid, payment_id, opts)
+  result = api_instance.get_payment_part(partid, payment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->g_et_payment_part: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->get_payment_part: #{e}"
 end
 ```
 
@@ -303,8 +303,8 @@ No authorization required
 
 
 
-# **g_et_payment_parts**
-> GETPaymentPartsCollectionType g_et_payment_parts(payment_id, opts)
+# **get_payment_parts**
+> GETPaymentPartsCollectionType get_payment_parts(payment_id, opts)
 
 Get payment parts
 
@@ -313,9 +313,9 @@ Get payment parts
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
 payment_id = "payment_id_example" # String | The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
@@ -327,10 +327,10 @@ opts = {
 
 begin
   #Get payment parts
-  result = api_instance.g_et_payment_parts(payment_id, opts)
+  result = api_instance.get_payment_parts(payment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->g_et_payment_parts: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->get_payment_parts: #{e}"
 end
 ```
 
@@ -358,8 +358,8 @@ No authorization required
 
 
 
-# **g_et_retrieve_all_payments**
-> PaymentCollectionResponseType g_et_retrieve_all_payments(opts)
+# **get_retrieve_all_payments**
+> PaymentCollectionResponseType get_retrieve_all_payments(opts)
 
 Get all payments
 
@@ -368,9 +368,9 @@ Get all payments
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -382,10 +382,10 @@ opts = {
 
 begin
   #Get all payments
-  result = api_instance.g_et_retrieve_all_payments(opts)
+  result = api_instance.get_retrieve_all_payments(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->g_et_retrieve_all_payments: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->get_retrieve_all_payments: #{e}"
 end
 ```
 
@@ -424,9 +424,9 @@ Deletes a payment. Only payments with the Cancelled status can be deleted.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
 id = "id_example" # String | The unique ID of the payment to be deleted. For example, 2c92c0f85d4e95ae015d4f7e5d690622. 
 
@@ -439,7 +439,7 @@ begin
   #CRUD: Delete payment
   result = api_instance.object_delete_payment(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling PaymentsApi->object_delete_payment: #{e}"
 end
 ```
@@ -477,9 +477,9 @@ Retrives the information about one specific payment.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
 id = "id_example" # String | The unique ID of a payment. For example, 2c92c095592623ea01596621ada84352. 
 
@@ -492,7 +492,7 @@ begin
   #CRUD: Get payment
   result = api_instance.object_get_payment(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling PaymentsApi->object_get_payment: #{e}"
 end
 ```
@@ -530,11 +530,11 @@ Creates a payment.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
-create_request = SwaggerClient::ProxyCreatePayment.new # ProxyCreatePayment | 
+create_request = Zuora::ProxyCreatePayment.new # ProxyCreatePayment | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -545,7 +545,7 @@ begin
   #CRUD: Create payment
   result = api_instance.object_post_payment(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling PaymentsApi->object_post_payment: #{e}"
 end
 ```
@@ -583,13 +583,13 @@ Updates a payment.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
 id = "id_example" # String | The unique ID of a payment. For example, 2c92c095592623ea01596621ada84352. 
 
-modify_request = SwaggerClient::ProxyModifyPayment.new # ProxyModifyPayment | 
+modify_request = Zuora::ProxyModifyPayment.new # ProxyModifyPayment | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -600,7 +600,7 @@ begin
   #CRUD: Update payment
   result = api_instance.object_put_payment(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling PaymentsApi->object_put_payment: #{e}"
 end
 ```
@@ -629,8 +629,8 @@ No authorization required
 
 
 
-# **p_ost_create_payment**
-> GETARPaymentType p_ost_create_payment(body, opts)
+# **post_create_payment**
+> GETARPaymentType post_create_payment(body, opts)
 
 Create payment
 
@@ -639,11 +639,11 @@ Create payment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
-body = SwaggerClient::CreatePaymentType.new # CreatePaymentType | 
+body = Zuora::CreatePaymentType.new # CreatePaymentType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -652,10 +652,10 @@ opts = {
 
 begin
   #Create payment
-  result = api_instance.p_ost_create_payment(body, opts)
+  result = api_instance.post_create_payment(body, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->p_ost_create_payment: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->post_create_payment: #{e}"
 end
 ```
 
@@ -682,8 +682,8 @@ No authorization required
 
 
 
-# **p_ost_refund_payment**
-> GETRefundPaymentType p_ost_refund_payment(body, payment_id, opts)
+# **post_refund_payment**
+> GETRefundPaymentType post_refund_payment(body, payment_id, opts)
 
 Refund payment
 
@@ -692,11 +692,11 @@ Refund payment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
-body = SwaggerClient::PostRefundType.new # PostRefundType | 
+body = Zuora::PostRefundType.new # PostRefundType | 
 
 payment_id = "payment_id_example" # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
@@ -707,10 +707,10 @@ opts = {
 
 begin
   #Refund payment
-  result = api_instance.p_ost_refund_payment(body, payment_id, opts)
+  result = api_instance.post_refund_payment(body, payment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->p_ost_refund_payment: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->post_refund_payment: #{e}"
 end
 ```
 
@@ -738,8 +738,8 @@ No authorization required
 
 
 
-# **p_ut_apply_payment**
-> GETARPaymentType p_ut_apply_payment(body, payment_id, opts)
+# **put_apply_payment**
+> GETARPaymentType put_apply_payment(body, payment_id, opts)
 
 Apply payment
 
@@ -748,11 +748,11 @@ Apply payment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
-body = SwaggerClient::ApplyPaymentType.new # ApplyPaymentType | 
+body = Zuora::ApplyPaymentType.new # ApplyPaymentType | 
 
 payment_id = "payment_id_example" # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
@@ -763,10 +763,10 @@ opts = {
 
 begin
   #Apply payment
-  result = api_instance.p_ut_apply_payment(body, payment_id, opts)
+  result = api_instance.put_apply_payment(body, payment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->p_ut_apply_payment: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->put_apply_payment: #{e}"
 end
 ```
 
@@ -794,8 +794,8 @@ No authorization required
 
 
 
-# **p_ut_cancel_payment**
-> GETARPaymentType p_ut_cancel_payment(payment_id, opts)
+# **put_cancel_payment**
+> GETARPaymentType put_cancel_payment(payment_id, opts)
 
 Cancel payment
 
@@ -804,9 +804,9 @@ Cancel payment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
 payment_id = "payment_id_example" # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
@@ -817,10 +817,10 @@ opts = {
 
 begin
   #Cancel payment
-  result = api_instance.p_ut_cancel_payment(payment_id, opts)
+  result = api_instance.put_cancel_payment(payment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->p_ut_cancel_payment: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->put_cancel_payment: #{e}"
 end
 ```
 
@@ -847,8 +847,8 @@ No authorization required
 
 
 
-# **p_ut_transfer_payment**
-> GETARPaymentType p_ut_transfer_payment(body, payment_id, opts)
+# **put_transfer_payment**
+> GETARPaymentType put_transfer_payment(body, payment_id, opts)
 
 Transfer payment
 
@@ -857,11 +857,11 @@ Transfer payment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
-body = SwaggerClient::TransferPaymentType.new # TransferPaymentType | 
+body = Zuora::TransferPaymentType.new # TransferPaymentType | 
 
 payment_id = "payment_id_example" # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
@@ -872,10 +872,10 @@ opts = {
 
 begin
   #Transfer payment
-  result = api_instance.p_ut_transfer_payment(body, payment_id, opts)
+  result = api_instance.put_transfer_payment(body, payment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->p_ut_transfer_payment: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->put_transfer_payment: #{e}"
 end
 ```
 
@@ -903,8 +903,8 @@ No authorization required
 
 
 
-# **p_ut_unapply_payment**
-> GETARPaymentType p_ut_unapply_payment(body, payment_id, opts)
+# **put_unapply_payment**
+> GETARPaymentType put_unapply_payment(body, payment_id, opts)
 
 Unapply payment
 
@@ -913,11 +913,11 @@ Unapply payment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
-body = SwaggerClient::UnapplyPaymentType.new # UnapplyPaymentType | 
+body = Zuora::UnapplyPaymentType.new # UnapplyPaymentType | 
 
 payment_id = "payment_id_example" # String | The unique ID of an applied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
@@ -928,10 +928,10 @@ opts = {
 
 begin
   #Unapply payment
-  result = api_instance.p_ut_unapply_payment(body, payment_id, opts)
+  result = api_instance.put_unapply_payment(body, payment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->p_ut_unapply_payment: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->put_unapply_payment: #{e}"
 end
 ```
 
@@ -959,8 +959,8 @@ No authorization required
 
 
 
-# **p_ut_update_payment**
-> GETARPaymentType p_ut_update_payment(body, payment_id, opts)
+# **put_update_payment**
+> GETARPaymentType put_update_payment(body, payment_id, opts)
 
 Update payment
 
@@ -969,11 +969,11 @@ Update payment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Zuora::PaymentsApi.new
 
-body = SwaggerClient::UpdatePaymentType.new # UpdatePaymentType | 
+body = Zuora::UpdatePaymentType.new # UpdatePaymentType | 
 
 payment_id = "payment_id_example" # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
@@ -984,10 +984,10 @@ opts = {
 
 begin
   #Update payment
-  result = api_instance.p_ut_update_payment(body, payment_id, opts)
+  result = api_instance.put_update_payment(body, payment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->p_ut_update_payment: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentsApi->put_update_payment: #{e}"
 end
 ```
 

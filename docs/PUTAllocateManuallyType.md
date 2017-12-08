@@ -1,4 +1,4 @@
-# SwaggerClient::PUTAllocateManuallyType
+# Zuora::PUTAllocateManuallyType
 
 ## Properties
 Name | Type | Description | Notes

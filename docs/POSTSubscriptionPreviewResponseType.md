@@ -1,4 +1,4 @@
-# SwaggerClient::POSTSubscriptionPreviewResponseType
+# Zuora::POSTSubscriptionPreviewResponseType
 
 ## Properties
 Name | Type | Description | Notes

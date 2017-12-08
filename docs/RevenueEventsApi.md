@@ -1,15 +1,15 @@
-# SwaggerClient::RevenueEventsApi
+# Zuora::RevenueEventsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_revenue_event_details**](RevenueEventsApi.md#g_et_revenue_event_details) | **GET** /v1/revenue-events/{event-number} | Get revenue event details
-[**g_et_revenue_event_for_revenue_schedule**](RevenueEventsApi.md#g_et_revenue_event_for_revenue_schedule) | **GET** /v1/revenue-events/revenue-schedules/{rs-number} | Get revenue events for a revenue schedule
+[**get_revenue_event_details**](RevenueEventsApi.md#get_revenue_event_details) | **GET** /v1/revenue-events/{event-number} | Get revenue event details
+[**get_revenue_event_for_revenue_schedule**](RevenueEventsApi.md#get_revenue_event_for_revenue_schedule) | **GET** /v1/revenue-events/revenue-schedules/{rs-number} | Get revenue events for a revenue schedule
 
 
-# **g_et_revenue_event_details**
-> GETRevenueEventDetailType g_et_revenue_event_details(event_number, opts)
+# **get_revenue_event_details**
+> GETRevenueEventDetailType get_revenue_event_details(event_number, opts)
 
 Get revenue event details
 
@@ -18,9 +18,9 @@ Get revenue event details
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueEventsApi.new
+api_instance = Zuora::RevenueEventsApi.new
 
 event_number = "event_number_example" # String | The number associated with the revenue event.
 
@@ -31,10 +31,10 @@ opts = {
 
 begin
   #Get revenue event details
-  result = api_instance.g_et_revenue_event_details(event_number, opts)
+  result = api_instance.get_revenue_event_details(event_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueEventsApi->g_et_revenue_event_details: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueEventsApi->get_revenue_event_details: #{e}"
 end
 ```
 
@@ -61,8 +61,8 @@ No authorization required
 
 
 
-# **g_et_revenue_event_for_revenue_schedule**
-> GETRevenueEventDetailsType g_et_revenue_event_for_revenue_schedule(rs_number, opts)
+# **get_revenue_event_for_revenue_schedule**
+> GETRevenueEventDetailsType get_revenue_event_for_revenue_schedule(rs_number, opts)
 
 Get revenue events for a revenue schedule
 
@@ -71,9 +71,9 @@ Get revenue events for a revenue schedule
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueEventsApi.new
+api_instance = Zuora::RevenueEventsApi.new
 
 rs_number = "rs_number_example" # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\".
 
@@ -85,10 +85,10 @@ opts = {
 
 begin
   #Get revenue events for a revenue schedule
-  result = api_instance.g_et_revenue_event_for_revenue_schedule(rs_number, opts)
+  result = api_instance.get_revenue_event_for_revenue_schedule(rs_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueEventsApi->g_et_revenue_event_for_revenue_schedule: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueEventsApi->get_revenue_event_for_revenue_schedule: #{e}"
 end
 ```
 

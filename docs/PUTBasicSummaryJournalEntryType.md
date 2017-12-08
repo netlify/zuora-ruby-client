@@ -1,4 +1,4 @@
-# SwaggerClient::PUTBasicSummaryJournalEntryType
+# Zuora::PUTBasicSummaryJournalEntryType
 
 ## Properties
 Name | Type | Description | Notes

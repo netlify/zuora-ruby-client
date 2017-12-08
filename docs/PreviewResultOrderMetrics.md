@@ -1,4 +1,4 @@
-# SwaggerClient::PreviewResultOrderMetrics
+# Zuora::PreviewResultOrderMetrics
 
 ## Properties
 Name | Type | Description | Notes

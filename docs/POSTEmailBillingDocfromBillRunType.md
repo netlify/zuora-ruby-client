@@ -1,4 +1,4 @@
-# SwaggerClient::POSTEmailBillingDocfromBillRunType
+# Zuora::POSTEmailBillingDocfromBillRunType
 
 ## Properties
 Name | Type | Description | Notes

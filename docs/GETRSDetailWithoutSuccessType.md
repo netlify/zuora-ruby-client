@@ -1,4 +1,4 @@
-# SwaggerClient::GETRSDetailWithoutSuccessType
+# Zuora::GETRSDetailWithoutSuccessType
 
 ## Properties
 Name | Type | Description | Notes

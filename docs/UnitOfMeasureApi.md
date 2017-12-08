@@ -1,4 +1,4 @@
-# SwaggerClient::UnitOfMeasureApi
+# Zuora::UnitOfMeasureApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -20,9 +20,9 @@ CRUD: Delete UnitOfMeasure
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UnitOfMeasureApi.new
+api_instance = Zuora::UnitOfMeasureApi.new
 
 id = "id_example" # String | Object id
 
@@ -35,7 +35,7 @@ begin
   #CRUD: Delete UnitOfMeasure
   result = api_instance.object_delete_unit_of_measure(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling UnitOfMeasureApi->object_delete_unit_of_measure: #{e}"
 end
 ```
@@ -73,9 +73,9 @@ CRUD: Retrieve UnitOfMeasure
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UnitOfMeasureApi.new
+api_instance = Zuora::UnitOfMeasureApi.new
 
 id = "id_example" # String | Object id
 
@@ -89,7 +89,7 @@ begin
   #CRUD: Retrieve UnitOfMeasure
   result = api_instance.object_get_unit_of_measure(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling UnitOfMeasureApi->object_get_unit_of_measure: #{e}"
 end
 ```
@@ -128,11 +128,11 @@ CRUD: Create UnitOfMeasure
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UnitOfMeasureApi.new
+api_instance = Zuora::UnitOfMeasureApi.new
 
-create_request = SwaggerClient::ProxyCreateUnitOfMeasure.new # ProxyCreateUnitOfMeasure | 
+create_request = Zuora::ProxyCreateUnitOfMeasure.new # ProxyCreateUnitOfMeasure | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -143,7 +143,7 @@ begin
   #CRUD: Create UnitOfMeasure
   result = api_instance.object_post_unit_of_measure(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling UnitOfMeasureApi->object_post_unit_of_measure: #{e}"
 end
 ```
@@ -181,13 +181,13 @@ CRUD: Update UnitOfMeasure
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UnitOfMeasureApi.new
+api_instance = Zuora::UnitOfMeasureApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifyUnitOfMeasure.new # ProxyModifyUnitOfMeasure | 
+modify_request = Zuora::ProxyModifyUnitOfMeasure.new # ProxyModifyUnitOfMeasure | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -198,7 +198,7 @@ begin
   #CRUD: Update UnitOfMeasure
   result = api_instance.object_put_unit_of_measure(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling UnitOfMeasureApi->object_put_unit_of_measure: #{e}"
 end
 ```

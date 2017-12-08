@@ -1,4 +1,4 @@
-# SwaggerClient::PaymentInvoiceApplicationItemApplyRequestType
+# Zuora::PaymentInvoiceApplicationItemApplyRequestType
 
 ## Properties
 Name | Type | Description | Notes

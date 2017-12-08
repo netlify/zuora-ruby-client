@@ -1,4 +1,4 @@
-# SwaggerClient::PUTCatalogType
+# Zuora::PUTCatalogType
 
 ## Properties
 Name | Type | Description | Notes

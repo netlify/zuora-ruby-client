@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyBadRequestResponse
+# Zuora::ProxyBadRequestResponse
 
 ## Properties
 Name | Type | Description | Notes

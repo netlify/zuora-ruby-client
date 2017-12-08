@@ -1,4 +1,4 @@
-# SwaggerClient::POSTAccountTypeBillToContact
+# Zuora::POSTAccountTypeBillToContact
 
 ## Properties
 Name | Type | Description | Notes

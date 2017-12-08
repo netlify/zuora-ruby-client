@@ -1,4 +1,4 @@
-# SwaggerClient::POSTEntityConnectionsResponseType
+# Zuora::POSTEntityConnectionsResponseType
 
 ## Properties
 Name | Type | Description | Notes

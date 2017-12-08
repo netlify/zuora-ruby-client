@@ -1,4 +1,4 @@
-# SwaggerClient::PutReverseInvoiceResponseTypeCreditMemo
+# Zuora::PutReverseInvoiceResponseTypeCreditMemo
 
 ## Properties
 Name | Type | Description | Notes

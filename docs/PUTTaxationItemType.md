@@ -1,4 +1,4 @@
-# SwaggerClient::PUTTaxationItemType
+# Zuora::PUTTaxationItemType
 
 ## Properties
 Name | Type | Description | Notes

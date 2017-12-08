@@ -1,4 +1,4 @@
-# SwaggerClient::GetAllOrdersResponseType
+# Zuora::GetAllOrdersResponseType
 
 ## Properties
 Name | Type | Description | Notes

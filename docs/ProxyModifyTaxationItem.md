@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyModifyTaxationItem
+# Zuora::ProxyModifyTaxationItem
 
 ## Properties
 Name | Type | Description | Notes

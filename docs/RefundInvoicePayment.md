@@ -1,4 +1,4 @@
-# SwaggerClient::RefundInvoicePayment
+# Zuora::RefundInvoicePayment
 
 ## Properties
 Name | Type | Description | Notes

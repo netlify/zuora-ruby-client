@@ -1,4 +1,4 @@
-# SwaggerClient::GETEntityConnectionsArrayItemsType
+# Zuora::GETEntityConnectionsArrayItemsType
 
 ## Properties
 Name | Type | Description | Notes

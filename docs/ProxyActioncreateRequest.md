@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyActioncreateRequest
+# Zuora::ProxyActioncreateRequest
 
 ## Properties
 Name | Type | Description | Notes

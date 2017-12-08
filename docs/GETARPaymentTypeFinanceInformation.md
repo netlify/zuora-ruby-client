@@ -1,4 +1,4 @@
-# SwaggerClient::GETARPaymentTypeFinanceInformation
+# Zuora::GETARPaymentTypeFinanceInformation
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::PostNonRefRefundTypeFinanceInformation
+# Zuora::PostNonRefRefundTypeFinanceInformation
 
 ## Properties
 Name | Type | Description | Notes

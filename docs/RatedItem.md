@@ -1,4 +1,4 @@
-# SwaggerClient::RatedItem
+# Zuora::RatedItem
 
 ## Properties
 Name | Type | Description | Notes

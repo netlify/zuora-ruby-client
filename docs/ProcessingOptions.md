@@ -1,4 +1,4 @@
-# SwaggerClient::ProcessingOptions
+# Zuora::ProcessingOptions
 
 ## Properties
 Name | Type | Description | Notes

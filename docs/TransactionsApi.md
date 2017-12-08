@@ -1,15 +1,15 @@
-# SwaggerClient::TransactionsApi
+# Zuora::TransactionsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_transaction_invoice**](TransactionsApi.md#g_et_transaction_invoice) | **GET** /v1/transactions/invoices/accounts/{account-key} | Get invoices
-[**g_et_transaction_payment**](TransactionsApi.md#g_et_transaction_payment) | **GET** /v1/transactions/payments/accounts/{account-key} | Get payments
+[**get_transaction_invoice**](TransactionsApi.md#get_transaction_invoice) | **GET** /v1/transactions/invoices/accounts/{account-key} | Get invoices
+[**get_transaction_payment**](TransactionsApi.md#get_transaction_payment) | **GET** /v1/transactions/payments/accounts/{account-key} | Get payments
 
 
-# **g_et_transaction_invoice**
-> GETInvoiceFileWrapper g_et_transaction_invoice(account_key, opts)
+# **get_transaction_invoice**
+> GETInvoiceFileWrapper get_transaction_invoice(account_key, opts)
 
 Get invoices
 
@@ -18,9 +18,9 @@ Retrieves invoices for a specified account.  Invoices are returned in reverse ch
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::TransactionsApi.new
+api_instance = Zuora::TransactionsApi.new
 
 account_key = "account_key_example" # String | Account number or account ID. 
 
@@ -32,10 +32,10 @@ opts = {
 
 begin
   #Get invoices
-  result = api_instance.g_et_transaction_invoice(account_key, opts)
+  result = api_instance.get_transaction_invoice(account_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling TransactionsApi->g_et_transaction_invoice: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling TransactionsApi->get_transaction_invoice: #{e}"
 end
 ```
 
@@ -63,8 +63,8 @@ No authorization required
 
 
 
-# **g_et_transaction_payment**
-> GETPaymentsType g_et_transaction_payment(account_key, opts)
+# **get_transaction_payment**
+> GETPaymentsType get_transaction_payment(account_key, opts)
 
 Get payments
 
@@ -73,9 +73,9 @@ Retrieves payments for a specified account. Payments are returned in reverse chr
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::TransactionsApi.new
+api_instance = Zuora::TransactionsApi.new
 
 account_key = "account_key_example" # String | Account number or account ID.
 
@@ -87,10 +87,10 @@ opts = {
 
 begin
   #Get payments
-  result = api_instance.g_et_transaction_payment(account_key, opts)
+  result = api_instance.get_transaction_payment(account_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling TransactionsApi->g_et_transaction_payment: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling TransactionsApi->get_transaction_payment: #{e}"
 end
 ```
 

@@ -1,4 +1,4 @@
-# SwaggerClient::PutReverseInvoiceResponseType
+# Zuora::PutReverseInvoiceResponseType
 
 ## Properties
 Name | Type | Description | Notes

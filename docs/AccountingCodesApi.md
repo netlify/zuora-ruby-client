@@ -1,20 +1,20 @@
-# SwaggerClient::AccountingCodesApi
+# Zuora::AccountingCodesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_elete_accounting_code**](AccountingCodesApi.md#d_elete_accounting_code) | **DELETE** /v1/accounting-codes/{ac-id} | Delete accounting code
-[**g_et_accounting_code**](AccountingCodesApi.md#g_et_accounting_code) | **GET** /v1/accounting-codes/{ac-id} | Query an accounting code
-[**g_et_all_accounting_codes**](AccountingCodesApi.md#g_et_all_accounting_codes) | **GET** /v1/accounting-codes | Get all accounting codes
-[**p_ost_accounting_code**](AccountingCodesApi.md#p_ost_accounting_code) | **POST** /v1/accounting-codes | Create accounting code
-[**p_ut_accounting_code**](AccountingCodesApi.md#p_ut_accounting_code) | **PUT** /v1/accounting-codes/{ac-id} | Update an accounting code
-[**p_ut_activate_accounting_code**](AccountingCodesApi.md#p_ut_activate_accounting_code) | **PUT** /v1/accounting-codes/{ac-id}/activate | Activate accounting code
-[**p_ut_deactivate_accounting_code**](AccountingCodesApi.md#p_ut_deactivate_accounting_code) | **PUT** /v1/accounting-codes/{ac-id}/deactivate | Deactivate accounting code
+[**delete_accounting_code**](AccountingCodesApi.md#delete_accounting_code) | **DELETE** /v1/accounting-codes/{ac-id} | Delete accounting code
+[**get_accounting_code**](AccountingCodesApi.md#get_accounting_code) | **GET** /v1/accounting-codes/{ac-id} | Query an accounting code
+[**get_all_accounting_codes**](AccountingCodesApi.md#get_all_accounting_codes) | **GET** /v1/accounting-codes | Get all accounting codes
+[**post_accounting_code**](AccountingCodesApi.md#post_accounting_code) | **POST** /v1/accounting-codes | Create accounting code
+[**put_accounting_code**](AccountingCodesApi.md#put_accounting_code) | **PUT** /v1/accounting-codes/{ac-id} | Update an accounting code
+[**put_activate_accounting_code**](AccountingCodesApi.md#put_activate_accounting_code) | **PUT** /v1/accounting-codes/{ac-id}/activate | Activate accounting code
+[**put_deactivate_accounting_code**](AccountingCodesApi.md#put_deactivate_accounting_code) | **PUT** /v1/accounting-codes/{ac-id}/deactivate | Deactivate accounting code
 
 
-# **d_elete_accounting_code**
-> CommonResponseType d_elete_accounting_code(ac_id, opts)
+# **delete_accounting_code**
+> CommonResponseType delete_accounting_code(ac_id, opts)
 
 Delete accounting code
 
@@ -23,9 +23,9 @@ This reference describes how to delete an accounting code through the REST API. 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingCodesApi.new
+api_instance = Zuora::AccountingCodesApi.new
 
 ac_id = "ac_id_example" # String | ID of the accounting code you want to delete.
 
@@ -36,10 +36,10 @@ opts = {
 
 begin
   #Delete accounting code
-  result = api_instance.d_elete_accounting_code(ac_id, opts)
+  result = api_instance.delete_accounting_code(ac_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingCodesApi->d_elete_accounting_code: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingCodesApi->delete_accounting_code: #{e}"
 end
 ```
 
@@ -66,8 +66,8 @@ No authorization required
 
 
 
-# **g_et_accounting_code**
-> GETAccountingCodeItemType g_et_accounting_code(ac_id, opts)
+# **get_accounting_code**
+> GETAccountingCodeItemType get_accounting_code(ac_id, opts)
 
 Query an accounting code
 
@@ -76,9 +76,9 @@ This reference describes how to query an accounting code through the REST API.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingCodesApi.new
+api_instance = Zuora::AccountingCodesApi.new
 
 ac_id = "ac_id_example" # String | ID of the accounting code you want to query.
 
@@ -89,10 +89,10 @@ opts = {
 
 begin
   #Query an accounting code
-  result = api_instance.g_et_accounting_code(ac_id, opts)
+  result = api_instance.get_accounting_code(ac_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingCodesApi->g_et_accounting_code: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingCodesApi->get_accounting_code: #{e}"
 end
 ```
 
@@ -119,8 +119,8 @@ No authorization required
 
 
 
-# **g_et_all_accounting_codes**
-> GETAccountingCodesType g_et_all_accounting_codes(opts)
+# **get_all_accounting_codes**
+> GETAccountingCodesType get_all_accounting_codes(opts)
 
 Get all accounting codes
 
@@ -129,9 +129,9 @@ This reference describes how to query all accounting codes in your chart of acco
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingCodesApi.new
+api_instance = Zuora::AccountingCodesApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -141,10 +141,10 @@ opts = {
 
 begin
   #Get all accounting codes
-  result = api_instance.g_et_all_accounting_codes(opts)
+  result = api_instance.get_all_accounting_codes(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingCodesApi->g_et_all_accounting_codes: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingCodesApi->get_all_accounting_codes: #{e}"
 end
 ```
 
@@ -171,8 +171,8 @@ No authorization required
 
 
 
-# **p_ost_accounting_code**
-> POSTAccountingCodeResponseType p_ost_accounting_code(request, opts)
+# **post_accounting_code**
+> POSTAccountingCodeResponseType post_accounting_code(request, opts)
 
 Create accounting code
 
@@ -181,11 +181,11 @@ This reference describes how to create a new accounting code through the REST AP
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingCodesApi.new
+api_instance = Zuora::AccountingCodesApi.new
 
-request = SwaggerClient::POSTAccountingCodeType.new # POSTAccountingCodeType | 
+request = Zuora::POSTAccountingCodeType.new # POSTAccountingCodeType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -194,10 +194,10 @@ opts = {
 
 begin
   #Create accounting code
-  result = api_instance.p_ost_accounting_code(request, opts)
+  result = api_instance.post_accounting_code(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingCodesApi->p_ost_accounting_code: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingCodesApi->post_accounting_code: #{e}"
 end
 ```
 
@@ -224,8 +224,8 @@ No authorization required
 
 
 
-# **p_ut_accounting_code**
-> CommonResponseType p_ut_accounting_code(ac_id, request, opts)
+# **put_accounting_code**
+> CommonResponseType put_accounting_code(ac_id, request, opts)
 
 Update an accounting code
 
@@ -234,13 +234,13 @@ This reference describes how to update an existing accounting code through the R
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingCodesApi.new
+api_instance = Zuora::AccountingCodesApi.new
 
 ac_id = "ac_id_example" # String | ID of the accounting code you want to update.
 
-request = SwaggerClient::PUTAccountingCodeType.new # PUTAccountingCodeType | 
+request = Zuora::PUTAccountingCodeType.new # PUTAccountingCodeType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -249,10 +249,10 @@ opts = {
 
 begin
   #Update an accounting code
-  result = api_instance.p_ut_accounting_code(ac_id, request, opts)
+  result = api_instance.put_accounting_code(ac_id, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingCodesApi->p_ut_accounting_code: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingCodesApi->put_accounting_code: #{e}"
 end
 ```
 
@@ -280,8 +280,8 @@ No authorization required
 
 
 
-# **p_ut_activate_accounting_code**
-> CommonResponseType p_ut_activate_accounting_code(ac_id, opts)
+# **put_activate_accounting_code**
+> CommonResponseType put_activate_accounting_code(ac_id, opts)
 
 Activate accounting code
 
@@ -290,9 +290,9 @@ This reference describes how to activate an accounting code through the REST API
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingCodesApi.new
+api_instance = Zuora::AccountingCodesApi.new
 
 ac_id = "ac_id_example" # String | ID of the accounting code you want to activate.
 
@@ -303,10 +303,10 @@ opts = {
 
 begin
   #Activate accounting code
-  result = api_instance.p_ut_activate_accounting_code(ac_id, opts)
+  result = api_instance.put_activate_accounting_code(ac_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingCodesApi->p_ut_activate_accounting_code: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingCodesApi->put_activate_accounting_code: #{e}"
 end
 ```
 
@@ -333,8 +333,8 @@ No authorization required
 
 
 
-# **p_ut_deactivate_accounting_code**
-> CommonResponseType p_ut_deactivate_accounting_code(ac_id, opts)
+# **put_deactivate_accounting_code**
+> CommonResponseType put_deactivate_accounting_code(ac_id, opts)
 
 Deactivate accounting code
 
@@ -343,9 +343,9 @@ This reference describes how to deactivate an accounting code through the REST A
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingCodesApi.new
+api_instance = Zuora::AccountingCodesApi.new
 
 ac_id = "ac_id_example" # String | ID of the accounting code you want to deactivate.
 
@@ -356,10 +356,10 @@ opts = {
 
 begin
   #Deactivate accounting code
-  result = api_instance.p_ut_deactivate_accounting_code(ac_id, opts)
+  result = api_instance.put_deactivate_accounting_code(ac_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingCodesApi->p_ut_deactivate_accounting_code: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingCodesApi->put_deactivate_accounting_code: #{e}"
 end
 ```
 

@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyDeleteResponse
+# Zuora::ProxyDeleteResponse
 
 ## Properties
 Name | Type | Description | Notes

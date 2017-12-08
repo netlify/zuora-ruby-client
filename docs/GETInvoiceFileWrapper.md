@@ -1,4 +1,4 @@
-# SwaggerClient::GETInvoiceFileWrapper
+# Zuora::GETInvoiceFileWrapper
 
 ## Properties
 Name | Type | Description | Notes

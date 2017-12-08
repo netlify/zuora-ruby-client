@@ -1,4 +1,4 @@
-# SwaggerClient::PUTSubscriptionPatchRequestType
+# Zuora::PUTSubscriptionPatchRequestType
 
 ## Properties
 Name | Type | Description | Notes

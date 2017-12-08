@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyModifyContact
+# Zuora::ProxyModifyContact
 
 ## Properties
 Name | Type | Description | Notes

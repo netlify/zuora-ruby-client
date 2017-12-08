@@ -1,4 +1,4 @@
-# SwaggerClient::OneTimeVolumePricingOverride
+# Zuora::OneTimeVolumePricingOverride
 
 ## Properties
 Name | Type | Description | Notes

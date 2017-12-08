@@ -1,4 +1,4 @@
-# SwaggerClient::CreditMemoFromChargeDetailTypeFinanceInformation
+# Zuora::CreditMemoFromChargeDetailTypeFinanceInformation
 
 ## Properties
 Name | Type | Description | Notes

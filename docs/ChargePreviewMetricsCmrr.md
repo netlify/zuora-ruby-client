@@ -1,4 +1,4 @@
-# SwaggerClient::ChargePreviewMetricsCmrr
+# Zuora::ChargePreviewMetricsCmrr
 
 ## Properties
 Name | Type | Description | Notes

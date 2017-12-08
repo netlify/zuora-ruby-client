@@ -1,4 +1,4 @@
-# SwaggerClient::POSTAttachmentResponseType
+# Zuora::POSTAttachmentResponseType
 
 ## Properties
 Name | Type | Description | Notes

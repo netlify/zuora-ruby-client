@@ -1,4 +1,4 @@
-# SwaggerClient::SubscribeRequestPaymentMethodGatewayOptionData
+# Zuora::SubscribeRequestPaymentMethodGatewayOptionData
 
 ## Properties
 Name | Type | Description | Notes

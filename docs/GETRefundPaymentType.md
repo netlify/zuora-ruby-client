@@ -1,4 +1,4 @@
-# SwaggerClient::GETRefundPaymentType
+# Zuora::GETRefundPaymentType
 
 ## Properties
 Name | Type | Description | Notes

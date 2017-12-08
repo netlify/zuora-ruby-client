@@ -1,4 +1,4 @@
-# SwaggerClient::GETJournalEntryDetailType
+# Zuora::GETJournalEntryDetailType
 
 ## Properties
 Name | Type | Description | Notes

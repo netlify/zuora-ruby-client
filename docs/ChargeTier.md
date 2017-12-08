@@ -1,4 +1,4 @@
-# SwaggerClient::ChargeTier
+# Zuora::ChargeTier
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::PreviewContactInfo
+# Zuora::PreviewContactInfo
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::RefundPartResponseTypewithSuccess
+# Zuora::RefundPartResponseTypewithSuccess
 
 ## Properties
 Name | Type | Description | Notes

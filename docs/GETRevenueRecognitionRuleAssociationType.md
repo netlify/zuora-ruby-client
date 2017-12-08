@@ -1,4 +1,4 @@
-# SwaggerClient::GETRevenueRecognitionRuleAssociationType
+# Zuora::GETRevenueRecognitionRuleAssociationType
 
 ## Properties
 Name | Type | Description | Notes

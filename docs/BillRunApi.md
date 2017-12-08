@@ -1,4 +1,4 @@
-# SwaggerClient::BillRunApi
+# Zuora::BillRunApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**object_get_bill_run**](BillRunApi.md#object_get_bill_run) | **GET** /v1/object/bill-run/{id} | CRUD: Retrieve Bill Run
 [**object_post_bill_run**](BillRunApi.md#object_post_bill_run) | **POST** /v1/object/bill-run | CRUD: Create Bill Run
 [**object_put_bill_run**](BillRunApi.md#object_put_bill_run) | **PUT** /v1/object/bill-run/{id} | CRUD: Post or Cancel Bill Run
-[**p_ost_email_billing_documentsfrom_bill_run**](BillRunApi.md#p_ost_email_billing_documentsfrom_bill_run) | **POST** /v1/bill-runs/{billRunId}/emails | Email billing documents generated from bill run
+[**post_email_billing_documentsfrom_bill_run**](BillRunApi.md#post_email_billing_documentsfrom_bill_run) | **POST** /v1/bill-runs/{billRunId}/emails | Email billing documents generated from bill run
 
 
 # **object_delete_bill_run**
@@ -21,9 +21,9 @@ CRUD: Delete Bill Run
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::BillRunApi.new
+api_instance = Zuora::BillRunApi.new
 
 id = "id_example" # String | Object id
 
@@ -36,7 +36,7 @@ begin
   #CRUD: Delete Bill Run
   result = api_instance.object_delete_bill_run(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling BillRunApi->object_delete_bill_run: #{e}"
 end
 ```
@@ -74,9 +74,9 @@ CRUD: Retrieve Bill Run
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::BillRunApi.new
+api_instance = Zuora::BillRunApi.new
 
 id = "id_example" # String | Object id
 
@@ -90,7 +90,7 @@ begin
   #CRUD: Retrieve Bill Run
   result = api_instance.object_get_bill_run(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling BillRunApi->object_get_bill_run: #{e}"
 end
 ```
@@ -129,11 +129,11 @@ CRUD: Create Bill Run
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::BillRunApi.new
+api_instance = Zuora::BillRunApi.new
 
-create_request = SwaggerClient::ProxyCreateBillRun.new # ProxyCreateBillRun | 
+create_request = Zuora::ProxyCreateBillRun.new # ProxyCreateBillRun | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -144,7 +144,7 @@ begin
   #CRUD: Create Bill Run
   result = api_instance.object_post_bill_run(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling BillRunApi->object_post_bill_run: #{e}"
 end
 ```
@@ -182,13 +182,13 @@ CRUD: Post or Cancel Bill Run
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::BillRunApi.new
+api_instance = Zuora::BillRunApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifyBillRun.new # ProxyModifyBillRun | 
+modify_request = Zuora::ProxyModifyBillRun.new # ProxyModifyBillRun | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -199,7 +199,7 @@ begin
   #CRUD: Post or Cancel Bill Run
   result = api_instance.object_put_bill_run(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling BillRunApi->object_put_bill_run: #{e}"
 end
 ```
@@ -228,8 +228,8 @@ No authorization required
 
 
 
-# **p_ost_email_billing_documentsfrom_bill_run**
-> CommonResponseType p_ost_email_billing_documentsfrom_bill_run(bill_run_id, request, opts)
+# **post_email_billing_documentsfrom_bill_run**
+> CommonResponseType post_email_billing_documentsfrom_bill_run(bill_run_id, request, opts)
 
 Email billing documents generated from bill run
 
@@ -238,13 +238,13 @@ Manually emails all the billing documents that are generated from a specified bi
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::BillRunApi.new
+api_instance = Zuora::BillRunApi.new
 
 bill_run_id = "bill_run_id_example" # String | The ID of the bill run. For example, 2c92c8f95d0c886e015d11287a8f0f8b. 
 
-request = SwaggerClient::POSTEmailBillingDocfromBillRunType.new # POSTEmailBillingDocfromBillRunType | 
+request = Zuora::POSTEmailBillingDocfromBillRunType.new # POSTEmailBillingDocfromBillRunType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -253,10 +253,10 @@ opts = {
 
 begin
   #Email billing documents generated from bill run
-  result = api_instance.p_ost_email_billing_documentsfrom_bill_run(bill_run_id, request, opts)
+  result = api_instance.post_email_billing_documentsfrom_bill_run(bill_run_id, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling BillRunApi->p_ost_email_billing_documentsfrom_bill_run: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling BillRunApi->post_email_billing_documentsfrom_bill_run: #{e}"
 end
 ```
 

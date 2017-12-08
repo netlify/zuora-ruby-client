@@ -1,4 +1,4 @@
-# SwaggerClient::ExportsApi
+# Zuora::ExportsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -18,9 +18,9 @@ Use this operation to check the status of a data source export and access the ex
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ExportsApi.new
+api_instance = Zuora::ExportsApi.new
 
 id = "id_example" # String | Object id
 
@@ -34,7 +34,7 @@ begin
   #CRUD: Retrieve Export
   result = api_instance.object_get_export(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ExportsApi->object_get_export: #{e}"
 end
 ```
@@ -73,11 +73,11 @@ Use this operation to create a data source export. After you have created a data
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ExportsApi.new
+api_instance = Zuora::ExportsApi.new
 
-create_request = SwaggerClient::ProxyCreateExport.new # ProxyCreateExport | 
+create_request = Zuora::ProxyCreateExport.new # ProxyCreateExport | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -88,7 +88,7 @@ begin
   #CRUD: Create Export
   result = api_instance.object_post_export(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ExportsApi->object_post_export: #{e}"
 end
 ```

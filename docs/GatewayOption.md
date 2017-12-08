@@ -1,4 +1,4 @@
-# SwaggerClient::GatewayOption
+# Zuora::GatewayOption
 
 ## Properties
 Name | Type | Description | Notes

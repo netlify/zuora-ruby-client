@@ -1,4 +1,4 @@
-# SwaggerClient::PUTSubscriptionResponseTypeChargeMetrics
+# Zuora::PUTSubscriptionResponseTypeChargeMetrics
 
 ## Properties
 Name | Type | Description | Notes

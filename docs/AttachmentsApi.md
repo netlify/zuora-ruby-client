@@ -1,18 +1,18 @@
-# SwaggerClient::AttachmentsApi
+# Zuora::AttachmentsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_elete_attachments**](AttachmentsApi.md#d_elete_attachments) | **DELETE** /v1/attachments/{attachment-id} | Delete attachments
-[**g_et_attachments**](AttachmentsApi.md#g_et_attachments) | **GET** /v1/attachments/{attachment-id} | View attachments
-[**g_et_attachments_list**](AttachmentsApi.md#g_et_attachments_list) | **GET** /v1/attachments/{object-type}/{object-key} | View attachments list
-[**p_ost_attachments**](AttachmentsApi.md#p_ost_attachments) | **POST** /v1/attachments | Add attachments
-[**p_ut_attachments**](AttachmentsApi.md#p_ut_attachments) | **PUT** /v1/attachments/{attachment-id} | Edit attachments
+[**delete_attachments**](AttachmentsApi.md#delete_attachments) | **DELETE** /v1/attachments/{attachment-id} | Delete attachments
+[**get_attachments**](AttachmentsApi.md#get_attachments) | **GET** /v1/attachments/{attachment-id} | View attachments
+[**get_attachments_list**](AttachmentsApi.md#get_attachments_list) | **GET** /v1/attachments/{object-type}/{object-key} | View attachments list
+[**post_attachments**](AttachmentsApi.md#post_attachments) | **POST** /v1/attachments | Add attachments
+[**put_attachments**](AttachmentsApi.md#put_attachments) | **PUT** /v1/attachments/{attachment-id} | Edit attachments
 
 
-# **d_elete_attachments**
-> CommonResponseType d_elete_attachments(attachment_id, opts)
+# **delete_attachments**
+> CommonResponseType delete_attachments(attachment_id, opts)
 
 Delete attachments
 
@@ -21,9 +21,9 @@ Use the Delete Attachment REST request to delete an attachment from a Zuora obje
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AttachmentsApi.new
+api_instance = Zuora::AttachmentsApi.new
 
 attachment_id = "attachment_id_example" # String | Id of the attachment to be deleted.
 
@@ -34,10 +34,10 @@ opts = {
 
 begin
   #Delete attachments
-  result = api_instance.d_elete_attachments(attachment_id, opts)
+  result = api_instance.delete_attachments(attachment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AttachmentsApi->d_elete_attachments: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AttachmentsApi->delete_attachments: #{e}"
 end
 ```
 
@@ -64,8 +64,8 @@ No authorization required
 
 
 
-# **g_et_attachments**
-> GETAttachmentResponseType g_et_attachments(attachment_id, opts)
+# **get_attachments**
+> GETAttachmentResponseType get_attachments(attachment_id, opts)
 
 View attachments
 
@@ -74,9 +74,9 @@ Use the View Attachment REST request to retrieve information about an attachment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AttachmentsApi.new
+api_instance = Zuora::AttachmentsApi.new
 
 attachment_id = "attachment_id_example" # String | Id of the attachment you want to view.
 
@@ -87,10 +87,10 @@ opts = {
 
 begin
   #View attachments
-  result = api_instance.g_et_attachments(attachment_id, opts)
+  result = api_instance.get_attachments(attachment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AttachmentsApi->g_et_attachments: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AttachmentsApi->get_attachments: #{e}"
 end
 ```
 
@@ -117,8 +117,8 @@ No authorization required
 
 
 
-# **g_et_attachments_list**
-> GETAttachmentsResponseType g_et_attachments_list(object_type, object_key, opts)
+# **get_attachments_list**
+> GETAttachmentsResponseType get_attachments_list(object_type, object_key, opts)
 
 View attachments list
 
@@ -127,9 +127,9 @@ Use the View Attachment REST request to get a list of attachments on an account,
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AttachmentsApi.new
+api_instance = Zuora::AttachmentsApi.new
 
 object_type = "object_type_example" # String | The type of object to list attachements for. 
 
@@ -143,10 +143,10 @@ opts = {
 
 begin
   #View attachments list
-  result = api_instance.g_et_attachments_list(object_type, object_key, opts)
+  result = api_instance.get_attachments_list(object_type, object_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AttachmentsApi->g_et_attachments_list: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AttachmentsApi->get_attachments_list: #{e}"
 end
 ```
 
@@ -175,8 +175,8 @@ No authorization required
 
 
 
-# **p_ost_attachments**
-> POSTAttachmentResponseType p_ost_attachments(associated_object_type, associated_object_key, request, opts)
+# **post_attachments**
+> POSTAttachmentResponseType post_attachments(associated_object_type, associated_object_key, request, opts)
 
 Add attachments
 
@@ -185,15 +185,15 @@ Use the Add Attachment REST request with a multipart/form-data to attach a docum
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AttachmentsApi.new
+api_instance = Zuora::AttachmentsApi.new
 
 associated_object_type = "associated_object_type_example" # String | Specify one of the following values: Account, Subscription, or Invoice. 
 
 associated_object_key = "associated_object_key_example" # String | For the Subscription type, specify the Subscription Number. An attachment is tied to the Subscription Number and thus viewable with every subscription version.  For Account and Invoice, specify the id. 
 
-request = SwaggerClient::POSTAttachmentType.new # POSTAttachmentType | 
+request = Zuora::POSTAttachmentType.new # POSTAttachmentType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -203,10 +203,10 @@ opts = {
 
 begin
   #Add attachments
-  result = api_instance.p_ost_attachments(associated_object_type, associated_object_key, request, opts)
+  result = api_instance.post_attachments(associated_object_type, associated_object_key, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AttachmentsApi->p_ost_attachments: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AttachmentsApi->post_attachments: #{e}"
 end
 ```
 
@@ -236,8 +236,8 @@ No authorization required
 
 
 
-# **p_ut_attachments**
-> CommonResponseType p_ut_attachments(attachment_id, opts)
+# **put_attachments**
+> CommonResponseType put_attachments(attachment_id, opts)
 
 Edit attachments
 
@@ -246,24 +246,24 @@ Use the Edit Attachment REST request to make changes to the descriptive fields o
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AttachmentsApi.new
+api_instance = Zuora::AttachmentsApi.new
 
 attachment_id = "attachment_id_example" # String | Id of the attachment to be updated.
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
   entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  request: SwaggerClient::PUTAttachmentType.new # PUTAttachmentType | 
+  request: Zuora::PUTAttachmentType.new # PUTAttachmentType | 
 }
 
 begin
   #Edit attachments
-  result = api_instance.p_ut_attachments(attachment_id, opts)
+  result = api_instance.put_attachments(attachment_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AttachmentsApi->p_ut_attachments: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AttachmentsApi->put_attachments: #{e}"
 end
 ```
 

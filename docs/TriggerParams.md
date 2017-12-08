@@ -1,4 +1,4 @@
-# SwaggerClient::TriggerParams
+# Zuora::TriggerParams
 
 ## Properties
 Name | Type | Description | Notes

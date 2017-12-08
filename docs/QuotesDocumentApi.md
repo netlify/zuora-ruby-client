@@ -1,14 +1,14 @@
-# SwaggerClient::QuotesDocumentApi
+# Zuora::QuotesDocumentApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**p_ost_quotes_document**](QuotesDocumentApi.md#p_ost_quotes_document) | **POST** /v1/quotes/document | Generate quotes document
+[**post_quotes_document**](QuotesDocumentApi.md#post_quotes_document) | **POST** /v1/quotes/document | Generate quotes document
 
 
-# **p_ost_quotes_document**
-> POSTQuoteDocResponseType p_ost_quotes_document(request, opts)
+# **post_quotes_document**
+> POSTQuoteDocResponseType post_quotes_document(request, opts)
 
 Generate quotes document
 
@@ -17,11 +17,11 @@ The `document` call generates a quote document and returns the generated documen
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::QuotesDocumentApi.new
+api_instance = Zuora::QuotesDocumentApi.new
 
-request = SwaggerClient::POSTQuoteDocType.new # POSTQuoteDocType | 
+request = Zuora::POSTQuoteDocType.new # POSTQuoteDocType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -30,10 +30,10 @@ opts = {
 
 begin
   #Generate quotes document
-  result = api_instance.p_ost_quotes_document(request, opts)
+  result = api_instance.post_quotes_document(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling QuotesDocumentApi->p_ost_quotes_document: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling QuotesDocumentApi->post_quotes_document: #{e}"
 end
 ```
 

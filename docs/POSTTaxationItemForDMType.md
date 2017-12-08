@@ -1,4 +1,4 @@
-# SwaggerClient::POSTTaxationItemForDMType
+# Zuora::POSTTaxationItemForDMType
 
 ## Properties
 Name | Type | Description | Notes

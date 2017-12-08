@@ -1,4 +1,4 @@
-# SwaggerClient::GETRefundItemPartTypewithSuccess
+# Zuora::GETRefundItemPartTypewithSuccess
 
 ## Properties
 Name | Type | Description | Notes

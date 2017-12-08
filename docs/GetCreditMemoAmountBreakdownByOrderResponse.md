@@ -1,4 +1,4 @@
-# SwaggerClient::GetCreditMemoAmountBreakdownByOrderResponse
+# Zuora::GetCreditMemoAmountBreakdownByOrderResponse
 
 ## Properties
 Name | Type | Description | Notes

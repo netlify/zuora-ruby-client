@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyGetCommunicationProfile
+# Zuora::ProxyGetCommunicationProfile
 
 ## Properties
 Name | Type | Description | Notes

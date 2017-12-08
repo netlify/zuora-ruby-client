@@ -1,4 +1,4 @@
-# SwaggerClient::InvoiceAdjustmentsApi
+# Zuora::InvoiceAdjustmentsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -20,9 +20,9 @@ CRUD: Delete InvoiceAdjustment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoiceAdjustmentsApi.new
+api_instance = Zuora::InvoiceAdjustmentsApi.new
 
 id = "id_example" # String | Object id
 
@@ -35,7 +35,7 @@ begin
   #CRUD: Delete InvoiceAdjustment
   result = api_instance.object_delete_invoice_adjustment(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoiceAdjustmentsApi->object_delete_invoice_adjustment: #{e}"
 end
 ```
@@ -73,9 +73,9 @@ CRUD: Retrieve InvoiceAdjustment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoiceAdjustmentsApi.new
+api_instance = Zuora::InvoiceAdjustmentsApi.new
 
 id = "id_example" # String | Object id
 
@@ -89,7 +89,7 @@ begin
   #CRUD: Retrieve InvoiceAdjustment
   result = api_instance.object_get_invoice_adjustment(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoiceAdjustmentsApi->object_get_invoice_adjustment: #{e}"
 end
 ```
@@ -128,11 +128,11 @@ CRUD: Create InvoiceAdjustment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoiceAdjustmentsApi.new
+api_instance = Zuora::InvoiceAdjustmentsApi.new
 
-create_request = SwaggerClient::ProxyCreateInvoiceAdjustment.new # ProxyCreateInvoiceAdjustment | 
+create_request = Zuora::ProxyCreateInvoiceAdjustment.new # ProxyCreateInvoiceAdjustment | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -143,7 +143,7 @@ begin
   #CRUD: Create InvoiceAdjustment
   result = api_instance.object_post_invoice_adjustment(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoiceAdjustmentsApi->object_post_invoice_adjustment: #{e}"
 end
 ```
@@ -181,13 +181,13 @@ CRUD: Update InvoiceAdjustment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoiceAdjustmentsApi.new
+api_instance = Zuora::InvoiceAdjustmentsApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifyInvoiceAdjustment.new # ProxyModifyInvoiceAdjustment | 
+modify_request = Zuora::ProxyModifyInvoiceAdjustment.new # ProxyModifyInvoiceAdjustment | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -198,7 +198,7 @@ begin
   #CRUD: Update InvoiceAdjustment
   result = api_instance.object_put_invoice_adjustment(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoiceAdjustmentsApi->object_put_invoice_adjustment: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# SwaggerClient::ChargeUpdate
+# Zuora::ChargeUpdate
 
 ## Properties
 Name | Type | Description | Notes

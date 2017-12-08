@@ -1,17 +1,17 @@
-# SwaggerClient::JournalRunsApi
+# Zuora::JournalRunsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_elete_journal_run**](JournalRunsApi.md#d_elete_journal_run) | **DELETE** /v1/journal-runs/{jr-number} | Delete journal run
-[**g_et_journal_run**](JournalRunsApi.md#g_et_journal_run) | **GET** /v1/journal-runs/{jr-number} | Get journal run
-[**p_ost_journal_run**](JournalRunsApi.md#p_ost_journal_run) | **POST** /v1/journal-runs | Create journal run
-[**p_ut_journal_run**](JournalRunsApi.md#p_ut_journal_run) | **PUT** /v1/journal-runs/{jr-number}/cancel | Cancel journal run
+[**delete_journal_run**](JournalRunsApi.md#delete_journal_run) | **DELETE** /v1/journal-runs/{jr-number} | Delete journal run
+[**get_journal_run**](JournalRunsApi.md#get_journal_run) | **GET** /v1/journal-runs/{jr-number} | Get journal run
+[**post_journal_run**](JournalRunsApi.md#post_journal_run) | **POST** /v1/journal-runs | Create journal run
+[**put_journal_run**](JournalRunsApi.md#put_journal_run) | **PUT** /v1/journal-runs/{jr-number}/cancel | Cancel journal run
 
 
-# **d_elete_journal_run**
-> CommonResponseType d_elete_journal_run(jr_number, opts)
+# **delete_journal_run**
+> CommonResponseType delete_journal_run(jr_number, opts)
 
 Delete journal run
 
@@ -20,9 +20,9 @@ This reference describes how to delete a journal run using the REST API.        
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::JournalRunsApi.new
+api_instance = Zuora::JournalRunsApi.new
 
 jr_number = "jr_number_example" # String | Journal run number. Must be a valid journal run number in the format `JR-00000001`. 
 
@@ -33,10 +33,10 @@ opts = {
 
 begin
   #Delete journal run
-  result = api_instance.d_elete_journal_run(jr_number, opts)
+  result = api_instance.delete_journal_run(jr_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling JournalRunsApi->d_elete_journal_run: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling JournalRunsApi->delete_journal_run: #{e}"
 end
 ```
 
@@ -63,8 +63,8 @@ No authorization required
 
 
 
-# **g_et_journal_run**
-> GETJournalRunType g_et_journal_run(jr_number, opts)
+# **get_journal_run**
+> GETJournalRunType get_journal_run(jr_number, opts)
 
 Get journal run
 
@@ -73,9 +73,9 @@ This REST API reference describes how to get information about a journal run. Re
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::JournalRunsApi.new
+api_instance = Zuora::JournalRunsApi.new
 
 jr_number = "jr_number_example" # String | Journal run number. Must be a valid journal run number in the format `JR-00000001`. 
 
@@ -86,10 +86,10 @@ opts = {
 
 begin
   #Get journal run
-  result = api_instance.g_et_journal_run(jr_number, opts)
+  result = api_instance.get_journal_run(jr_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling JournalRunsApi->g_et_journal_run: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling JournalRunsApi->get_journal_run: #{e}"
 end
 ```
 
@@ -116,8 +116,8 @@ No authorization required
 
 
 
-# **p_ost_journal_run**
-> POSTJournalRunResponseType p_ost_journal_run(request, opts)
+# **post_journal_run**
+> POSTJournalRunResponseType post_journal_run(request, opts)
 
 Create journal run
 
@@ -126,11 +126,11 @@ This REST API reference describes how to create a journal run. Request and respo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::JournalRunsApi.new
+api_instance = Zuora::JournalRunsApi.new
 
-request = SwaggerClient::POSTJournalRunType.new # POSTJournalRunType | 
+request = Zuora::POSTJournalRunType.new # POSTJournalRunType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -139,10 +139,10 @@ opts = {
 
 begin
   #Create journal run
-  result = api_instance.p_ost_journal_run(request, opts)
+  result = api_instance.post_journal_run(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling JournalRunsApi->p_ost_journal_run: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling JournalRunsApi->post_journal_run: #{e}"
 end
 ```
 
@@ -169,8 +169,8 @@ No authorization required
 
 
 
-# **p_ut_journal_run**
-> CommonResponseType p_ut_journal_run(jr_number, opts)
+# **put_journal_run**
+> CommonResponseType put_journal_run(jr_number, opts)
 
 Cancel journal run
 
@@ -179,9 +179,9 @@ This reference describes how to cancel a journal run using the REST API.        
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::JournalRunsApi.new
+api_instance = Zuora::JournalRunsApi.new
 
 jr_number = "jr_number_example" # String | Journal run number. Must be a valid journal run number in the format JR-00000001.  You can only cancel a journal run whose status is \"Pending\", \"Error\", or \"Completed\". 
 
@@ -192,10 +192,10 @@ opts = {
 
 begin
   #Cancel journal run
-  result = api_instance.p_ut_journal_run(jr_number, opts)
+  result = api_instance.put_journal_run(jr_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling JournalRunsApi->p_ut_journal_run: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling JournalRunsApi->put_journal_run: #{e}"
 end
 ```
 

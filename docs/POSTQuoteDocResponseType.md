@@ -1,4 +1,4 @@
-# SwaggerClient::POSTQuoteDocResponseType
+# Zuora::POSTQuoteDocResponseType
 
 ## Properties
 Name | Type | Description | Notes

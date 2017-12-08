@@ -1,4 +1,4 @@
-# SwaggerClient::GetHostedPageType
+# Zuora::GetHostedPageType
 
 ## Properties
 Name | Type | Description | Notes

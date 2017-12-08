@@ -1,4 +1,4 @@
-# SwaggerClient::POSTTaxationItemForCMTypeFinanceInformation
+# Zuora::POSTTaxationItemForCMTypeFinanceInformation
 
 ## Properties
 Name | Type | Description | Notes

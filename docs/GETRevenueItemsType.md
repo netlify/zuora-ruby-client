@@ -1,4 +1,4 @@
-# SwaggerClient::GETRevenueItemsType
+# Zuora::GETRevenueItemsType
 
 ## Properties
 Name | Type | Description | Notes

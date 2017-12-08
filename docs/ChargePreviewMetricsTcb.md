@@ -1,4 +1,4 @@
-# SwaggerClient::ChargePreviewMetricsTcb
+# Zuora::ChargePreviewMetricsTcb
 
 ## Properties
 Name | Type | Description | Notes

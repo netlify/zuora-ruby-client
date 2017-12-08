@@ -1,4 +1,4 @@
-# SwaggerClient::DiscountPricingUpdate
+# Zuora::DiscountPricingUpdate
 
 ## Properties
 Name | Type | Description | Notes

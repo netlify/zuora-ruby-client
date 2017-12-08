@@ -1,4 +1,4 @@
-# SwaggerClient::RenewalTerm
+# Zuora::RenewalTerm
 
 ## Properties
 Name | Type | Description | Notes

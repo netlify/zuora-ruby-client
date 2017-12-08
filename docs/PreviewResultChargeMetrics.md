@@ -1,4 +1,4 @@
-# SwaggerClient::PreviewResultChargeMetrics
+# Zuora::PreviewResultChargeMetrics
 
 ## Properties
 Name | Type | Description | Notes

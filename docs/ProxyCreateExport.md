@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyCreateExport
+# Zuora::ProxyCreateExport
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,15 +1,15 @@
-# SwaggerClient::RSASignaturesApi
+# Zuora::RSASignaturesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**p_ost_decrypt_rsa_signatures**](RSASignaturesApi.md#p_ost_decrypt_rsa_signatures) | **POST** /v1/rsa-signatures/decrypt | Decrypt RSA signature
-[**p_ostrsa_signatures**](RSASignaturesApi.md#p_ostrsa_signatures) | **POST** /v1/rsa-signatures | Generate RSA signature
+[**post_decrypt_rsa_signatures**](RSASignaturesApi.md#post_decrypt_rsa_signatures) | **POST** /v1/rsa-signatures/decrypt | Decrypt RSA signature
+[**post_rsa_signatures**](RSASignaturesApi.md#post_rsa_signatures) | **POST** /v1/rsa-signatures | Generate RSA signature
 
 
-# **p_ost_decrypt_rsa_signatures**
-> POSTDecryptResponseType p_ost_decrypt_rsa_signatures(request, opts)
+# **post_decrypt_rsa_signatures**
+> POSTDecryptResponseType post_decrypt_rsa_signatures(request, opts)
 
 Decrypt RSA signature
 
@@ -18,11 +18,11 @@ Decrypt RSA signature
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RSASignaturesApi.new
+api_instance = Zuora::RSASignaturesApi.new
 
-request = SwaggerClient::POSTDecryptionType.new # POSTDecryptionType | 
+request = Zuora::POSTDecryptionType.new # POSTDecryptionType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -31,10 +31,10 @@ opts = {
 
 begin
   #Decrypt RSA signature
-  result = api_instance.p_ost_decrypt_rsa_signatures(request, opts)
+  result = api_instance.post_decrypt_rsa_signatures(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RSASignaturesApi->p_ost_decrypt_rsa_signatures: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RSASignaturesApi->post_decrypt_rsa_signatures: #{e}"
 end
 ```
 
@@ -61,8 +61,8 @@ No authorization required
 
 
 
-# **p_ostrsa_signatures**
-> POSTRSASignatureResponseType p_ostrsa_signatures(request, opts)
+# **post_rsa_signatures**
+> POSTRSASignatureResponseType post_rsa_signatures(request, opts)
 
 Generate RSA signature
 
@@ -71,11 +71,11 @@ Generate RSA signature
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RSASignaturesApi.new
+api_instance = Zuora::RSASignaturesApi.new
 
-request = SwaggerClient::POSTRSASignatureType.new # POSTRSASignatureType | 
+request = Zuora::POSTRSASignatureType.new # POSTRSASignatureType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -84,10 +84,10 @@ opts = {
 
 begin
   #Generate RSA signature
-  result = api_instance.p_ostrsa_signatures(request, opts)
+  result = api_instance.post_rsa_signatures(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RSASignaturesApi->p_ostrsa_signatures: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RSASignaturesApi->post_rsa_signatures: #{e}"
 end
 ```
 

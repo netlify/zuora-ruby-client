@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyCreateAmendmentRatePlanData
+# Zuora::ProxyCreateAmendmentRatePlanData
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::RatePlanOverride
+# Zuora::RatePlanOverride
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::GETSubscriptionRatePlanType
+# Zuora::GETSubscriptionRatePlanType
 
 ## Properties
 Name | Type | Description | Notes

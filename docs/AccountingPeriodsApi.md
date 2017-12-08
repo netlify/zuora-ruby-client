@@ -1,22 +1,22 @@
-# SwaggerClient::AccountingPeriodsApi
+# Zuora::AccountingPeriodsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_elete_accounting_period**](AccountingPeriodsApi.md#d_elete_accounting_period) | **DELETE** /v1/accounting-periods/{ap-id} | Delete accounting period
-[**g_et_accounting_period**](AccountingPeriodsApi.md#g_et_accounting_period) | **GET** /v1/accounting-periods/{ap-id} | Get accounting period
-[**g_et_all_accounting_periods**](AccountingPeriodsApi.md#g_et_all_accounting_periods) | **GET** /v1/accounting-periods | Get all accounting periods
-[**p_ost_accounting_period**](AccountingPeriodsApi.md#p_ost_accounting_period) | **POST** /v1/accounting-periods | Create accounting period
-[**p_ut_close_accounting_period**](AccountingPeriodsApi.md#p_ut_close_accounting_period) | **PUT** /v1/accounting-periods/{ap-id}/close | Close accounting period
-[**p_ut_pending_close_accounting_period**](AccountingPeriodsApi.md#p_ut_pending_close_accounting_period) | **PUT** /v1/accounting-periods/{ap-id}/pending-close | Set accounting period to pending close
-[**p_ut_reopen_accounting_period**](AccountingPeriodsApi.md#p_ut_reopen_accounting_period) | **PUT** /v1/accounting-periods/{ap-id}/reopen | Re-open accounting period
-[**p_ut_run_trial_balance**](AccountingPeriodsApi.md#p_ut_run_trial_balance) | **PUT** /v1/accounting-periods/{ap-id}/run-trial-balance | Run trial balance
-[**p_ut_update_accounting_period**](AccountingPeriodsApi.md#p_ut_update_accounting_period) | **PUT** /v1/accounting-periods/{ap-id} | Update accounting period
+[**delete_accounting_period**](AccountingPeriodsApi.md#delete_accounting_period) | **DELETE** /v1/accounting-periods/{ap-id} | Delete accounting period
+[**get_accounting_period**](AccountingPeriodsApi.md#get_accounting_period) | **GET** /v1/accounting-periods/{ap-id} | Get accounting period
+[**get_all_accounting_periods**](AccountingPeriodsApi.md#get_all_accounting_periods) | **GET** /v1/accounting-periods | Get all accounting periods
+[**post_accounting_period**](AccountingPeriodsApi.md#post_accounting_period) | **POST** /v1/accounting-periods | Create accounting period
+[**put_close_accounting_period**](AccountingPeriodsApi.md#put_close_accounting_period) | **PUT** /v1/accounting-periods/{ap-id}/close | Close accounting period
+[**put_pending_close_accounting_period**](AccountingPeriodsApi.md#put_pending_close_accounting_period) | **PUT** /v1/accounting-periods/{ap-id}/pending-close | Set accounting period to pending close
+[**put_reopen_accounting_period**](AccountingPeriodsApi.md#put_reopen_accounting_period) | **PUT** /v1/accounting-periods/{ap-id}/reopen | Re-open accounting period
+[**put_run_trial_balance**](AccountingPeriodsApi.md#put_run_trial_balance) | **PUT** /v1/accounting-periods/{ap-id}/run-trial-balance | Run trial balance
+[**put_update_accounting_period**](AccountingPeriodsApi.md#put_update_accounting_period) | **PUT** /v1/accounting-periods/{ap-id} | Update accounting period
 
 
-# **d_elete_accounting_period**
-> CommonResponseType d_elete_accounting_period(ap_id, opts)
+# **delete_accounting_period**
+> CommonResponseType delete_accounting_period(ap_id, opts)
 
 Delete accounting period
 
@@ -25,9 +25,9 @@ Delete accounting period
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingPeriodsApi.new
+api_instance = Zuora::AccountingPeriodsApi.new
 
 ap_id = "ap_id_example" # String | ID of the accounting period you want to delete.
 
@@ -38,10 +38,10 @@ opts = {
 
 begin
   #Delete accounting period
-  result = api_instance.d_elete_accounting_period(ap_id, opts)
+  result = api_instance.delete_accounting_period(ap_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->d_elete_accounting_period: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingPeriodsApi->delete_accounting_period: #{e}"
 end
 ```
 
@@ -68,8 +68,8 @@ No authorization required
 
 
 
-# **g_et_accounting_period**
-> GETAccountingPeriodType g_et_accounting_period(ap_id, opts)
+# **get_accounting_period**
+> GETAccountingPeriodType get_accounting_period(ap_id, opts)
 
 Get accounting period
 
@@ -78,9 +78,9 @@ Retrieves an accounting period. Prerequisites -------------  You must have Zuora
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingPeriodsApi.new
+api_instance = Zuora::AccountingPeriodsApi.new
 
 ap_id = "ap_id_example" # String | ID of the accounting period you want to get.
 
@@ -91,10 +91,10 @@ opts = {
 
 begin
   #Get accounting period
-  result = api_instance.g_et_accounting_period(ap_id, opts)
+  result = api_instance.get_accounting_period(ap_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->g_et_accounting_period: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingPeriodsApi->get_accounting_period: #{e}"
 end
 ```
 
@@ -121,8 +121,8 @@ No authorization required
 
 
 
-# **g_et_all_accounting_periods**
-> GETAccountingPeriodsType g_et_all_accounting_periods(opts)
+# **get_all_accounting_periods**
+> GETAccountingPeriodsType get_all_accounting_periods(opts)
 
 Get all accounting periods
 
@@ -131,9 +131,9 @@ Retrieves all accounting periods on your tenant.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingPeriodsApi.new
+api_instance = Zuora::AccountingPeriodsApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -143,10 +143,10 @@ opts = {
 
 begin
   #Get all accounting periods
-  result = api_instance.g_et_all_accounting_periods(opts)
+  result = api_instance.get_all_accounting_periods(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->g_et_all_accounting_periods: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingPeriodsApi->get_all_accounting_periods: #{e}"
 end
 ```
 
@@ -173,8 +173,8 @@ No authorization required
 
 
 
-# **p_ost_accounting_period**
-> POSTAccountingPeriodResponseType p_ost_accounting_period(request, opts)
+# **post_accounting_period**
+> POSTAccountingPeriodResponseType post_accounting_period(request, opts)
 
 Create accounting period
 
@@ -183,11 +183,11 @@ Creates an accounting period. Prerequisites ------------- * You must have Zuora 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingPeriodsApi.new
+api_instance = Zuora::AccountingPeriodsApi.new
 
-request = SwaggerClient::POSTAccountingPeriodType.new # POSTAccountingPeriodType | 
+request = Zuora::POSTAccountingPeriodType.new # POSTAccountingPeriodType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -196,10 +196,10 @@ opts = {
 
 begin
   #Create accounting period
-  result = api_instance.p_ost_accounting_period(request, opts)
+  result = api_instance.post_accounting_period(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->p_ost_accounting_period: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingPeriodsApi->post_accounting_period: #{e}"
 end
 ```
 
@@ -226,8 +226,8 @@ No authorization required
 
 
 
-# **p_ut_close_accounting_period**
-> CommonResponseType p_ut_close_accounting_period(ap_id, opts)
+# **put_close_accounting_period**
+> CommonResponseType put_close_accounting_period(ap_id, opts)
 
 Close accounting period
 
@@ -236,9 +236,9 @@ Close an accounting period by accounting period ID.  Prerequisites -------------
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingPeriodsApi.new
+api_instance = Zuora::AccountingPeriodsApi.new
 
 ap_id = "ap_id_example" # String | ID of the accounting period you want to close.
 
@@ -249,10 +249,10 @@ opts = {
 
 begin
   #Close accounting period
-  result = api_instance.p_ut_close_accounting_period(ap_id, opts)
+  result = api_instance.put_close_accounting_period(ap_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->p_ut_close_accounting_period: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingPeriodsApi->put_close_accounting_period: #{e}"
 end
 ```
 
@@ -279,8 +279,8 @@ No authorization required
 
 
 
-# **p_ut_pending_close_accounting_period**
-> CommonResponseType p_ut_pending_close_accounting_period(ap_id, opts)
+# **put_pending_close_accounting_period**
+> CommonResponseType put_pending_close_accounting_period(ap_id, opts)
 
 Set accounting period to pending close
 
@@ -289,9 +289,9 @@ Sets an accounting period to pending close.   Prerequisites -------------  * You
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingPeriodsApi.new
+api_instance = Zuora::AccountingPeriodsApi.new
 
 ap_id = "ap_id_example" # String | ID of the accounting period you want to set to pending close.
 
@@ -302,10 +302,10 @@ opts = {
 
 begin
   #Set accounting period to pending close
-  result = api_instance.p_ut_pending_close_accounting_period(ap_id, opts)
+  result = api_instance.put_pending_close_accounting_period(ap_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->p_ut_pending_close_accounting_period: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingPeriodsApi->put_pending_close_accounting_period: #{e}"
 end
 ```
 
@@ -332,8 +332,8 @@ No authorization required
 
 
 
-# **p_ut_reopen_accounting_period**
-> CommonResponseType p_ut_reopen_accounting_period(ap_id, opts)
+# **put_reopen_accounting_period**
+> CommonResponseType put_reopen_accounting_period(ap_id, opts)
 
 Re-open accounting period
 
@@ -342,9 +342,9 @@ Re-opens an accounting period. Prerequisites ------------- * You must have Zuora
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingPeriodsApi.new
+api_instance = Zuora::AccountingPeriodsApi.new
 
 ap_id = "ap_id_example" # String | ID of the accounting period that you want to re-open.
 
@@ -355,10 +355,10 @@ opts = {
 
 begin
   #Re-open accounting period
-  result = api_instance.p_ut_reopen_accounting_period(ap_id, opts)
+  result = api_instance.put_reopen_accounting_period(ap_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->p_ut_reopen_accounting_period: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingPeriodsApi->put_reopen_accounting_period: #{e}"
 end
 ```
 
@@ -385,8 +385,8 @@ No authorization required
 
 
 
-# **p_ut_run_trial_balance**
-> CommonResponseType p_ut_run_trial_balance(ap_id, opts)
+# **put_run_trial_balance**
+> CommonResponseType put_run_trial_balance(ap_id, opts)
 
 Run trial balance
 
@@ -395,9 +395,9 @@ Runs the trial balance for an accounting period.   Prerequisites -------------  
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingPeriodsApi.new
+api_instance = Zuora::AccountingPeriodsApi.new
 
 ap_id = "ap_id_example" # String | ID of the accounting period for which you want to run a trial balance.
 
@@ -408,10 +408,10 @@ opts = {
 
 begin
   #Run trial balance
-  result = api_instance.p_ut_run_trial_balance(ap_id, opts)
+  result = api_instance.put_run_trial_balance(ap_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->p_ut_run_trial_balance: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingPeriodsApi->put_run_trial_balance: #{e}"
 end
 ```
 
@@ -438,8 +438,8 @@ No authorization required
 
 
 
-# **p_ut_update_accounting_period**
-> CommonResponseType p_ut_update_accounting_period(ap_id, request, opts)
+# **put_update_accounting_period**
+> CommonResponseType put_update_accounting_period(ap_id, request, opts)
 
 Update accounting period
 
@@ -448,13 +448,13 @@ Update accounting period
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AccountingPeriodsApi.new
+api_instance = Zuora::AccountingPeriodsApi.new
 
 ap_id = "ap_id_example" # String | ID of the accounting period you want to update.
 
-request = SwaggerClient::PUTAccountingPeriodType.new # PUTAccountingPeriodType | 
+request = Zuora::PUTAccountingPeriodType.new # PUTAccountingPeriodType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -463,10 +463,10 @@ opts = {
 
 begin
   #Update accounting period
-  result = api_instance.p_ut_update_accounting_period(ap_id, request, opts)
+  result = api_instance.put_update_accounting_period(ap_id, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->p_ut_update_accounting_period: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AccountingPeriodsApi->put_update_accounting_period: #{e}"
 end
 ```
 

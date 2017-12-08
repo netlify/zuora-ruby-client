@@ -1,4 +1,4 @@
-# SwaggerClient::EventRevenueItemType
+# Zuora::EventRevenueItemType
 
 ## Properties
 Name | Type | Description | Notes

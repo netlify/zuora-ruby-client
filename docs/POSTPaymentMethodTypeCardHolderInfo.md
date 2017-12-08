@@ -1,4 +1,4 @@
-# SwaggerClient::POSTPaymentMethodTypeCardHolderInfo
+# Zuora::POSTPaymentMethodTypeCardHolderInfo
 
 ## Properties
 Name | Type | Description | Notes

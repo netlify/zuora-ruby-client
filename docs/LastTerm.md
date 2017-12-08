@@ -1,4 +1,4 @@
-# SwaggerClient::LastTerm
+# Zuora::LastTerm
 
 ## Properties
 Name | Type | Description | Notes

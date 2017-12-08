@@ -1,4 +1,4 @@
-# SwaggerClient::PUTRevenueScheduleResponseType
+# Zuora::PUTRevenueScheduleResponseType
 
 ## Properties
 Name | Type | Description | Notes

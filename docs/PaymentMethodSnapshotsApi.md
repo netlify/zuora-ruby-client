@@ -1,4 +1,4 @@
-# SwaggerClient::PaymentMethodSnapshotsApi
+# Zuora::PaymentMethodSnapshotsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -17,9 +17,9 @@ This REST API reference describes how to retrieve a Payment Method Snapshot.  A 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentMethodSnapshotsApi.new
+api_instance = Zuora::PaymentMethodSnapshotsApi.new
 
 id = "id_example" # String | Object id
 
@@ -33,7 +33,7 @@ begin
   #CRUD: Retrieve PaymentMethodSnapshot
   result = api_instance.object_get_payment_method_snapshot(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling PaymentMethodSnapshotsApi->object_get_payment_method_snapshot: #{e}"
 end
 ```

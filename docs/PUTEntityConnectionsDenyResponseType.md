@@ -1,4 +1,4 @@
-# SwaggerClient::PUTEntityConnectionsDenyResponseType
+# Zuora::PUTEntityConnectionsDenyResponseType
 
 ## Properties
 Name | Type | Description | Notes

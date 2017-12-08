@@ -1,4 +1,4 @@
-# SwaggerClient::PutDebitMemoTaxItemTypeFinanceInformation
+# Zuora::PutDebitMemoTaxItemTypeFinanceInformation
 
 ## Properties
 Name | Type | Description | Notes

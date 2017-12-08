@@ -1,14 +1,14 @@
-# SwaggerClient::DescribeApi
+# Zuora::DescribeApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_describe**](DescribeApi.md#g_et_describe) | **GET** /v1/describe/{object} | Describe object
+[**get_describe**](DescribeApi.md#get_describe) | **GET** /v1/describe/{object} | Describe object
 
 
-# **g_et_describe**
-> g_et_describe(object, opts)
+# **get_describe**
+> get_describe(object, opts)
 
 Describe object
 
@@ -17,9 +17,9 @@ Provides a reference listing of each object that is available in your Zuora tena
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DescribeApi.new
+api_instance = Zuora::DescribeApi.new
 
 object = "object_example" # String | API name of an object in your Zuora tenant. For example, `InvoiceItem`. See [Zuora Object Model](https://www.zuora.com/developer/api-reference/#section/Zuora-Object-Model) for the list of valid object names.  Depending on the features enabled in your Zuora tenant, you may not be able to list the fields of some objects. 
 
@@ -30,9 +30,9 @@ opts = {
 
 begin
   #Describe object
-  api_instance.g_et_describe(object, opts)
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DescribeApi->g_et_describe: #{e}"
+  api_instance.get_describe(object, opts)
+rescue Zuora::ApiError => e
+  puts "Exception when calling DescribeApi->get_describe: #{e}"
 end
 ```
 

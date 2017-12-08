@@ -1,4 +1,4 @@
-# SwaggerClient::BillingDocumentQueryResponseElementType
+# Zuora::BillingDocumentQueryResponseElementType
 
 ## Properties
 Name | Type | Description | Notes

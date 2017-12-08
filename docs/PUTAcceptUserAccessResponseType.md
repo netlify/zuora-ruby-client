@@ -1,4 +1,4 @@
-# SwaggerClient::PUTAcceptUserAccessResponseType
+# Zuora::PUTAcceptUserAccessResponseType
 
 ## Properties
 Name | Type | Description | Notes

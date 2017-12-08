@@ -1,19 +1,19 @@
-# SwaggerClient::SummaryJournalEntriesApi
+# Zuora::SummaryJournalEntriesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_elete_summary_journal_entry**](SummaryJournalEntriesApi.md#d_elete_summary_journal_entry) | **DELETE** /v1/journal-entries/{je-number} | Delete summary journal entry
-[**g_et_all_summary_journal_entries**](SummaryJournalEntriesApi.md#g_et_all_summary_journal_entries) | **GET** /v1/journal-entries/journal-runs/{jr-number} | Get all summary journal entries in a journal run
-[**g_et_summary_journal_entry**](SummaryJournalEntriesApi.md#g_et_summary_journal_entry) | **GET** /v1/journal-entries/{je-number} | Get summary journal entry
-[**p_ost_summary_journal_entry**](SummaryJournalEntriesApi.md#p_ost_summary_journal_entry) | **POST** /v1/journal-entries | Create summary journal entry
-[**p_ut_basic_summary_journal_entry**](SummaryJournalEntriesApi.md#p_ut_basic_summary_journal_entry) | **PUT** /v1/journal-entries/{je-number}/basic-information | Update basic information of a summary journal entry
-[**p_ut_summary_journal_entry**](SummaryJournalEntriesApi.md#p_ut_summary_journal_entry) | **PUT** /v1/journal-entries/{je-number}/cancel | Cancel summary journal entry
+[**delete_summary_journal_entry**](SummaryJournalEntriesApi.md#delete_summary_journal_entry) | **DELETE** /v1/journal-entries/{je-number} | Delete summary journal entry
+[**get_all_summary_journal_entries**](SummaryJournalEntriesApi.md#get_all_summary_journal_entries) | **GET** /v1/journal-entries/journal-runs/{jr-number} | Get all summary journal entries in a journal run
+[**get_summary_journal_entry**](SummaryJournalEntriesApi.md#get_summary_journal_entry) | **GET** /v1/journal-entries/{je-number} | Get summary journal entry
+[**post_summary_journal_entry**](SummaryJournalEntriesApi.md#post_summary_journal_entry) | **POST** /v1/journal-entries | Create summary journal entry
+[**put_basic_summary_journal_entry**](SummaryJournalEntriesApi.md#put_basic_summary_journal_entry) | **PUT** /v1/journal-entries/{je-number}/basic-information | Update basic information of a summary journal entry
+[**put_summary_journal_entry**](SummaryJournalEntriesApi.md#put_summary_journal_entry) | **PUT** /v1/journal-entries/{je-number}/cancel | Cancel summary journal entry
 
 
-# **d_elete_summary_journal_entry**
-> CommonResponseType d_elete_summary_journal_entry(je_number, opts)
+# **delete_summary_journal_entry**
+> CommonResponseType delete_summary_journal_entry(je_number, opts)
 
 Delete summary journal entry
 
@@ -22,9 +22,9 @@ This reference describes how to delete a summary journal entry using the REST AP
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SummaryJournalEntriesApi.new
+api_instance = Zuora::SummaryJournalEntriesApi.new
 
 je_number = "je_number_example" # String | Journal entry number in the format JE-00000001.
 
@@ -35,10 +35,10 @@ opts = {
 
 begin
   #Delete summary journal entry
-  result = api_instance.d_elete_summary_journal_entry(je_number, opts)
+  result = api_instance.delete_summary_journal_entry(je_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SummaryJournalEntriesApi->d_elete_summary_journal_entry: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SummaryJournalEntriesApi->delete_summary_journal_entry: #{e}"
 end
 ```
 
@@ -65,8 +65,8 @@ No authorization required
 
 
 
-# **g_et_all_summary_journal_entries**
-> GETJournalEntriesInJournalRunType g_et_all_summary_journal_entries(jr_number, opts)
+# **get_all_summary_journal_entries**
+> GETJournalEntriesInJournalRunType get_all_summary_journal_entries(jr_number, opts)
 
 Get all summary journal entries in a journal run
 
@@ -75,9 +75,9 @@ Get all summary journal entries in a journal run
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SummaryJournalEntriesApi.new
+api_instance = Zuora::SummaryJournalEntriesApi.new
 
 jr_number = "jr_number_example" # String | Journal run number.
 
@@ -89,10 +89,10 @@ opts = {
 
 begin
   #Get all summary journal entries in a journal run
-  result = api_instance.g_et_all_summary_journal_entries(jr_number, opts)
+  result = api_instance.get_all_summary_journal_entries(jr_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SummaryJournalEntriesApi->g_et_all_summary_journal_entries: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SummaryJournalEntriesApi->get_all_summary_journal_entries: #{e}"
 end
 ```
 
@@ -120,8 +120,8 @@ No authorization required
 
 
 
-# **g_et_summary_journal_entry**
-> GETJournalEntryDetailType g_et_summary_journal_entry(je_number, opts)
+# **get_summary_journal_entry**
+> GETJournalEntryDetailType get_summary_journal_entry(je_number, opts)
 
 Get summary journal entry
 
@@ -130,9 +130,9 @@ This REST API reference describes how to get information about a summary journal
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SummaryJournalEntriesApi.new
+api_instance = Zuora::SummaryJournalEntriesApi.new
 
 je_number = "je_number_example" # String | 
 
@@ -143,10 +143,10 @@ opts = {
 
 begin
   #Get summary journal entry
-  result = api_instance.g_et_summary_journal_entry(je_number, opts)
+  result = api_instance.get_summary_journal_entry(je_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SummaryJournalEntriesApi->g_et_summary_journal_entry: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SummaryJournalEntriesApi->get_summary_journal_entry: #{e}"
 end
 ```
 
@@ -173,8 +173,8 @@ No authorization required
 
 
 
-# **p_ost_summary_journal_entry**
-> POSTJournalEntryResponseType p_ost_summary_journal_entry(request, opts)
+# **post_summary_journal_entry**
+> POSTJournalEntryResponseType post_summary_journal_entry(request, opts)
 
 Create summary journal entry
 
@@ -183,11 +183,11 @@ This REST API reference describes how to manually create a summary journal entry
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SummaryJournalEntriesApi.new
+api_instance = Zuora::SummaryJournalEntriesApi.new
 
-request = SwaggerClient::POSTJournalEntryType.new # POSTJournalEntryType | 
+request = Zuora::POSTJournalEntryType.new # POSTJournalEntryType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -196,10 +196,10 @@ opts = {
 
 begin
   #Create summary journal entry
-  result = api_instance.p_ost_summary_journal_entry(request, opts)
+  result = api_instance.post_summary_journal_entry(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SummaryJournalEntriesApi->p_ost_summary_journal_entry: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SummaryJournalEntriesApi->post_summary_journal_entry: #{e}"
 end
 ```
 
@@ -226,8 +226,8 @@ No authorization required
 
 
 
-# **p_ut_basic_summary_journal_entry**
-> CommonResponseType p_ut_basic_summary_journal_entry(je_number, request, opts)
+# **put_basic_summary_journal_entry**
+> CommonResponseType put_basic_summary_journal_entry(je_number, request, opts)
 
 Update basic information of a summary journal entry
 
@@ -236,13 +236,13 @@ Update basic information of a summary journal entry
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SummaryJournalEntriesApi.new
+api_instance = Zuora::SummaryJournalEntriesApi.new
 
 je_number = "je_number_example" # String | Journal entry number in the format JE-00000001.
 
-request = SwaggerClient::PUTBasicSummaryJournalEntryType.new # PUTBasicSummaryJournalEntryType | 
+request = Zuora::PUTBasicSummaryJournalEntryType.new # PUTBasicSummaryJournalEntryType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -251,10 +251,10 @@ opts = {
 
 begin
   #Update basic information of a summary journal entry
-  result = api_instance.p_ut_basic_summary_journal_entry(je_number, request, opts)
+  result = api_instance.put_basic_summary_journal_entry(je_number, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SummaryJournalEntriesApi->p_ut_basic_summary_journal_entry: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SummaryJournalEntriesApi->put_basic_summary_journal_entry: #{e}"
 end
 ```
 
@@ -282,8 +282,8 @@ No authorization required
 
 
 
-# **p_ut_summary_journal_entry**
-> CommonResponseType p_ut_summary_journal_entry(je_number, opts)
+# **put_summary_journal_entry**
+> CommonResponseType put_summary_journal_entry(je_number, opts)
 
 Cancel summary journal entry
 
@@ -292,9 +292,9 @@ Cancel summary journal entry
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SummaryJournalEntriesApi.new
+api_instance = Zuora::SummaryJournalEntriesApi.new
 
 je_number = "je_number_example" # String | Journal entry number in the format JE-00000001.
 
@@ -305,10 +305,10 @@ opts = {
 
 begin
   #Cancel summary journal entry
-  result = api_instance.p_ut_summary_journal_entry(je_number, opts)
+  result = api_instance.put_summary_journal_entry(je_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SummaryJournalEntriesApi->p_ut_summary_journal_entry: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SummaryJournalEntriesApi->put_summary_journal_entry: #{e}"
 end
 ```
 

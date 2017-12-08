@@ -1,4 +1,4 @@
-# SwaggerClient::PostDebitMemoEmailType
+# Zuora::PostDebitMemoEmailType
 
 ## Properties
 Name | Type | Description | Notes

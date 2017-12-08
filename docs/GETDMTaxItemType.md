@@ -1,4 +1,4 @@
-# SwaggerClient::GETDMTaxItemType
+# Zuora::GETDMTaxItemType
 
 ## Properties
 Name | Type | Description | Notes

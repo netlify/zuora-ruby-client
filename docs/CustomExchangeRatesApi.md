@@ -1,14 +1,14 @@
-# SwaggerClient::CustomExchangeRatesApi
+# Zuora::CustomExchangeRatesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_custom_exchange_rates**](CustomExchangeRatesApi.md#g_et_custom_exchange_rates) | **GET** /v1/custom-exchange-rates/{currency} | Get custom foreign currency exchange rates
+[**get_custom_exchange_rates**](CustomExchangeRatesApi.md#get_custom_exchange_rates) | **GET** /v1/custom-exchange-rates/{currency} | Get custom foreign currency exchange rates
 
 
-# **g_et_custom_exchange_rates**
-> GETCustomExchangeRatesType g_et_custom_exchange_rates(currency, start_date, end_date, opts)
+# **get_custom_exchange_rates**
+> GETCustomExchangeRatesType get_custom_exchange_rates(currency, start_date, end_date, opts)
 
 Get custom foreign currency exchange rates
 
@@ -17,9 +17,9 @@ This feature is in **Limited Availability**. If you wish to have access to the f
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CustomExchangeRatesApi.new
+api_instance = Zuora::CustomExchangeRatesApi.new
 
 currency = "currency_example" # String | The target base currency of the tenant. The exchange rates in the response are calculated in relation to the target currency.  The value must be a three-letter currency code, for example, USD.  
 
@@ -34,10 +34,10 @@ opts = {
 
 begin
   #Get custom foreign currency exchange rates
-  result = api_instance.g_et_custom_exchange_rates(currency, start_date, end_date, opts)
+  result = api_instance.get_custom_exchange_rates(currency, start_date, end_date, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CustomExchangeRatesApi->g_et_custom_exchange_rates: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CustomExchangeRatesApi->get_custom_exchange_rates: #{e}"
 end
 ```
 

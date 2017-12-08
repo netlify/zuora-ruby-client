@@ -1,4 +1,4 @@
-# SwaggerClient::SubscribeResultChargeMetricsData
+# Zuora::SubscribeResultChargeMetricsData
 
 ## Properties
 Name | Type | Description | Notes

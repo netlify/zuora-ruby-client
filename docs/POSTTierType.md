@@ -1,4 +1,4 @@
-# SwaggerClient::POSTTierType
+# Zuora::POSTTierType
 
 ## Properties
 Name | Type | Description | Notes

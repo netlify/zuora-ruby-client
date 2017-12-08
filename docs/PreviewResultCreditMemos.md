@@ -1,4 +1,4 @@
-# SwaggerClient::PreviewResultCreditMemos
+# Zuora::PreviewResultCreditMemos
 
 ## Properties
 Name | Type | Description | Notes

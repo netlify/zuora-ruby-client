@@ -1,4 +1,4 @@
-# SwaggerClient::ChargeRatedResult
+# Zuora::ChargeRatedResult
 
 ## Properties
 Name | Type | Description | Notes

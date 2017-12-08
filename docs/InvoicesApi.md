@@ -1,21 +1,21 @@
-# SwaggerClient::InvoicesApi
+# Zuora::InvoicesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_breakdown_invoice_by_order**](InvoicesApi.md#g_et_breakdown_invoice_by_order) | **GET** /v1/invoices/{invoiceNumber}/amountBreakdownByOrder | Get breakdown of invoice by order
+[**get_breakdown_invoice_by_order**](InvoicesApi.md#get_breakdown_invoice_by_order) | **GET** /v1/invoices/{invoiceNumber}/amountBreakdownByOrder | Get breakdown of invoice by order
 [**object_delete_invoice**](InvoicesApi.md#object_delete_invoice) | **DELETE** /v1/object/invoice/{id} | CRUD: Delete Invoice
 [**object_get_invoice**](InvoicesApi.md#object_get_invoice) | **GET** /v1/object/invoice/{id} | CRUD: Retrieve Invoice
 [**object_put_invoice**](InvoicesApi.md#object_put_invoice) | **PUT** /v1/object/invoice/{id} | CRUD: Update Invoice
-[**p_ost_credit_memo_from_invoice**](InvoicesApi.md#p_ost_credit_memo_from_invoice) | **POST** /v1/invoices/{invoiceId}/creditmemos | Create credit memo from invoice
-[**p_ost_debit_memo_from_invoice**](InvoicesApi.md#p_ost_debit_memo_from_invoice) | **POST** /v1/invoices/{invoiceId}/debitmemos | Create debit memo from invoice
-[**p_ost_email_invoice**](InvoicesApi.md#p_ost_email_invoice) | **POST** /v1/invoices/{invoiceId}/emails | Email invoice
-[**p_ut_reverse_invoice**](InvoicesApi.md#p_ut_reverse_invoice) | **PUT** /v1/invoices/{invoiceId}/reverse | Reverse invoice
+[**post_credit_memo_from_invoice**](InvoicesApi.md#post_credit_memo_from_invoice) | **POST** /v1/invoices/{invoiceId}/creditmemos | Create credit memo from invoice
+[**post_debit_memo_from_invoice**](InvoicesApi.md#post_debit_memo_from_invoice) | **POST** /v1/invoices/{invoiceId}/debitmemos | Create debit memo from invoice
+[**post_email_invoice**](InvoicesApi.md#post_email_invoice) | **POST** /v1/invoices/{invoiceId}/emails | Email invoice
+[**put_reverse_invoice**](InvoicesApi.md#put_reverse_invoice) | **PUT** /v1/invoices/{invoiceId}/reverse | Reverse invoice
 
 
-# **g_et_breakdown_invoice_by_order**
-> GetInvoiceAmountBreakdownByOrderResponse g_et_breakdown_invoice_by_order(invoice_number, opts)
+# **get_breakdown_invoice_by_order**
+> GetInvoiceAmountBreakdownByOrderResponse get_breakdown_invoice_by_order(invoice_number, opts)
 
 Get breakdown of invoice by order
 
@@ -24,9 +24,9 @@ Get breakdown of invoice by order
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = Zuora::InvoicesApi.new
 
 invoice_number = "invoice_number_example" # String | Number of invoice to be broken down.
 
@@ -37,10 +37,10 @@ opts = {
 
 begin
   #Get breakdown of invoice by order
-  result = api_instance.g_et_breakdown_invoice_by_order(invoice_number, opts)
+  result = api_instance.get_breakdown_invoice_by_order(invoice_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling InvoicesApi->g_et_breakdown_invoice_by_order: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling InvoicesApi->get_breakdown_invoice_by_order: #{e}"
 end
 ```
 
@@ -77,9 +77,9 @@ CRUD: Delete Invoice
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = Zuora::InvoicesApi.new
 
 id = "id_example" # String | Object id
 
@@ -92,7 +92,7 @@ begin
   #CRUD: Delete Invoice
   result = api_instance.object_delete_invoice(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoicesApi->object_delete_invoice: #{e}"
 end
 ```
@@ -130,9 +130,9 @@ CRUD: Retrieve Invoice
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = Zuora::InvoicesApi.new
 
 id = "id_example" # String | Object id
 
@@ -146,7 +146,7 @@ begin
   #CRUD: Retrieve Invoice
   result = api_instance.object_get_invoice(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoicesApi->object_get_invoice: #{e}"
 end
 ```
@@ -185,13 +185,13 @@ CRUD: Update Invoice
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = Zuora::InvoicesApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifyInvoice.new # ProxyModifyInvoice | 
+modify_request = Zuora::ProxyModifyInvoice.new # ProxyModifyInvoice | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -202,7 +202,7 @@ begin
   #CRUD: Update Invoice
   result = api_instance.object_put_invoice(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoicesApi->object_put_invoice: #{e}"
 end
 ```
@@ -231,8 +231,8 @@ No authorization required
 
 
 
-# **p_ost_credit_memo_from_invoice**
-> GETCreditMemoType p_ost_credit_memo_from_invoice(body, invoice_id, opts)
+# **post_credit_memo_from_invoice**
+> GETCreditMemoType post_credit_memo_from_invoice(body, invoice_id, opts)
 
 Create credit memo from invoice
 
@@ -241,11 +241,11 @@ Create credit memo from invoice
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = Zuora::InvoicesApi.new
 
-body = SwaggerClient::CreditMemoFromInvoiceType.new # CreditMemoFromInvoiceType | 
+body = Zuora::CreditMemoFromInvoiceType.new # CreditMemoFromInvoiceType | 
 
 invoice_id = "invoice_id_example" # String | The ID of an invoice that you want to create a credit memo from. 
 
@@ -256,10 +256,10 @@ opts = {
 
 begin
   #Create credit memo from invoice
-  result = api_instance.p_ost_credit_memo_from_invoice(body, invoice_id, opts)
+  result = api_instance.post_credit_memo_from_invoice(body, invoice_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling InvoicesApi->p_ost_credit_memo_from_invoice: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling InvoicesApi->post_credit_memo_from_invoice: #{e}"
 end
 ```
 
@@ -287,8 +287,8 @@ No authorization required
 
 
 
-# **p_ost_debit_memo_from_invoice**
-> GETDebitMemoType p_ost_debit_memo_from_invoice(invoice_id, body, opts)
+# **post_debit_memo_from_invoice**
+> GETDebitMemoType post_debit_memo_from_invoice(invoice_id, body, opts)
 
 Create debit memo from invoice
 
@@ -297,13 +297,13 @@ Create debit memo from invoice
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = Zuora::InvoicesApi.new
 
 invoice_id = "invoice_id_example" # String | The ID of an invoice that you want to create a debit memo from. 
 
-body = SwaggerClient::DebitMemoFromInvoiceType.new # DebitMemoFromInvoiceType | 
+body = Zuora::DebitMemoFromInvoiceType.new # DebitMemoFromInvoiceType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -312,10 +312,10 @@ opts = {
 
 begin
   #Create debit memo from invoice
-  result = api_instance.p_ost_debit_memo_from_invoice(invoice_id, body, opts)
+  result = api_instance.post_debit_memo_from_invoice(invoice_id, body, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling InvoicesApi->p_ost_debit_memo_from_invoice: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling InvoicesApi->post_debit_memo_from_invoice: #{e}"
 end
 ```
 
@@ -343,8 +343,8 @@ No authorization required
 
 
 
-# **p_ost_email_invoice**
-> CommonResponseType p_ost_email_invoice(request, invoice_id, opts)
+# **post_email_invoice**
+> CommonResponseType post_email_invoice(request, invoice_id, opts)
 
 Email invoice
 
@@ -353,11 +353,11 @@ Sends a posted invoice to the specified email addresses manually.    ## Notes   
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = Zuora::InvoicesApi.new
 
-request = SwaggerClient::PostInvoiceEmailRequestType.new # PostInvoiceEmailRequestType | 
+request = Zuora::PostInvoiceEmailRequestType.new # PostInvoiceEmailRequestType | 
 
 invoice_id = "invoice_id_example" # String | The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
 
@@ -368,10 +368,10 @@ opts = {
 
 begin
   #Email invoice
-  result = api_instance.p_ost_email_invoice(request, invoice_id, opts)
+  result = api_instance.post_email_invoice(request, invoice_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling InvoicesApi->p_ost_email_invoice: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling InvoicesApi->post_email_invoice: #{e}"
 end
 ```
 
@@ -399,8 +399,8 @@ No authorization required
 
 
 
-# **p_ut_reverse_invoice**
-> PutReverseInvoiceResponseType p_ut_reverse_invoice(invoice_id, request, opts)
+# **put_reverse_invoice**
+> PutReverseInvoiceResponseType put_reverse_invoice(invoice_id, request, opts)
 
 Reverse invoice
 
@@ -409,13 +409,13 @@ Reverses posted invoices.    **Note:** This feature is only available if you hav
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = Zuora::InvoicesApi.new
 
 invoice_id = "invoice_id_example" # String | The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
 
-request = SwaggerClient::PutReverseInvoiceType.new # PutReverseInvoiceType | 
+request = Zuora::PutReverseInvoiceType.new # PutReverseInvoiceType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -424,10 +424,10 @@ opts = {
 
 begin
   #Reverse invoice
-  result = api_instance.p_ut_reverse_invoice(invoice_id, request, opts)
+  result = api_instance.put_reverse_invoice(invoice_id, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling InvoicesApi->p_ut_reverse_invoice: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling InvoicesApi->put_reverse_invoice: #{e}"
 end
 ```
 

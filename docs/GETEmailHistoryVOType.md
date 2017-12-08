@@ -1,4 +1,4 @@
-# SwaggerClient::GETEmailHistoryVOType
+# Zuora::GETEmailHistoryVOType
 
 ## Properties
 Name | Type | Description | Notes

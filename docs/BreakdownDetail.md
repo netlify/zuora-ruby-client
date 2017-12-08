@@ -1,4 +1,4 @@
-# SwaggerClient::BreakdownDetail
+# Zuora::BreakdownDetail
 
 ## Properties
 Name | Type | Description | Notes

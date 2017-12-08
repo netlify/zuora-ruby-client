@@ -1,4 +1,4 @@
-# SwaggerClient::Order
+# Zuora::Order
 
 ## Properties
 Name | Type | Description | Notes

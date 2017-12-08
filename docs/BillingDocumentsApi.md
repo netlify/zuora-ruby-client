@@ -1,14 +1,14 @@
-# SwaggerClient::BillingDocumentsApi
+# Zuora::BillingDocumentsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_billing_documents**](BillingDocumentsApi.md#g_et_billing_documents) | **GET** /v1/billing-documents | Get billing documents
+[**get_billing_documents**](BillingDocumentsApi.md#get_billing_documents) | **GET** /v1/billing-documents | Get billing documents
 
 
-# **g_et_billing_documents**
-> BillingDocumentQueryResponseElementType g_et_billing_documents(account_id, opts)
+# **get_billing_documents**
+> BillingDocumentQueryResponseElementType get_billing_documents(account_id, opts)
 
 Get billing documents
 
@@ -17,9 +17,9 @@ Retrieves the information about all billing documents associated with a specifie
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::BillingDocumentsApi.new
+api_instance = Zuora::BillingDocumentsApi.new
 
 account_id = "account_id_example" # String | The ID of the customer account that the billing documents are associated with.  
 
@@ -34,10 +34,10 @@ opts = {
 
 begin
   #Get billing documents
-  result = api_instance.g_et_billing_documents(account_id, opts)
+  result = api_instance.get_billing_documents(account_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling BillingDocumentsApi->g_et_billing_documents: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling BillingDocumentsApi->get_billing_documents: #{e}"
 end
 ```
 

@@ -1,4 +1,4 @@
-# SwaggerClient::RatePlanChargeTiersApi
+# Zuora::RatePlanChargeTiersApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -17,9 +17,9 @@ CRUD: Retrieve RatePlanChargeTier
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RatePlanChargeTiersApi.new
+api_instance = Zuora::RatePlanChargeTiersApi.new
 
 id = "id_example" # String | Object id
 
@@ -33,7 +33,7 @@ begin
   #CRUD: Retrieve RatePlanChargeTier
   result = api_instance.object_get_rate_plan_charge_tier(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling RatePlanChargeTiersApi->object_get_rate_plan_charge_tier: #{e}"
 end
 ```

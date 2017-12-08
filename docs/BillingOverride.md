@@ -1,4 +1,4 @@
-# SwaggerClient::BillingOverride
+# Zuora::BillingOverride
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyNoDataResponse
+# Zuora::ProxyNoDataResponse
 
 ## Properties
 Name | Type | Description | Notes

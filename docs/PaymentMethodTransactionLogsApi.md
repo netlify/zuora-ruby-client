@@ -1,4 +1,4 @@
-# SwaggerClient::PaymentMethodTransactionLogsApi
+# Zuora::PaymentMethodTransactionLogsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -17,9 +17,9 @@ CRUD: Retrieve PaymentMethodTransactionLog
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentMethodTransactionLogsApi.new
+api_instance = Zuora::PaymentMethodTransactionLogsApi.new
 
 id = "id_example" # String | Object id
 
@@ -33,7 +33,7 @@ begin
   #CRUD: Retrieve PaymentMethodTransactionLog
   result = api_instance.object_get_payment_method_transaction_log(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling PaymentMethodTransactionLogsApi->object_get_payment_method_transaction_log: #{e}"
 end
 ```

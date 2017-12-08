@@ -1,4 +1,4 @@
-# SwaggerClient::TimeSlicedTcbNetMetrics
+# Zuora::TimeSlicedTcbNetMetrics
 
 ## Properties
 Name | Type | Description | Notes

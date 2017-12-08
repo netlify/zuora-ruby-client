@@ -1,4 +1,4 @@
-# SwaggerClient::GETProductType
+# Zuora::GETProductType
 
 ## Properties
 Name | Type | Description | Notes

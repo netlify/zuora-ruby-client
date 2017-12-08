@@ -1,4 +1,4 @@
-# SwaggerClient::InvoiceProcessingOptions
+# Zuora::InvoiceProcessingOptions
 
 ## Properties
 Name | Type | Description | Notes

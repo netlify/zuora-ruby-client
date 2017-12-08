@@ -1,4 +1,4 @@
-# SwaggerClient::GetBillingPreviewRunResponse
+# Zuora::GetBillingPreviewRunResponse
 
 ## Properties
 Name | Type | Description | Notes

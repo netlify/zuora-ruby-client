@@ -1,4 +1,4 @@
-# SwaggerClient::InvoiceItemPreviewResultAdditionalInfo
+# Zuora::InvoiceItemPreviewResultAdditionalInfo
 
 ## Properties
 Name | Type | Description | Notes

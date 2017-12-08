@@ -1,4 +1,4 @@
-# SwaggerClient::OrderActionRequest
+# Zuora::OrderActionRequest
 
 ## Properties
 Name | Type | Description | Notes

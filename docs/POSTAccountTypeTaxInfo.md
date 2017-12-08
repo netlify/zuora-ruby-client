@@ -1,4 +1,4 @@
-# SwaggerClient::POSTAccountTypeTaxInfo
+# Zuora::POSTAccountTypeTaxInfo
 
 ## Properties
 Name | Type | Description | Notes

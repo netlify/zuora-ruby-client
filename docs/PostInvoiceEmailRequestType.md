@@ -1,4 +1,4 @@
-# SwaggerClient::PostInvoiceEmailRequestType
+# Zuora::PostInvoiceEmailRequestType
 
 ## Properties
 Name | Type | Description | Notes

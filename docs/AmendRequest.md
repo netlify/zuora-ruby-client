@@ -1,4 +1,4 @@
-# SwaggerClient::AmendRequest
+# Zuora::AmendRequest
 
 ## Properties
 Name | Type | Description | Notes

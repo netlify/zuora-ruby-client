@@ -1,4 +1,4 @@
-# SwaggerClient::PUTSubscriptionSuspendResponseType
+# Zuora::PUTSubscriptionSuspendResponseType
 
 ## Properties
 Name | Type | Description | Notes

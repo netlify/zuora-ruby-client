@@ -1,4 +1,4 @@
-# SwaggerClient::POSTOrderRequestTypeSubscriptions
+# Zuora::POSTOrderRequestTypeSubscriptions
 
 ## Properties
 Name | Type | Description | Notes

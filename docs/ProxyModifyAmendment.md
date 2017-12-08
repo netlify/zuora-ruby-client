@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyModifyAmendment
+# Zuora::ProxyModifyAmendment
 
 ## Properties
 Name | Type | Description | Notes

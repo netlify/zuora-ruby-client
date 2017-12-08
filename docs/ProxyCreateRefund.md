@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyCreateRefund
+# Zuora::ProxyCreateRefund
 
 ## Properties
 Name | Type | Description | Notes

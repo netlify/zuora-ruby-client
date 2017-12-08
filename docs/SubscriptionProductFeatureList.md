@@ -1,4 +1,4 @@
-# SwaggerClient::SubscriptionProductFeatureList
+# Zuora::SubscriptionProductFeatureList
 
 ## Properties
 Name | Type | Description | Notes

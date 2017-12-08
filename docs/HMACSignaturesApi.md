@@ -1,14 +1,14 @@
-# SwaggerClient::HMACSignaturesApi
+# Zuora::HMACSignaturesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**p_osthmac_signatures**](HMACSignaturesApi.md#p_osthmac_signatures) | **POST** /v1/hmac-signatures | Return HMAC signatures
+[**post_hmac_signatures**](HMACSignaturesApi.md#post_hmac_signatures) | **POST** /v1/hmac-signatures | Return HMAC signatures
 
 
-# **p_osthmac_signatures**
-> POSTHMACSignatureResponseType p_osthmac_signatures(request, opts)
+# **post_hmac_signatures**
+> POSTHMACSignatureResponseType post_hmac_signatures(request, opts)
 
 Return HMAC signatures
 
@@ -17,11 +17,11 @@ This REST API reference describes how to return unique signature and token value
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::HMACSignaturesApi.new
+api_instance = Zuora::HMACSignaturesApi.new
 
-request = SwaggerClient::POSTHMACSignatureType.new # POSTHMACSignatureType | 
+request = Zuora::POSTHMACSignatureType.new # POSTHMACSignatureType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -30,10 +30,10 @@ opts = {
 
 begin
   #Return HMAC signatures
-  result = api_instance.p_osthmac_signatures(request, opts)
+  result = api_instance.post_hmac_signatures(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling HMACSignaturesApi->p_osthmac_signatures: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling HMACSignaturesApi->post_hmac_signatures: #{e}"
 end
 ```
 

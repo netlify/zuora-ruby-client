@@ -1,4 +1,4 @@
-# SwaggerClient::PricingOverride
+# Zuora::PricingOverride
 
 ## Properties
 Name | Type | Description | Notes

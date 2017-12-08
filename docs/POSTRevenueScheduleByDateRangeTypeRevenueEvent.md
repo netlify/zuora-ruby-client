@@ -1,4 +1,4 @@
-# SwaggerClient::POSTRevenueScheduleByDateRangeTypeRevenueEvent
+# Zuora::POSTRevenueScheduleByDateRangeTypeRevenueEvent
 
 ## Properties
 Name | Type | Description | Notes

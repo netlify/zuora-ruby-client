@@ -1,4 +1,4 @@
-# SwaggerClient::RatePlanData
+# Zuora::RatePlanData
 
 ## Properties
 Name | Type | Description | Notes

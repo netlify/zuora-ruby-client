@@ -1,4 +1,4 @@
-# SwaggerClient::SubscribeRequestPreviewOptions
+# Zuora::SubscribeRequestPreviewOptions
 
 ## Properties
 Name | Type | Description | Notes

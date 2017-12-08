@@ -1,4 +1,4 @@
-# SwaggerClient::GetOrderBillingInfoResponseType
+# Zuora::GetOrderBillingInfoResponseType
 
 ## Properties
 Name | Type | Description | Notes

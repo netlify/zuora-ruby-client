@@ -1,4 +1,4 @@
-# SwaggerClient::GETCustomExchangeRatesDataType
+# Zuora::GETCustomExchangeRatesDataType
 
 ## Properties
 Name | Type | Description | Notes

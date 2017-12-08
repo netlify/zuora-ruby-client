@@ -1,4 +1,4 @@
-# SwaggerClient::Terms
+# Zuora::Terms
 
 ## Properties
 Name | Type | Description | Notes

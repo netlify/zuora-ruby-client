@@ -1,4 +1,4 @@
-# SwaggerClient::RecurringPerUnitPricingOverride
+# Zuora::RecurringPerUnitPricingOverride
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::ProductFeaturesApi
+# Zuora::ProductFeaturesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -18,9 +18,9 @@ CRUD: Delete ProductFeature
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ProductFeaturesApi.new
+api_instance = Zuora::ProductFeaturesApi.new
 
 id = "id_example" # String | Object id
 
@@ -33,7 +33,7 @@ begin
   #CRUD: Delete ProductFeature
   result = api_instance.object_delete_product_feature(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ProductFeaturesApi->object_delete_product_feature: #{e}"
 end
 ```
@@ -71,9 +71,9 @@ CRUD: Retrieve ProductFeature
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ProductFeaturesApi.new
+api_instance = Zuora::ProductFeaturesApi.new
 
 id = "id_example" # String | Object id
 
@@ -87,7 +87,7 @@ begin
   #CRUD: Retrieve ProductFeature
   result = api_instance.object_get_product_feature(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ProductFeaturesApi->object_get_product_feature: #{e}"
 end
 ```

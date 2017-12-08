@@ -1,4 +1,4 @@
-# SwaggerClient::GETCalloutHistoryVOsType
+# Zuora::GETCalloutHistoryVOsType
 
 ## Properties
 Name | Type | Description | Notes

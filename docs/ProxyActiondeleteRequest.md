@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyActiondeleteRequest
+# Zuora::ProxyActiondeleteRequest
 
 ## Properties
 Name | Type | Description | Notes

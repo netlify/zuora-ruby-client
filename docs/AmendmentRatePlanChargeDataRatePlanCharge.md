@@ -1,4 +1,4 @@
-# SwaggerClient::AmendmentRatePlanChargeDataRatePlanCharge
+# Zuora::AmendmentRatePlanChargeDataRatePlanCharge
 
 ## Properties
 Name | Type | Description | Notes

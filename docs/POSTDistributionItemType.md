@@ -1,4 +1,4 @@
-# SwaggerClient::POSTDistributionItemType
+# Zuora::POSTDistributionItemType
 
 ## Properties
 Name | Type | Description | Notes

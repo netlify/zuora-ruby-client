@@ -1,4 +1,4 @@
-# SwaggerClient::RefundTransactionLogsApi
+# Zuora::RefundTransactionLogsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -17,9 +17,9 @@ CRUD: Retrieve RefundTransactionLog
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundTransactionLogsApi.new
+api_instance = Zuora::RefundTransactionLogsApi.new
 
 id = "id_example" # String | Object id
 
@@ -33,7 +33,7 @@ begin
   #CRUD: Retrieve RefundTransactionLog
   result = api_instance.object_get_refund_transaction_log(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling RefundTransactionLogsApi->object_get_refund_transaction_log: #{e}"
 end
 ```

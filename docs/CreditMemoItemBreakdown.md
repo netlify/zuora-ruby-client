@@ -1,4 +1,4 @@
-# SwaggerClient::CreditMemoItemBreakdown
+# Zuora::CreditMemoItemBreakdown
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,26 +1,26 @@
-# SwaggerClient::RefundsApi
+# Zuora::RefundsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_elete_refund**](RefundsApi.md#d_elete_refund) | **DELETE** /v1/refunds/{refundId} | Delete refund
-[**g_et_refund**](RefundsApi.md#g_et_refund) | **GET** /v1/refunds/{refundId} | Get refund
-[**g_et_refund_item_part**](RefundsApi.md#g_et_refund_item_part) | **GET** /v1/refunds/{refundId}/parts/{refundpartid}/itemparts/{itempartid} | Get refund part item
-[**g_et_refund_item_parts**](RefundsApi.md#g_et_refund_item_parts) | **GET** /v1/refunds/{refundId}/parts/{refundpartid}/itemparts | Get refund part items
-[**g_et_refund_part**](RefundsApi.md#g_et_refund_part) | **GET** /v1/refunds/{refundId}/parts/{refundpartid} | Get refund part
-[**g_et_refund_parts**](RefundsApi.md#g_et_refund_parts) | **GET** /v1/refunds/{refundId}/parts | Get refund parts
-[**g_et_refunds**](RefundsApi.md#g_et_refunds) | **GET** /v1/refunds | Get all refunds
+[**delete_refund**](RefundsApi.md#delete_refund) | **DELETE** /v1/refunds/{refundId} | Delete refund
+[**get_refund**](RefundsApi.md#get_refund) | **GET** /v1/refunds/{refundId} | Get refund
+[**get_refund_item_part**](RefundsApi.md#get_refund_item_part) | **GET** /v1/refunds/{refundId}/parts/{refundpartid}/itemparts/{itempartid} | Get refund part item
+[**get_refund_item_parts**](RefundsApi.md#get_refund_item_parts) | **GET** /v1/refunds/{refundId}/parts/{refundpartid}/itemparts | Get refund part items
+[**get_refund_part**](RefundsApi.md#get_refund_part) | **GET** /v1/refunds/{refundId}/parts/{refundpartid} | Get refund part
+[**get_refund_parts**](RefundsApi.md#get_refund_parts) | **GET** /v1/refunds/{refundId}/parts | Get refund parts
+[**get_refunds**](RefundsApi.md#get_refunds) | **GET** /v1/refunds | Get all refunds
 [**object_delete_refund**](RefundsApi.md#object_delete_refund) | **DELETE** /v1/object/refund/{id} | CRUD: Delete refund
 [**object_get_refund**](RefundsApi.md#object_get_refund) | **GET** /v1/object/refund/{id} | CRUD: Get refund
 [**object_post_refund**](RefundsApi.md#object_post_refund) | **POST** /v1/object/refund | CRUD: Create refund
 [**object_put_refund**](RefundsApi.md#object_put_refund) | **PUT** /v1/object/refund/{id} | CRUD: Update refund
-[**p_ut_cancel_refund**](RefundsApi.md#p_ut_cancel_refund) | **PUT** /v1/refunds/{refundId}/cancel | Cancel refund
-[**p_ut_update_refund**](RefundsApi.md#p_ut_update_refund) | **PUT** /v1/refunds/{refundId} | Update refund
+[**put_cancel_refund**](RefundsApi.md#put_cancel_refund) | **PUT** /v1/refunds/{refundId}/cancel | Cancel refund
+[**put_update_refund**](RefundsApi.md#put_update_refund) | **PUT** /v1/refunds/{refundId} | Update refund
 
 
-# **d_elete_refund**
-> CommonResponseType d_elete_refund(refund_id, opts)
+# **delete_refund**
+> CommonResponseType delete_refund(refund_id, opts)
 
 Delete refund
 
@@ -29,9 +29,9 @@ Delete refund
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
 refund_id = "refund_id_example" # String | The unique ID of a refund. For example, 4028905f5a87c0ff015a889e590e00c9. 
 
@@ -42,10 +42,10 @@ opts = {
 
 begin
   #Delete refund
-  result = api_instance.d_elete_refund(refund_id, opts)
+  result = api_instance.delete_refund(refund_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RefundsApi->d_elete_refund: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RefundsApi->delete_refund: #{e}"
 end
 ```
 
@@ -72,8 +72,8 @@ No authorization required
 
 
 
-# **g_et_refund**
-> GETRefundType g_et_refund(refund_id, opts)
+# **get_refund**
+> GETRefundType get_refund(refund_id, opts)
 
 Get refund
 
@@ -82,9 +82,9 @@ Get refund
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
 refund_id = "refund_id_example" # String | The unique ID of a refund. For example, 4028905f5a87c0ff015a889e590e00c9. 
 
@@ -95,10 +95,10 @@ opts = {
 
 begin
   #Get refund
-  result = api_instance.g_et_refund(refund_id, opts)
+  result = api_instance.get_refund(refund_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RefundsApi->g_et_refund: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RefundsApi->get_refund: #{e}"
 end
 ```
 
@@ -125,8 +125,8 @@ No authorization required
 
 
 
-# **g_et_refund_item_part**
-> GETRefundItemPartType g_et_refund_item_part(itempartid, refundpartid, refund_id, opts)
+# **get_refund_item_part**
+> GETRefundItemPartType get_refund_item_part(itempartid, refundpartid, refund_id, opts)
 
 Get refund part item
 
@@ -135,9 +135,9 @@ Get refund part item
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
 itempartid = "itempartid_example" # String | The unique ID of a specific refund part item. You can get the refund part item ID from the response of [Get refund part items](https://www.zuora.com/developer/api-reference/#operation/GET_RefundItemParts). 
 
@@ -152,10 +152,10 @@ opts = {
 
 begin
   #Get refund part item
-  result = api_instance.g_et_refund_item_part(itempartid, refundpartid, refund_id, opts)
+  result = api_instance.get_refund_item_part(itempartid, refundpartid, refund_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RefundsApi->g_et_refund_item_part: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RefundsApi->get_refund_item_part: #{e}"
 end
 ```
 
@@ -184,8 +184,8 @@ No authorization required
 
 
 
-# **g_et_refund_item_parts**
-> GETRefundItemPartCollectionType g_et_refund_item_parts(refundpartid, refund_id, opts)
+# **get_refund_item_parts**
+> GETRefundItemPartCollectionType get_refund_item_parts(refundpartid, refund_id, opts)
 
 Get refund part items
 
@@ -194,9 +194,9 @@ Get refund part items
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
 refundpartid = "refundpartid_example" # String | The unique ID of a specific refund part. You can get the refund part ID from the response of [Get refund parts](https://www.zuora.com/developer/api-reference/#operation/GET_RefundParts). 
 
@@ -210,10 +210,10 @@ opts = {
 
 begin
   #Get refund part items
-  result = api_instance.g_et_refund_item_parts(refundpartid, refund_id, opts)
+  result = api_instance.get_refund_item_parts(refundpartid, refund_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RefundsApi->g_et_refund_item_parts: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RefundsApi->get_refund_item_parts: #{e}"
 end
 ```
 
@@ -242,8 +242,8 @@ No authorization required
 
 
 
-# **g_et_refund_part**
-> RefundPartResponseType g_et_refund_part(refundpartid, refund_id, opts)
+# **get_refund_part**
+> RefundPartResponseType get_refund_part(refundpartid, refund_id, opts)
 
 Get refund part
 
@@ -252,9 +252,9 @@ Get refund part
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
 refundpartid = "refundpartid_example" # String | The unique ID of a specific refund part. You can get the refund part ID from the response of [Get refund parts](https://www.zuora.com/developer/api-reference/#operation/GET_RefundParts). 
 
@@ -267,10 +267,10 @@ opts = {
 
 begin
   #Get refund part
-  result = api_instance.g_et_refund_part(refundpartid, refund_id, opts)
+  result = api_instance.get_refund_part(refundpartid, refund_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RefundsApi->g_et_refund_part: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RefundsApi->get_refund_part: #{e}"
 end
 ```
 
@@ -298,8 +298,8 @@ No authorization required
 
 
 
-# **g_et_refund_parts**
-> GETRefundPartCollectionType g_et_refund_parts(refund_id, opts)
+# **get_refund_parts**
+> GETRefundPartCollectionType get_refund_parts(refund_id, opts)
 
 Get refund parts
 
@@ -308,9 +308,9 @@ Get refund parts
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
 refund_id = "refund_id_example" # String | The unique ID of a refund. For example, 4028905f5a87c0ff015a889e590e00c9. 
 
@@ -321,10 +321,10 @@ opts = {
 
 begin
   #Get refund parts
-  result = api_instance.g_et_refund_parts(refund_id, opts)
+  result = api_instance.get_refund_parts(refund_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RefundsApi->g_et_refund_parts: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RefundsApi->get_refund_parts: #{e}"
 end
 ```
 
@@ -351,8 +351,8 @@ No authorization required
 
 
 
-# **g_et_refunds**
-> GETRefundCollectionType g_et_refunds(opts)
+# **get_refunds**
+> GETRefundCollectionType get_refunds(opts)
 
 Get all refunds
 
@@ -361,9 +361,9 @@ Get all refunds
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -375,10 +375,10 @@ opts = {
 
 begin
   #Get all refunds
-  result = api_instance.g_et_refunds(opts)
+  result = api_instance.get_refunds(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RefundsApi->g_et_refunds: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RefundsApi->get_refunds: #{e}"
 end
 ```
 
@@ -417,9 +417,9 @@ CRUD: Delete refund
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
 id = "id_example" # String | Object id
 
@@ -432,7 +432,7 @@ begin
   #CRUD: Delete refund
   result = api_instance.object_delete_refund(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling RefundsApi->object_delete_refund: #{e}"
 end
 ```
@@ -470,9 +470,9 @@ CRUD: Get refund
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
 id = "id_example" # String | Object id
 
@@ -486,7 +486,7 @@ begin
   #CRUD: Get refund
   result = api_instance.object_get_refund(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling RefundsApi->object_get_refund: #{e}"
 end
 ```
@@ -525,11 +525,11 @@ CRUD: Create refund
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
-create_request = SwaggerClient::ProxyCreateRefund.new # ProxyCreateRefund | 
+create_request = Zuora::ProxyCreateRefund.new # ProxyCreateRefund | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -540,7 +540,7 @@ begin
   #CRUD: Create refund
   result = api_instance.object_post_refund(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling RefundsApi->object_post_refund: #{e}"
 end
 ```
@@ -578,13 +578,13 @@ CRUD: Update refund
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifyRefund.new # ProxyModifyRefund | 
+modify_request = Zuora::ProxyModifyRefund.new # ProxyModifyRefund | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -595,7 +595,7 @@ begin
   #CRUD: Update refund
   result = api_instance.object_put_refund(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling RefundsApi->object_put_refund: #{e}"
 end
 ```
@@ -624,8 +624,8 @@ No authorization required
 
 
 
-# **p_ut_cancel_refund**
-> GETRefundType p_ut_cancel_refund(refund_id, opts)
+# **put_cancel_refund**
+> GETRefundType put_cancel_refund(refund_id, opts)
 
 Cancel refund
 
@@ -634,9 +634,9 @@ Cancel refund
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
 refund_id = "refund_id_example" # String | The unique ID of a refund. For example, 4028905f5a87c0ff015a889e590e00c9.       
 
@@ -647,10 +647,10 @@ opts = {
 
 begin
   #Cancel refund
-  result = api_instance.p_ut_cancel_refund(refund_id, opts)
+  result = api_instance.put_cancel_refund(refund_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RefundsApi->p_ut_cancel_refund: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RefundsApi->put_cancel_refund: #{e}"
 end
 ```
 
@@ -677,8 +677,8 @@ No authorization required
 
 
 
-# **p_ut_update_refund**
-> GETRefundType p_ut_update_refund(body, refund_id, opts)
+# **put_update_refund**
+> GETRefundType put_update_refund(body, refund_id, opts)
 
 Update refund
 
@@ -687,11 +687,11 @@ Update refund
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Zuora::RefundsApi.new
 
-body = SwaggerClient::PUTRefundType.new # PUTRefundType | 
+body = Zuora::PUTRefundType.new # PUTRefundType | 
 
 refund_id = "refund_id_example" # String | The unique ID of a refund. For example, 4028905f5a87c0ff015a889e590e00c9. 
 
@@ -702,10 +702,10 @@ opts = {
 
 begin
   #Update refund
-  result = api_instance.p_ut_update_refund(body, refund_id, opts)
+  result = api_instance.put_update_refund(body, refund_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RefundsApi->p_ut_update_refund: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RefundsApi->put_update_refund: #{e}"
 end
 ```
 

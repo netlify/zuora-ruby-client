@@ -1,4 +1,4 @@
-# SwaggerClient::GETRevenueEventDetailWithoutSuccessType
+# Zuora::GETRevenueEventDetailWithoutSuccessType
 
 ## Properties
 Name | Type | Description | Notes

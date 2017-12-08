@@ -1,4 +1,4 @@
-# SwaggerClient::GETAccountingCodeItemWithoutSuccessType
+# Zuora::GETAccountingCodeItemWithoutSuccessType
 
 ## Properties
 Name | Type | Description | Notes

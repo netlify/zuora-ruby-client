@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyGetInvoiceSplitItem
+# Zuora::ProxyGetInvoiceSplitItem
 
 ## Properties
 Name | Type | Description | Notes

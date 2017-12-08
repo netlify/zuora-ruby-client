@@ -1,4 +1,4 @@
-# SwaggerClient::ChargePreviewMetricsTax
+# Zuora::ChargePreviewMetricsTax
 
 ## Properties
 Name | Type | Description | Notes

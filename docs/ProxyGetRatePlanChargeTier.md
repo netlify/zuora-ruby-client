@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyGetRatePlanChargeTier
+# Zuora::ProxyGetRatePlanChargeTier
 
 ## Properties
 Name | Type | Description | Notes

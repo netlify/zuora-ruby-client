@@ -1,4 +1,4 @@
-# SwaggerClient::InvoiceItemAdjustmentsApi
+# Zuora::InvoiceItemAdjustmentsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -18,9 +18,9 @@ CRUD: Delete InvoiceItemAdjustment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoiceItemAdjustmentsApi.new
+api_instance = Zuora::InvoiceItemAdjustmentsApi.new
 
 id = "id_example" # String | Object id
 
@@ -33,7 +33,7 @@ begin
   #CRUD: Delete InvoiceItemAdjustment
   result = api_instance.object_delete_invoice_item_adjustment(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoiceItemAdjustmentsApi->object_delete_invoice_item_adjustment: #{e}"
 end
 ```
@@ -71,9 +71,9 @@ CRUD: Retrieve InvoiceItemAdjustment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoiceItemAdjustmentsApi.new
+api_instance = Zuora::InvoiceItemAdjustmentsApi.new
 
 id = "id_example" # String | Object id
 
@@ -87,7 +87,7 @@ begin
   #CRUD: Retrieve InvoiceItemAdjustment
   result = api_instance.object_get_invoice_item_adjustment(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoiceItemAdjustmentsApi->object_get_invoice_item_adjustment: #{e}"
 end
 ```

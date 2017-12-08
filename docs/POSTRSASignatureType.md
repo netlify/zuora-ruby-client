@@ -1,4 +1,4 @@
-# SwaggerClient::POSTRSASignatureType
+# Zuora::POSTRSASignatureType
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,25 +1,25 @@
-# SwaggerClient::DebitMemosApi
+# Zuora::DebitMemosApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_elete_debit_memo**](DebitMemosApi.md#d_elete_debit_memo) | **DELETE** /v1/debitmemos/{debitMemoId} | Delete debit memo
-[**g_et_debit_memo**](DebitMemosApi.md#g_et_debit_memo) | **GET** /v1/debitmemos/{debitMemoId} | Get debit memo
-[**g_et_debit_memo_item**](DebitMemosApi.md#g_et_debit_memo_item) | **GET** /v1/debitmemos/{debitMemoId}/items/{dmitemid} | Get debit memo item
-[**g_et_debit_memo_items**](DebitMemosApi.md#g_et_debit_memo_items) | **GET** /v1/debitmemos/{debitMemoId}/items | Get debit memo items
-[**g_et_debit_memos**](DebitMemosApi.md#g_et_debit_memos) | **GET** /v1/debitmemos | Get debit memos
-[**p_ost_debit_memo_from_prpc**](DebitMemosApi.md#p_ost_debit_memo_from_prpc) | **POST** /v1/debitmemos | Create debit memo from charge
-[**p_ost_debit_memo_pdf**](DebitMemosApi.md#p_ost_debit_memo_pdf) | **POST** /v1/debitmemos/{debitMemoId}/pdfs | Create debit memo PDF
-[**p_ost_email_debit_memo**](DebitMemosApi.md#p_ost_email_debit_memo) | **POST** /v1/debitmemos/{debitMemoId}/emails | Email debit memo
-[**p_ostdm_taxation_items**](DebitMemosApi.md#p_ostdm_taxation_items) | **POST** /v1/debitmemos/{debitMemoId}/taxationitems | Create taxation items for debit memo
-[**p_ut_cancel_debit_memo**](DebitMemosApi.md#p_ut_cancel_debit_memo) | **PUT** /v1/debitmemos/{debitMemoId}/cancel | Cancel debit memo
-[**p_ut_debit_memo**](DebitMemosApi.md#p_ut_debit_memo) | **PUT** /v1/debitmemos/{debitMemoId} | Update debit memo
-[**p_ut_post_debit_memo**](DebitMemosApi.md#p_ut_post_debit_memo) | **PUT** /v1/debitmemos/{debitMemoId}/post | Post debit memo
+[**delete_debit_memo**](DebitMemosApi.md#delete_debit_memo) | **DELETE** /v1/debitmemos/{debitMemoId} | Delete debit memo
+[**get_debit_memo**](DebitMemosApi.md#get_debit_memo) | **GET** /v1/debitmemos/{debitMemoId} | Get debit memo
+[**get_debit_memo_item**](DebitMemosApi.md#get_debit_memo_item) | **GET** /v1/debitmemos/{debitMemoId}/items/{dmitemid} | Get debit memo item
+[**get_debit_memo_items**](DebitMemosApi.md#get_debit_memo_items) | **GET** /v1/debitmemos/{debitMemoId}/items | Get debit memo items
+[**get_debit_memos**](DebitMemosApi.md#get_debit_memos) | **GET** /v1/debitmemos | Get debit memos
+[**post_debit_memo_from_prpc**](DebitMemosApi.md#post_debit_memo_from_prpc) | **POST** /v1/debitmemos | Create debit memo from charge
+[**post_debit_memo_pdf**](DebitMemosApi.md#post_debit_memo_pdf) | **POST** /v1/debitmemos/{debitMemoId}/pdfs | Create debit memo PDF
+[**post_email_debit_memo**](DebitMemosApi.md#post_email_debit_memo) | **POST** /v1/debitmemos/{debitMemoId}/emails | Email debit memo
+[**post_dm_taxation_items**](DebitMemosApi.md#post_dm_taxation_items) | **POST** /v1/debitmemos/{debitMemoId}/taxationitems | Create taxation items for debit memo
+[**put_cancel_debit_memo**](DebitMemosApi.md#put_cancel_debit_memo) | **PUT** /v1/debitmemos/{debitMemoId}/cancel | Cancel debit memo
+[**put_debit_memo**](DebitMemosApi.md#put_debit_memo) | **PUT** /v1/debitmemos/{debitMemoId} | Update debit memo
+[**put_post_debit_memo**](DebitMemosApi.md#put_post_debit_memo) | **PUT** /v1/debitmemos/{debitMemoId}/post | Post debit memo
 
 
-# **d_elete_debit_memo**
-> CommonResponseType d_elete_debit_memo(debit_memo_id, opts)
+# **delete_debit_memo**
+> CommonResponseType delete_debit_memo(debit_memo_id, opts)
 
 Delete debit memo
 
@@ -28,9 +28,9 @@ Delete debit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DebitMemosApi.new
+api_instance = Zuora::DebitMemosApi.new
 
 debit_memo_id = "debit_memo_id_example" # String | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 
@@ -41,10 +41,10 @@ opts = {
 
 begin
   #Delete debit memo
-  result = api_instance.d_elete_debit_memo(debit_memo_id, opts)
+  result = api_instance.delete_debit_memo(debit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DebitMemosApi->d_elete_debit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling DebitMemosApi->delete_debit_memo: #{e}"
 end
 ```
 
@@ -71,8 +71,8 @@ No authorization required
 
 
 
-# **g_et_debit_memo**
-> GETDebitMemoType g_et_debit_memo(debit_memo_id, opts)
+# **get_debit_memo**
+> GETDebitMemoType get_debit_memo(debit_memo_id, opts)
 
 Get debit memo
 
@@ -81,9 +81,9 @@ Get debit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DebitMemosApi.new
+api_instance = Zuora::DebitMemosApi.new
 
 debit_memo_id = "debit_memo_id_example" # String | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 
@@ -94,10 +94,10 @@ opts = {
 
 begin
   #Get debit memo
-  result = api_instance.g_et_debit_memo(debit_memo_id, opts)
+  result = api_instance.get_debit_memo(debit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DebitMemosApi->g_et_debit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling DebitMemosApi->get_debit_memo: #{e}"
 end
 ```
 
@@ -124,8 +124,8 @@ No authorization required
 
 
 
-# **g_et_debit_memo_item**
-> GETDebitMemoItemType g_et_debit_memo_item(dmitemid, debit_memo_id, opts)
+# **get_debit_memo_item**
+> GETDebitMemoItemType get_debit_memo_item(dmitemid, debit_memo_id, opts)
 
 Get debit memo item
 
@@ -134,9 +134,9 @@ Get debit memo item
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DebitMemosApi.new
+api_instance = Zuora::DebitMemosApi.new
 
 dmitemid = "dmitemid_example" # String | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
 
@@ -149,10 +149,10 @@ opts = {
 
 begin
   #Get debit memo item
-  result = api_instance.g_et_debit_memo_item(dmitemid, debit_memo_id, opts)
+  result = api_instance.get_debit_memo_item(dmitemid, debit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DebitMemosApi->g_et_debit_memo_item: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling DebitMemosApi->get_debit_memo_item: #{e}"
 end
 ```
 
@@ -180,8 +180,8 @@ No authorization required
 
 
 
-# **g_et_debit_memo_items**
-> GETDebitMemoItemCollectionType g_et_debit_memo_items(debit_memo_id, opts)
+# **get_debit_memo_items**
+> GETDebitMemoItemCollectionType get_debit_memo_items(debit_memo_id, opts)
 
 Get debit memo items
 
@@ -190,9 +190,9 @@ Get debit memo items
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DebitMemosApi.new
+api_instance = Zuora::DebitMemosApi.new
 
 debit_memo_id = "debit_memo_id_example" # String | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 
@@ -206,10 +206,10 @@ opts = {
 
 begin
   #Get debit memo items
-  result = api_instance.g_et_debit_memo_items(debit_memo_id, opts)
+  result = api_instance.get_debit_memo_items(debit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DebitMemosApi->g_et_debit_memo_items: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling DebitMemosApi->get_debit_memo_items: #{e}"
 end
 ```
 
@@ -239,8 +239,8 @@ No authorization required
 
 
 
-# **g_et_debit_memos**
-> GETDebitMemoCollectionType g_et_debit_memos(opts)
+# **get_debit_memos**
+> GETDebitMemoCollectionType get_debit_memos(opts)
 
 Get debit memos
 
@@ -249,9 +249,9 @@ Get debit memos
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DebitMemosApi.new
+api_instance = Zuora::DebitMemosApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -263,10 +263,10 @@ opts = {
 
 begin
   #Get debit memos
-  result = api_instance.g_et_debit_memos(opts)
+  result = api_instance.get_debit_memos(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DebitMemosApi->g_et_debit_memos: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling DebitMemosApi->get_debit_memos: #{e}"
 end
 ```
 
@@ -295,8 +295,8 @@ No authorization required
 
 
 
-# **p_ost_debit_memo_from_prpc**
-> GETDebitMemoType p_ost_debit_memo_from_prpc(body, opts)
+# **post_debit_memo_from_prpc**
+> GETDebitMemoType post_debit_memo_from_prpc(body, opts)
 
 Create debit memo from charge
 
@@ -305,11 +305,11 @@ Create debit memo from charge
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DebitMemosApi.new
+api_instance = Zuora::DebitMemosApi.new
 
-body = SwaggerClient::DebitMemoFromChargeType.new # DebitMemoFromChargeType | 
+body = Zuora::DebitMemoFromChargeType.new # DebitMemoFromChargeType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -318,10 +318,10 @@ opts = {
 
 begin
   #Create debit memo from charge
-  result = api_instance.p_ost_debit_memo_from_prpc(body, opts)
+  result = api_instance.post_debit_memo_from_prpc(body, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DebitMemosApi->p_ost_debit_memo_from_prpc: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling DebitMemosApi->post_debit_memo_from_prpc: #{e}"
 end
 ```
 
@@ -348,8 +348,8 @@ No authorization required
 
 
 
-# **p_ost_debit_memo_pdf**
-> POSTMemoPdfResponse p_ost_debit_memo_pdf(debit_memo_id, opts)
+# **post_debit_memo_pdf**
+> POSTMemoPdfResponse post_debit_memo_pdf(debit_memo_id, opts)
 
 Create debit memo PDF
 
@@ -358,9 +358,9 @@ Create debit memo PDF
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DebitMemosApi.new
+api_instance = Zuora::DebitMemosApi.new
 
 debit_memo_id = "debit_memo_id_example" # String | The unique ID of the debit memo that you want to create PDF for. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 
@@ -371,10 +371,10 @@ opts = {
 
 begin
   #Create debit memo PDF
-  result = api_instance.p_ost_debit_memo_pdf(debit_memo_id, opts)
+  result = api_instance.post_debit_memo_pdf(debit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DebitMemosApi->p_ost_debit_memo_pdf: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling DebitMemosApi->post_debit_memo_pdf: #{e}"
 end
 ```
 
@@ -401,8 +401,8 @@ No authorization required
 
 
 
-# **p_ost_email_debit_memo**
-> CommonResponseType p_ost_email_debit_memo(request, debit_memo_id, opts)
+# **post_email_debit_memo**
+> CommonResponseType post_email_debit_memo(request, debit_memo_id, opts)
 
 Email debit memo
 
@@ -411,11 +411,11 @@ Email debit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DebitMemosApi.new
+api_instance = Zuora::DebitMemosApi.new
 
-request = SwaggerClient::PostDebitMemoEmailType.new # PostDebitMemoEmailType | 
+request = Zuora::PostDebitMemoEmailType.new # PostDebitMemoEmailType | 
 
 debit_memo_id = "debit_memo_id_example" # String | The ID of a posted debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 
@@ -426,10 +426,10 @@ opts = {
 
 begin
   #Email debit memo
-  result = api_instance.p_ost_email_debit_memo(request, debit_memo_id, opts)
+  result = api_instance.post_email_debit_memo(request, debit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DebitMemosApi->p_ost_email_debit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling DebitMemosApi->post_email_debit_memo: #{e}"
 end
 ```
 
@@ -457,8 +457,8 @@ No authorization required
 
 
 
-# **p_ostdm_taxation_items**
-> GETTaxationItemListType p_ostdm_taxation_items(debit_memo_id, body, opts)
+# **post_dm_taxation_items**
+> GETTaxationItemListType post_dm_taxation_items(debit_memo_id, body, opts)
 
 Create taxation items for debit memo
 
@@ -467,13 +467,13 @@ Create taxation items for debit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DebitMemosApi.new
+api_instance = Zuora::DebitMemosApi.new
 
 debit_memo_id = "debit_memo_id_example" # String | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 
-body = SwaggerClient::POSTTaxationItemListForDMType.new # POSTTaxationItemListForDMType | 
+body = Zuora::POSTTaxationItemListForDMType.new # POSTTaxationItemListForDMType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -482,10 +482,10 @@ opts = {
 
 begin
   #Create taxation items for debit memo
-  result = api_instance.p_ostdm_taxation_items(debit_memo_id, body, opts)
+  result = api_instance.post_dm_taxation_items(debit_memo_id, body, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DebitMemosApi->p_ostdm_taxation_items: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling DebitMemosApi->post_dm_taxation_items: #{e}"
 end
 ```
 
@@ -513,8 +513,8 @@ No authorization required
 
 
 
-# **p_ut_cancel_debit_memo**
-> GETDebitMemoType p_ut_cancel_debit_memo(debit_memo_id, opts)
+# **put_cancel_debit_memo**
+> GETDebitMemoType put_cancel_debit_memo(debit_memo_id, opts)
 
 Cancel debit memo
 
@@ -523,9 +523,9 @@ Cancel debit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DebitMemosApi.new
+api_instance = Zuora::DebitMemosApi.new
 
 debit_memo_id = "debit_memo_id_example" # String | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 
@@ -536,10 +536,10 @@ opts = {
 
 begin
   #Cancel debit memo
-  result = api_instance.p_ut_cancel_debit_memo(debit_memo_id, opts)
+  result = api_instance.put_cancel_debit_memo(debit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DebitMemosApi->p_ut_cancel_debit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling DebitMemosApi->put_cancel_debit_memo: #{e}"
 end
 ```
 
@@ -566,8 +566,8 @@ No authorization required
 
 
 
-# **p_ut_debit_memo**
-> GETDebitMemoType p_ut_debit_memo(body, debit_memo_id, opts)
+# **put_debit_memo**
+> GETDebitMemoType put_debit_memo(body, debit_memo_id, opts)
 
 Update debit memo
 
@@ -576,11 +576,11 @@ Update debit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DebitMemosApi.new
+api_instance = Zuora::DebitMemosApi.new
 
-body = SwaggerClient::PUTDebitMemoType.new # PUTDebitMemoType | 
+body = Zuora::PUTDebitMemoType.new # PUTDebitMemoType | 
 
 debit_memo_id = "debit_memo_id_example" # String | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 
@@ -591,10 +591,10 @@ opts = {
 
 begin
   #Update debit memo
-  result = api_instance.p_ut_debit_memo(body, debit_memo_id, opts)
+  result = api_instance.put_debit_memo(body, debit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DebitMemosApi->p_ut_debit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling DebitMemosApi->put_debit_memo: #{e}"
 end
 ```
 
@@ -622,8 +622,8 @@ No authorization required
 
 
 
-# **p_ut_post_debit_memo**
-> GETDebitMemoType p_ut_post_debit_memo(debit_memo_id, opts)
+# **put_post_debit_memo**
+> GETDebitMemoType put_post_debit_memo(debit_memo_id, opts)
 
 Post debit memo
 
@@ -632,9 +632,9 @@ Post debit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::DebitMemosApi.new
+api_instance = Zuora::DebitMemosApi.new
 
 debit_memo_id = "debit_memo_id_example" # String | The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e. 
 
@@ -645,10 +645,10 @@ opts = {
 
 begin
   #Post debit memo
-  result = api_instance.p_ut_post_debit_memo(debit_memo_id, opts)
+  result = api_instance.put_post_debit_memo(debit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DebitMemosApi->p_ut_post_debit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling DebitMemosApi->put_post_debit_memo: #{e}"
 end
 ```
 

@@ -1,4 +1,4 @@
-# SwaggerClient::GETAccountingCodesType
+# Zuora::GETAccountingCodesType
 
 ## Properties
 Name | Type | Description | Notes

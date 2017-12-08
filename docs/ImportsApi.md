@@ -1,4 +1,4 @@
-# SwaggerClient::ImportsApi
+# Zuora::ImportsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -17,9 +17,9 @@ CRUD: Retrieve Import
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ImportsApi.new
+api_instance = Zuora::ImportsApi.new
 
 id = "id_example" # String | Object id
 
@@ -33,7 +33,7 @@ begin
   #CRUD: Retrieve Import
   result = api_instance.object_get_import(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ImportsApi->object_get_import: #{e}"
 end
 ```

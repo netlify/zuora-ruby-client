@@ -1,4 +1,4 @@
-# SwaggerClient::GETAmendmentType
+# Zuora::GETAmendmentType
 
 ## Properties
 Name | Type | Description | Notes

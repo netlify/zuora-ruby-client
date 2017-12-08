@@ -1,4 +1,4 @@
-# SwaggerClient::PUTSpecificDateAllocationType
+# Zuora::PUTSpecificDateAllocationType
 
 ## Properties
 Name | Type | Description | Notes

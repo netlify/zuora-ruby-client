@@ -1,4 +1,4 @@
-# SwaggerClient::POSTAccountingPeriodType
+# Zuora::POSTAccountingPeriodType
 
 ## Properties
 Name | Type | Description | Notes

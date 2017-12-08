@@ -1,4 +1,4 @@
-# SwaggerClient::GETAccountTypeMetrics
+# Zuora::GETAccountTypeMetrics
 
 ## Properties
 Name | Type | Description | Notes

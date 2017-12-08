@@ -1,4 +1,4 @@
-# SwaggerClient::RecurringVolumePricingUpdate
+# Zuora::RecurringVolumePricingUpdate
 
 ## Properties
 Name | Type | Description | Notes

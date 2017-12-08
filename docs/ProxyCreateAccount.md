@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyCreateAccount
+# Zuora::ProxyCreateAccount
 
 ## Properties
 Name | Type | Description | Notes

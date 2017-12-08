@@ -1,4 +1,4 @@
-# SwaggerClient::PUTAttachmentType
+# Zuora::PUTAttachmentType
 
 ## Properties
 Name | Type | Description | Notes

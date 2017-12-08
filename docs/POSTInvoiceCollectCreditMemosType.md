@@ -1,4 +1,4 @@
-# SwaggerClient::POSTInvoiceCollectCreditMemosType
+# Zuora::POSTInvoiceCollectCreditMemosType
 
 ## Properties
 Name | Type | Description | Notes

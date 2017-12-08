@@ -1,4 +1,4 @@
-# SwaggerClient::POSTAccountTypeCreditCardCardHolderInfo
+# Zuora::POSTAccountTypeCreditCardCardHolderInfo
 
 ## Properties
 Name | Type | Description | Notes

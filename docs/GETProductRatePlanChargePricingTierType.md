@@ -1,4 +1,4 @@
-# SwaggerClient::GETProductRatePlanChargePricingTierType
+# Zuora::GETProductRatePlanChargePricingTierType
 
 ## Properties
 Name | Type | Description | Notes

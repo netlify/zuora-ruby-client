@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyGetPaymentTransactionLog
+# Zuora::ProxyGetPaymentTransactionLog
 
 ## Properties
 Name | Type | Description | Notes

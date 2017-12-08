@@ -1,4 +1,4 @@
-# SwaggerClient::GetInvoiceAmountBreakdownByOrderResponse
+# Zuora::GetInvoiceAmountBreakdownByOrderResponse
 
 ## Properties
 Name | Type | Description | Notes

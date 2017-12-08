@@ -1,4 +1,4 @@
-# SwaggerClient::GETUsageWrapper
+# Zuora::GETUsageWrapper
 
 ## Properties
 Name | Type | Description | Notes

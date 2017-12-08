@@ -1,4 +1,4 @@
-# SwaggerClient::POSTSubscriptionPreviewResponseTypeCreditMemo
+# Zuora::POSTSubscriptionPreviewResponseTypeCreditMemo
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyGetCreditBalanceAdjustment
+# Zuora::ProxyGetCreditBalanceAdjustment
 
 ## Properties
 Name | Type | Description | Notes

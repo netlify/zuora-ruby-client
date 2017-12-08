@@ -1,4 +1,4 @@
-# SwaggerClient::CreditBalanceAdjustmentsApi
+# Zuora::CreditBalanceAdjustmentsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -17,9 +17,9 @@ CRUD: Retrieve CreditBalanceAdjustment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditBalanceAdjustmentsApi.new
+api_instance = Zuora::CreditBalanceAdjustmentsApi.new
 
 id = "id_example" # String | Object id
 
@@ -33,7 +33,7 @@ begin
   #CRUD: Retrieve CreditBalanceAdjustment
   result = api_instance.object_get_credit_balance_adjustment(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling CreditBalanceAdjustmentsApi->object_get_credit_balance_adjustment: #{e}"
 end
 ```

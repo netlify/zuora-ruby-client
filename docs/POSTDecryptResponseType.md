@@ -1,4 +1,4 @@
-# SwaggerClient::POSTDecryptResponseType
+# Zuora::POSTDecryptResponseType
 
 ## Properties
 Name | Type | Description | Notes

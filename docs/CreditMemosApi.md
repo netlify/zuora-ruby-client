@@ -1,33 +1,33 @@
-# SwaggerClient::CreditMemosApi
+# Zuora::CreditMemosApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_elete_credit_memo**](CreditMemosApi.md#d_elete_credit_memo) | **DELETE** /v1/creditmemos/{creditMemoId} | Delete credit memo
-[**g_et_breakdown_credit_memo_by_order**](CreditMemosApi.md#g_et_breakdown_credit_memo_by_order) | **GET** /v1/creditmemos/{creditMemoNumber}/amountBreakdownByOrder | Get breakdown of credit memo by order
-[**g_et_credit_memo**](CreditMemosApi.md#g_et_credit_memo) | **GET** /v1/creditmemos/{creditMemoId} | Get credit memo
-[**g_et_credit_memo_item**](CreditMemosApi.md#g_et_credit_memo_item) | **GET** /v1/creditmemos/{creditMemoId}/items/{cmitemid} | Get credit memo item
-[**g_et_credit_memo_item_part**](CreditMemosApi.md#g_et_credit_memo_item_part) | **GET** /v1/creditmemos/{creditMemoId}/parts/{partid}/itemparts/{itempartid} | Get credit memo part item
-[**g_et_credit_memo_item_parts**](CreditMemosApi.md#g_et_credit_memo_item_parts) | **GET** /v1/creditmemos/{creditMemoId}/parts/{partid}/itemparts | Get credit memo part items
-[**g_et_credit_memo_items**](CreditMemosApi.md#g_et_credit_memo_items) | **GET** /v1/creditmemos/{creditMemoId}/items | Get credit memo items
-[**g_et_credit_memo_part**](CreditMemosApi.md#g_et_credit_memo_part) | **GET** /v1/creditmemos/{creditMemoId}/parts/{partid} | Get credit memo part
-[**g_et_credit_memo_parts**](CreditMemosApi.md#g_et_credit_memo_parts) | **GET** /v1/creditmemos/{creditMemoId}/parts | Get credit memo parts
-[**g_et_credit_memos**](CreditMemosApi.md#g_et_credit_memos) | **GET** /v1/creditmemos | Get credit memos
-[**p_ost_credit_memo_from_prpc**](CreditMemosApi.md#p_ost_credit_memo_from_prpc) | **POST** /v1/creditmemos | Create credit memo from charge
-[**p_ost_credit_memo_pdf**](CreditMemosApi.md#p_ost_credit_memo_pdf) | **POST** /v1/creditmemos/{creditMemoId}/pdfs | Create credit memo PDF
-[**p_ost_email_credit_memo**](CreditMemosApi.md#p_ost_email_credit_memo) | **POST** /v1/creditmemos/{creditMemoId}/emails | Email credit memo
-[**p_ost_refund_credit_memo**](CreditMemosApi.md#p_ost_refund_credit_memo) | **POST** /v1/creditmemos/{creditmemoId}/refunds | Refund credit memo
-[**p_ostcm_taxation_items**](CreditMemosApi.md#p_ostcm_taxation_items) | **POST** /v1/creditmemos/{creditMemoId}/taxationitems | Create taxation items for credit memo
-[**p_ut_apply_credit_memo**](CreditMemosApi.md#p_ut_apply_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/apply | Apply credit memo
-[**p_ut_cancel_credit_memo**](CreditMemosApi.md#p_ut_cancel_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/cancel | Cancel credit memo
-[**p_ut_post_credit_memo**](CreditMemosApi.md#p_ut_post_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/post | Post credit memo
-[**p_ut_unapply_credit_memo**](CreditMemosApi.md#p_ut_unapply_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/unapply | Unapply credit memo
-[**p_ut_update_credit_memo**](CreditMemosApi.md#p_ut_update_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId} | Update credit memo
+[**delete_credit_memo**](CreditMemosApi.md#delete_credit_memo) | **DELETE** /v1/creditmemos/{creditMemoId} | Delete credit memo
+[**get_breakdown_credit_memo_by_order**](CreditMemosApi.md#get_breakdown_credit_memo_by_order) | **GET** /v1/creditmemos/{creditMemoNumber}/amountBreakdownByOrder | Get breakdown of credit memo by order
+[**get_credit_memo**](CreditMemosApi.md#get_credit_memo) | **GET** /v1/creditmemos/{creditMemoId} | Get credit memo
+[**get_credit_memo_item**](CreditMemosApi.md#get_credit_memo_item) | **GET** /v1/creditmemos/{creditMemoId}/items/{cmitemid} | Get credit memo item
+[**get_credit_memo_item_part**](CreditMemosApi.md#get_credit_memo_item_part) | **GET** /v1/creditmemos/{creditMemoId}/parts/{partid}/itemparts/{itempartid} | Get credit memo part item
+[**get_credit_memo_item_parts**](CreditMemosApi.md#get_credit_memo_item_parts) | **GET** /v1/creditmemos/{creditMemoId}/parts/{partid}/itemparts | Get credit memo part items
+[**get_credit_memo_items**](CreditMemosApi.md#get_credit_memo_items) | **GET** /v1/creditmemos/{creditMemoId}/items | Get credit memo items
+[**get_credit_memo_part**](CreditMemosApi.md#get_credit_memo_part) | **GET** /v1/creditmemos/{creditMemoId}/parts/{partid} | Get credit memo part
+[**get_credit_memo_parts**](CreditMemosApi.md#get_credit_memo_parts) | **GET** /v1/creditmemos/{creditMemoId}/parts | Get credit memo parts
+[**get_credit_memos**](CreditMemosApi.md#get_credit_memos) | **GET** /v1/creditmemos | Get credit memos
+[**post_credit_memo_from_prpc**](CreditMemosApi.md#post_credit_memo_from_prpc) | **POST** /v1/creditmemos | Create credit memo from charge
+[**post_credit_memo_pdf**](CreditMemosApi.md#post_credit_memo_pdf) | **POST** /v1/creditmemos/{creditMemoId}/pdfs | Create credit memo PDF
+[**post_email_credit_memo**](CreditMemosApi.md#post_email_credit_memo) | **POST** /v1/creditmemos/{creditMemoId}/emails | Email credit memo
+[**post_refund_credit_memo**](CreditMemosApi.md#post_refund_credit_memo) | **POST** /v1/creditmemos/{creditmemoId}/refunds | Refund credit memo
+[**post_cm_taxation_items**](CreditMemosApi.md#post_cm_taxation_items) | **POST** /v1/creditmemos/{creditMemoId}/taxationitems | Create taxation items for credit memo
+[**put_apply_credit_memo**](CreditMemosApi.md#put_apply_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/apply | Apply credit memo
+[**put_cancel_credit_memo**](CreditMemosApi.md#put_cancel_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/cancel | Cancel credit memo
+[**put_post_credit_memo**](CreditMemosApi.md#put_post_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/post | Post credit memo
+[**put_unapply_credit_memo**](CreditMemosApi.md#put_unapply_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/unapply | Unapply credit memo
+[**put_update_credit_memo**](CreditMemosApi.md#put_update_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId} | Update credit memo
 
 
-# **d_elete_credit_memo**
-> CommonResponseType d_elete_credit_memo(credit_memo_id, opts)
+# **delete_credit_memo**
+> CommonResponseType delete_credit_memo(credit_memo_id, opts)
 
 Delete credit memo
 
@@ -36,9 +36,9 @@ Delete credit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
@@ -49,10 +49,10 @@ opts = {
 
 begin
   #Delete credit memo
-  result = api_instance.d_elete_credit_memo(credit_memo_id, opts)
+  result = api_instance.delete_credit_memo(credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->d_elete_credit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->delete_credit_memo: #{e}"
 end
 ```
 
@@ -79,8 +79,8 @@ No authorization required
 
 
 
-# **g_et_breakdown_credit_memo_by_order**
-> GetCreditMemoAmountBreakdownByOrderResponse g_et_breakdown_credit_memo_by_order(credit_memo_number, opts)
+# **get_breakdown_credit_memo_by_order**
+> GetCreditMemoAmountBreakdownByOrderResponse get_breakdown_credit_memo_by_order(credit_memo_number, opts)
 
 Get breakdown of credit memo by order
 
@@ -89,9 +89,9 @@ Get breakdown of credit memo by order
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 credit_memo_number = "credit_memo_number_example" # String | Number of credit memo to be broken down.
 
@@ -102,10 +102,10 @@ opts = {
 
 begin
   #Get breakdown of credit memo by order
-  result = api_instance.g_et_breakdown_credit_memo_by_order(credit_memo_number, opts)
+  result = api_instance.get_breakdown_credit_memo_by_order(credit_memo_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->g_et_breakdown_credit_memo_by_order: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->get_breakdown_credit_memo_by_order: #{e}"
 end
 ```
 
@@ -132,8 +132,8 @@ No authorization required
 
 
 
-# **g_et_credit_memo**
-> GETCreditMemoType g_et_credit_memo(credit_memo_id, opts)
+# **get_credit_memo**
+> GETCreditMemoType get_credit_memo(credit_memo_id, opts)
 
 Get credit memo
 
@@ -142,9 +142,9 @@ Get credit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
@@ -155,10 +155,10 @@ opts = {
 
 begin
   #Get credit memo
-  result = api_instance.g_et_credit_memo(credit_memo_id, opts)
+  result = api_instance.get_credit_memo(credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->g_et_credit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->get_credit_memo: #{e}"
 end
 ```
 
@@ -185,8 +185,8 @@ No authorization required
 
 
 
-# **g_et_credit_memo_item**
-> GETCreditMemoItemType g_et_credit_memo_item(cmitemid, credit_memo_id, opts)
+# **get_credit_memo_item**
+> GETCreditMemoItemType get_credit_memo_item(cmitemid, credit_memo_id, opts)
 
 Get credit memo item
 
@@ -195,9 +195,9 @@ Get credit memo item
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 cmitemid = "cmitemid_example" # String | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 
@@ -210,10 +210,10 @@ opts = {
 
 begin
   #Get credit memo item
-  result = api_instance.g_et_credit_memo_item(cmitemid, credit_memo_id, opts)
+  result = api_instance.get_credit_memo_item(cmitemid, credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->g_et_credit_memo_item: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->get_credit_memo_item: #{e}"
 end
 ```
 
@@ -241,8 +241,8 @@ No authorization required
 
 
 
-# **g_et_credit_memo_item_part**
-> GETCreditMemoItemPartType g_et_credit_memo_item_part(partid, itempartid, credit_memo_id, opts)
+# **get_credit_memo_item_part**
+> GETCreditMemoItemPartType get_credit_memo_item_part(partid, itempartid, credit_memo_id, opts)
 
 Get credit memo part item
 
@@ -251,9 +251,9 @@ Get credit memo part item
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 partid = "partid_example" # String | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). 
 
@@ -268,10 +268,10 @@ opts = {
 
 begin
   #Get credit memo part item
-  result = api_instance.g_et_credit_memo_item_part(partid, itempartid, credit_memo_id, opts)
+  result = api_instance.get_credit_memo_item_part(partid, itempartid, credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->g_et_credit_memo_item_part: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->get_credit_memo_item_part: #{e}"
 end
 ```
 
@@ -300,8 +300,8 @@ No authorization required
 
 
 
-# **g_et_credit_memo_item_parts**
-> GETCreditMemoItemPartsCollectionType g_et_credit_memo_item_parts(partid, credit_memo_id, opts)
+# **get_credit_memo_item_parts**
+> GETCreditMemoItemPartsCollectionType get_credit_memo_item_parts(partid, credit_memo_id, opts)
 
 Get credit memo part items
 
@@ -310,9 +310,9 @@ Get credit memo part items
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 partid = "partid_example" # String | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). . 
 
@@ -326,10 +326,10 @@ opts = {
 
 begin
   #Get credit memo part items
-  result = api_instance.g_et_credit_memo_item_parts(partid, credit_memo_id, opts)
+  result = api_instance.get_credit_memo_item_parts(partid, credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->g_et_credit_memo_item_parts: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->get_credit_memo_item_parts: #{e}"
 end
 ```
 
@@ -358,8 +358,8 @@ No authorization required
 
 
 
-# **g_et_credit_memo_items**
-> GETCreditMemoItemsListType g_et_credit_memo_items(credit_memo_id, opts)
+# **get_credit_memo_items**
+> GETCreditMemoItemsListType get_credit_memo_items(credit_memo_id, opts)
 
 Get credit memo items
 
@@ -368,9 +368,9 @@ Get credit memo items
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
@@ -384,10 +384,10 @@ opts = {
 
 begin
   #Get credit memo items
-  result = api_instance.g_et_credit_memo_items(credit_memo_id, opts)
+  result = api_instance.get_credit_memo_items(credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->g_et_credit_memo_items: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->get_credit_memo_items: #{e}"
 end
 ```
 
@@ -417,8 +417,8 @@ No authorization required
 
 
 
-# **g_et_credit_memo_part**
-> GETCreditMemoPartType g_et_credit_memo_part(partid, credit_memo_id, opts)
+# **get_credit_memo_part**
+> GETCreditMemoPartType get_credit_memo_part(partid, credit_memo_id, opts)
 
 Get credit memo part
 
@@ -427,9 +427,9 @@ Get credit memo part
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 partid = "partid_example" # String | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). 
 
@@ -442,10 +442,10 @@ opts = {
 
 begin
   #Get credit memo part
-  result = api_instance.g_et_credit_memo_part(partid, credit_memo_id, opts)
+  result = api_instance.get_credit_memo_part(partid, credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->g_et_credit_memo_part: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->get_credit_memo_part: #{e}"
 end
 ```
 
@@ -473,8 +473,8 @@ No authorization required
 
 
 
-# **g_et_credit_memo_parts**
-> GETCreditMemoPartsCollectionType g_et_credit_memo_parts(credit_memo_id, opts)
+# **get_credit_memo_parts**
+> GETCreditMemoPartsCollectionType get_credit_memo_parts(credit_memo_id, opts)
 
 Get credit memo parts
 
@@ -483,9 +483,9 @@ Get credit memo parts
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
@@ -497,10 +497,10 @@ opts = {
 
 begin
   #Get credit memo parts
-  result = api_instance.g_et_credit_memo_parts(credit_memo_id, opts)
+  result = api_instance.get_credit_memo_parts(credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->g_et_credit_memo_parts: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->get_credit_memo_parts: #{e}"
 end
 ```
 
@@ -528,8 +528,8 @@ No authorization required
 
 
 
-# **g_et_credit_memos**
-> GETCreditMemoCollectionType g_et_credit_memos(opts)
+# **get_credit_memos**
+> GETCreditMemoCollectionType get_credit_memos(opts)
 
 Get credit memos
 
@@ -538,9 +538,9 @@ Get credit memos
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -552,10 +552,10 @@ opts = {
 
 begin
   #Get credit memos
-  result = api_instance.g_et_credit_memos(opts)
+  result = api_instance.get_credit_memos(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->g_et_credit_memos: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->get_credit_memos: #{e}"
 end
 ```
 
@@ -584,8 +584,8 @@ No authorization required
 
 
 
-# **p_ost_credit_memo_from_prpc**
-> GETCreditMemoType p_ost_credit_memo_from_prpc(body, opts)
+# **post_credit_memo_from_prpc**
+> GETCreditMemoType post_credit_memo_from_prpc(body, opts)
 
 Create credit memo from charge
 
@@ -594,11 +594,11 @@ Create credit memo from charge
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
-body = SwaggerClient::CreditMemoFromChargeType.new # CreditMemoFromChargeType | 
+body = Zuora::CreditMemoFromChargeType.new # CreditMemoFromChargeType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -607,10 +607,10 @@ opts = {
 
 begin
   #Create credit memo from charge
-  result = api_instance.p_ost_credit_memo_from_prpc(body, opts)
+  result = api_instance.post_credit_memo_from_prpc(body, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->p_ost_credit_memo_from_prpc: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->post_credit_memo_from_prpc: #{e}"
 end
 ```
 
@@ -637,8 +637,8 @@ No authorization required
 
 
 
-# **p_ost_credit_memo_pdf**
-> POSTMemoPdfResponse p_ost_credit_memo_pdf(credit_memo_id, opts)
+# **post_credit_memo_pdf**
+> POSTMemoPdfResponse post_credit_memo_pdf(credit_memo_id, opts)
 
 Create credit memo PDF
 
@@ -647,9 +647,9 @@ Create credit memo PDF
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 credit_memo_id = "credit_memo_id_example" # String | The unique ID of the credit memo that you want to create PDF for. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
@@ -660,10 +660,10 @@ opts = {
 
 begin
   #Create credit memo PDF
-  result = api_instance.p_ost_credit_memo_pdf(credit_memo_id, opts)
+  result = api_instance.post_credit_memo_pdf(credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->p_ost_credit_memo_pdf: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->post_credit_memo_pdf: #{e}"
 end
 ```
 
@@ -690,8 +690,8 @@ No authorization required
 
 
 
-# **p_ost_email_credit_memo**
-> CommonResponseType p_ost_email_credit_memo(request, credit_memo_id, opts)
+# **post_email_credit_memo**
+> CommonResponseType post_email_credit_memo(request, credit_memo_id, opts)
 
 Email credit memo
 
@@ -700,11 +700,11 @@ Email credit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
-request = SwaggerClient::PostCreditMemoEmailRequestType.new # PostCreditMemoEmailRequestType | 
+request = Zuora::PostCreditMemoEmailRequestType.new # PostCreditMemoEmailRequestType | 
 
 credit_memo_id = "credit_memo_id_example" # String | The ID of a posted credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
@@ -715,10 +715,10 @@ opts = {
 
 begin
   #Email credit memo
-  result = api_instance.p_ost_email_credit_memo(request, credit_memo_id, opts)
+  result = api_instance.post_email_credit_memo(request, credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->p_ost_email_credit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->post_email_credit_memo: #{e}"
 end
 ```
 
@@ -746,8 +746,8 @@ No authorization required
 
 
 
-# **p_ost_refund_credit_memo**
-> GETRefundCreditMemoType p_ost_refund_credit_memo(body, creditmemo_id, opts)
+# **post_refund_credit_memo**
+> GETRefundCreditMemoType post_refund_credit_memo(body, creditmemo_id, opts)
 
 Refund credit memo
 
@@ -756,11 +756,11 @@ Refund credit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
-body = SwaggerClient::PostNonRefRefundType.new # PostNonRefRefundType | 
+body = Zuora::PostNonRefRefundType.new # PostNonRefRefundType | 
 
 creditmemo_id = "creditmemo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
@@ -771,10 +771,10 @@ opts = {
 
 begin
   #Refund credit memo
-  result = api_instance.p_ost_refund_credit_memo(body, creditmemo_id, opts)
+  result = api_instance.post_refund_credit_memo(body, creditmemo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->p_ost_refund_credit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->post_refund_credit_memo: #{e}"
 end
 ```
 
@@ -802,8 +802,8 @@ No authorization required
 
 
 
-# **p_ostcm_taxation_items**
-> GETTaxationItemListType p_ostcm_taxation_items(credit_memo_id, body, opts)
+# **post_cm_taxation_items**
+> GETTaxationItemListType post_cm_taxation_items(credit_memo_id, body, opts)
 
 Create taxation items for credit memo
 
@@ -812,13 +812,13 @@ Create taxation items for credit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
-body = SwaggerClient::POSTTaxationItemListForCMType.new # POSTTaxationItemListForCMType | 
+body = Zuora::POSTTaxationItemListForCMType.new # POSTTaxationItemListForCMType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -827,10 +827,10 @@ opts = {
 
 begin
   #Create taxation items for credit memo
-  result = api_instance.p_ostcm_taxation_items(credit_memo_id, body, opts)
+  result = api_instance.post_cm_taxation_items(credit_memo_id, body, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->p_ostcm_taxation_items: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->post_cm_taxation_items: #{e}"
 end
 ```
 
@@ -858,8 +858,8 @@ No authorization required
 
 
 
-# **p_ut_apply_credit_memo**
-> GETCreditMemoType p_ut_apply_credit_memo(body, credit_memo_id, opts)
+# **put_apply_credit_memo**
+> GETCreditMemoType put_apply_credit_memo(body, credit_memo_id, opts)
 
 Apply credit memo
 
@@ -868,11 +868,11 @@ Apply credit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
-body = SwaggerClient::ApplyCreditMemoType.new # ApplyCreditMemoType | 
+body = Zuora::ApplyCreditMemoType.new # ApplyCreditMemoType | 
 
 credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
@@ -883,10 +883,10 @@ opts = {
 
 begin
   #Apply credit memo
-  result = api_instance.p_ut_apply_credit_memo(body, credit_memo_id, opts)
+  result = api_instance.put_apply_credit_memo(body, credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->p_ut_apply_credit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->put_apply_credit_memo: #{e}"
 end
 ```
 
@@ -914,8 +914,8 @@ No authorization required
 
 
 
-# **p_ut_cancel_credit_memo**
-> GETCreditMemoType p_ut_cancel_credit_memo(credit_memo_id, opts)
+# **put_cancel_credit_memo**
+> GETCreditMemoType put_cancel_credit_memo(credit_memo_id, opts)
 
 Cancel credit memo
 
@@ -924,9 +924,9 @@ Cancel credit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
@@ -937,10 +937,10 @@ opts = {
 
 begin
   #Cancel credit memo
-  result = api_instance.p_ut_cancel_credit_memo(credit_memo_id, opts)
+  result = api_instance.put_cancel_credit_memo(credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->p_ut_cancel_credit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->put_cancel_credit_memo: #{e}"
 end
 ```
 
@@ -967,8 +967,8 @@ No authorization required
 
 
 
-# **p_ut_post_credit_memo**
-> GETCreditMemoType p_ut_post_credit_memo(credit_memo_id, opts)
+# **put_post_credit_memo**
+> GETCreditMemoType put_post_credit_memo(credit_memo_id, opts)
 
 Post credit memo
 
@@ -977,9 +977,9 @@ Post credit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
 credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
@@ -990,10 +990,10 @@ opts = {
 
 begin
   #Post credit memo
-  result = api_instance.p_ut_post_credit_memo(credit_memo_id, opts)
+  result = api_instance.put_post_credit_memo(credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->p_ut_post_credit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->put_post_credit_memo: #{e}"
 end
 ```
 
@@ -1020,8 +1020,8 @@ No authorization required
 
 
 
-# **p_ut_unapply_credit_memo**
-> GETCreditMemoType p_ut_unapply_credit_memo(body, credit_memo_id, opts)
+# **put_unapply_credit_memo**
+> GETCreditMemoType put_unapply_credit_memo(body, credit_memo_id, opts)
 
 Unapply credit memo
 
@@ -1030,11 +1030,11 @@ Unapply credit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
-body = SwaggerClient::UnapplyCreditMemoType.new # UnapplyCreditMemoType | 
+body = Zuora::UnapplyCreditMemoType.new # UnapplyCreditMemoType | 
 
 credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
@@ -1045,10 +1045,10 @@ opts = {
 
 begin
   #Unapply credit memo
-  result = api_instance.p_ut_unapply_credit_memo(body, credit_memo_id, opts)
+  result = api_instance.put_unapply_credit_memo(body, credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->p_ut_unapply_credit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->put_unapply_credit_memo: #{e}"
 end
 ```
 
@@ -1076,8 +1076,8 @@ No authorization required
 
 
 
-# **p_ut_update_credit_memo**
-> GETCreditMemoType p_ut_update_credit_memo(body, credit_memo_id, opts)
+# **put_update_credit_memo**
+> GETCreditMemoType put_update_credit_memo(body, credit_memo_id, opts)
 
 Update credit memo
 
@@ -1086,11 +1086,11 @@ Update credit memo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::CreditMemosApi.new
+api_instance = Zuora::CreditMemosApi.new
 
-body = SwaggerClient::PUTCreditMemoType.new # PUTCreditMemoType | 
+body = Zuora::PUTCreditMemoType.new # PUTCreditMemoType | 
 
 credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  
 
@@ -1101,10 +1101,10 @@ opts = {
 
 begin
   #Update credit memo
-  result = api_instance.p_ut_update_credit_memo(body, credit_memo_id, opts)
+  result = api_instance.put_update_credit_memo(body, credit_memo_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling CreditMemosApi->p_ut_update_credit_memo: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling CreditMemosApi->put_update_credit_memo: #{e}"
 end
 ```
 

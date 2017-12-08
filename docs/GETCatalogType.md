@@ -1,4 +1,4 @@
-# SwaggerClient::GETCatalogType
+# Zuora::GETCatalogType
 
 ## Properties
 Name | Type | Description | Notes

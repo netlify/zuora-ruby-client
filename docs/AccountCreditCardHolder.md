@@ -1,4 +1,4 @@
-# SwaggerClient::AccountCreditCardHolder
+# Zuora::AccountCreditCardHolder
 
 ## Properties
 Name | Type | Description | Notes

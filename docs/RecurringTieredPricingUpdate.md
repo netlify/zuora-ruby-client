@@ -1,4 +1,4 @@
-# SwaggerClient::RecurringTieredPricingUpdate
+# Zuora::RecurringTieredPricingUpdate
 
 ## Properties
 Name | Type | Description | Notes

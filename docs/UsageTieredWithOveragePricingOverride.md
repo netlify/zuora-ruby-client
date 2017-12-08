@@ -1,4 +1,4 @@
-# SwaggerClient::UsageTieredWithOveragePricingOverride
+# Zuora::UsageTieredWithOveragePricingOverride
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,15 +1,15 @@
-# SwaggerClient::OperationsApi
+# Zuora::OperationsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**p_ost_billing_preview**](OperationsApi.md#p_ost_billing_preview) | **POST** /v1/operations/billing-preview | Create billing preview
-[**p_ost_transaction_invoice_payment**](OperationsApi.md#p_ost_transaction_invoice_payment) | **POST** /v1/operations/invoice-collect | Invoice and collect
+[**post_billing_preview**](OperationsApi.md#post_billing_preview) | **POST** /v1/operations/billing-preview | Create billing preview
+[**post_transaction_invoice_payment**](OperationsApi.md#post_transaction_invoice_payment) | **POST** /v1/operations/invoice-collect | Invoice and collect
 
 
-# **p_ost_billing_preview**
-> BillingPreviewResult p_ost_billing_preview(request, opts)
+# **post_billing_preview**
+> BillingPreviewResult post_billing_preview(request, opts)
 
 Create billing preview
 
@@ -18,11 +18,11 @@ Create billing preview
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OperationsApi.new
+api_instance = Zuora::OperationsApi.new
 
-request = SwaggerClient::PostBillingPreviewParam.new # PostBillingPreviewParam | 
+request = Zuora::PostBillingPreviewParam.new # PostBillingPreviewParam | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -31,10 +31,10 @@ opts = {
 
 begin
   #Create billing preview
-  result = api_instance.p_ost_billing_preview(request, opts)
+  result = api_instance.post_billing_preview(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OperationsApi->p_ost_billing_preview: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OperationsApi->post_billing_preview: #{e}"
 end
 ```
 
@@ -61,8 +61,8 @@ No authorization required
 
 
 
-# **p_ost_transaction_invoice_payment**
-> POSTInvoiceCollectResponseType p_ost_transaction_invoice_payment(request, opts)
+# **post_transaction_invoice_payment**
+> POSTInvoiceCollectResponseType post_transaction_invoice_payment(request, opts)
 
 Invoice and collect
 
@@ -71,11 +71,11 @@ Generates and posts invoices and credit memos and collects payments for posted i
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OperationsApi.new
+api_instance = Zuora::OperationsApi.new
 
-request = SwaggerClient::POSTInvoiceCollectType.new # POSTInvoiceCollectType | 
+request = Zuora::POSTInvoiceCollectType.new # POSTInvoiceCollectType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -85,10 +85,10 @@ opts = {
 
 begin
   #Invoice and collect
-  result = api_instance.p_ost_transaction_invoice_payment(request, opts)
+  result = api_instance.post_transaction_invoice_payment(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OperationsApi->p_ost_transaction_invoice_payment: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OperationsApi->post_transaction_invoice_payment: #{e}"
 end
 ```
 

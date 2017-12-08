@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyGetInvoiceItem
+# Zuora::ProxyGetInvoiceItem
 
 ## Properties
 Name | Type | Description | Notes

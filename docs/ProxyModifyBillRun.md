@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyModifyBillRun
+# Zuora::ProxyModifyBillRun
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,15 +1,15 @@
-# SwaggerClient::NotificationHistoryApi
+# Zuora::NotificationHistoryApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_callout_history**](NotificationHistoryApi.md#g_et_callout_history) | **GET** /v1/notification-history/callout | Get callout notification histories
-[**g_et_email_history**](NotificationHistoryApi.md#g_et_email_history) | **GET** /v1/notification-history/email | Get email notification histories
+[**get_callout_history**](NotificationHistoryApi.md#get_callout_history) | **GET** /v1/notification-history/callout | Get callout notification histories
+[**get_email_history**](NotificationHistoryApi.md#get_email_history) | **GET** /v1/notification-history/email | Get email notification histories
 
 
-# **g_et_callout_history**
-> GETCalloutHistoryVOsType g_et_callout_history(opts)
+# **get_callout_history**
+> GETCalloutHistoryVOsType get_callout_history(opts)
 
 Get callout notification histories
 
@@ -18,9 +18,9 @@ This REST API reference describes how to get a notification history for callouts
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::NotificationHistoryApi.new
+api_instance = Zuora::NotificationHistoryApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -36,10 +36,10 @@ opts = {
 
 begin
   #Get callout notification histories
-  result = api_instance.g_et_callout_history(opts)
+  result = api_instance.get_callout_history(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling NotificationHistoryApi->g_et_callout_history: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling NotificationHistoryApi->get_callout_history: #{e}"
 end
 ```
 
@@ -72,8 +72,8 @@ No authorization required
 
 
 
-# **g_et_email_history**
-> GETEmailHistoryVOsType g_et_email_history(opts)
+# **get_email_history**
+> GETEmailHistoryVOsType get_email_history(opts)
 
 Get email notification histories
 
@@ -82,9 +82,9 @@ This REST API reference describes how to get a notification history for notifica
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::NotificationHistoryApi.new
+api_instance = Zuora::NotificationHistoryApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -99,10 +99,10 @@ opts = {
 
 begin
   #Get email notification histories
-  result = api_instance.g_et_email_history(opts)
+  result = api_instance.get_email_history(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling NotificationHistoryApi->g_et_email_history: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling NotificationHistoryApi->get_email_history: #{e}"
 end
 ```
 

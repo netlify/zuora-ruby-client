@@ -1,4 +1,4 @@
-# SwaggerClient::SubscribeRequestBillToContact
+# Zuora::SubscribeRequestBillToContact
 
 ## Properties
 Name | Type | Description | Notes

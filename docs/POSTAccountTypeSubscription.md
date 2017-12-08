@@ -1,4 +1,4 @@
-# SwaggerClient::POSTAccountTypeSubscription
+# Zuora::POSTAccountTypeSubscription
 
 ## Properties
 Name | Type | Description | Notes

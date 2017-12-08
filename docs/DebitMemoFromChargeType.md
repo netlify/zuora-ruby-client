@@ -1,4 +1,4 @@
-# SwaggerClient::DebitMemoFromChargeType
+# Zuora::DebitMemoFromChargeType
 
 ## Properties
 Name | Type | Description | Notes

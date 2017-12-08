@@ -1,4 +1,4 @@
-# SwaggerClient::FinanceInformation
+# Zuora::FinanceInformation
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,18 +1,18 @@
-# SwaggerClient::EntityConnectionsApi
+# Zuora::EntityConnectionsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_entity_connections**](EntityConnectionsApi.md#g_et_entity_connections) | **GET** /v1/entity-connections | Multi-entity: Get connections
-[**p_ost_entity_connections**](EntityConnectionsApi.md#p_ost_entity_connections) | **POST** /v1/entity-connections | Multi-entity: Initiate connection
-[**p_ut_entity_connections_accept**](EntityConnectionsApi.md#p_ut_entity_connections_accept) | **PUT** /v1/entity-connections/{connection-id}/accept | Multi-entity: Accept connection
-[**p_ut_entity_connections_deny**](EntityConnectionsApi.md#p_ut_entity_connections_deny) | **PUT** /v1/entity-connections/{connection-id}/deny | Multi-entity: Deny connection
-[**p_ut_entity_connections_disconnect**](EntityConnectionsApi.md#p_ut_entity_connections_disconnect) | **PUT** /v1/entity-connections/{connection-id}/disconnect | Multi-entity: Disconnect connection
+[**get_entity_connections**](EntityConnectionsApi.md#get_entity_connections) | **GET** /v1/entity-connections | Multi-entity: Get connections
+[**post_entity_connections**](EntityConnectionsApi.md#post_entity_connections) | **POST** /v1/entity-connections | Multi-entity: Initiate connection
+[**put_entity_connections_accept**](EntityConnectionsApi.md#put_entity_connections_accept) | **PUT** /v1/entity-connections/{connection-id}/accept | Multi-entity: Accept connection
+[**put_entity_connections_deny**](EntityConnectionsApi.md#put_entity_connections_deny) | **PUT** /v1/entity-connections/{connection-id}/deny | Multi-entity: Deny connection
+[**put_entity_connections_disconnect**](EntityConnectionsApi.md#put_entity_connections_disconnect) | **PUT** /v1/entity-connections/{connection-id}/disconnect | Multi-entity: Disconnect connection
 
 
-# **g_et_entity_connections**
-> GETEntityConnectionsResponseType g_et_entity_connections(opts)
+# **get_entity_connections**
+> GETEntityConnectionsResponseType get_entity_connections(opts)
 
 Multi-entity: Get connections
 
@@ -21,9 +21,9 @@ Multi-entity: Get connections
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::EntityConnectionsApi.new
+api_instance = Zuora::EntityConnectionsApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -34,10 +34,10 @@ opts = {
 
 begin
   #Multi-entity: Get connections
-  result = api_instance.g_et_entity_connections(opts)
+  result = api_instance.get_entity_connections(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling EntityConnectionsApi->g_et_entity_connections: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling EntityConnectionsApi->get_entity_connections: #{e}"
 end
 ```
 
@@ -65,8 +65,8 @@ No authorization required
 
 
 
-# **p_ost_entity_connections**
-> POSTEntityConnectionsResponseType p_ost_entity_connections(opts)
+# **post_entity_connections**
+> POSTEntityConnectionsResponseType post_entity_connections(opts)
 
 Multi-entity: Initiate connection
 
@@ -75,22 +75,22 @@ Multi-entity: Initiate connection
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::EntityConnectionsApi.new
+api_instance = Zuora::EntityConnectionsApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
   entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  request: SwaggerClient::POSTEntityConnectionsType.new # POSTEntityConnectionsType | 
+  request: Zuora::POSTEntityConnectionsType.new # POSTEntityConnectionsType | 
 }
 
 begin
   #Multi-entity: Initiate connection
-  result = api_instance.p_ost_entity_connections(opts)
+  result = api_instance.post_entity_connections(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling EntityConnectionsApi->p_ost_entity_connections: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling EntityConnectionsApi->post_entity_connections: #{e}"
 end
 ```
 
@@ -117,8 +117,8 @@ No authorization required
 
 
 
-# **p_ut_entity_connections_accept**
-> PUTEntityConnectionsAcceptResponseType p_ut_entity_connections_accept(connection_id, opts)
+# **put_entity_connections_accept**
+> PUTEntityConnectionsAcceptResponseType put_entity_connections_accept(connection_id, opts)
 
 Multi-entity: Accept connection
 
@@ -127,9 +127,9 @@ Multi-entity: Accept connection
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::EntityConnectionsApi.new
+api_instance = Zuora::EntityConnectionsApi.new
 
 connection_id = "connection_id_example" # String | The ID of the connection that you want to accept. 
 
@@ -140,10 +140,10 @@ opts = {
 
 begin
   #Multi-entity: Accept connection
-  result = api_instance.p_ut_entity_connections_accept(connection_id, opts)
+  result = api_instance.put_entity_connections_accept(connection_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling EntityConnectionsApi->p_ut_entity_connections_accept: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling EntityConnectionsApi->put_entity_connections_accept: #{e}"
 end
 ```
 
@@ -170,8 +170,8 @@ No authorization required
 
 
 
-# **p_ut_entity_connections_deny**
-> PUTEntityConnectionsDenyResponseType p_ut_entity_connections_deny(connection_id, opts)
+# **put_entity_connections_deny**
+> PUTEntityConnectionsDenyResponseType put_entity_connections_deny(connection_id, opts)
 
 Multi-entity: Deny connection
 
@@ -180,9 +180,9 @@ Multi-entity: Deny connection
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::EntityConnectionsApi.new
+api_instance = Zuora::EntityConnectionsApi.new
 
 connection_id = "connection_id_example" # String | The ID of the connection that you want to deny. 
 
@@ -193,10 +193,10 @@ opts = {
 
 begin
   #Multi-entity: Deny connection
-  result = api_instance.p_ut_entity_connections_deny(connection_id, opts)
+  result = api_instance.put_entity_connections_deny(connection_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling EntityConnectionsApi->p_ut_entity_connections_deny: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling EntityConnectionsApi->put_entity_connections_deny: #{e}"
 end
 ```
 
@@ -223,8 +223,8 @@ No authorization required
 
 
 
-# **p_ut_entity_connections_disconnect**
-> PUTEntityConnectionsDisconnectResponseType p_ut_entity_connections_disconnect(connection_id, opts)
+# **put_entity_connections_disconnect**
+> PUTEntityConnectionsDisconnectResponseType put_entity_connections_disconnect(connection_id, opts)
 
 Multi-entity: Disconnect connection
 
@@ -233,9 +233,9 @@ Multi-entity: Disconnect connection
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::EntityConnectionsApi.new
+api_instance = Zuora::EntityConnectionsApi.new
 
 connection_id = "connection_id_example" # String | The ID of the connection that you want to disconnect. 
 
@@ -246,10 +246,10 @@ opts = {
 
 begin
   #Multi-entity: Disconnect connection
-  result = api_instance.p_ut_entity_connections_disconnect(connection_id, opts)
+  result = api_instance.put_entity_connections_disconnect(connection_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling EntityConnectionsApi->p_ut_entity_connections_disconnect: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling EntityConnectionsApi->put_entity_connections_disconnect: #{e}"
 end
 ```
 

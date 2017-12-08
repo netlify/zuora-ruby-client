@@ -1,4 +1,4 @@
-# SwaggerClient::PUTVerifyPaymentMethodTypeGatewayOptions
+# Zuora::PUTVerifyPaymentMethodTypeGatewayOptions
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::TriggerDatesInner
+# Zuora::TriggerDatesInner
 
 ## Properties
 Name | Type | Description | Notes

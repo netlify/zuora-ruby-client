@@ -1,4 +1,4 @@
-# SwaggerClient::PUTRefundType
+# Zuora::PUTRefundType
 
 ## Properties
 Name | Type | Description | Notes

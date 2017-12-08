@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyCreateRefundRefundInvoicePaymentData
+# Zuora::ProxyCreateRefundRefundInvoicePaymentData
 
 ## Properties
 Name | Type | Description | Notes

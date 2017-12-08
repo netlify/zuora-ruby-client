@@ -1,4 +1,4 @@
-# SwaggerClient::PUTAccountingCodeType
+# Zuora::PUTAccountingCodeType
 
 ## Properties
 Name | Type | Description | Notes

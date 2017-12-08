@@ -1,4 +1,4 @@
-# SwaggerClient::SubscribeResult
+# Zuora::SubscribeResult
 
 ## Properties
 Name | Type | Description | Notes

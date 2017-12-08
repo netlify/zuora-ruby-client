@@ -1,4 +1,4 @@
-# SwaggerClient::CreditMemoUnapplyDebitMemoItemRequestType
+# Zuora::CreditMemoUnapplyDebitMemoItemRequestType
 
 ## Properties
 Name | Type | Description | Notes

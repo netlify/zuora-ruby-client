@@ -1,4 +1,4 @@
-# SwaggerClient::RatePlanChargeTier
+# Zuora::RatePlanChargeTier
 
 ## Properties
 Name | Type | Description | Notes

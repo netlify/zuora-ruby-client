@@ -1,4 +1,4 @@
-# SwaggerClient::SaveResult
+# Zuora::SaveResult
 
 ## Properties
 Name | Type | Description | Notes

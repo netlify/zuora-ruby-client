@@ -1,4 +1,4 @@
-# SwaggerClient::BillingUpdate
+# Zuora::BillingUpdate
 
 ## Properties
 Name | Type | Description | Notes

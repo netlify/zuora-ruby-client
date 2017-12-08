@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyModifyUnitOfMeasure
+# Zuora::ProxyModifyUnitOfMeasure
 
 ## Properties
 Name | Type | Description | Notes

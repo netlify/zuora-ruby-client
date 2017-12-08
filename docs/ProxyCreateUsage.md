@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyCreateUsage
+# Zuora::ProxyCreateUsage
 
 ## Properties
 Name | Type | Description | Notes

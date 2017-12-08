@@ -1,4 +1,4 @@
-# SwaggerClient::SubscribeRequestSubscribeOptionsElectronicPaymentOptions
+# Zuora::SubscribeRequestSubscribeOptionsElectronicPaymentOptions
 
 ## Properties
 Name | Type | Description | Notes

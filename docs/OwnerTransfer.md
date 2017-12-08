@@ -1,4 +1,4 @@
-# SwaggerClient::OwnerTransfer
+# Zuora::OwnerTransfer
 
 ## Properties
 Name | Type | Description | Notes

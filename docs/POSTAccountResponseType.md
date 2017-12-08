@@ -1,4 +1,4 @@
-# SwaggerClient::POSTAccountResponseType
+# Zuora::POSTAccountResponseType
 
 ## Properties
 Name | Type | Description | Notes

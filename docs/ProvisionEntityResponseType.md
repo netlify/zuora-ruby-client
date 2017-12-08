@@ -1,4 +1,4 @@
-# SwaggerClient::ProvisionEntityResponseType
+# Zuora::ProvisionEntityResponseType
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::CommonResponseType
+# Zuora::CommonResponseType
 
 ## Properties
 Name | Type | Description | Notes

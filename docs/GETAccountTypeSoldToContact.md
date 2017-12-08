@@ -1,4 +1,4 @@
-# SwaggerClient::GETAccountTypeSoldToContact
+# Zuora::GETAccountTypeSoldToContact
 
 ## Properties
 Name | Type | Description | Notes

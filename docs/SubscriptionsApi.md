@@ -1,27 +1,27 @@
-# SwaggerClient::SubscriptionsApi
+# Zuora::SubscriptionsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_subscriptions_by_account**](SubscriptionsApi.md#g_et_subscriptions_by_account) | **GET** /v1/subscriptions/accounts/{account-key} | Get subscriptions by account
-[**g_et_subscriptions_by_key**](SubscriptionsApi.md#g_et_subscriptions_by_key) | **GET** /v1/subscriptions/{subscription-key} | Get subscriptions by key
-[**g_et_subscriptions_by_key_and_version**](SubscriptionsApi.md#g_et_subscriptions_by_key_and_version) | **GET** /v1/subscriptions/{subscription-key}/versions/{version} | Get subscriptions by key and version
+[**get_subscriptions_by_account**](SubscriptionsApi.md#get_subscriptions_by_account) | **GET** /v1/subscriptions/accounts/{account-key} | Get subscriptions by account
+[**get_subscriptions_by_key**](SubscriptionsApi.md#get_subscriptions_by_key) | **GET** /v1/subscriptions/{subscription-key} | Get subscriptions by key
+[**get_subscriptions_by_key_and_version**](SubscriptionsApi.md#get_subscriptions_by_key_and_version) | **GET** /v1/subscriptions/{subscription-key}/versions/{version} | Get subscriptions by key and version
 [**object_delete_subscription**](SubscriptionsApi.md#object_delete_subscription) | **DELETE** /v1/object/subscription/{id} | CRUD: Delete Subscription
 [**object_get_subscription**](SubscriptionsApi.md#object_get_subscription) | **GET** /v1/object/subscription/{id} | CRUD: Retrieve Subscription
 [**object_put_subscription**](SubscriptionsApi.md#object_put_subscription) | **PUT** /v1/object/subscription/{id} | CRUD: Update Subscription
-[**p_ost_preview_subscription**](SubscriptionsApi.md#p_ost_preview_subscription) | **POST** /v1/subscriptions/preview | Preview subscription
-[**p_ost_subscription**](SubscriptionsApi.md#p_ost_subscription) | **POST** /v1/subscriptions | Create subscription
-[**p_ut_cancel_subscription**](SubscriptionsApi.md#p_ut_cancel_subscription) | **PUT** /v1/subscriptions/{subscription-key}/cancel | Cancel subscription
-[**p_ut_renew_subscription**](SubscriptionsApi.md#p_ut_renew_subscription) | **PUT** /v1/subscriptions/{subscription-key}/renew | Renew subscription
-[**p_ut_resume_subscription**](SubscriptionsApi.md#p_ut_resume_subscription) | **PUT** /v1/subscriptions/{subscription-key}/resume | Resume subscription
-[**p_ut_subscription**](SubscriptionsApi.md#p_ut_subscription) | **PUT** /v1/subscriptions/{subscription-key} | Update subscription
-[**p_ut_suspend_subscription**](SubscriptionsApi.md#p_ut_suspend_subscription) | **PUT** /v1/subscriptions/{subscription-key}/suspend | Suspend subscription
-[**p_ut_update_subscription_custom_fields**](SubscriptionsApi.md#p_ut_update_subscription_custom_fields) | **PUT** /v1/subscriptions/{subscriptionNumber}/customFields | Update subscription custom fields
+[**post_preview_subscription**](SubscriptionsApi.md#post_preview_subscription) | **POST** /v1/subscriptions/preview | Preview subscription
+[**post_subscription**](SubscriptionsApi.md#post_subscription) | **POST** /v1/subscriptions | Create subscription
+[**put_cancel_subscription**](SubscriptionsApi.md#put_cancel_subscription) | **PUT** /v1/subscriptions/{subscription-key}/cancel | Cancel subscription
+[**put_renew_subscription**](SubscriptionsApi.md#put_renew_subscription) | **PUT** /v1/subscriptions/{subscription-key}/renew | Renew subscription
+[**put_resume_subscription**](SubscriptionsApi.md#put_resume_subscription) | **PUT** /v1/subscriptions/{subscription-key}/resume | Resume subscription
+[**put_subscription**](SubscriptionsApi.md#put_subscription) | **PUT** /v1/subscriptions/{subscription-key} | Update subscription
+[**put_suspend_subscription**](SubscriptionsApi.md#put_suspend_subscription) | **PUT** /v1/subscriptions/{subscription-key}/suspend | Suspend subscription
+[**put_update_subscription_custom_fields**](SubscriptionsApi.md#put_update_subscription_custom_fields) | **PUT** /v1/subscriptions/{subscriptionNumber}/customFields | Update subscription custom fields
 
 
-# **g_et_subscriptions_by_account**
-> GETSubscriptionWrapper g_et_subscriptions_by_account(account_key, opts)
+# **get_subscriptions_by_account**
+> GETSubscriptionWrapper get_subscriptions_by_account(account_key, opts)
 
 Get subscriptions by account
 
@@ -30,9 +30,9 @@ Retrieves all subscriptions associated with the specified account. Zuora only re
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
 account_key = "account_key_example" # String |  Possible values are: * an account number * an account ID 
 
@@ -45,10 +45,10 @@ opts = {
 
 begin
   #Get subscriptions by account
-  result = api_instance.g_et_subscriptions_by_account(account_key, opts)
+  result = api_instance.get_subscriptions_by_account(account_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SubscriptionsApi->g_et_subscriptions_by_account: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SubscriptionsApi->get_subscriptions_by_account: #{e}"
 end
 ```
 
@@ -77,8 +77,8 @@ No authorization required
 
 
 
-# **g_et_subscriptions_by_key**
-> GETSubscriptionTypeWithSuccess g_et_subscriptions_by_key(subscription_key, opts)
+# **get_subscriptions_by_key**
+> GETSubscriptionTypeWithSuccess get_subscriptions_by_key(subscription_key, opts)
 
 Get subscriptions by key
 
@@ -87,9 +87,9 @@ This REST API reference describes how to retrieve detailed information about a s
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
 subscription_key = "subscription_key_example" # String | Possible values are:   * a subscription number   * a subscription ID 
 
@@ -101,10 +101,10 @@ opts = {
 
 begin
   #Get subscriptions by key
-  result = api_instance.g_et_subscriptions_by_key(subscription_key, opts)
+  result = api_instance.get_subscriptions_by_key(subscription_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SubscriptionsApi->g_et_subscriptions_by_key: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SubscriptionsApi->get_subscriptions_by_key: #{e}"
 end
 ```
 
@@ -132,8 +132,8 @@ No authorization required
 
 
 
-# **g_et_subscriptions_by_key_and_version**
-> GETSubscriptionTypeWithSuccess g_et_subscriptions_by_key_and_version(subscription_key, version, opts)
+# **get_subscriptions_by_key_and_version**
+> GETSubscriptionTypeWithSuccess get_subscriptions_by_key_and_version(subscription_key, version, opts)
 
 Get subscriptions by key and version
 
@@ -142,9 +142,9 @@ This REST API reference describes how to retrieve detailed information about a s
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
 subscription_key = "subscription_key_example" # String | Subscription number. For example, A-S00000135. 
 
@@ -158,10 +158,10 @@ opts = {
 
 begin
   #Get subscriptions by key and version
-  result = api_instance.g_et_subscriptions_by_key_and_version(subscription_key, version, opts)
+  result = api_instance.get_subscriptions_by_key_and_version(subscription_key, version, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SubscriptionsApi->g_et_subscriptions_by_key_and_version: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SubscriptionsApi->get_subscriptions_by_key_and_version: #{e}"
 end
 ```
 
@@ -200,9 +200,9 @@ CRUD: Delete Subscription
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
 id = "id_example" # String | Object id
 
@@ -215,7 +215,7 @@ begin
   #CRUD: Delete Subscription
   result = api_instance.object_delete_subscription(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling SubscriptionsApi->object_delete_subscription: #{e}"
 end
 ```
@@ -253,9 +253,9 @@ CRUD: Retrieve Subscription
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
 id = "id_example" # String | Object id
 
@@ -269,7 +269,7 @@ begin
   #CRUD: Retrieve Subscription
   result = api_instance.object_get_subscription(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling SubscriptionsApi->object_get_subscription: #{e}"
 end
 ```
@@ -308,13 +308,13 @@ CRUD: Update Subscription
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifySubscription.new # ProxyModifySubscription | 
+modify_request = Zuora::ProxyModifySubscription.new # ProxyModifySubscription | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -325,7 +325,7 @@ begin
   #CRUD: Update Subscription
   result = api_instance.object_put_subscription(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling SubscriptionsApi->object_put_subscription: #{e}"
 end
 ```
@@ -354,8 +354,8 @@ No authorization required
 
 
 
-# **p_ost_preview_subscription**
-> POSTSubscriptionPreviewResponseType p_ost_preview_subscription(request, opts)
+# **post_preview_subscription**
+> POSTSubscriptionPreviewResponseType post_preview_subscription(request, opts)
 
 Preview subscription
 
@@ -364,11 +364,11 @@ The REST API reference describes how to create a new subscription in preview mod
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
-request = SwaggerClient::POSTSubscriptionPreviewType.new # POSTSubscriptionPreviewType | 
+request = Zuora::POSTSubscriptionPreviewType.new # POSTSubscriptionPreviewType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -378,10 +378,10 @@ opts = {
 
 begin
   #Preview subscription
-  result = api_instance.p_ost_preview_subscription(request, opts)
+  result = api_instance.post_preview_subscription(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SubscriptionsApi->p_ost_preview_subscription: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SubscriptionsApi->post_preview_subscription: #{e}"
 end
 ```
 
@@ -409,8 +409,8 @@ No authorization required
 
 
 
-# **p_ost_subscription**
-> POSTSubscriptionResponseType p_ost_subscription(request, opts)
+# **post_subscription**
+> POSTSubscriptionResponseType post_subscription(request, opts)
 
 Create subscription
 
@@ -419,11 +419,11 @@ This REST API reference describes how to create a new subscription for an existi
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
-request = SwaggerClient::POSTSubscriptionType.new # POSTSubscriptionType | 
+request = Zuora::POSTSubscriptionType.new # POSTSubscriptionType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -433,10 +433,10 @@ opts = {
 
 begin
   #Create subscription
-  result = api_instance.p_ost_subscription(request, opts)
+  result = api_instance.post_subscription(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SubscriptionsApi->p_ost_subscription: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SubscriptionsApi->post_subscription: #{e}"
 end
 ```
 
@@ -464,8 +464,8 @@ No authorization required
 
 
 
-# **p_ut_cancel_subscription**
-> POSTSubscriptionCancellationResponseType p_ut_cancel_subscription(subscription_key, request, opts)
+# **put_cancel_subscription**
+> POSTSubscriptionCancellationResponseType put_cancel_subscription(subscription_key, request, opts)
 
 Cancel subscription
 
@@ -474,13 +474,13 @@ This REST API reference describes how to cancel an active subscription.  **Note:
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
 subscription_key = "subscription_key_example" # String | Subscription number or ID. Subscription status must be `Active`.
 
-request = SwaggerClient::POSTSubscriptionCancellationType.new # POSTSubscriptionCancellationType | 
+request = Zuora::POSTSubscriptionCancellationType.new # POSTSubscriptionCancellationType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -490,10 +490,10 @@ opts = {
 
 begin
   #Cancel subscription
-  result = api_instance.p_ut_cancel_subscription(subscription_key, request, opts)
+  result = api_instance.put_cancel_subscription(subscription_key, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SubscriptionsApi->p_ut_cancel_subscription: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SubscriptionsApi->put_cancel_subscription: #{e}"
 end
 ```
 
@@ -522,8 +522,8 @@ No authorization required
 
 
 
-# **p_ut_renew_subscription**
-> PUTRenewSubscriptionResponseType p_ut_renew_subscription(subscription_key, request, opts)
+# **put_renew_subscription**
+> PUTRenewSubscriptionResponseType put_renew_subscription(subscription_key, request, opts)
 
 Renew subscription
 
@@ -532,13 +532,13 @@ Renews a termed subscription using existing renewal terms.   **Note:** This feat
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
 subscription_key = "subscription_key_example" # String | Subscription number or ID
 
-request = SwaggerClient::PUTRenewSubscriptionType.new # PUTRenewSubscriptionType | 
+request = Zuora::PUTRenewSubscriptionType.new # PUTRenewSubscriptionType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -548,10 +548,10 @@ opts = {
 
 begin
   #Renew subscription
-  result = api_instance.p_ut_renew_subscription(subscription_key, request, opts)
+  result = api_instance.put_renew_subscription(subscription_key, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SubscriptionsApi->p_ut_renew_subscription: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SubscriptionsApi->put_renew_subscription: #{e}"
 end
 ```
 
@@ -580,8 +580,8 @@ No authorization required
 
 
 
-# **p_ut_resume_subscription**
-> PUTSubscriptionResumeResponseType p_ut_resume_subscription(subscription_key, request, opts)
+# **put_resume_subscription**
+> PUTSubscriptionResumeResponseType put_resume_subscription(subscription_key, request, opts)
 
 Resume subscription
 
@@ -590,13 +590,13 @@ This REST API reference describes how to resume a suspended subscription.   This
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
 subscription_key = "subscription_key_example" # String | Subscription number or ID. Subscription status must be Active.
 
-request = SwaggerClient::PUTSubscriptionResumeType.new # PUTSubscriptionResumeType | 
+request = Zuora::PUTSubscriptionResumeType.new # PUTSubscriptionResumeType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -606,10 +606,10 @@ opts = {
 
 begin
   #Resume subscription
-  result = api_instance.p_ut_resume_subscription(subscription_key, request, opts)
+  result = api_instance.put_resume_subscription(subscription_key, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SubscriptionsApi->p_ut_resume_subscription: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SubscriptionsApi->put_resume_subscription: #{e}"
 end
 ```
 
@@ -638,8 +638,8 @@ No authorization required
 
 
 
-# **p_ut_subscription**
-> PUTSubscriptionResponseType p_ut_subscription(subscription_key, request, opts)
+# **put_subscription**
+> PUTSubscriptionResponseType put_subscription(subscription_key, request, opts)
 
 Update subscription
 
@@ -648,13 +648,13 @@ Use this call to make the following kinds of changes to a subscription:   * Add 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
 subscription_key = "subscription_key_example" # String | Subscription number or ID.
 
-request = SwaggerClient::PUTSubscriptionType.new # PUTSubscriptionType | 
+request = Zuora::PUTSubscriptionType.new # PUTSubscriptionType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -664,10 +664,10 @@ opts = {
 
 begin
   #Update subscription
-  result = api_instance.p_ut_subscription(subscription_key, request, opts)
+  result = api_instance.put_subscription(subscription_key, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SubscriptionsApi->p_ut_subscription: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SubscriptionsApi->put_subscription: #{e}"
 end
 ```
 
@@ -696,8 +696,8 @@ No authorization required
 
 
 
-# **p_ut_suspend_subscription**
-> PUTSubscriptionSuspendResponseType p_ut_suspend_subscription(subscription_key, request, opts)
+# **put_suspend_subscription**
+> PUTSubscriptionSuspendResponseType put_suspend_subscription(subscription_key, request, opts)
 
 Suspend subscription
 
@@ -706,13 +706,13 @@ This REST API reference describes how to suspend an active subscription.   This 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
 subscription_key = "subscription_key_example" # String | Subscription number or ID. Subscription status must be Active.
 
-request = SwaggerClient::PUTSubscriptionSuspendType.new # PUTSubscriptionSuspendType | 
+request = Zuora::PUTSubscriptionSuspendType.new # PUTSubscriptionSuspendType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -722,10 +722,10 @@ opts = {
 
 begin
   #Suspend subscription
-  result = api_instance.p_ut_suspend_subscription(subscription_key, request, opts)
+  result = api_instance.put_suspend_subscription(subscription_key, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SubscriptionsApi->p_ut_suspend_subscription: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SubscriptionsApi->put_suspend_subscription: #{e}"
 end
 ```
 
@@ -754,8 +754,8 @@ No authorization required
 
 
 
-# **p_ut_update_subscription_custom_fields**
-> CommonResponse p_ut_update_subscription_custom_fields(subscription_number, body, opts)
+# **put_update_subscription_custom_fields**
+> CommonResponse put_update_subscription_custom_fields(subscription_number, body, opts)
 
 Update subscription custom fields
 
@@ -764,13 +764,13 @@ Update subscription custom fields
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Zuora::SubscriptionsApi.new
 
 subscription_number = "subscription_number_example" # String | The subscription number to be updated.
 
-body = SwaggerClient::PUTSubscriptionPatchRequestType.new # PUTSubscriptionPatchRequestType | 
+body = Zuora::PUTSubscriptionPatchRequestType.new # PUTSubscriptionPatchRequestType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -779,10 +779,10 @@ opts = {
 
 begin
   #Update subscription custom fields
-  result = api_instance.p_ut_update_subscription_custom_fields(subscription_number, body, opts)
+  result = api_instance.put_update_subscription_custom_fields(subscription_number, body, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SubscriptionsApi->p_ut_update_subscription_custom_fields: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SubscriptionsApi->put_update_subscription_custom_fields: #{e}"
 end
 ```
 

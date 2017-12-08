@@ -1,4 +1,4 @@
-# SwaggerClient::CancelSubscription
+# Zuora::CancelSubscription
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,19 +1,19 @@
-# SwaggerClient::EntitiesApi
+# Zuora::EntitiesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_elete_entities**](EntitiesApi.md#d_elete_entities) | **DELETE** /v1/entities/{id} | Multi-entity: Delete entity
-[**g_et_entities**](EntitiesApi.md#g_et_entities) | **GET** /v1/entities | Multi-entity: Get entities
-[**g_et_entity_by_id**](EntitiesApi.md#g_et_entity_by_id) | **GET** /v1/entities/{id} | Multi-entity: Get entity by Id
-[**p_ost_entities**](EntitiesApi.md#p_ost_entities) | **POST** /v1/entities | Multi-entity: Create entity
-[**p_ut_entities**](EntitiesApi.md#p_ut_entities) | **PUT** /v1/entities/{id} | Multi-entity: Update entity
-[**p_ut_provision_entity**](EntitiesApi.md#p_ut_provision_entity) | **PUT** /v1/entities/{id}/provision | Multi-entity: Provision entity
+[**delete_entities**](EntitiesApi.md#delete_entities) | **DELETE** /v1/entities/{id} | Multi-entity: Delete entity
+[**get_entities**](EntitiesApi.md#get_entities) | **GET** /v1/entities | Multi-entity: Get entities
+[**get_entity_by_id**](EntitiesApi.md#get_entity_by_id) | **GET** /v1/entities/{id} | Multi-entity: Get entity by Id
+[**post_entities**](EntitiesApi.md#post_entities) | **POST** /v1/entities | Multi-entity: Create entity
+[**put_entities**](EntitiesApi.md#put_entities) | **PUT** /v1/entities/{id} | Multi-entity: Update entity
+[**put_provision_entity**](EntitiesApi.md#put_provision_entity) | **PUT** /v1/entities/{id}/provision | Multi-entity: Provision entity
 
 
-# **d_elete_entities**
-> DELETEntityResponseType d_elete_entities(id, opts)
+# **delete_entities**
+> DELETEntityResponseType delete_entities(id, opts)
 
 Multi-entity: Delete entity
 
@@ -22,9 +22,9 @@ Multi-entity: Delete entity
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::EntitiesApi.new
+api_instance = Zuora::EntitiesApi.new
 
 id = "id_example" # String | Specify the Id of the entity that you want to delete. You can get the entity Id from the GET Entities call.
 
@@ -35,10 +35,10 @@ opts = {
 
 begin
   #Multi-entity: Delete entity
-  result = api_instance.d_elete_entities(id, opts)
+  result = api_instance.delete_entities(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling EntitiesApi->d_elete_entities: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling EntitiesApi->delete_entities: #{e}"
 end
 ```
 
@@ -65,8 +65,8 @@ No authorization required
 
 
 
-# **g_et_entities**
-> GETEntitiesResponseType g_et_entities(opts)
+# **get_entities**
+> GETEntitiesResponseType get_entities(opts)
 
 Multi-entity: Get entities
 
@@ -75,9 +75,9 @@ Multi-entity: Get entities
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::EntitiesApi.new
+api_instance = Zuora::EntitiesApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -87,10 +87,10 @@ opts = {
 
 begin
   #Multi-entity: Get entities
-  result = api_instance.g_et_entities(opts)
+  result = api_instance.get_entities(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling EntitiesApi->g_et_entities: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling EntitiesApi->get_entities: #{e}"
 end
 ```
 
@@ -117,8 +117,8 @@ No authorization required
 
 
 
-# **g_et_entity_by_id**
-> GETEntitiesResponseTypeWithId g_et_entity_by_id(id, opts)
+# **get_entity_by_id**
+> GETEntitiesResponseTypeWithId get_entity_by_id(id, opts)
 
 Multi-entity: Get entity by Id
 
@@ -127,9 +127,9 @@ Multi-entity: Get entity by Id
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::EntitiesApi.new
+api_instance = Zuora::EntitiesApi.new
 
 id = "id_example" # String | Specify the Id of the entity that you want to retrieve. You can get the entity Id from the GET Entities call.
 
@@ -140,10 +140,10 @@ opts = {
 
 begin
   #Multi-entity: Get entity by Id
-  result = api_instance.g_et_entity_by_id(id, opts)
+  result = api_instance.get_entity_by_id(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling EntitiesApi->g_et_entity_by_id: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling EntitiesApi->get_entity_by_id: #{e}"
 end
 ```
 
@@ -170,8 +170,8 @@ No authorization required
 
 
 
-# **p_ost_entities**
-> CreateEntityResponseType p_ost_entities(request, opts)
+# **post_entities**
+> CreateEntityResponseType post_entities(request, opts)
 
 Multi-entity: Create entity
 
@@ -180,11 +180,11 @@ Multi-entity: Create entity
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::EntitiesApi.new
+api_instance = Zuora::EntitiesApi.new
 
-request = SwaggerClient::CreateEntityType.new # CreateEntityType | 
+request = Zuora::CreateEntityType.new # CreateEntityType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -193,10 +193,10 @@ opts = {
 
 begin
   #Multi-entity: Create entity
-  result = api_instance.p_ost_entities(request, opts)
+  result = api_instance.post_entities(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling EntitiesApi->p_ost_entities: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling EntitiesApi->post_entities: #{e}"
 end
 ```
 
@@ -223,8 +223,8 @@ No authorization required
 
 
 
-# **p_ut_entities**
-> UpdateEntityResponseType p_ut_entities(id, request, opts)
+# **put_entities**
+> UpdateEntityResponseType put_entities(id, request, opts)
 
 Multi-entity: Update entity
 
@@ -233,13 +233,13 @@ Multi-entity: Update entity
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::EntitiesApi.new
+api_instance = Zuora::EntitiesApi.new
 
 id = "id_example" # String | The Id of the entity that you want to edit. You can get the entity Id from the GET Entities call.
 
-request = SwaggerClient::UpdateEntityType.new # UpdateEntityType | 
+request = Zuora::UpdateEntityType.new # UpdateEntityType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -248,10 +248,10 @@ opts = {
 
 begin
   #Multi-entity: Update entity
-  result = api_instance.p_ut_entities(id, request, opts)
+  result = api_instance.put_entities(id, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling EntitiesApi->p_ut_entities: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling EntitiesApi->put_entities: #{e}"
 end
 ```
 
@@ -279,8 +279,8 @@ No authorization required
 
 
 
-# **p_ut_provision_entity**
-> ProvisionEntityResponseType p_ut_provision_entity(id, opts)
+# **put_provision_entity**
+> ProvisionEntityResponseType put_provision_entity(id, opts)
 
 Multi-entity: Provision entity
 
@@ -289,9 +289,9 @@ Multi-entity: Provision entity
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::EntitiesApi.new
+api_instance = Zuora::EntitiesApi.new
 
 id = "id_example" # String | Specify the Id of the entity that you want to provision.  You can get the entity Id from the GET Entities call.
 
@@ -302,10 +302,10 @@ opts = {
 
 begin
   #Multi-entity: Provision entity
-  result = api_instance.p_ut_provision_entity(id, opts)
+  result = api_instance.put_provision_entity(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling EntitiesApi->p_ut_provision_entity: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling EntitiesApi->put_provision_entity: #{e}"
 end
 ```
 

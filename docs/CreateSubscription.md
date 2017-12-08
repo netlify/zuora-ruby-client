@@ -1,4 +1,4 @@
-# SwaggerClient::CreateSubscription
+# Zuora::CreateSubscription
 
 ## Properties
 Name | Type | Description | Notes

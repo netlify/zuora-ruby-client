@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyModifyPaymentMethod
+# Zuora::ProxyModifyPaymentMethod
 
 ## Properties
 Name | Type | Description | Notes

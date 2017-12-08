@@ -1,4 +1,4 @@
-# SwaggerClient::PostBillingPreviewRunParam
+# Zuora::PostBillingPreviewRunParam
 
 ## Properties
 Name | Type | Description | Notes

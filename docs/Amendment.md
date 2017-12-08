@@ -1,4 +1,4 @@
-# SwaggerClient::Amendment
+# Zuora::Amendment
 
 ## Properties
 Name | Type | Description | Notes

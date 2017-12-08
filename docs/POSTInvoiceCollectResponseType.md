@@ -1,4 +1,4 @@
-# SwaggerClient::POSTInvoiceCollectResponseType
+# Zuora::POSTInvoiceCollectResponseType
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::PaymentCollectionResponseType
+# Zuora::PaymentCollectionResponseType
 
 ## Properties
 Name | Type | Description | Notes

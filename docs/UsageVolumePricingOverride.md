@@ -1,4 +1,4 @@
-# SwaggerClient::UsageVolumePricingOverride
+# Zuora::UsageVolumePricingOverride
 
 ## Properties
 Name | Type | Description | Notes

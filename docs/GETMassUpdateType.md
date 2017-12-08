@@ -1,4 +1,4 @@
-# SwaggerClient::GETMassUpdateType
+# Zuora::GETMassUpdateType
 
 ## Properties
 Name | Type | Description | Notes

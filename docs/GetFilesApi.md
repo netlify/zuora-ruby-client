@@ -1,14 +1,14 @@
-# SwaggerClient::GetFilesApi
+# Zuora::GetFilesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_files**](GetFilesApi.md#g_et_files) | **GET** /v1/files/{file-id} | Get files
+[**get_files**](GetFilesApi.md#get_files) | **GET** /v1/files/{file-id} | Get files
 
 
-# **g_et_files**
-> g_et_files(file_id, opts)
+# **get_files**
+> get_files(file_id, opts)
 
 Get files
 
@@ -17,9 +17,9 @@ Retrieve a file by specifying its file ID. You can retrieve accounting period re
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::GetFilesApi.new
+api_instance = Zuora::GetFilesApi.new
 
 file_id = "file_id_example" # String | The Zuora ID of the file you want to retrieve. 
 
@@ -30,9 +30,9 @@ opts = {
 
 begin
   #Get files
-  api_instance.g_et_files(file_id, opts)
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling GetFilesApi->g_et_files: #{e}"
+  api_instance.get_files(file_id, opts)
+rescue Zuora::ApiError => e
+  puts "Exception when calling GetFilesApi->get_files: #{e}"
 end
 ```
 

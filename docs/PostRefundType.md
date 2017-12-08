@@ -1,4 +1,4 @@
-# SwaggerClient::PostRefundType
+# Zuora::PostRefundType
 
 ## Properties
 Name | Type | Description | Notes

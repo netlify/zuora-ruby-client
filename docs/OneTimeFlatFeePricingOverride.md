@@ -1,4 +1,4 @@
-# SwaggerClient::OneTimeFlatFeePricingOverride
+# Zuora::OneTimeFlatFeePricingOverride
 
 ## Properties
 Name | Type | Description | Notes

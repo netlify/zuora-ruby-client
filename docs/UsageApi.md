@@ -1,19 +1,19 @@
-# SwaggerClient::UsageApi
+# Zuora::UsageApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_usage**](UsageApi.md#g_et_usage) | **GET** /v1/usage/accounts/{account-key} | Get usage
+[**get_usage**](UsageApi.md#get_usage) | **GET** /v1/usage/accounts/{account-key} | Get usage
 [**object_delete_usage**](UsageApi.md#object_delete_usage) | **DELETE** /v1/object/usage/{id} | CRUD: Delete Usage
 [**object_get_usage**](UsageApi.md#object_get_usage) | **GET** /v1/object/usage/{id} | CRUD: Retrieve Usage
 [**object_post_usage**](UsageApi.md#object_post_usage) | **POST** /v1/object/usage | CRUD: Create Usage
 [**object_put_usage**](UsageApi.md#object_put_usage) | **PUT** /v1/object/usage/{id} | CRUD: Update Usage
-[**p_ost_usage**](UsageApi.md#p_ost_usage) | **POST** /v1/usage | Post usage
+[**post_usage**](UsageApi.md#post_usage) | **POST** /v1/usage | Post usage
 
 
-# **g_et_usage**
-> GETUsageWrapper g_et_usage(account_key, opts)
+# **get_usage**
+> GETUsageWrapper get_usage(account_key, opts)
 
 Get usage
 
@@ -22,9 +22,9 @@ This REST API reference describes how to retrieve usage details for an account. 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UsageApi.new
+api_instance = Zuora::UsageApi.new
 
 account_key = "account_key_example" # String | Account number or account ID.
 
@@ -36,10 +36,10 @@ opts = {
 
 begin
   #Get usage
-  result = api_instance.g_et_usage(account_key, opts)
+  result = api_instance.get_usage(account_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UsageApi->g_et_usage: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling UsageApi->get_usage: #{e}"
 end
 ```
 
@@ -77,9 +77,9 @@ CRUD: Delete Usage
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UsageApi.new
+api_instance = Zuora::UsageApi.new
 
 id = "id_example" # String | Object id
 
@@ -92,7 +92,7 @@ begin
   #CRUD: Delete Usage
   result = api_instance.object_delete_usage(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling UsageApi->object_delete_usage: #{e}"
 end
 ```
@@ -130,9 +130,9 @@ CRUD: Retrieve Usage
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UsageApi.new
+api_instance = Zuora::UsageApi.new
 
 id = "id_example" # String | Object id
 
@@ -146,7 +146,7 @@ begin
   #CRUD: Retrieve Usage
   result = api_instance.object_get_usage(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling UsageApi->object_get_usage: #{e}"
 end
 ```
@@ -185,11 +185,11 @@ CRUD: Create Usage
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UsageApi.new
+api_instance = Zuora::UsageApi.new
 
-create_request = SwaggerClient::ProxyCreateUsage.new # ProxyCreateUsage | 
+create_request = Zuora::ProxyCreateUsage.new # ProxyCreateUsage | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -200,7 +200,7 @@ begin
   #CRUD: Create Usage
   result = api_instance.object_post_usage(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling UsageApi->object_post_usage: #{e}"
 end
 ```
@@ -238,13 +238,13 @@ CRUD: Update Usage
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UsageApi.new
+api_instance = Zuora::UsageApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifyUsage.new # ProxyModifyUsage | 
+modify_request = Zuora::ProxyModifyUsage.new # ProxyModifyUsage | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -255,7 +255,7 @@ begin
   #CRUD: Update Usage
   result = api_instance.object_put_usage(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling UsageApi->object_put_usage: #{e}"
 end
 ```
@@ -284,8 +284,8 @@ No authorization required
 
 
 
-# **p_ost_usage**
-> POSTUsageResponseType p_ost_usage(content_type, opts)
+# **post_usage**
+> POSTUsageResponseType post_usage(content_type, opts)
 
 Post usage
 
@@ -294,9 +294,9 @@ Post usage
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UsageApi.new
+api_instance = Zuora::UsageApi.new
 
 content_type = "content_type_example" # String | Must be set to \"multipart/form-data\". 
 
@@ -307,10 +307,10 @@ opts = {
 
 begin
   #Post usage
-  result = api_instance.p_ost_usage(content_type, opts)
+  result = api_instance.post_usage(content_type, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UsageApi->p_ost_usage: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling UsageApi->post_usage: #{e}"
 end
 ```
 

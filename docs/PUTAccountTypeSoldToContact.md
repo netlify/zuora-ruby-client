@@ -1,4 +1,4 @@
-# SwaggerClient::PUTAccountTypeSoldToContact
+# Zuora::PUTAccountTypeSoldToContact
 
 ## Properties
 Name | Type | Description | Notes

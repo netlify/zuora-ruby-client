@@ -1,4 +1,4 @@
-# SwaggerClient::GETAccountSummaryTypeTaxInfo
+# Zuora::GETAccountSummaryTypeTaxInfo
 
 ## Properties
 Name | Type | Description | Notes

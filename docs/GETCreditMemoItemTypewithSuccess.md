@@ -1,4 +1,4 @@
-# SwaggerClient::GETCreditMemoItemTypewithSuccess
+# Zuora::GETCreditMemoItemTypewithSuccess
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::DELETEntityResponseType
+# Zuora::DELETEntityResponseType
 
 ## Properties
 Name | Type | Description | Notes

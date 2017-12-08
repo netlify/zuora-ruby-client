@@ -1,4 +1,4 @@
-# SwaggerClient::DeleteResult
+# Zuora::DeleteResult
 
 ## Properties
 Name | Type | Description | Notes

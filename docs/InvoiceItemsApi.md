@@ -1,4 +1,4 @@
-# SwaggerClient::InvoiceItemsApi
+# Zuora::InvoiceItemsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -17,9 +17,9 @@ CRUD: Retrieve InvoiceItem
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::InvoiceItemsApi.new
+api_instance = Zuora::InvoiceItemsApi.new
 
 id = "id_example" # String | Object id
 
@@ -33,7 +33,7 @@ begin
   #CRUD: Retrieve InvoiceItem
   result = api_instance.object_get_invoice_item(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling InvoiceItemsApi->object_get_invoice_item: #{e}"
 end
 ```

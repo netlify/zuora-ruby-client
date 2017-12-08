@@ -1,4 +1,4 @@
-# SwaggerClient::GETPaymentMethodsType
+# Zuora::GETPaymentMethodsType
 
 ## Properties
 Name | Type | Description | Notes

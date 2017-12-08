@@ -1,4 +1,4 @@
-# SwaggerClient::ActionsApi
+# Zuora::ActionsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -25,11 +25,11 @@ Amend
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ActionsApi.new
+api_instance = Zuora::ActionsApi.new
 
-amend_request = SwaggerClient::ProxyActionamendRequest.new # ProxyActionamendRequest | 
+amend_request = Zuora::ProxyActionamendRequest.new # ProxyActionamendRequest | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -40,7 +40,7 @@ begin
   #Amend
   result = api_instance.action_pos_tamend(amend_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ActionsApi->action_pos_tamend: #{e}"
 end
 ```
@@ -78,11 +78,11 @@ Use the create call to create one or more objects of a specific type. You can sp
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ActionsApi.new
+api_instance = Zuora::ActionsApi.new
 
-create_request = SwaggerClient::ProxyActioncreateRequest.new # ProxyActioncreateRequest | 
+create_request = Zuora::ProxyActioncreateRequest.new # ProxyActioncreateRequest | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -93,7 +93,7 @@ begin
   #Create
   result = api_instance.action_pos_tcreate(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ActionsApi->action_pos_tcreate: #{e}"
 end
 ```
@@ -131,11 +131,11 @@ Deletes one or more objects of the same type. You can specify different types in
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ActionsApi.new
+api_instance = Zuora::ActionsApi.new
 
-delete_request = SwaggerClient::ProxyActiondeleteRequest.new # ProxyActiondeleteRequest | 
+delete_request = Zuora::ProxyActiondeleteRequest.new # ProxyActiondeleteRequest | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -146,7 +146,7 @@ begin
   #Delete
   result = api_instance.action_pos_tdelete(delete_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ActionsApi->action_pos_tdelete: #{e}"
 end
 ```
@@ -184,11 +184,11 @@ Use the execute call to execute a process to split an invoice into multiple invo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ActionsApi.new
+api_instance = Zuora::ActionsApi.new
 
-execute_request = SwaggerClient::ProxyActionexecuteRequest.new # ProxyActionexecuteRequest | 
+execute_request = Zuora::ProxyActionexecuteRequest.new # ProxyActionexecuteRequest | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -199,7 +199,7 @@ begin
   #Execute
   result = api_instance.action_pos_texecute(execute_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ActionsApi->action_pos_texecute: #{e}"
 end
 ```
@@ -237,11 +237,11 @@ Generates an on-demand invoice for a specific customer. This is similar to creat
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ActionsApi.new
+api_instance = Zuora::ActionsApi.new
 
-generate_request = SwaggerClient::ProxyActiongenerateRequest.new # ProxyActiongenerateRequest | 
+generate_request = Zuora::ProxyActiongenerateRequest.new # ProxyActiongenerateRequest | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -252,7 +252,7 @@ begin
   #Generate
   result = api_instance.action_pos_tgenerate(generate_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ActionsApi->action_pos_tgenerate: #{e}"
 end
 ```
@@ -290,11 +290,11 @@ The query call sends a query expression by specifying the object to query, the f
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ActionsApi.new
+api_instance = Zuora::ActionsApi.new
 
-query_request = SwaggerClient::ProxyActionqueryRequest.new # ProxyActionqueryRequest | 
+query_request = Zuora::ProxyActionqueryRequest.new # ProxyActionqueryRequest | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -305,7 +305,7 @@ begin
   #Query
   result = api_instance.action_pos_tquery(query_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ActionsApi->action_pos_tquery: #{e}"
 end
 ```
@@ -343,11 +343,11 @@ Use queryMore to request additional results from a previous query call. If your 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ActionsApi.new
+api_instance = Zuora::ActionsApi.new
 
-query_more_request = SwaggerClient::ProxyActionqueryMoreRequest.new # ProxyActionqueryMoreRequest | 
+query_more_request = Zuora::ProxyActionqueryMoreRequest.new # ProxyActionqueryMoreRequest | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -358,7 +358,7 @@ begin
   #QueryMore
   result = api_instance.action_pos_tquery_more(query_more_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ActionsApi->action_pos_tquery_more: #{e}"
 end
 ```
@@ -396,11 +396,11 @@ Subscribe
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ActionsApi.new
+api_instance = Zuora::ActionsApi.new
 
-subscribe_request = SwaggerClient::ProxyActionsubscribeRequest.new # ProxyActionsubscribeRequest | 
+subscribe_request = Zuora::ProxyActionsubscribeRequest.new # ProxyActionsubscribeRequest | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -411,7 +411,7 @@ begin
   #Subscribe
   result = api_instance.action_pos_tsubscribe(subscribe_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ActionsApi->action_pos_tsubscribe: #{e}"
 end
 ```
@@ -449,11 +449,11 @@ Update
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ActionsApi.new
+api_instance = Zuora::ActionsApi.new
 
-update_request = SwaggerClient::ProxyActionupdateRequest.new # ProxyActionupdateRequest | 
+update_request = Zuora::ProxyActionupdateRequest.new # ProxyActionupdateRequest | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -464,7 +464,7 @@ begin
   #Update
   result = api_instance.action_pos_tupdate(update_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ActionsApi->action_pos_tupdate: #{e}"
 end
 ```

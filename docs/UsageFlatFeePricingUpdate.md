@@ -1,4 +1,4 @@
-# SwaggerClient::UsageFlatFeePricingUpdate
+# Zuora::UsageFlatFeePricingUpdate
 
 ## Properties
 Name | Type | Description | Notes

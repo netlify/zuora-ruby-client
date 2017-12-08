@@ -1,4 +1,4 @@
-# SwaggerClient::PUTAccountingPeriodType
+# Zuora::PUTAccountingPeriodType
 
 ## Properties
 Name | Type | Description | Notes

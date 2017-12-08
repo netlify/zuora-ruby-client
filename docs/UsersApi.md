@@ -1,17 +1,17 @@
-# SwaggerClient::UsersApi
+# Zuora::UsersApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_entities_user_accessible**](UsersApi.md#g_et_entities_user_accessible) | **GET** /v1/users/{username}/accessible-entities | Multi-entity: Get entities that a user can access
-[**p_ut_accept_user_access**](UsersApi.md#p_ut_accept_user_access) | **PUT** /v1/users/{username}/accept-access | Multi-entity: Accept user access
-[**p_ut_deny_user_access**](UsersApi.md#p_ut_deny_user_access) | **PUT** /v1/users/{username}/deny-access | Multi-entity: Deny user access
-[**p_ut_send_user_access_requests**](UsersApi.md#p_ut_send_user_access_requests) | **PUT** /v1/users/{username}/request-access | Multi-entity: Send user access requests
+[**get_entities_user_accessible**](UsersApi.md#get_entities_user_accessible) | **GET** /v1/users/{username}/accessible-entities | Multi-entity: Get entities that a user can access
+[**put_accept_user_access**](UsersApi.md#put_accept_user_access) | **PUT** /v1/users/{username}/accept-access | Multi-entity: Accept user access
+[**put_deny_user_access**](UsersApi.md#put_deny_user_access) | **PUT** /v1/users/{username}/deny-access | Multi-entity: Deny user access
+[**put_send_user_access_requests**](UsersApi.md#put_send_user_access_requests) | **PUT** /v1/users/{username}/request-access | Multi-entity: Send user access requests
 
 
-# **g_et_entities_user_accessible**
-> GETEntitiesUserAccessibleResponseType g_et_entities_user_accessible(username, opts)
+# **get_entities_user_accessible**
+> GETEntitiesUserAccessibleResponseType get_entities_user_accessible(username, opts)
 
 Multi-entity: Get entities that a user can access
 
@@ -20,9 +20,9 @@ Multi-entity: Get entities that a user can access
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UsersApi.new
+api_instance = Zuora::UsersApi.new
 
 username = "username_example" # String | Specify the login user name that you want to retrieve. 
 
@@ -33,10 +33,10 @@ opts = {
 
 begin
   #Multi-entity: Get entities that a user can access
-  result = api_instance.g_et_entities_user_accessible(username, opts)
+  result = api_instance.get_entities_user_accessible(username, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UsersApi->g_et_entities_user_accessible: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling UsersApi->get_entities_user_accessible: #{e}"
 end
 ```
 
@@ -63,8 +63,8 @@ No authorization required
 
 
 
-# **p_ut_accept_user_access**
-> PUTAcceptUserAccessResponseType p_ut_accept_user_access(username, opts)
+# **put_accept_user_access**
+> PUTAcceptUserAccessResponseType put_accept_user_access(username, opts)
 
 Multi-entity: Accept user access
 
@@ -73,9 +73,9 @@ Multi-entity: Accept user access
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UsersApi.new
+api_instance = Zuora::UsersApi.new
 
 username = "username_example" # String | Specify the login name of the user that you want to accept the access request for. 
 
@@ -86,10 +86,10 @@ opts = {
 
 begin
   #Multi-entity: Accept user access
-  result = api_instance.p_ut_accept_user_access(username, opts)
+  result = api_instance.put_accept_user_access(username, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UsersApi->p_ut_accept_user_access: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling UsersApi->put_accept_user_access: #{e}"
 end
 ```
 
@@ -116,8 +116,8 @@ No authorization required
 
 
 
-# **p_ut_deny_user_access**
-> PUTDenyUserAccessResponseType p_ut_deny_user_access(username, opts)
+# **put_deny_user_access**
+> PUTDenyUserAccessResponseType put_deny_user_access(username, opts)
 
 Multi-entity: Deny user access
 
@@ -126,9 +126,9 @@ Multi-entity: Deny user access
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UsersApi.new
+api_instance = Zuora::UsersApi.new
 
 username = "username_example" # String | Specify the login name of the user that you want to deny the access. 
 
@@ -139,10 +139,10 @@ opts = {
 
 begin
   #Multi-entity: Deny user access
-  result = api_instance.p_ut_deny_user_access(username, opts)
+  result = api_instance.put_deny_user_access(username, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UsersApi->p_ut_deny_user_access: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling UsersApi->put_deny_user_access: #{e}"
 end
 ```
 
@@ -169,8 +169,8 @@ No authorization required
 
 
 
-# **p_ut_send_user_access_requests**
-> PUTSendUserAccessRequestResponseType p_ut_send_user_access_requests(username, request, opts)
+# **put_send_user_access_requests**
+> PUTSendUserAccessRequestResponseType put_send_user_access_requests(username, request, opts)
 
 Multi-entity: Send user access requests
 
@@ -179,13 +179,13 @@ Multi-entity: Send user access requests
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::UsersApi.new
+api_instance = Zuora::UsersApi.new
 
 username = "username_example" # String | Specify the login name of the user who wants to access other entities. 
 
-request = SwaggerClient::PUTSendUserAccessRequestType.new # PUTSendUserAccessRequestType | 
+request = Zuora::PUTSendUserAccessRequestType.new # PUTSendUserAccessRequestType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -194,10 +194,10 @@ opts = {
 
 begin
   #Multi-entity: Send user access requests
-  result = api_instance.p_ut_send_user_access_requests(username, request, opts)
+  result = api_instance.put_send_user_access_requests(username, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling UsersApi->p_ut_send_user_access_requests: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling UsersApi->put_send_user_access_requests: #{e}"
 end
 ```
 

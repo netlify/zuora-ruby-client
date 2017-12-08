@@ -1,4 +1,4 @@
-# SwaggerClient::GenerateBillingDocumentResponseType
+# Zuora::GenerateBillingDocumentResponseType
 
 ## Properties
 Name | Type | Description | Notes

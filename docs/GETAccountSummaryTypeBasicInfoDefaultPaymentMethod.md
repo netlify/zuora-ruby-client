@@ -1,4 +1,4 @@
-# SwaggerClient::GETAccountSummaryTypeBasicInfoDefaultPaymentMethod
+# Zuora::GETAccountSummaryTypeBasicInfoDefaultPaymentMethod
 
 ## Properties
 Name | Type | Description | Notes

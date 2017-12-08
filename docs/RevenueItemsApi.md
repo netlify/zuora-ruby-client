@@ -1,18 +1,18 @@
-# SwaggerClient::RevenueItemsApi
+# Zuora::RevenueItemsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_revenue_items_by_charge_revenue_event_number**](RevenueItemsApi.md#g_et_revenue_items_by_charge_revenue_event_number) | **GET** /v1/revenue-items/revenue-events/{event-number} | Get revenue items by revenue event number
-[**g_et_revenue_items_by_charge_revenue_summary_number**](RevenueItemsApi.md#g_et_revenue_items_by_charge_revenue_summary_number) | **GET** /v1/revenue-items/charge-revenue-summaries/{crs-number} | Get revenue items by charge revenue summary number
-[**g_et_revenue_items_by_revenue_schedule**](RevenueItemsApi.md#g_et_revenue_items_by_revenue_schedule) | **GET** /v1/revenue-items/revenue-schedules/{rs-number} | Get revenue items by revenue schedule
-[**p_ut_custom_fieldson_revenue_items_by_revenue_event**](RevenueItemsApi.md#p_ut_custom_fieldson_revenue_items_by_revenue_event) | **PUT** /v1/revenue-items/revenue-events/{event-number} | Update custom fields on revenue items by revenue event number
-[**p_ut_custom_fieldson_revenue_items_by_revenue_schedule**](RevenueItemsApi.md#p_ut_custom_fieldson_revenue_items_by_revenue_schedule) | **PUT** /v1/revenue-items/revenue-schedules/{rs-number} | Update custom fields on revenue items by revenue schedule number
+[**get_revenue_items_by_charge_revenue_event_number**](RevenueItemsApi.md#get_revenue_items_by_charge_revenue_event_number) | **GET** /v1/revenue-items/revenue-events/{event-number} | Get revenue items by revenue event number
+[**get_revenue_items_by_charge_revenue_summary_number**](RevenueItemsApi.md#get_revenue_items_by_charge_revenue_summary_number) | **GET** /v1/revenue-items/charge-revenue-summaries/{crs-number} | Get revenue items by charge revenue summary number
+[**get_revenue_items_by_revenue_schedule**](RevenueItemsApi.md#get_revenue_items_by_revenue_schedule) | **GET** /v1/revenue-items/revenue-schedules/{rs-number} | Get revenue items by revenue schedule
+[**put_custom_fieldson_revenue_items_by_revenue_event**](RevenueItemsApi.md#put_custom_fieldson_revenue_items_by_revenue_event) | **PUT** /v1/revenue-items/revenue-events/{event-number} | Update custom fields on revenue items by revenue event number
+[**put_custom_fieldson_revenue_items_by_revenue_schedule**](RevenueItemsApi.md#put_custom_fieldson_revenue_items_by_revenue_schedule) | **PUT** /v1/revenue-items/revenue-schedules/{rs-number} | Update custom fields on revenue items by revenue schedule number
 
 
-# **g_et_revenue_items_by_charge_revenue_event_number**
-> GETRevenueItemsType g_et_revenue_items_by_charge_revenue_event_number(event_number, opts)
+# **get_revenue_items_by_charge_revenue_event_number**
+> GETRevenueItemsType get_revenue_items_by_charge_revenue_event_number(event_number, opts)
 
 Get revenue items by revenue event number
 
@@ -21,9 +21,9 @@ This REST API reference describes how to get the details of each revenue item in
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueItemsApi.new
+api_instance = Zuora::RevenueItemsApi.new
 
 event_number = "event_number_example" # String | The number associated with the revenue event.
 
@@ -35,10 +35,10 @@ opts = {
 
 begin
   #Get revenue items by revenue event number
-  result = api_instance.g_et_revenue_items_by_charge_revenue_event_number(event_number, opts)
+  result = api_instance.get_revenue_items_by_charge_revenue_event_number(event_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueItemsApi->g_et_revenue_items_by_charge_revenue_event_number: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueItemsApi->get_revenue_items_by_charge_revenue_event_number: #{e}"
 end
 ```
 
@@ -66,8 +66,8 @@ No authorization required
 
 
 
-# **g_et_revenue_items_by_charge_revenue_summary_number**
-> GETRevenueItemsType g_et_revenue_items_by_charge_revenue_summary_number(crs_number, opts)
+# **get_revenue_items_by_charge_revenue_summary_number**
+> GETRevenueItemsType get_revenue_items_by_charge_revenue_summary_number(crs_number, opts)
 
 Get revenue items by charge revenue summary number
 
@@ -76,9 +76,9 @@ This REST API reference describes how to get the details for each revenue item i
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueItemsApi.new
+api_instance = Zuora::RevenueItemsApi.new
 
 crs_number = "crs_number_example" # String | The charge revenue summary number.
 
@@ -90,10 +90,10 @@ opts = {
 
 begin
   #Get revenue items by charge revenue summary number
-  result = api_instance.g_et_revenue_items_by_charge_revenue_summary_number(crs_number, opts)
+  result = api_instance.get_revenue_items_by_charge_revenue_summary_number(crs_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueItemsApi->g_et_revenue_items_by_charge_revenue_summary_number: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueItemsApi->get_revenue_items_by_charge_revenue_summary_number: #{e}"
 end
 ```
 
@@ -121,8 +121,8 @@ No authorization required
 
 
 
-# **g_et_revenue_items_by_revenue_schedule**
-> GETRsRevenueItemsType g_et_revenue_items_by_revenue_schedule(rs_number, opts)
+# **get_revenue_items_by_revenue_schedule**
+> GETRsRevenueItemsType get_revenue_items_by_revenue_schedule(rs_number, opts)
 
 Get revenue items by revenue schedule
 
@@ -131,9 +131,9 @@ This REST API reference describes how to get the details for each revenue items 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueItemsApi.new
+api_instance = Zuora::RevenueItemsApi.new
 
 rs_number = "rs_number_example" # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\".
 
@@ -145,10 +145,10 @@ opts = {
 
 begin
   #Get revenue items by revenue schedule
-  result = api_instance.g_et_revenue_items_by_revenue_schedule(rs_number, opts)
+  result = api_instance.get_revenue_items_by_revenue_schedule(rs_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueItemsApi->g_et_revenue_items_by_revenue_schedule: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueItemsApi->get_revenue_items_by_revenue_schedule: #{e}"
 end
 ```
 
@@ -176,8 +176,8 @@ No authorization required
 
 
 
-# **p_ut_custom_fieldson_revenue_items_by_revenue_event**
-> CommonResponseType p_ut_custom_fieldson_revenue_items_by_revenue_event(event_number, request, opts)
+# **put_custom_fieldson_revenue_items_by_revenue_event**
+> CommonResponseType put_custom_fieldson_revenue_items_by_revenue_event(event_number, request, opts)
 
 Update custom fields on revenue items by revenue event number
 
@@ -186,13 +186,13 @@ This REST API reference describes how to update custom fields on revenue items b
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueItemsApi.new
+api_instance = Zuora::RevenueItemsApi.new
 
 event_number = "event_number_example" # String | The number associated with the revenue event.
 
-request = SwaggerClient::PUTEventRIDetailType.new # PUTEventRIDetailType | 
+request = Zuora::PUTEventRIDetailType.new # PUTEventRIDetailType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -201,10 +201,10 @@ opts = {
 
 begin
   #Update custom fields on revenue items by revenue event number
-  result = api_instance.p_ut_custom_fieldson_revenue_items_by_revenue_event(event_number, request, opts)
+  result = api_instance.put_custom_fieldson_revenue_items_by_revenue_event(event_number, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueItemsApi->p_ut_custom_fieldson_revenue_items_by_revenue_event: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueItemsApi->put_custom_fieldson_revenue_items_by_revenue_event: #{e}"
 end
 ```
 
@@ -232,8 +232,8 @@ No authorization required
 
 
 
-# **p_ut_custom_fieldson_revenue_items_by_revenue_schedule**
-> CommonResponseType p_ut_custom_fieldson_revenue_items_by_revenue_schedule(rs_number, request, opts)
+# **put_custom_fieldson_revenue_items_by_revenue_schedule**
+> CommonResponseType put_custom_fieldson_revenue_items_by_revenue_schedule(rs_number, request, opts)
 
 Update custom fields on revenue items by revenue schedule number
 
@@ -242,13 +242,13 @@ This REST API reference describes how to update custom fields on revenue Items b
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueItemsApi.new
+api_instance = Zuora::RevenueItemsApi.new
 
 rs_number = "rs_number_example" # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\".
 
-request = SwaggerClient::PUTScheduleRIDetailType.new # PUTScheduleRIDetailType | 
+request = Zuora::PUTScheduleRIDetailType.new # PUTScheduleRIDetailType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -257,10 +257,10 @@ opts = {
 
 begin
   #Update custom fields on revenue items by revenue schedule number
-  result = api_instance.p_ut_custom_fieldson_revenue_items_by_revenue_schedule(rs_number, request, opts)
+  result = api_instance.put_custom_fieldson_revenue_items_by_revenue_schedule(rs_number, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueItemsApi->p_ut_custom_fieldson_revenue_items_by_revenue_schedule: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueItemsApi->put_custom_fieldson_revenue_items_by_revenue_schedule: #{e}"
 end
 ```
 

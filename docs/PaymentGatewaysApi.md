@@ -1,14 +1,14 @@
-# SwaggerClient::PaymentGatewaysApi
+# Zuora::PaymentGatewaysApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_paymentgateways**](PaymentGatewaysApi.md#g_et_paymentgateways) | **GET** /v1/paymentgateways | Get payment gateways
+[**get_paymentgateways**](PaymentGatewaysApi.md#get_paymentgateways) | **GET** /v1/paymentgateways | Get payment gateways
 
 
-# **g_et_paymentgateways**
-> GETPaymentGatwaysResponse g_et_paymentgateways(opts)
+# **get_paymentgateways**
+> GETPaymentGatwaysResponse get_paymentgateways(opts)
 
 Get payment gateways
 
@@ -17,9 +17,9 @@ Retrieves the basic information about all the payment gateways.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentGatewaysApi.new
+api_instance = Zuora::PaymentGatewaysApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -28,10 +28,10 @@ opts = {
 
 begin
   #Get payment gateways
-  result = api_instance.g_et_paymentgateways(opts)
+  result = api_instance.get_paymentgateways(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentGatewaysApi->g_et_paymentgateways: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentGatewaysApi->get_paymentgateways: #{e}"
 end
 ```
 

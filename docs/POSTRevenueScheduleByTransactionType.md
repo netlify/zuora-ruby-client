@@ -1,4 +1,4 @@
-# SwaggerClient::POSTRevenueScheduleByTransactionType
+# Zuora::POSTRevenueScheduleByTransactionType
 
 ## Properties
 Name | Type | Description | Notes

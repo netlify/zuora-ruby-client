@@ -1,4 +1,4 @@
-# SwaggerClient::GETCMTaxItemTypeFinanceInformation
+# Zuora::GETCMTaxItemTypeFinanceInformation
 
 ## Properties
 Name | Type | Description | Notes

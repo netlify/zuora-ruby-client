@@ -1,4 +1,4 @@
-# SwaggerClient::POSTBillingPreviewInvoiceItem
+# Zuora::POSTBillingPreviewInvoiceItem
 
 ## Properties
 Name | Type | Description | Notes

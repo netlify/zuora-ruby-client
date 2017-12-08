@@ -1,4 +1,4 @@
-# SwaggerClient::TaxInfo
+# Zuora::TaxInfo
 
 ## Properties
 Name | Type | Description | Notes

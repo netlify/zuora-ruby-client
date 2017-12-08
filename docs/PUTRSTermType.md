@@ -1,4 +1,4 @@
-# SwaggerClient::PUTRSTermType
+# Zuora::PUTRSTermType
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::TokenResponse
+# Zuora::TokenResponse
 
 ## Properties
 Name | Type | Description | Notes

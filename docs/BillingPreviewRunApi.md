@@ -1,15 +1,15 @@
-# SwaggerClient::BillingPreviewRunApi
+# Zuora::BillingPreviewRunApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_billing_preview_run**](BillingPreviewRunApi.md#g_et_billing_preview_run) | **GET** /v1/billing-preview-runs/{billingPreviewRunId} | Get Billing Preview Run
-[**p_ost_billing_preview_run**](BillingPreviewRunApi.md#p_ost_billing_preview_run) | **POST** /v1/billing-preview-runs | Create Billing Preview Run
+[**get_billing_preview_run**](BillingPreviewRunApi.md#get_billing_preview_run) | **GET** /v1/billing-preview-runs/{billingPreviewRunId} | Get Billing Preview Run
+[**post_billing_preview_run**](BillingPreviewRunApi.md#post_billing_preview_run) | **POST** /v1/billing-preview-runs | Create Billing Preview Run
 
 
-# **g_et_billing_preview_run**
-> GetBillingPreviewRunResponse g_et_billing_preview_run(billing_preview_run_id, opts)
+# **get_billing_preview_run**
+> GetBillingPreviewRunResponse get_billing_preview_run(billing_preview_run_id, opts)
 
 Get Billing Preview Run
 
@@ -18,9 +18,9 @@ Get Billing Preview Run
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::BillingPreviewRunApi.new
+api_instance = Zuora::BillingPreviewRunApi.new
 
 billing_preview_run_id = "billing_preview_run_id_example" # String | Id of the billing preview run. 
 
@@ -31,10 +31,10 @@ opts = {
 
 begin
   #Get Billing Preview Run
-  result = api_instance.g_et_billing_preview_run(billing_preview_run_id, opts)
+  result = api_instance.get_billing_preview_run(billing_preview_run_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling BillingPreviewRunApi->g_et_billing_preview_run: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling BillingPreviewRunApi->get_billing_preview_run: #{e}"
 end
 ```
 
@@ -61,8 +61,8 @@ No authorization required
 
 
 
-# **p_ost_billing_preview_run**
-> InlineResponse200 p_ost_billing_preview_run(request, opts)
+# **post_billing_preview_run**
+> InlineResponse200 post_billing_preview_run(request, opts)
 
 Create Billing Preview Run
 
@@ -71,11 +71,11 @@ Create Billing Preview Run
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::BillingPreviewRunApi.new
+api_instance = Zuora::BillingPreviewRunApi.new
 
-request = SwaggerClient::PostBillingPreviewRunParam.new # PostBillingPreviewRunParam | 
+request = Zuora::PostBillingPreviewRunParam.new # PostBillingPreviewRunParam | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -84,10 +84,10 @@ opts = {
 
 begin
   #Create Billing Preview Run
-  result = api_instance.p_ost_billing_preview_run(request, opts)
+  result = api_instance.post_billing_preview_run(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling BillingPreviewRunApi->p_ost_billing_preview_run: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling BillingPreviewRunApi->post_billing_preview_run: #{e}"
 end
 ```
 

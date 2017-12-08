@@ -1,4 +1,4 @@
-# SwaggerClient::GETPaidInvoicesType
+# Zuora::GETPaidInvoicesType
 
 ## Properties
 Name | Type | Description | Notes

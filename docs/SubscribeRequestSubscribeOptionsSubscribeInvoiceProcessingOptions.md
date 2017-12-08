@@ -1,4 +1,4 @@
-# SwaggerClient::SubscribeRequestSubscribeOptionsSubscribeInvoiceProcessingOptions
+# Zuora::SubscribeRequestSubscribeOptionsSubscribeInvoiceProcessingOptions
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::PUTEventRIDetailType
+# Zuora::PUTEventRIDetailType
 
 ## Properties
 Name | Type | Description | Notes

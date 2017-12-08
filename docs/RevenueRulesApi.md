@@ -1,15 +1,15 @@
-# SwaggerClient::RevenueRulesApi
+# Zuora::RevenueRulesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_revenue_rec_ruleby_product_rate_plan_charge**](RevenueRulesApi.md#g_et_revenue_rec_ruleby_product_rate_plan_charge) | **GET** /v1/revenue-recognition-rules/product-charges/{charge-key} | Get revenue recognition rule by product rate plan charge
-[**g_et_revenue_rec_rules**](RevenueRulesApi.md#g_et_revenue_rec_rules) | **GET** /v1/revenue-recognition-rules/subscription-charges/{charge-key} | Get revenue recognition rule by subscription charge
+[**get_revenue_rec_ruleby_product_rate_plan_charge**](RevenueRulesApi.md#get_revenue_rec_ruleby_product_rate_plan_charge) | **GET** /v1/revenue-recognition-rules/product-charges/{charge-key} | Get revenue recognition rule by product rate plan charge
+[**get_revenue_rec_rules**](RevenueRulesApi.md#get_revenue_rec_rules) | **GET** /v1/revenue-recognition-rules/subscription-charges/{charge-key} | Get revenue recognition rule by subscription charge
 
 
-# **g_et_revenue_rec_ruleby_product_rate_plan_charge**
-> GETRevenueRecognitionRuleAssociationType g_et_revenue_rec_ruleby_product_rate_plan_charge(charge_key)
+# **get_revenue_rec_ruleby_product_rate_plan_charge**
+> GETRevenueRecognitionRuleAssociationType get_revenue_rec_ruleby_product_rate_plan_charge(charge_key)
 
 Get revenue recognition rule by product rate plan charge
 
@@ -18,19 +18,19 @@ Get revenue recognition rule by product rate plan charge
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueRulesApi.new
+api_instance = Zuora::RevenueRulesApi.new
 
 charge_key = "charge_key_example" # String | The unique ID of a product rate plan charge. For example, 8a8082e65ba86084015bb323d3c61d82. 
 
 
 begin
   #Get revenue recognition rule by product rate plan charge
-  result = api_instance.g_et_revenue_rec_ruleby_product_rate_plan_charge(charge_key)
+  result = api_instance.get_revenue_rec_ruleby_product_rate_plan_charge(charge_key)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueRulesApi->g_et_revenue_rec_ruleby_product_rate_plan_charge: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueRulesApi->get_revenue_rec_ruleby_product_rate_plan_charge: #{e}"
 end
 ```
 
@@ -55,8 +55,8 @@ No authorization required
 
 
 
-# **g_et_revenue_rec_rules**
-> GETRevenueRecognitionRuleAssociationType g_et_revenue_rec_rules(charge_key, opts)
+# **get_revenue_rec_rules**
+> GETRevenueRecognitionRuleAssociationType get_revenue_rec_rules(charge_key, opts)
 
 Get revenue recognition rule by subscription charge
 
@@ -65,9 +65,9 @@ Retrieves the revenue recognition rule associated with a subscription charge by 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::RevenueRulesApi.new
+api_instance = Zuora::RevenueRulesApi.new
 
 charge_key = "charge_key_example" # String | The unique ID of the subscription rate plan charge. For example, 402892793e173340013e173b81000012. 
 
@@ -78,10 +78,10 @@ opts = {
 
 begin
   #Get revenue recognition rule by subscription charge
-  result = api_instance.g_et_revenue_rec_rules(charge_key, opts)
+  result = api_instance.get_revenue_rec_rules(charge_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling RevenueRulesApi->g_et_revenue_rec_rules: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling RevenueRulesApi->get_revenue_rec_rules: #{e}"
 end
 ```
 

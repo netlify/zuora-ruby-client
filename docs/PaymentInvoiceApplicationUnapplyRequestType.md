@@ -1,4 +1,4 @@
-# SwaggerClient::PaymentInvoiceApplicationUnapplyRequestType
+# Zuora::PaymentInvoiceApplicationUnapplyRequestType
 
 ## Properties
 Name | Type | Description | Notes

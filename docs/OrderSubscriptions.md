@@ -1,4 +1,4 @@
-# SwaggerClient::OrderSubscriptions
+# Zuora::OrderSubscriptions
 
 ## Properties
 Name | Type | Description | Notes

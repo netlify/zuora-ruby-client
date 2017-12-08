@@ -1,4 +1,4 @@
-# SwaggerClient::GETJournalEntryDetailTypeWithoutSuccess
+# Zuora::GETJournalEntryDetailTypeWithoutSuccess
 
 ## Properties
 Name | Type | Description | Notes

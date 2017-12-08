@@ -1,4 +1,4 @@
-# SwaggerClient::POSTHMACSignatureResponseType
+# Zuora::POSTHMACSignatureResponseType
 
 ## Properties
 Name | Type | Description | Notes

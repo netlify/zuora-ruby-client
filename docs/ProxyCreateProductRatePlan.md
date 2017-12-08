@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyCreateProductRatePlan
+# Zuora::ProxyCreateProductRatePlan
 
 ## Properties
 Name | Type | Description | Notes

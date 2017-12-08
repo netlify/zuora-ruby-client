@@ -1,4 +1,4 @@
-# SwaggerClient::ZObjectUpdate
+# Zuora::ZObjectUpdate
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::GETRevenueStartDateSettingType
+# Zuora::GETRevenueStartDateSettingType
 
 ## Properties
 Name | Type | Description | Notes

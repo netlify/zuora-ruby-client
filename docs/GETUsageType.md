@@ -1,4 +1,4 @@
-# SwaggerClient::GETUsageType
+# Zuora::GETUsageType
 
 ## Properties
 Name | Type | Description | Notes

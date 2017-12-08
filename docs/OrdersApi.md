@@ -1,25 +1,25 @@
-# SwaggerClient::OrdersApi
+# Zuora::OrdersApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_elete_order**](OrdersApi.md#d_elete_order) | **DELETE** /v1/orders/{orderNumber} | Delete order
-[**g_et_all_orders**](OrdersApi.md#g_et_all_orders) | **GET** /v1/orders | Get all orders
-[**g_et_order**](OrdersApi.md#g_et_order) | **GET** /v1/orders/{orderNumber} | Get an order
-[**g_et_order_billing_info**](OrdersApi.md#g_et_order_billing_info) | **GET** /v1/orders/{orderNumber}/billingInfo | Get billing information for order
-[**g_et_order_metricsfor_evergreen_subscription**](OrdersApi.md#g_et_order_metricsfor_evergreen_subscription) | **GET** /v1/orders/{orderNumber}/evergreenMetrics/{subscriptionNumber} | Get order metrics for evergreen subscription
-[**g_et_order_rated_result**](OrdersApi.md#g_et_order_rated_result) | **GET** /v1/orders/{orderNumber}/ratedResults | Get rated result for order
-[**g_et_orders_by_invoice_owner**](OrdersApi.md#g_et_orders_by_invoice_owner) | **GET** /v1/orders/invoiceOwner/{accountNumber} | Get orders by invoice owner
-[**g_et_orders_by_subscription_number**](OrdersApi.md#g_et_orders_by_subscription_number) | **GET** /v1/orders/subscription/{subscriptionNumber} | Get orders by subscription number
-[**g_et_orders_by_subscription_owner**](OrdersApi.md#g_et_orders_by_subscription_owner) | **GET** /v1/orders/subscriptionOwner/{accountNumber} | Get orders by subscription owner
-[**p_ost_order**](OrdersApi.md#p_ost_order) | **POST** /v1/orders | Create and activate order
-[**p_ost_preview_order**](OrdersApi.md#p_ost_preview_order) | **POST** /v1/orders/preview | Preview order
-[**p_ut_update_order_custom_fields**](OrdersApi.md#p_ut_update_order_custom_fields) | **PUT** /v1/orders/{orderNumber}/customFields | Update order custom fields
+[**delete_order**](OrdersApi.md#delete_order) | **DELETE** /v1/orders/{orderNumber} | Delete order
+[**get_all_orders**](OrdersApi.md#get_all_orders) | **GET** /v1/orders | Get all orders
+[**get_order**](OrdersApi.md#get_order) | **GET** /v1/orders/{orderNumber} | Get an order
+[**get_order_billing_info**](OrdersApi.md#get_order_billing_info) | **GET** /v1/orders/{orderNumber}/billingInfo | Get billing information for order
+[**get_order_metricsfor_evergreen_subscription**](OrdersApi.md#get_order_metricsfor_evergreen_subscription) | **GET** /v1/orders/{orderNumber}/evergreenMetrics/{subscriptionNumber} | Get order metrics for evergreen subscription
+[**get_order_rated_result**](OrdersApi.md#get_order_rated_result) | **GET** /v1/orders/{orderNumber}/ratedResults | Get rated result for order
+[**get_orders_by_invoice_owner**](OrdersApi.md#get_orders_by_invoice_owner) | **GET** /v1/orders/invoiceOwner/{accountNumber} | Get orders by invoice owner
+[**get_orders_by_subscription_number**](OrdersApi.md#get_orders_by_subscription_number) | **GET** /v1/orders/subscription/{subscriptionNumber} | Get orders by subscription number
+[**get_orders_by_subscription_owner**](OrdersApi.md#get_orders_by_subscription_owner) | **GET** /v1/orders/subscriptionOwner/{accountNumber} | Get orders by subscription owner
+[**post_order**](OrdersApi.md#post_order) | **POST** /v1/orders | Create and activate order
+[**post_preview_order**](OrdersApi.md#post_preview_order) | **POST** /v1/orders/preview | Preview order
+[**put_update_order_custom_fields**](OrdersApi.md#put_update_order_custom_fields) | **PUT** /v1/orders/{orderNumber}/customFields | Update order custom fields
 
 
-# **d_elete_order**
-> CommonResponse d_elete_order(order_number, opts)
+# **delete_order**
+> CommonResponse delete_order(order_number, opts)
 
 Delete order
 
@@ -28,9 +28,9 @@ Delete order
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OrdersApi.new
+api_instance = Zuora::OrdersApi.new
 
 order_number = "order_number_example" # String | The number of the order to be deleted.
 
@@ -41,10 +41,10 @@ opts = {
 
 begin
   #Delete order
-  result = api_instance.d_elete_order(order_number, opts)
+  result = api_instance.delete_order(order_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OrdersApi->d_elete_order: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->delete_order: #{e}"
 end
 ```
 
@@ -71,8 +71,8 @@ No authorization required
 
 
 
-# **g_et_all_orders**
-> GetAllOrdersResponseType g_et_all_orders(opts)
+# **get_all_orders**
+> GetAllOrdersResponseType get_all_orders(opts)
 
 Get all orders
 
@@ -81,9 +81,9 @@ Get all orders
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OrdersApi.new
+api_instance = Zuora::OrdersApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -97,10 +97,10 @@ opts = {
 
 begin
   #Get all orders
-  result = api_instance.g_et_all_orders(opts)
+  result = api_instance.get_all_orders(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OrdersApi->g_et_all_orders: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->get_all_orders: #{e}"
 end
 ```
 
@@ -131,8 +131,8 @@ No authorization required
 
 
 
-# **g_et_order**
-> GetOrderResponse g_et_order(order_number, opts)
+# **get_order**
+> GetOrderResponse get_order(order_number, opts)
 
 Get an order
 
@@ -141,9 +141,9 @@ Get an order
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OrdersApi.new
+api_instance = Zuora::OrdersApi.new
 
 order_number = "order_number_example" # String | The order number to be retrieved.
 
@@ -154,10 +154,10 @@ opts = {
 
 begin
   #Get an order
-  result = api_instance.g_et_order(order_number, opts)
+  result = api_instance.get_order(order_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OrdersApi->g_et_order: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->get_order: #{e}"
 end
 ```
 
@@ -184,8 +184,8 @@ No authorization required
 
 
 
-# **g_et_order_billing_info**
-> GetOrderBillingInfoResponseType g_et_order_billing_info(order_number, opts)
+# **get_order_billing_info**
+> GetOrderBillingInfoResponseType get_order_billing_info(order_number, opts)
 
 Get billing information for order
 
@@ -194,9 +194,9 @@ Get billing information for order
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OrdersApi.new
+api_instance = Zuora::OrdersApi.new
 
 order_number = "order_number_example" # String | The order number.
 
@@ -208,10 +208,10 @@ opts = {
 
 begin
   #Get billing information for order
-  result = api_instance.g_et_order_billing_info(order_number, opts)
+  result = api_instance.get_order_billing_info(order_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OrdersApi->g_et_order_billing_info: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->get_order_billing_info: #{e}"
 end
 ```
 
@@ -239,8 +239,8 @@ No authorization required
 
 
 
-# **g_et_order_metricsfor_evergreen_subscription**
-> GetOrderResponse g_et_order_metricsfor_evergreen_subscription(order_number, subscription_number, start_date, end_date, opts)
+# **get_order_metricsfor_evergreen_subscription**
+> GetOrderResponse get_order_metricsfor_evergreen_subscription(order_number, subscription_number, start_date, end_date, opts)
 
 Get order metrics for evergreen subscription
 
@@ -249,9 +249,9 @@ Get order metrics for evergreen subscription
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OrdersApi.new
+api_instance = Zuora::OrdersApi.new
 
 order_number = "order_number_example" # String | The order number. 
 
@@ -268,10 +268,10 @@ opts = {
 
 begin
   #Get order metrics for evergreen subscription
-  result = api_instance.g_et_order_metricsfor_evergreen_subscription(order_number, subscription_number, start_date, end_date, opts)
+  result = api_instance.get_order_metricsfor_evergreen_subscription(order_number, subscription_number, start_date, end_date, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OrdersApi->g_et_order_metricsfor_evergreen_subscription: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->get_order_metricsfor_evergreen_subscription: #{e}"
 end
 ```
 
@@ -301,8 +301,8 @@ No authorization required
 
 
 
-# **g_et_order_rated_result**
-> GetOrderRatedResultResponseType g_et_order_rated_result(order_number, opts)
+# **get_order_rated_result**
+> GetOrderRatedResultResponseType get_order_rated_result(order_number, opts)
 
 Get rated result for order
 
@@ -311,9 +311,9 @@ Get rated result for order
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OrdersApi.new
+api_instance = Zuora::OrdersApi.new
 
 order_number = "order_number_example" # String | The order number.
 
@@ -324,10 +324,10 @@ opts = {
 
 begin
   #Get rated result for order
-  result = api_instance.g_et_order_rated_result(order_number, opts)
+  result = api_instance.get_order_rated_result(order_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OrdersApi->g_et_order_rated_result: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->get_order_rated_result: #{e}"
 end
 ```
 
@@ -354,8 +354,8 @@ No authorization required
 
 
 
-# **g_et_orders_by_invoice_owner**
-> GetOrdersResponse g_et_orders_by_invoice_owner(account_number, opts)
+# **get_orders_by_invoice_owner**
+> GetOrdersResponse get_orders_by_invoice_owner(account_number, opts)
 
 Get orders by invoice owner
 
@@ -364,9 +364,9 @@ Get orders by invoice owner
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OrdersApi.new
+api_instance = Zuora::OrdersApi.new
 
 account_number = "account_number_example" # String | The invoice owner account number.
 
@@ -382,10 +382,10 @@ opts = {
 
 begin
   #Get orders by invoice owner
-  result = api_instance.g_et_orders_by_invoice_owner(account_number, opts)
+  result = api_instance.get_orders_by_invoice_owner(account_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OrdersApi->g_et_orders_by_invoice_owner: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->get_orders_by_invoice_owner: #{e}"
 end
 ```
 
@@ -417,8 +417,8 @@ No authorization required
 
 
 
-# **g_et_orders_by_subscription_number**
-> GetOrdersResponse g_et_orders_by_subscription_number(subscription_number, opts)
+# **get_orders_by_subscription_number**
+> GetOrdersResponse get_orders_by_subscription_number(subscription_number, opts)
 
 Get orders by subscription number
 
@@ -427,9 +427,9 @@ Get orders by subscription number
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OrdersApi.new
+api_instance = Zuora::OrdersApi.new
 
 subscription_number = "subscription_number_example" # String | The subscription number.
 
@@ -445,10 +445,10 @@ opts = {
 
 begin
   #Get orders by subscription number
-  result = api_instance.g_et_orders_by_subscription_number(subscription_number, opts)
+  result = api_instance.get_orders_by_subscription_number(subscription_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OrdersApi->g_et_orders_by_subscription_number: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->get_orders_by_subscription_number: #{e}"
 end
 ```
 
@@ -480,8 +480,8 @@ No authorization required
 
 
 
-# **g_et_orders_by_subscription_owner**
-> GetOrdersResponse g_et_orders_by_subscription_owner(account_number, opts)
+# **get_orders_by_subscription_owner**
+> GetOrdersResponse get_orders_by_subscription_owner(account_number, opts)
 
 Get orders by subscription owner
 
@@ -490,9 +490,9 @@ Get orders by subscription owner
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OrdersApi.new
+api_instance = Zuora::OrdersApi.new
 
 account_number = "account_number_example" # String | The subscription owner account number.
 
@@ -508,10 +508,10 @@ opts = {
 
 begin
   #Get orders by subscription owner
-  result = api_instance.g_et_orders_by_subscription_owner(account_number, opts)
+  result = api_instance.get_orders_by_subscription_owner(account_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OrdersApi->g_et_orders_by_subscription_owner: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->get_orders_by_subscription_owner: #{e}"
 end
 ```
 
@@ -543,8 +543,8 @@ No authorization required
 
 
 
-# **p_ost_order**
-> PostOrderResponseType p_ost_order(body, opts)
+# **post_order**
+> PostOrderResponseType post_order(body, opts)
 
 Create and activate order
 
@@ -553,11 +553,11 @@ Create and activate order
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OrdersApi.new
+api_instance = Zuora::OrdersApi.new
 
-body = SwaggerClient::POSTOrderRequestType.new # POSTOrderRequestType | 
+body = Zuora::POSTOrderRequestType.new # POSTOrderRequestType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -566,10 +566,10 @@ opts = {
 
 begin
   #Create and activate order
-  result = api_instance.p_ost_order(body, opts)
+  result = api_instance.post_order(body, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OrdersApi->p_ost_order: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->post_order: #{e}"
 end
 ```
 
@@ -596,8 +596,8 @@ No authorization required
 
 
 
-# **p_ost_preview_order**
-> PostOrderPreviewResponseType p_ost_preview_order(body, opts)
+# **post_preview_order**
+> PostOrderPreviewResponseType post_preview_order(body, opts)
 
 Preview order
 
@@ -606,11 +606,11 @@ Preview order
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OrdersApi.new
+api_instance = Zuora::OrdersApi.new
 
-body = SwaggerClient::POSTOrderPreviewRequestType.new # POSTOrderPreviewRequestType | 
+body = Zuora::POSTOrderPreviewRequestType.new # POSTOrderPreviewRequestType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -619,10 +619,10 @@ opts = {
 
 begin
   #Preview order
-  result = api_instance.p_ost_preview_order(body, opts)
+  result = api_instance.post_preview_order(body, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OrdersApi->p_ost_preview_order: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->post_preview_order: #{e}"
 end
 ```
 
@@ -649,8 +649,8 @@ No authorization required
 
 
 
-# **p_ut_update_order_custom_fields**
-> CommonResponse p_ut_update_order_custom_fields(order_number, body, opts)
+# **put_update_order_custom_fields**
+> CommonResponse put_update_order_custom_fields(order_number, body, opts)
 
 Update order custom fields
 
@@ -659,13 +659,13 @@ Update order custom fields
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OrdersApi.new
+api_instance = Zuora::OrdersApi.new
 
 order_number = "order_number_example" # String | The order number.
 
-body = SwaggerClient::PUTOrderPatchRequestType.new # PUTOrderPatchRequestType | 
+body = Zuora::PUTOrderPatchRequestType.new # PUTOrderPatchRequestType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -674,10 +674,10 @@ opts = {
 
 begin
   #Update order custom fields
-  result = api_instance.p_ut_update_order_custom_fields(order_number, body, opts)
+  result = api_instance.put_update_order_custom_fields(order_number, body, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling OrdersApi->p_ut_update_order_custom_fields: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->put_update_order_custom_fields: #{e}"
 end
 ```
 

@@ -1,4 +1,4 @@
-# SwaggerClient::ProductsApi
+# Zuora::ProductsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -20,9 +20,9 @@ CRUD: Delete Product
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ProductsApi.new
+api_instance = Zuora::ProductsApi.new
 
 id = "id_example" # String | Object id
 
@@ -35,7 +35,7 @@ begin
   #CRUD: Delete Product
   result = api_instance.object_delete_product(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ProductsApi->object_delete_product: #{e}"
 end
 ```
@@ -73,9 +73,9 @@ CRUD: Retrieve Product
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ProductsApi.new
+api_instance = Zuora::ProductsApi.new
 
 id = "id_example" # String | Object id
 
@@ -89,7 +89,7 @@ begin
   #CRUD: Retrieve Product
   result = api_instance.object_get_product(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ProductsApi->object_get_product: #{e}"
 end
 ```
@@ -128,11 +128,11 @@ CRUD: Create Product
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ProductsApi.new
+api_instance = Zuora::ProductsApi.new
 
-create_request = SwaggerClient::ProxyCreateProduct.new # ProxyCreateProduct | 
+create_request = Zuora::ProxyCreateProduct.new # ProxyCreateProduct | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -143,7 +143,7 @@ begin
   #CRUD: Create Product
   result = api_instance.object_post_product(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ProductsApi->object_post_product: #{e}"
 end
 ```
@@ -181,13 +181,13 @@ CRUD: Update Product
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ProductsApi.new
+api_instance = Zuora::ProductsApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifyProduct.new # ProxyModifyProduct | 
+modify_request = Zuora::ProxyModifyProduct.new # ProxyModifyProduct | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -198,7 +198,7 @@ begin
   #CRUD: Update Product
   result = api_instance.object_put_product(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ProductsApi->object_put_product: #{e}"
 end
 ```

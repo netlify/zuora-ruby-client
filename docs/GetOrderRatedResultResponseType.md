@@ -1,4 +1,4 @@
-# SwaggerClient::GetOrderRatedResultResponseType
+# Zuora::GetOrderRatedResultResponseType
 
 ## Properties
 Name | Type | Description | Notes

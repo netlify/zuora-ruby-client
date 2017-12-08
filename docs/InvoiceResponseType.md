@@ -1,4 +1,4 @@
-# SwaggerClient::InvoiceResponseType
+# Zuora::InvoiceResponseType
 
 ## Properties
 Name | Type | Description | Notes

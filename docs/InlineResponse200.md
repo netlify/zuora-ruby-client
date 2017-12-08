@@ -1,4 +1,4 @@
-# SwaggerClient::InlineResponse200
+# Zuora::InlineResponse200
 
 ## Properties
 Name | Type | Description | Notes

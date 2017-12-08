@@ -1,4 +1,4 @@
-# SwaggerClient::Error
+# Zuora::Error
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::PUTJournalEntryItemType
+# Zuora::PUTJournalEntryItemType
 
 ## Properties
 Name | Type | Description | Notes

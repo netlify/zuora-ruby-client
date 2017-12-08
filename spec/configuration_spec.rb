@@ -12,14 +12,14 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 
 require 'spec_helper'
 
-describe SwaggerClient::Configuration do
-  let(:config) { SwaggerClient::Configuration.default }
+describe Zuora::Configuration do
+  let(:config) { Zuora::Configuration.default }
 
   before(:each) do
     # uncomment below to setup host and base_path
     #require 'URI'
     #uri = URI.parse("https://rest.zuora.com")
-    #SwaggerClient.configure do |c|
+    #Zuora.configure do |c|
     #  c.host = uri.host
     #  c.base_path = uri.path
     #end

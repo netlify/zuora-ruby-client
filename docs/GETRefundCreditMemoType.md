@@ -1,4 +1,4 @@
-# SwaggerClient::GETRefundCreditMemoType
+# Zuora::GETRefundCreditMemoType
 
 ## Properties
 Name | Type | Description | Notes

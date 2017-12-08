@@ -1,4 +1,4 @@
-# SwaggerClient::GETRefundPartCollectionType
+# Zuora::GETRefundPartCollectionType
 
 ## Properties
 Name | Type | Description | Notes

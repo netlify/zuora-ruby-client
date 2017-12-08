@@ -1,4 +1,4 @@
-# SwaggerClient::ContactsApi
+# Zuora::ContactsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -20,9 +20,9 @@ CRUD: Delete Contact
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ContactsApi.new
+api_instance = Zuora::ContactsApi.new
 
 id = "id_example" # String | Object id
 
@@ -35,7 +35,7 @@ begin
   #CRUD: Delete Contact
   result = api_instance.object_delete_contact(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ContactsApi->object_delete_contact: #{e}"
 end
 ```
@@ -73,9 +73,9 @@ CRUD: Retrieve Contact
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ContactsApi.new
+api_instance = Zuora::ContactsApi.new
 
 id = "id_example" # String | Object id
 
@@ -89,7 +89,7 @@ begin
   #CRUD: Retrieve Contact
   result = api_instance.object_get_contact(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ContactsApi->object_get_contact: #{e}"
 end
 ```
@@ -128,11 +128,11 @@ CRUD: Create Contact
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ContactsApi.new
+api_instance = Zuora::ContactsApi.new
 
-create_request = SwaggerClient::ProxyCreateContact.new # ProxyCreateContact | 
+create_request = Zuora::ProxyCreateContact.new # ProxyCreateContact | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -143,7 +143,7 @@ begin
   #CRUD: Create Contact
   result = api_instance.object_post_contact(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ContactsApi->object_post_contact: #{e}"
 end
 ```
@@ -181,13 +181,13 @@ CRUD: Update Contact
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ContactsApi.new
+api_instance = Zuora::ContactsApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifyContact.new # ProxyModifyContact | 
+modify_request = Zuora::ProxyModifyContact.new # ProxyModifyContact | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -198,7 +198,7 @@ begin
   #CRUD: Update Contact
   result = api_instance.object_put_contact(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ContactsApi->object_put_contact: #{e}"
 end
 ```

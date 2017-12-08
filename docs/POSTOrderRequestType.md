@@ -1,4 +1,4 @@
-# SwaggerClient::POSTOrderRequestType
+# Zuora::POSTOrderRequestType
 
 ## Properties
 Name | Type | Description | Notes

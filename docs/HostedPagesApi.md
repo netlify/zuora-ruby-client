@@ -1,4 +1,4 @@
-# SwaggerClient::HostedPagesApi
+# Zuora::HostedPagesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -17,9 +17,9 @@ The hostedpages call returns the Payment Pages configuration metadata, specifica
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::HostedPagesApi.new
+api_instance = Zuora::HostedPagesApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -32,7 +32,7 @@ begin
   #Return hosted pages
   result = api_instance.get_hosted_pages(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling HostedPagesApi->get_hosted_pages: #{e}"
 end
 ```

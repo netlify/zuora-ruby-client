@@ -1,14 +1,14 @@
-# SwaggerClient::SettingsApi
+# Zuora::SettingsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_revenue_automation_start_date**](SettingsApi.md#g_et_revenue_automation_start_date) | **GET** /v1/settings/finance/revenue-automation-start-date | Get the revenue automation start date
+[**get_revenue_automation_start_date**](SettingsApi.md#get_revenue_automation_start_date) | **GET** /v1/settings/finance/revenue-automation-start-date | Get the revenue automation start date
 
 
-# **g_et_revenue_automation_start_date**
-> GETRevenueStartDateSettingType g_et_revenue_automation_start_date(opts)
+# **get_revenue_automation_start_date**
+> GETRevenueStartDateSettingType get_revenue_automation_start_date(opts)
 
 Get the revenue automation start date
 
@@ -17,9 +17,9 @@ This REST API reference describes how to get the revenue automation start date. 
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::SettingsApi.new
+api_instance = Zuora::SettingsApi.new
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -28,10 +28,10 @@ opts = {
 
 begin
   #Get the revenue automation start date
-  result = api_instance.g_et_revenue_automation_start_date(opts)
+  result = api_instance.get_revenue_automation_start_date(opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling SettingsApi->g_et_revenue_automation_start_date: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling SettingsApi->get_revenue_automation_start_date: #{e}"
 end
 ```
 

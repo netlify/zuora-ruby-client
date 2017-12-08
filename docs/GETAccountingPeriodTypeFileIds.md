@@ -1,4 +1,4 @@
-# SwaggerClient::GETAccountingPeriodTypeFileIds
+# Zuora::GETAccountingPeriodTypeFileIds
 
 ## Properties
 Name | Type | Description | Notes

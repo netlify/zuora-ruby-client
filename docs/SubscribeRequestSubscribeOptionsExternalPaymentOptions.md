@@ -1,4 +1,4 @@
-# SwaggerClient::SubscribeRequestSubscribeOptionsExternalPaymentOptions
+# Zuora::SubscribeRequestSubscribeOptionsExternalPaymentOptions
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::OAuthApi
+# Zuora::OAuthApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -17,9 +17,9 @@ Generates a bearer token that enables an OAuth client to authenticate with the Z
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::OAuthApi.new
+api_instance = Zuora::OAuthApi.new
 
 client_id = "client_id_example" # String | The Client ID of the OAuth client. 
 
@@ -32,7 +32,7 @@ begin
   #Generate an OAuth token
   result = api_instance.create_token(client_id, client_secret, grant_type)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling OAuthApi->create_token: #{e}"
 end
 ```

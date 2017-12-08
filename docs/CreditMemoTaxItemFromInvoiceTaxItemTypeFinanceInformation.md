@@ -1,4 +1,4 @@
-# SwaggerClient::CreditMemoTaxItemFromInvoiceTaxItemTypeFinanceInformation
+# Zuora::CreditMemoTaxItemFromInvoiceTaxItemTypeFinanceInformation
 
 ## Properties
 Name | Type | Description | Notes

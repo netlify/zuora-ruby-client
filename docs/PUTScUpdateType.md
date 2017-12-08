@@ -1,4 +1,4 @@
-# SwaggerClient::PUTScUpdateType
+# Zuora::PUTScUpdateType
 
 ## Properties
 Name | Type | Description | Notes

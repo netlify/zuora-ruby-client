@@ -1,23 +1,23 @@
-# SwaggerClient::PaymentMethodsApi
+# Zuora::PaymentMethodsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**d_elete_payment_methods**](PaymentMethodsApi.md#d_elete_payment_methods) | **DELETE** /v1/payment-methods/{payment-method-id} | Delete payment method
-[**g_et_payment_methods**](PaymentMethodsApi.md#g_et_payment_methods) | **GET** /v1/payment-methods/credit-cards/accounts/{account-key} | Get payment methods
+[**delete_payment_methods**](PaymentMethodsApi.md#delete_payment_methods) | **DELETE** /v1/payment-methods/{payment-method-id} | Delete payment method
+[**get_payment_methods**](PaymentMethodsApi.md#get_payment_methods) | **GET** /v1/payment-methods/credit-cards/accounts/{account-key} | Get payment methods
 [**object_delete_payment_method**](PaymentMethodsApi.md#object_delete_payment_method) | **DELETE** /v1/object/payment-method/{id} | CRUD: Delete payment method
 [**object_get_payment_method**](PaymentMethodsApi.md#object_get_payment_method) | **GET** /v1/object/payment-method/{id} | CRUD: Get payment method
 [**object_post_payment_method**](PaymentMethodsApi.md#object_post_payment_method) | **POST** /v1/object/payment-method | CRUD: Create payment method
 [**object_put_payment_method**](PaymentMethodsApi.md#object_put_payment_method) | **PUT** /v1/object/payment-method/{id} | CRUD: Update payment method
-[**p_ost_payment_methods**](PaymentMethodsApi.md#p_ost_payment_methods) | **POST** /v1/payment-methods/credit-cards | Create payment method
-[**p_ost_payment_methods_decryption**](PaymentMethodsApi.md#p_ost_payment_methods_decryption) | **POST** /v1/payment-methods/decryption | Create payment method decryption
-[**p_ut_payment_methods**](PaymentMethodsApi.md#p_ut_payment_methods) | **PUT** /v1/payment-methods/credit-cards/{payment-method-id} | Update payment method
-[**p_ut_verify_payment_methods**](PaymentMethodsApi.md#p_ut_verify_payment_methods) | **PUT** /v1/payment-methods/{payment-method-id}/verify | Verify payment method
+[**post_payment_methods**](PaymentMethodsApi.md#post_payment_methods) | **POST** /v1/payment-methods/credit-cards | Create payment method
+[**post_payment_methods_decryption**](PaymentMethodsApi.md#post_payment_methods_decryption) | **POST** /v1/payment-methods/decryption | Create payment method decryption
+[**put_payment_methods**](PaymentMethodsApi.md#put_payment_methods) | **PUT** /v1/payment-methods/credit-cards/{payment-method-id} | Update payment method
+[**put_verify_payment_methods**](PaymentMethodsApi.md#put_verify_payment_methods) | **PUT** /v1/payment-methods/{payment-method-id}/verify | Verify payment method
 
 
-# **d_elete_payment_methods**
-> CommonResponseType d_elete_payment_methods(payment_method_id, opts)
+# **delete_payment_methods**
+> CommonResponseType delete_payment_methods(payment_method_id, opts)
 
 Delete payment method
 
@@ -26,9 +26,9 @@ Deletes a credit card payment method from the specified customer account.  If th
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentMethodsApi.new
+api_instance = Zuora::PaymentMethodsApi.new
 
 payment_method_id = "payment_method_id_example" # String | Unique identifier of a payment method. (Since this ID is unique, and linked to a customer account in the system, no customer identifier is needed.)
 
@@ -39,10 +39,10 @@ opts = {
 
 begin
   #Delete payment method
-  result = api_instance.d_elete_payment_methods(payment_method_id, opts)
+  result = api_instance.delete_payment_methods(payment_method_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentMethodsApi->d_elete_payment_methods: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentMethodsApi->delete_payment_methods: #{e}"
 end
 ```
 
@@ -69,8 +69,8 @@ No authorization required
 
 
 
-# **g_et_payment_methods**
-> GETPaymentMethodsType g_et_payment_methods(account_key, opts)
+# **get_payment_methods**
+> GETPaymentMethodsType get_payment_methods(account_key, opts)
 
 Get payment methods
 
@@ -79,9 +79,9 @@ This REST API reference describes how to retrieve all credit card information fo
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentMethodsApi.new
+api_instance = Zuora::PaymentMethodsApi.new
 
 account_key = "account_key_example" # String | Account number or account ID.
 
@@ -93,10 +93,10 @@ opts = {
 
 begin
   #Get payment methods
-  result = api_instance.g_et_payment_methods(account_key, opts)
+  result = api_instance.get_payment_methods(account_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentMethodsApi->g_et_payment_methods: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentMethodsApi->get_payment_methods: #{e}"
 end
 ```
 
@@ -134,9 +134,9 @@ CRUD: Delete payment method
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentMethodsApi.new
+api_instance = Zuora::PaymentMethodsApi.new
 
 id = "id_example" # String | Object id
 
@@ -149,7 +149,7 @@ begin
   #CRUD: Delete payment method
   result = api_instance.object_delete_payment_method(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling PaymentMethodsApi->object_delete_payment_method: #{e}"
 end
 ```
@@ -187,9 +187,9 @@ CRUD: Get payment method
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentMethodsApi.new
+api_instance = Zuora::PaymentMethodsApi.new
 
 id = "id_example" # String | Object id
 
@@ -203,7 +203,7 @@ begin
   #CRUD: Get payment method
   result = api_instance.object_get_payment_method(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling PaymentMethodsApi->object_get_payment_method: #{e}"
 end
 ```
@@ -242,11 +242,11 @@ CRUD: Create payment method
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentMethodsApi.new
+api_instance = Zuora::PaymentMethodsApi.new
 
-create_request = SwaggerClient::ProxyCreatePaymentMethod.new # ProxyCreatePaymentMethod | 
+create_request = Zuora::ProxyCreatePaymentMethod.new # ProxyCreatePaymentMethod | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -257,7 +257,7 @@ begin
   #CRUD: Create payment method
   result = api_instance.object_post_payment_method(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling PaymentMethodsApi->object_post_payment_method: #{e}"
 end
 ```
@@ -295,13 +295,13 @@ CRUD: Update payment method
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentMethodsApi.new
+api_instance = Zuora::PaymentMethodsApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifyPaymentMethod.new # ProxyModifyPaymentMethod | 
+modify_request = Zuora::ProxyModifyPaymentMethod.new # ProxyModifyPaymentMethod | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -312,7 +312,7 @@ begin
   #CRUD: Update payment method
   result = api_instance.object_put_payment_method(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling PaymentMethodsApi->object_put_payment_method: #{e}"
 end
 ```
@@ -341,8 +341,8 @@ No authorization required
 
 
 
-# **p_ost_payment_methods**
-> POSTPaymentMethodResponseType p_ost_payment_methods(request, opts)
+# **post_payment_methods**
+> POSTPaymentMethodResponseType post_payment_methods(request, opts)
 
 Create payment method
 
@@ -351,11 +351,11 @@ This REST API reference describes how to create a new credit card payment method
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentMethodsApi.new
+api_instance = Zuora::PaymentMethodsApi.new
 
-request = SwaggerClient::POSTPaymentMethodType.new # POSTPaymentMethodType | 
+request = Zuora::POSTPaymentMethodType.new # POSTPaymentMethodType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -364,10 +364,10 @@ opts = {
 
 begin
   #Create payment method
-  result = api_instance.p_ost_payment_methods(request, opts)
+  result = api_instance.post_payment_methods(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentMethodsApi->p_ost_payment_methods: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentMethodsApi->post_payment_methods: #{e}"
 end
 ```
 
@@ -394,8 +394,8 @@ No authorization required
 
 
 
-# **p_ost_payment_methods_decryption**
-> POSTPaymentMethodResponseDecryption p_ost_payment_methods_decryption(request, opts)
+# **post_payment_methods_decryption**
+> POSTPaymentMethodResponseDecryption post_payment_methods_decryption(request, opts)
 
 Create payment method decryption
 
@@ -404,11 +404,11 @@ The decryption API endpoint can conditionally perform 3 tasks in one atomic call
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentMethodsApi.new
+api_instance = Zuora::PaymentMethodsApi.new
 
-request = SwaggerClient::POSTPaymentMethodDecryption.new # POSTPaymentMethodDecryption | 
+request = Zuora::POSTPaymentMethodDecryption.new # POSTPaymentMethodDecryption | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -417,10 +417,10 @@ opts = {
 
 begin
   #Create payment method decryption
-  result = api_instance.p_ost_payment_methods_decryption(request, opts)
+  result = api_instance.post_payment_methods_decryption(request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentMethodsApi->p_ost_payment_methods_decryption: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentMethodsApi->post_payment_methods_decryption: #{e}"
 end
 ```
 
@@ -447,8 +447,8 @@ No authorization required
 
 
 
-# **p_ut_payment_methods**
-> PUTPaymentMethodResponseType p_ut_payment_methods(payment_method_id, request, opts)
+# **put_payment_methods**
+> PUTPaymentMethodResponseType put_payment_methods(payment_method_id, request, opts)
 
 Update payment method
 
@@ -457,13 +457,13 @@ Updates an existing credit card payment method for the specified customer accoun
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentMethodsApi.new
+api_instance = Zuora::PaymentMethodsApi.new
 
 payment_method_id = "payment_method_id_example" # String | Unique ID of the payment method to update.
 
-request = SwaggerClient::PUTPaymentMethodType.new # PUTPaymentMethodType | 
+request = Zuora::PUTPaymentMethodType.new # PUTPaymentMethodType | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -472,10 +472,10 @@ opts = {
 
 begin
   #Update payment method
-  result = api_instance.p_ut_payment_methods(payment_method_id, request, opts)
+  result = api_instance.put_payment_methods(payment_method_id, request, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentMethodsApi->p_ut_payment_methods: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentMethodsApi->put_payment_methods: #{e}"
 end
 ```
 
@@ -503,8 +503,8 @@ No authorization required
 
 
 
-# **p_ut_verify_payment_methods**
-> PUTVerifyPaymentMethodResponseType p_ut_verify_payment_methods(payment_method_id, body)
+# **put_verify_payment_methods**
+> PUTVerifyPaymentMethodResponseType put_verify_payment_methods(payment_method_id, body)
 
 Verify payment method
 
@@ -513,21 +513,21 @@ Sends an authorization request to the corresponding payment gateway to verify th
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::PaymentMethodsApi.new
+api_instance = Zuora::PaymentMethodsApi.new
 
 payment_method_id = "payment_method_id_example" # String | The ID of the payment method to be verified. 
 
-body = SwaggerClient::PUTVerifyPaymentMethodType.new # PUTVerifyPaymentMethodType | 
+body = Zuora::PUTVerifyPaymentMethodType.new # PUTVerifyPaymentMethodType | 
 
 
 begin
   #Verify payment method
-  result = api_instance.p_ut_verify_payment_methods(payment_method_id, body)
+  result = api_instance.put_verify_payment_methods(payment_method_id, body)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentMethodsApi->p_ut_verify_payment_methods: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentMethodsApi->put_verify_payment_methods: #{e}"
 end
 ```
 

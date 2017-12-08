@@ -1,4 +1,4 @@
-# SwaggerClient::ExternalPaymentOptions
+# Zuora::ExternalPaymentOptions
 
 ## Properties
 Name | Type | Description | Notes

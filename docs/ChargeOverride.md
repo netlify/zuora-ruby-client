@@ -1,4 +1,4 @@
-# SwaggerClient::ChargeOverride
+# Zuora::ChargeOverride
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::POSTJournalRunTransactionType
+# Zuora::POSTJournalRunTransactionType
 
 ## Properties
 Name | Type | Description | Notes

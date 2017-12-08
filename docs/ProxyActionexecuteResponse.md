@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyActionexecuteResponse
+# Zuora::ProxyActionexecuteResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::OneTimeTieredPricingOverride
+# Zuora::OneTimeTieredPricingOverride
 
 ## Properties
 Name | Type | Description | Notes

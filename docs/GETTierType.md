@@ -1,4 +1,4 @@
-# SwaggerClient::GETTierType
+# Zuora::GETTierType
 
 ## Properties
 Name | Type | Description | Notes

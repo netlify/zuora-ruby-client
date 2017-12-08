@@ -1,4 +1,4 @@
-# SwaggerClient::GETDiscountApplyDetailsType
+# Zuora::GETDiscountApplyDetailsType
 
 ## Properties
 Name | Type | Description | Notes

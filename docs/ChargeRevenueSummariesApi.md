@@ -1,15 +1,15 @@
-# SwaggerClient::ChargeRevenueSummariesApi
+# Zuora::ChargeRevenueSummariesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_etcrs_by_charge_id**](ChargeRevenueSummariesApi.md#g_etcrs_by_charge_id) | **GET** /v1/charge-revenue-summaries/subscription-charges/{charge-key} | Get charge summary details by charge ID
-[**g_etcrs_by_crs_number**](ChargeRevenueSummariesApi.md#g_etcrs_by_crs_number) | **GET** /v1/charge-revenue-summaries/{crs-number} | Get charge summary details by CRS number
+[**get_crs_by_charge_id**](ChargeRevenueSummariesApi.md#get_crs_by_charge_id) | **GET** /v1/charge-revenue-summaries/subscription-charges/{charge-key} | Get charge summary details by charge ID
+[**get_crs_by_crs_number**](ChargeRevenueSummariesApi.md#get_crs_by_crs_number) | **GET** /v1/charge-revenue-summaries/{crs-number} | Get charge summary details by CRS number
 
 
-# **g_etcrs_by_charge_id**
-> GETChargeRSDetailType g_etcrs_by_charge_id(charge_key, opts)
+# **get_crs_by_charge_id**
+> GETChargeRSDetailType get_crs_by_charge_id(charge_key, opts)
 
 Get charge summary details by charge ID
 
@@ -18,9 +18,9 @@ This REST API reference describes how to retrieve the details of a charge revenu
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ChargeRevenueSummariesApi.new
+api_instance = Zuora::ChargeRevenueSummariesApi.new
 
 charge_key = "charge_key_example" # String | ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012. 
 
@@ -31,10 +31,10 @@ opts = {
 
 begin
   #Get charge summary details by charge ID
-  result = api_instance.g_etcrs_by_charge_id(charge_key, opts)
+  result = api_instance.get_crs_by_charge_id(charge_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling ChargeRevenueSummariesApi->g_etcrs_by_charge_id: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling ChargeRevenueSummariesApi->get_crs_by_charge_id: #{e}"
 end
 ```
 
@@ -61,8 +61,8 @@ No authorization required
 
 
 
-# **g_etcrs_by_crs_number**
-> GETChargeRSDetailType g_etcrs_by_crs_number(crs_number, opts)
+# **get_crs_by_crs_number**
+> GETChargeRSDetailType get_crs_by_crs_number(crs_number, opts)
 
 Get charge summary details by CRS number
 
@@ -71,9 +71,9 @@ This REST API reference describes how to retrieve the details of a charge revenu
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ChargeRevenueSummariesApi.new
+api_instance = Zuora::ChargeRevenueSummariesApi.new
 
 crs_number = "crs_number_example" # String | The charge revenue summary number. 
 
@@ -84,10 +84,10 @@ opts = {
 
 begin
   #Get charge summary details by CRS number
-  result = api_instance.g_etcrs_by_crs_number(crs_number, opts)
+  result = api_instance.get_crs_by_crs_number(crs_number, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling ChargeRevenueSummariesApi->g_etcrs_by_crs_number: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling ChargeRevenueSummariesApi->get_crs_by_crs_number: #{e}"
 end
 ```
 

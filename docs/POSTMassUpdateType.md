@@ -1,4 +1,4 @@
-# SwaggerClient::POSTMassUpdateType
+# Zuora::POSTMassUpdateType
 
 ## Properties
 Name | Type | Description | Notes

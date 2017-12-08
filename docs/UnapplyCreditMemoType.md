@@ -1,4 +1,4 @@
-# SwaggerClient::UnapplyCreditMemoType
+# Zuora::UnapplyCreditMemoType
 
 ## Properties
 Name | Type | Description | Notes

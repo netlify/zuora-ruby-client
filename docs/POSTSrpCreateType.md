@@ -1,4 +1,4 @@
-# SwaggerClient::POSTSrpCreateType
+# Zuora::POSTSrpCreateType
 
 ## Properties
 Name | Type | Description | Notes

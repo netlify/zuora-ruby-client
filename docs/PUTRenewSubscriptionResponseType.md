@@ -1,4 +1,4 @@
-# SwaggerClient::PUTRenewSubscriptionResponseType
+# Zuora::PUTRenewSubscriptionResponseType
 
 ## Properties
 Name | Type | Description | Notes

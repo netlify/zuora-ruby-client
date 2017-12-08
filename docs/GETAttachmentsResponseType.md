@@ -1,4 +1,4 @@
-# SwaggerClient::GETAttachmentsResponseType
+# Zuora::GETAttachmentsResponseType
 
 ## Properties
 Name | Type | Description | Notes

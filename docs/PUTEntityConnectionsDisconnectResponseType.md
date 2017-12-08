@@ -1,4 +1,4 @@
-# SwaggerClient::PUTEntityConnectionsDisconnectResponseType
+# Zuora::PUTEntityConnectionsDisconnectResponseType
 
 ## Properties
 Name | Type | Description | Notes

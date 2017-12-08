@@ -1,4 +1,4 @@
-# SwaggerClient::Account
+# Zuora::Account
 
 ## Properties
 Name | Type | Description | Notes

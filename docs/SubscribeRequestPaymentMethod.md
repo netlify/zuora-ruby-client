@@ -1,4 +1,4 @@
-# SwaggerClient::SubscribeRequestPaymentMethod
+# Zuora::SubscribeRequestPaymentMethod
 
 ## Properties
 Name | Type | Description | Notes

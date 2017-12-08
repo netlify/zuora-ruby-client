@@ -1,4 +1,4 @@
-# SwaggerClient::ProductRatePlanChargesApi
+# Zuora::ProductRatePlanChargesApi
 
 All URIs are relative to *https://rest.zuora.com*
 
@@ -18,9 +18,9 @@ CRUD: Delete ProductRatePlanCharge
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ProductRatePlanChargesApi.new
+api_instance = Zuora::ProductRatePlanChargesApi.new
 
 id = "id_example" # String | Object id
 
@@ -33,7 +33,7 @@ begin
   #CRUD: Delete ProductRatePlanCharge
   result = api_instance.object_delete_product_rate_plan_charge(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ProductRatePlanChargesApi->object_delete_product_rate_plan_charge: #{e}"
 end
 ```
@@ -71,9 +71,9 @@ CRUD: Retrieve ProductRatePlanCharge
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::ProductRatePlanChargesApi.new
+api_instance = Zuora::ProductRatePlanChargesApi.new
 
 id = "id_example" # String | Object id
 
@@ -87,7 +87,7 @@ begin
   #CRUD: Retrieve ProductRatePlanCharge
   result = api_instance.object_get_product_rate_plan_charge(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling ProductRatePlanChargesApi->object_get_product_rate_plan_charge: #{e}"
 end
 ```

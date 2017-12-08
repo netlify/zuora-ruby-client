@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyGetSubscriptionProductFeature
+# Zuora::ProxyGetSubscriptionProductFeature
 
 ## Properties
 Name | Type | Description | Notes

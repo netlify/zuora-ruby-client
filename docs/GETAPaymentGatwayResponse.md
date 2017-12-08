@@ -1,4 +1,4 @@
-# SwaggerClient::GETAPaymentGatwayResponse
+# Zuora::GETAPaymentGatwayResponse
 
 ## Properties
 Name | Type | Description | Notes

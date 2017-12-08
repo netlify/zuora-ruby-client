@@ -1,4 +1,4 @@
-# SwaggerClient::InvoiceDataInvoice
+# Zuora::InvoiceDataInvoice
 
 ## Properties
 Name | Type | Description | Notes

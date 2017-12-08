@@ -1,4 +1,4 @@
-# SwaggerClient::TimeSlicedNetMetrics
+# Zuora::TimeSlicedNetMetrics
 
 ## Properties
 Name | Type | Description | Notes

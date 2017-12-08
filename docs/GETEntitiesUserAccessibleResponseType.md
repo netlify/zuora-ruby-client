@@ -1,4 +1,4 @@
-# SwaggerClient::GETEntitiesUserAccessibleResponseType
+# Zuora::GETEntitiesUserAccessibleResponseType
 
 ## Properties
 Name | Type | Description | Notes

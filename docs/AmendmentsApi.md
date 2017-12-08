@@ -1,19 +1,19 @@
-# SwaggerClient::AmendmentsApi
+# Zuora::AmendmentsApi
 
 All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**g_et_amendments_by_key**](AmendmentsApi.md#g_et_amendments_by_key) | **GET** /v1/amendments/{amendment-key} | Get amendments by key
-[**g_et_amendments_by_subscription_id**](AmendmentsApi.md#g_et_amendments_by_subscription_id) | **GET** /v1/amendments/subscriptions/{subscription-id} | Get amendments by subscription ID
+[**get_amendments_by_key**](AmendmentsApi.md#get_amendments_by_key) | **GET** /v1/amendments/{amendment-key} | Get amendments by key
+[**get_amendments_by_subscription_id**](AmendmentsApi.md#get_amendments_by_subscription_id) | **GET** /v1/amendments/subscriptions/{subscription-id} | Get amendments by subscription ID
 [**object_delete_amendment**](AmendmentsApi.md#object_delete_amendment) | **DELETE** /v1/object/amendment/{id} | CRUD: Delete amendment
 [**object_get_amendment**](AmendmentsApi.md#object_get_amendment) | **GET** /v1/object/amendment/{id} | CRUD: Get amendment
 [**object_post_amendment**](AmendmentsApi.md#object_post_amendment) | **POST** /v1/object/amendment | CRUD: Create amendment
 [**object_put_amendment**](AmendmentsApi.md#object_put_amendment) | **PUT** /v1/object/amendment/{id} | CRUD: Update amendment
 
 
-# **g_et_amendments_by_key**
-> GETAmendmentType g_et_amendments_by_key(amendment_key, opts)
+# **get_amendments_by_key**
+> GETAmendmentType get_amendments_by_key(amendment_key, opts)
 
 Get amendments by key
 
@@ -22,9 +22,9 @@ Retrieves detailed information about the specified subscription amendment.
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AmendmentsApi.new
+api_instance = Zuora::AmendmentsApi.new
 
 amendment_key = "amendment_key_example" # String | Can be the amendment ID or the amendment code.
 
@@ -35,10 +35,10 @@ opts = {
 
 begin
   #Get amendments by key
-  result = api_instance.g_et_amendments_by_key(amendment_key, opts)
+  result = api_instance.get_amendments_by_key(amendment_key, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AmendmentsApi->g_et_amendments_by_key: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AmendmentsApi->get_amendments_by_key: #{e}"
 end
 ```
 
@@ -65,8 +65,8 @@ No authorization required
 
 
 
-# **g_et_amendments_by_subscription_id**
-> GETAmendmentType g_et_amendments_by_subscription_id(subscription_id, opts)
+# **get_amendments_by_subscription_id**
+> GETAmendmentType get_amendments_by_subscription_id(subscription_id, opts)
 
 Get amendments by subscription ID
 
@@ -75,9 +75,9 @@ Retrieves detailed information about the amendment with the specified subscripti
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AmendmentsApi.new
+api_instance = Zuora::AmendmentsApi.new
 
 subscription_id = "subscription_id_example" # String | The ID of the subscription whose amendment changes you want to retrieve.
 
@@ -88,10 +88,10 @@ opts = {
 
 begin
   #Get amendments by subscription ID
-  result = api_instance.g_et_amendments_by_subscription_id(subscription_id, opts)
+  result = api_instance.get_amendments_by_subscription_id(subscription_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling AmendmentsApi->g_et_amendments_by_subscription_id: #{e}"
+rescue Zuora::ApiError => e
+  puts "Exception when calling AmendmentsApi->get_amendments_by_subscription_id: #{e}"
 end
 ```
 
@@ -128,9 +128,9 @@ CRUD: Delete amendment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AmendmentsApi.new
+api_instance = Zuora::AmendmentsApi.new
 
 id = "id_example" # String | Object id
 
@@ -143,7 +143,7 @@ begin
   #CRUD: Delete amendment
   result = api_instance.object_delete_amendment(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling AmendmentsApi->object_delete_amendment: #{e}"
 end
 ```
@@ -181,9 +181,9 @@ CRUD: Get amendment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AmendmentsApi.new
+api_instance = Zuora::AmendmentsApi.new
 
 id = "id_example" # String | Object id
 
@@ -197,7 +197,7 @@ begin
   #CRUD: Get amendment
   result = api_instance.object_get_amendment(id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling AmendmentsApi->object_get_amendment: #{e}"
 end
 ```
@@ -236,11 +236,11 @@ CRUD: Create amendment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AmendmentsApi.new
+api_instance = Zuora::AmendmentsApi.new
 
-create_request = SwaggerClient::ProxyCreateAmendment.new # ProxyCreateAmendment | 
+create_request = Zuora::ProxyCreateAmendment.new # ProxyCreateAmendment | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -251,7 +251,7 @@ begin
   #CRUD: Create amendment
   result = api_instance.object_post_amendment(create_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling AmendmentsApi->object_post_amendment: #{e}"
 end
 ```
@@ -289,13 +289,13 @@ CRUD: Update amendment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'zuora'
 
-api_instance = SwaggerClient::AmendmentsApi.new
+api_instance = Zuora::AmendmentsApi.new
 
 id = "id_example" # String | Object id
 
-modify_request = SwaggerClient::ProxyModifyAmendment.new # ProxyModifyAmendment | 
+modify_request = Zuora::ProxyModifyAmendment.new # ProxyModifyAmendment | 
 
 opts = { 
   entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
@@ -306,7 +306,7 @@ begin
   #CRUD: Update amendment
   result = api_instance.object_put_amendment(id, modify_request, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Zuora::ApiError => e
   puts "Exception when calling AmendmentsApi->object_put_amendment: #{e}"
 end
 ```

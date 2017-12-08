@@ -1,4 +1,4 @@
-# SwaggerClient::ProxyGetRefundTransactionLog
+# Zuora::ProxyGetRefundTransactionLog
 
 ## Properties
 Name | Type | Description | Notes

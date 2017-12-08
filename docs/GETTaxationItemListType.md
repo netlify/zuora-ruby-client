@@ -1,4 +1,4 @@
-# SwaggerClient::GETTaxationItemListType
+# Zuora::GETTaxationItemListType
 
 ## Properties
 Name | Type | Description | Notes
