@@ -61,6 +61,7 @@ module Zuora
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json; charset=utf-8'])
       header_params[:'entityId'] = opts[:'entity_id'] if !opts[:'entity_id'].nil?
       header_params[:'entityName'] = opts[:'entity_name'] if !opts[:'entity_name'].nil?
+      header_params['Origin'] = opts[:origin] if !opts[:origin].nil?
 
       # form parameters
       form_params = {}
