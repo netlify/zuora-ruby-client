@@ -4,11 +4,11 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**post_quotes_document**](QuotesDocumentApi.md#post_quotes_document) | **POST** /v1/quotes/document | Generate quotes document
+[**p_ost_quotes_document**](QuotesDocumentApi.md#p_ost_quotes_document) | **POST** /v1/quotes/document | Generate quotes document
 
 
-# **post_quotes_document**
-> POSTQuoteDocResponseType post_quotes_document(request, opts)
+# **p_ost_quotes_document**
+> POSTQuoteDocResponseType p_ost_quotes_document(request, opts)
 
 Generate quotes document
 
@@ -24,16 +24,15 @@ api_instance = Zuora::QuotesDocumentApi.new
 request = Zuora::POSTQuoteDocType.new # POSTQuoteDocType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Generate quotes document
-  result = api_instance.post_quotes_document(request, opts)
+  result = api_instance.p_ost_quotes_document(request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling QuotesDocumentApi->post_quotes_document: #{e}"
+  puts "Exception when calling QuotesDocumentApi->p_ost_quotes_document: #{e}"
 end
 ```
 
@@ -42,8 +41,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**POSTQuoteDocType**](POSTQuoteDocType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 

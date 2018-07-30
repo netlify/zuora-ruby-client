@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_by_id** | **String** | The ID of the Zuora user who created the taxation item.  | [optional] 
 **created_date** | **DateTime** | The date and time when the taxation item was created in the Zuora system, in &#x60;yyyy-mm-dd hh:mm:ss&#x60; format.  | [optional] 
+**custom_field__c** | **String** | Any custom fields defined for this object. The custom field name is case-sensitive.  | [optional] 
 **exempt_amount** | **Float** | The amount of taxes or VAT for which the customer has an exemption.  | [optional] 
 **finance_information** | [**GETTaxationItemTypeFinanceInformation**](GETTaxationItemTypeFinanceInformation.md) |  | [optional] 
 **id** | **String** | The ID of the taxation item.  | [optional] 

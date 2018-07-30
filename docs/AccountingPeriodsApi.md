@@ -4,19 +4,19 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_accounting_period**](AccountingPeriodsApi.md#delete_accounting_period) | **DELETE** /v1/accounting-periods/{ap-id} | Delete accounting period
-[**get_accounting_period**](AccountingPeriodsApi.md#get_accounting_period) | **GET** /v1/accounting-periods/{ap-id} | Get accounting period
-[**get_all_accounting_periods**](AccountingPeriodsApi.md#get_all_accounting_periods) | **GET** /v1/accounting-periods | Get all accounting periods
-[**post_accounting_period**](AccountingPeriodsApi.md#post_accounting_period) | **POST** /v1/accounting-periods | Create accounting period
-[**put_close_accounting_period**](AccountingPeriodsApi.md#put_close_accounting_period) | **PUT** /v1/accounting-periods/{ap-id}/close | Close accounting period
-[**put_pending_close_accounting_period**](AccountingPeriodsApi.md#put_pending_close_accounting_period) | **PUT** /v1/accounting-periods/{ap-id}/pending-close | Set accounting period to pending close
-[**put_reopen_accounting_period**](AccountingPeriodsApi.md#put_reopen_accounting_period) | **PUT** /v1/accounting-periods/{ap-id}/reopen | Re-open accounting period
-[**put_run_trial_balance**](AccountingPeriodsApi.md#put_run_trial_balance) | **PUT** /v1/accounting-periods/{ap-id}/run-trial-balance | Run trial balance
-[**put_update_accounting_period**](AccountingPeriodsApi.md#put_update_accounting_period) | **PUT** /v1/accounting-periods/{ap-id} | Update accounting period
+[**d_elete_accounting_period**](AccountingPeriodsApi.md#d_elete_accounting_period) | **DELETE** /v1/accounting-periods/{ap-id} | Delete accounting period
+[**g_et_accounting_period**](AccountingPeriodsApi.md#g_et_accounting_period) | **GET** /v1/accounting-periods/{ap-id} | Get accounting period
+[**g_et_all_accounting_periods**](AccountingPeriodsApi.md#g_et_all_accounting_periods) | **GET** /v1/accounting-periods | Get all accounting periods
+[**p_ost_accounting_period**](AccountingPeriodsApi.md#p_ost_accounting_period) | **POST** /v1/accounting-periods | Create accounting period
+[**p_ut_close_accounting_period**](AccountingPeriodsApi.md#p_ut_close_accounting_period) | **PUT** /v1/accounting-periods/{ap-id}/close | Close accounting period
+[**p_ut_pending_close_accounting_period**](AccountingPeriodsApi.md#p_ut_pending_close_accounting_period) | **PUT** /v1/accounting-periods/{ap-id}/pending-close | Set accounting period to pending close
+[**p_ut_reopen_accounting_period**](AccountingPeriodsApi.md#p_ut_reopen_accounting_period) | **PUT** /v1/accounting-periods/{ap-id}/reopen | Re-open accounting period
+[**p_ut_run_trial_balance**](AccountingPeriodsApi.md#p_ut_run_trial_balance) | **PUT** /v1/accounting-periods/{ap-id}/run-trial-balance | Run trial balance
+[**p_ut_update_accounting_period**](AccountingPeriodsApi.md#p_ut_update_accounting_period) | **PUT** /v1/accounting-periods/{ap-id} | Update accounting period
 
 
-# **delete_accounting_period**
-> CommonResponseType delete_accounting_period(ap_id, opts)
+# **d_elete_accounting_period**
+> CommonResponseType d_elete_accounting_period(ap_id, opts)
 
 Delete accounting period
 
@@ -29,19 +29,18 @@ require 'zuora'
 
 api_instance = Zuora::AccountingPeriodsApi.new
 
-ap_id = "ap_id_example" # String | ID of the accounting period you want to delete.
+ap_id = 'ap_id_example' # String | ID of the accounting period you want to delete.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Delete accounting period
-  result = api_instance.delete_accounting_period(ap_id, opts)
+  result = api_instance.d_elete_accounting_period(ap_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->delete_accounting_period: #{e}"
+  puts "Exception when calling AccountingPeriodsApi->d_elete_accounting_period: #{e}"
 end
 ```
 
@@ -50,8 +49,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ap_id** | **String**| ID of the accounting period you want to delete. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -68,8 +66,8 @@ No authorization required
 
 
 
-# **get_accounting_period**
-> GETAccountingPeriodType get_accounting_period(ap_id, opts)
+# **g_et_accounting_period**
+> GETAccountingPeriodType g_et_accounting_period(ap_id, opts)
 
 Get accounting period
 
@@ -82,19 +80,18 @@ require 'zuora'
 
 api_instance = Zuora::AccountingPeriodsApi.new
 
-ap_id = "ap_id_example" # String | ID of the accounting period you want to get.
+ap_id = 'ap_id_example' # String | ID of the accounting period you want to get.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get accounting period
-  result = api_instance.get_accounting_period(ap_id, opts)
+  result = api_instance.g_et_accounting_period(ap_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->get_accounting_period: #{e}"
+  puts "Exception when calling AccountingPeriodsApi->g_et_accounting_period: #{e}"
 end
 ```
 
@@ -103,8 +100,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ap_id** | **String**| ID of the accounting period you want to get. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -121,8 +117,8 @@ No authorization required
 
 
 
-# **get_all_accounting_periods**
-> GETAccountingPeriodsType get_all_accounting_periods(opts)
+# **g_et_all_accounting_periods**
+> GETAccountingPeriodsType g_et_all_accounting_periods(opts)
 
 Get all accounting periods
 
@@ -136,17 +132,16 @@ require 'zuora'
 api_instance = Zuora::AccountingPeriodsApi.new
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 300 # Integer | Number of rows returned per page. 
 }
 
 begin
   #Get all accounting periods
-  result = api_instance.get_all_accounting_periods(opts)
+  result = api_instance.g_et_all_accounting_periods(opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->get_all_accounting_periods: #{e}"
+  puts "Exception when calling AccountingPeriodsApi->g_et_all_accounting_periods: #{e}"
 end
 ```
 
@@ -154,8 +149,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 300]
 
 ### Return type
@@ -173,8 +167,8 @@ No authorization required
 
 
 
-# **post_accounting_period**
-> POSTAccountingPeriodResponseType post_accounting_period(request, opts)
+# **p_ost_accounting_period**
+> POSTAccountingPeriodResponseType p_ost_accounting_period(request, opts)
 
 Create accounting period
 
@@ -190,16 +184,15 @@ api_instance = Zuora::AccountingPeriodsApi.new
 request = Zuora::POSTAccountingPeriodType.new # POSTAccountingPeriodType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create accounting period
-  result = api_instance.post_accounting_period(request, opts)
+  result = api_instance.p_ost_accounting_period(request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->post_accounting_period: #{e}"
+  puts "Exception when calling AccountingPeriodsApi->p_ost_accounting_period: #{e}"
 end
 ```
 
@@ -208,8 +201,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**POSTAccountingPeriodType**](POSTAccountingPeriodType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -226,8 +218,8 @@ No authorization required
 
 
 
-# **put_close_accounting_period**
-> CommonResponseType put_close_accounting_period(ap_id, opts)
+# **p_ut_close_accounting_period**
+> CommonResponseType p_ut_close_accounting_period(ap_id, opts)
 
 Close accounting period
 
@@ -240,19 +232,18 @@ require 'zuora'
 
 api_instance = Zuora::AccountingPeriodsApi.new
 
-ap_id = "ap_id_example" # String | ID of the accounting period you want to close.
+ap_id = 'ap_id_example' # String | ID of the accounting period you want to close.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Close accounting period
-  result = api_instance.put_close_accounting_period(ap_id, opts)
+  result = api_instance.p_ut_close_accounting_period(ap_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->put_close_accounting_period: #{e}"
+  puts "Exception when calling AccountingPeriodsApi->p_ut_close_accounting_period: #{e}"
 end
 ```
 
@@ -261,8 +252,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ap_id** | **String**| ID of the accounting period you want to close. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -279,8 +269,8 @@ No authorization required
 
 
 
-# **put_pending_close_accounting_period**
-> CommonResponseType put_pending_close_accounting_period(ap_id, opts)
+# **p_ut_pending_close_accounting_period**
+> CommonResponseType p_ut_pending_close_accounting_period(ap_id, opts)
 
 Set accounting period to pending close
 
@@ -293,19 +283,18 @@ require 'zuora'
 
 api_instance = Zuora::AccountingPeriodsApi.new
 
-ap_id = "ap_id_example" # String | ID of the accounting period you want to set to pending close.
+ap_id = 'ap_id_example' # String | ID of the accounting period you want to set to pending close.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Set accounting period to pending close
-  result = api_instance.put_pending_close_accounting_period(ap_id, opts)
+  result = api_instance.p_ut_pending_close_accounting_period(ap_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->put_pending_close_accounting_period: #{e}"
+  puts "Exception when calling AccountingPeriodsApi->p_ut_pending_close_accounting_period: #{e}"
 end
 ```
 
@@ -314,8 +303,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ap_id** | **String**| ID of the accounting period you want to set to pending close. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -332,8 +320,8 @@ No authorization required
 
 
 
-# **put_reopen_accounting_period**
-> CommonResponseType put_reopen_accounting_period(ap_id, opts)
+# **p_ut_reopen_accounting_period**
+> CommonResponseType p_ut_reopen_accounting_period(ap_id, opts)
 
 Re-open accounting period
 
@@ -346,19 +334,18 @@ require 'zuora'
 
 api_instance = Zuora::AccountingPeriodsApi.new
 
-ap_id = "ap_id_example" # String | ID of the accounting period that you want to re-open.
+ap_id = 'ap_id_example' # String | ID of the accounting period that you want to re-open.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Re-open accounting period
-  result = api_instance.put_reopen_accounting_period(ap_id, opts)
+  result = api_instance.p_ut_reopen_accounting_period(ap_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->put_reopen_accounting_period: #{e}"
+  puts "Exception when calling AccountingPeriodsApi->p_ut_reopen_accounting_period: #{e}"
 end
 ```
 
@@ -367,8 +354,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ap_id** | **String**| ID of the accounting period that you want to re-open. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -385,8 +371,8 @@ No authorization required
 
 
 
-# **put_run_trial_balance**
-> CommonResponseType put_run_trial_balance(ap_id, opts)
+# **p_ut_run_trial_balance**
+> CommonResponseType p_ut_run_trial_balance(ap_id, opts)
 
 Run trial balance
 
@@ -399,19 +385,18 @@ require 'zuora'
 
 api_instance = Zuora::AccountingPeriodsApi.new
 
-ap_id = "ap_id_example" # String | ID of the accounting period for which you want to run a trial balance.
+ap_id = 'ap_id_example' # String | ID of the accounting period for which you want to run a trial balance.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Run trial balance
-  result = api_instance.put_run_trial_balance(ap_id, opts)
+  result = api_instance.p_ut_run_trial_balance(ap_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->put_run_trial_balance: #{e}"
+  puts "Exception when calling AccountingPeriodsApi->p_ut_run_trial_balance: #{e}"
 end
 ```
 
@@ -420,8 +405,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ap_id** | **String**| ID of the accounting period for which you want to run a trial balance. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -438,8 +422,8 @@ No authorization required
 
 
 
-# **put_update_accounting_period**
-> CommonResponseType put_update_accounting_period(ap_id, request, opts)
+# **p_ut_update_accounting_period**
+> CommonResponseType p_ut_update_accounting_period(ap_id, request, opts)
 
 Update accounting period
 
@@ -452,21 +436,20 @@ require 'zuora'
 
 api_instance = Zuora::AccountingPeriodsApi.new
 
-ap_id = "ap_id_example" # String | ID of the accounting period you want to update.
+ap_id = 'ap_id_example' # String | ID of the accounting period you want to update.
 
 request = Zuora::PUTAccountingPeriodType.new # PUTAccountingPeriodType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Update accounting period
-  result = api_instance.put_update_accounting_period(ap_id, request, opts)
+  result = api_instance.p_ut_update_accounting_period(ap_id, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling AccountingPeriodsApi->put_update_accounting_period: #{e}"
+  puts "Exception when calling AccountingPeriodsApi->p_ut_update_accounting_period: #{e}"
 end
 ```
 
@@ -476,8 +459,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ap_id** | **String**| ID of the accounting period you want to update. | 
  **request** | [**PUTAccountingPeriodType**](PUTAccountingPeriodType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 

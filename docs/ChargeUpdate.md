@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **billing** | [**BillingUpdate**](BillingUpdate.md) |  | [optional] 
 **charge_number** | **String** | Read only. Identifies the charge to be updated.  | [optional] 
-**custom_fields** | [**CustomFields**](CustomFields.md) |  | [optional] 
+**custom_fields** | [**ObjectCustomFields**](ObjectCustomFields.md) |  | [optional] 
 **description** | **String** |  | [optional] 
 **effective_date** | [**TriggerParams**](TriggerParams.md) |  | [optional] 
 **pricing** | [**PricingUpdate**](PricingUpdate.md) |  | [optional] 

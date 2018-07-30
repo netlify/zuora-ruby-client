@@ -4,22 +4,24 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_breakdown_invoice_by_order**](InvoicesApi.md#get_breakdown_invoice_by_order) | **GET** /v1/invoices/{invoiceNumber}/amountBreakdownByOrder | Get breakdown of invoice by order
+[**g_et_invoice_application_parts**](InvoicesApi.md#g_et_invoice_application_parts) | **GET** /v1/invoices/{invoiceId}/application-parts | Get invoice application parts
 [**object_delete_invoice**](InvoicesApi.md#object_delete_invoice) | **DELETE** /v1/object/invoice/{id} | CRUD: Delete Invoice
 [**object_get_invoice**](InvoicesApi.md#object_get_invoice) | **GET** /v1/object/invoice/{id} | CRUD: Retrieve Invoice
 [**object_put_invoice**](InvoicesApi.md#object_put_invoice) | **PUT** /v1/object/invoice/{id} | CRUD: Update Invoice
-[**post_credit_memo_from_invoice**](InvoicesApi.md#post_credit_memo_from_invoice) | **POST** /v1/invoices/{invoiceId}/creditmemos | Create credit memo from invoice
-[**post_debit_memo_from_invoice**](InvoicesApi.md#post_debit_memo_from_invoice) | **POST** /v1/invoices/{invoiceId}/debitmemos | Create debit memo from invoice
-[**post_email_invoice**](InvoicesApi.md#post_email_invoice) | **POST** /v1/invoices/{invoiceId}/emails | Email invoice
-[**put_reverse_invoice**](InvoicesApi.md#put_reverse_invoice) | **PUT** /v1/invoices/{invoiceId}/reverse | Reverse invoice
+[**p_ost_credit_memo_from_invoice**](InvoicesApi.md#p_ost_credit_memo_from_invoice) | **POST** /v1/invoices/{invoiceId}/creditmemos | Create credit memo from invoice
+[**p_ost_debit_memo_from_invoice**](InvoicesApi.md#p_ost_debit_memo_from_invoice) | **POST** /v1/invoices/{invoiceId}/debitmemos | Create debit memo from invoice
+[**p_ost_email_invoice**](InvoicesApi.md#p_ost_email_invoice) | **POST** /v1/invoices/{invoiceId}/emails | Email invoice
+[**p_ut_batch_update_invoices**](InvoicesApi.md#p_ut_batch_update_invoices) | **PUT** /v1/invoices | Update invoices
+[**p_ut_reverse_invoice**](InvoicesApi.md#p_ut_reverse_invoice) | **PUT** /v1/invoices/{invoiceId}/reverse | Reverse invoice
+[**p_ut_update_invoice**](InvoicesApi.md#p_ut_update_invoice) | **PUT** /v1/invoices/{invoiceId} | Update invoice
 
 
-# **get_breakdown_invoice_by_order**
-> GetInvoiceAmountBreakdownByOrderResponse get_breakdown_invoice_by_order(invoice_number, opts)
+# **g_et_invoice_application_parts**
+> GetInvoiceApplicationPartCollectionType g_et_invoice_application_parts(invoice_id, opts)
 
-Get breakdown of invoice by order
+Get invoice application parts
 
-**Note:** This feature is only available if you have the [Order Metrics](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/Orders_Generation_for_Subscriptions_and_Amendments) feature enabled. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/). We will investigate your use cases and data before enabling this feature for you. If you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders) feature enabled, you already have the Order Metrics feature enabled.   Retrieves a specified invoice that is broken down by orders. The invoice items might be broken down into a list of order rated items. 
+Note: The Advanced AR Settlement feature is in Limited Availability. This feature includes Unapplied Payments, Credit and Debit Memo, and Invoice Item Settlement. If you wish to have access to the feature, submit a request at Zuora Global Support.  Retrieves information about the payments or credit memos that are applied to a specified invoice. 
 
 ### Example
 ```ruby
@@ -28,19 +30,18 @@ require 'zuora'
 
 api_instance = Zuora::InvoicesApi.new
 
-invoice_number = "invoice_number_example" # String | Number of invoice to be broken down.
+invoice_id = 'invoice_id_example' # String | The unique ID of an invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
-  #Get breakdown of invoice by order
-  result = api_instance.get_breakdown_invoice_by_order(invoice_number, opts)
+  #Get invoice application parts
+  result = api_instance.g_et_invoice_application_parts(invoice_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling InvoicesApi->get_breakdown_invoice_by_order: #{e}"
+  puts "Exception when calling InvoicesApi->g_et_invoice_application_parts: #{e}"
 end
 ```
 
@@ -48,13 +49,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **invoice_number** | **String**| Number of invoice to be broken down. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **invoice_id** | **String**| The unique ID of an invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.  | 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
-[**GetInvoiceAmountBreakdownByOrderResponse**](GetInvoiceAmountBreakdownByOrderResponse.md)
+[**GetInvoiceApplicationPartCollectionType**](GetInvoiceApplicationPartCollectionType.md)
 
 ### Authorization
 
@@ -81,11 +81,10 @@ require 'zuora'
 
 api_instance = Zuora::InvoicesApi.new
 
-id = "id_example" # String | Object id
+id = 'id_example' # String | Object id
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
@@ -102,8 +101,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Object id | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -134,12 +132,11 @@ require 'zuora'
 
 api_instance = Zuora::InvoicesApi.new
 
-id = "id_example" # String | Object id
+id = 'id_example' # String | Object id
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  fields: "fields_example" # String | Object fields to return
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
+  fields: 'fields_example' # String | Object fields to return
 }
 
 begin
@@ -156,8 +153,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Object id | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **fields** | **String**| Object fields to return | [optional] 
 
 ### Return type
@@ -189,13 +185,12 @@ require 'zuora'
 
 api_instance = Zuora::InvoicesApi.new
 
-id = "id_example" # String | Object id
+id = 'id_example' # String | Object id
 
 modify_request = Zuora::ProxyModifyInvoice.new # ProxyModifyInvoice | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
@@ -213,8 +208,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Object id | 
  **modify_request** | [**ProxyModifyInvoice**](ProxyModifyInvoice.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -231,8 +225,8 @@ No authorization required
 
 
 
-# **post_credit_memo_from_invoice**
-> GETCreditMemoType post_credit_memo_from_invoice(body, invoice_id, opts)
+# **p_ost_credit_memo_from_invoice**
+> GETCreditMemoType p_ost_credit_memo_from_invoice(body, invoice_id, opts)
 
 Create credit memo from invoice
 
@@ -247,19 +241,18 @@ api_instance = Zuora::InvoicesApi.new
 
 body = Zuora::CreditMemoFromInvoiceType.new # CreditMemoFromInvoiceType | 
 
-invoice_id = "invoice_id_example" # String | The ID of an invoice that you want to create a credit memo from. 
+invoice_id = 'invoice_id_example' # String | The ID of an invoice that you want to create a credit memo from. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create credit memo from invoice
-  result = api_instance.post_credit_memo_from_invoice(body, invoice_id, opts)
+  result = api_instance.p_ost_credit_memo_from_invoice(body, invoice_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling InvoicesApi->post_credit_memo_from_invoice: #{e}"
+  puts "Exception when calling InvoicesApi->p_ost_credit_memo_from_invoice: #{e}"
 end
 ```
 
@@ -269,8 +262,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**CreditMemoFromInvoiceType**](CreditMemoFromInvoiceType.md)|  | 
  **invoice_id** | **String**| The ID of an invoice that you want to create a credit memo from.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -287,8 +279,8 @@ No authorization required
 
 
 
-# **post_debit_memo_from_invoice**
-> GETDebitMemoType post_debit_memo_from_invoice(invoice_id, body, opts)
+# **p_ost_debit_memo_from_invoice**
+> GETDebitMemoType p_ost_debit_memo_from_invoice(invoice_id, body, opts)
 
 Create debit memo from invoice
 
@@ -301,21 +293,20 @@ require 'zuora'
 
 api_instance = Zuora::InvoicesApi.new
 
-invoice_id = "invoice_id_example" # String | The ID of an invoice that you want to create a debit memo from. 
+invoice_id = 'invoice_id_example' # String | The ID of an invoice that you want to create a debit memo from. 
 
 body = Zuora::DebitMemoFromInvoiceType.new # DebitMemoFromInvoiceType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create debit memo from invoice
-  result = api_instance.post_debit_memo_from_invoice(invoice_id, body, opts)
+  result = api_instance.p_ost_debit_memo_from_invoice(invoice_id, body, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling InvoicesApi->post_debit_memo_from_invoice: #{e}"
+  puts "Exception when calling InvoicesApi->p_ost_debit_memo_from_invoice: #{e}"
 end
 ```
 
@@ -325,8 +316,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoice_id** | **String**| The ID of an invoice that you want to create a debit memo from.  | 
  **body** | [**DebitMemoFromInvoiceType**](DebitMemoFromInvoiceType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -343,8 +333,8 @@ No authorization required
 
 
 
-# **post_email_invoice**
-> CommonResponseType post_email_invoice(request, invoice_id, opts)
+# **p_ost_email_invoice**
+> CommonResponseType p_ost_email_invoice(request, invoice_id, opts)
 
 Email invoice
 
@@ -359,19 +349,18 @@ api_instance = Zuora::InvoicesApi.new
 
 request = Zuora::PostInvoiceEmailRequestType.new # PostInvoiceEmailRequestType | 
 
-invoice_id = "invoice_id_example" # String | The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
+invoice_id = 'invoice_id_example' # String | The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Email invoice
-  result = api_instance.post_email_invoice(request, invoice_id, opts)
+  result = api_instance.p_ost_email_invoice(request, invoice_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling InvoicesApi->post_email_invoice: #{e}"
+  puts "Exception when calling InvoicesApi->p_ost_email_invoice: #{e}"
 end
 ```
 
@@ -381,8 +370,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**PostInvoiceEmailRequestType**](PostInvoiceEmailRequestType.md)|  | 
  **invoice_id** | **String**| The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -399,8 +387,59 @@ No authorization required
 
 
 
-# **put_reverse_invoice**
-> PutReverseInvoiceResponseType put_reverse_invoice(invoice_id, request, opts)
+# **p_ut_batch_update_invoices**
+> CommonResponseType p_ut_batch_update_invoices(request, opts)
+
+Update invoices
+
+Updates multiple invoices in batches with one call.  
+
+### Example
+```ruby
+# load the gem
+require 'zuora'
+
+api_instance = Zuora::InvoicesApi.new
+
+request = Zuora::PutBatchInvoiceType.new # PutBatchInvoiceType | 
+
+opts = { 
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
+}
+
+begin
+  #Update invoices
+  result = api_instance.p_ut_batch_update_invoices(request, opts)
+  p result
+rescue Zuora::ApiError => e
+  puts "Exception when calling InvoicesApi->p_ut_batch_update_invoices: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**PutBatchInvoiceType**](PutBatchInvoiceType.md)|  | 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
+
+### Return type
+
+[**CommonResponseType**](CommonResponseType.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
+
+
+
+# **p_ut_reverse_invoice**
+> PutReverseInvoiceResponseType p_ut_reverse_invoice(invoice_id, request, opts)
 
 Reverse invoice
 
@@ -413,21 +452,20 @@ require 'zuora'
 
 api_instance = Zuora::InvoicesApi.new
 
-invoice_id = "invoice_id_example" # String | The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
+invoice_id = 'invoice_id_example' # String | The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
 
 request = Zuora::PutReverseInvoiceType.new # PutReverseInvoiceType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Reverse invoice
-  result = api_instance.put_reverse_invoice(invoice_id, request, opts)
+  result = api_instance.p_ut_reverse_invoice(invoice_id, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling InvoicesApi->put_reverse_invoice: #{e}"
+  puts "Exception when calling InvoicesApi->p_ut_reverse_invoice: #{e}"
 end
 ```
 
@@ -437,12 +475,65 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoice_id** | **String**| The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.  | 
  **request** | [**PutReverseInvoiceType**](PutReverseInvoiceType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
 [**PutReverseInvoiceResponseType**](PutReverseInvoiceResponseType.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
+
+
+
+# **p_ut_update_invoice**
+> PutInvoiceResponseType p_ut_update_invoice(invoice_id, request, opts)
+
+Update invoice
+
+Updates a specific invoice.  
+
+### Example
+```ruby
+# load the gem
+require 'zuora'
+
+api_instance = Zuora::InvoicesApi.new
+
+invoice_id = 'invoice_id_example' # String | The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab. 
+
+request = Zuora::PutInvoiceType.new # PutInvoiceType | 
+
+opts = { 
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
+}
+
+begin
+  #Update invoice
+  result = api_instance.p_ut_update_invoice(invoice_id, request, opts)
+  p result
+rescue Zuora::ApiError => e
+  puts "Exception when calling InvoicesApi->p_ut_update_invoice: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **invoice_id** | **String**| The ID of the invoice. For example, 2c92c8955bd63cc1015bd7c151af02ab.  | 
+ **request** | [**PutInvoiceType**](PutInvoiceType.md)|  | 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
+
+### Return type
+
+[**PutInvoiceResponseType**](PutInvoiceResponseType.md)
 
 ### Authorization
 

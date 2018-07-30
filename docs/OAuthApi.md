@@ -21,11 +21,11 @@ require 'zuora'
 
 api_instance = Zuora::OAuthApi.new
 
-client_id = "client_id_example" # String | The Client ID of the OAuth client. 
+client_id = 'client_id_example' # String | The Client ID of the OAuth client. 
 
-client_secret = "client_secret_example" # String | The Client Secret that was displayed when the OAuth client was created. 
+client_secret = 'client_secret_example' # String | The Client Secret that was displayed when the OAuth client was created. 
 
-grant_type = "grant_type_example" # String | The OAuth grant type that will be used to generate the token. The value of this parameter must be `client_credentials`. 
+grant_type = 'grant_type_example' # String | The OAuth grant type that will be used to generate the token. The value of this parameter must be `client_credentials`. 
 
 
 begin

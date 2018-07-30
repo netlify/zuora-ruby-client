@@ -4,28 +4,28 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_payment**](PaymentsApi.md#delete_payment) | **DELETE** /v1/payments/{paymentId} | Delete payment
-[**get_payment**](PaymentsApi.md#get_payment) | **GET** /v1/payments/{paymentId} | Get payment
-[**get_payment_item_part**](PaymentsApi.md#get_payment_item_part) | **GET** /v1/payments/{paymentId}/parts/{partid}/itemparts/{itempartid} | Get payment part item
-[**get_payment_item_parts**](PaymentsApi.md#get_payment_item_parts) | **GET** /v1/payments/{paymentId}/parts/{partid}/itemparts | Get payment part items
-[**get_payment_part**](PaymentsApi.md#get_payment_part) | **GET** /v1/payments/{paymentId}/parts/{partid} | Get payment part
-[**get_payment_parts**](PaymentsApi.md#get_payment_parts) | **GET** /v1/payments/{paymentId}/parts | Get payment parts
-[**get_retrieve_all_payments**](PaymentsApi.md#get_retrieve_all_payments) | **GET** /v1/payments | Get all payments
+[**d_elete_payment**](PaymentsApi.md#d_elete_payment) | **DELETE** /v1/payments/{paymentId} | Delete payment
+[**g_et_payment**](PaymentsApi.md#g_et_payment) | **GET** /v1/payments/{paymentId} | Get payment
+[**g_et_payment_item_part**](PaymentsApi.md#g_et_payment_item_part) | **GET** /v1/payments/{paymentId}/parts/{partid}/itemparts/{itempartid} | Get payment part item
+[**g_et_payment_item_parts**](PaymentsApi.md#g_et_payment_item_parts) | **GET** /v1/payments/{paymentId}/parts/{partid}/itemparts | Get payment part items
+[**g_et_payment_part**](PaymentsApi.md#g_et_payment_part) | **GET** /v1/payments/{paymentId}/parts/{partid} | Get payment part
+[**g_et_payment_parts**](PaymentsApi.md#g_et_payment_parts) | **GET** /v1/payments/{paymentId}/parts | Get payment parts
+[**g_et_retrieve_all_payments**](PaymentsApi.md#g_et_retrieve_all_payments) | **GET** /v1/payments | Get all payments
 [**object_delete_payment**](PaymentsApi.md#object_delete_payment) | **DELETE** /v1/object/payment/{id} | CRUD: Delete payment
 [**object_get_payment**](PaymentsApi.md#object_get_payment) | **GET** /v1/object/payment/{id} | CRUD: Get payment
 [**object_post_payment**](PaymentsApi.md#object_post_payment) | **POST** /v1/object/payment | CRUD: Create payment
 [**object_put_payment**](PaymentsApi.md#object_put_payment) | **PUT** /v1/object/payment/{id} | CRUD: Update payment
-[**post_create_payment**](PaymentsApi.md#post_create_payment) | **POST** /v1/payments | Create payment
-[**post_refund_payment**](PaymentsApi.md#post_refund_payment) | **POST** /v1/payments/{paymentId}/refunds | Refund payment
-[**put_apply_payment**](PaymentsApi.md#put_apply_payment) | **PUT** /v1/payments/{paymentId}/apply | Apply payment
-[**put_cancel_payment**](PaymentsApi.md#put_cancel_payment) | **PUT** /v1/payments/{paymentId}/cancel | Cancel payment
-[**put_transfer_payment**](PaymentsApi.md#put_transfer_payment) | **PUT** /v1/payments/{paymentId}/transfer | Transfer payment
-[**put_unapply_payment**](PaymentsApi.md#put_unapply_payment) | **PUT** /v1/payments/{paymentId}/unapply | Unapply payment
-[**put_update_payment**](PaymentsApi.md#put_update_payment) | **PUT** /v1/payments/{paymentId} | Update payment
+[**p_ost_create_payment**](PaymentsApi.md#p_ost_create_payment) | **POST** /v1/payments | Create payment
+[**p_ost_refund_payment**](PaymentsApi.md#p_ost_refund_payment) | **POST** /v1/payments/{paymentId}/refunds | Refund payment
+[**p_ut_apply_payment**](PaymentsApi.md#p_ut_apply_payment) | **PUT** /v1/payments/{paymentId}/apply | Apply payment
+[**p_ut_cancel_payment**](PaymentsApi.md#p_ut_cancel_payment) | **PUT** /v1/payments/{paymentId}/cancel | Cancel payment
+[**p_ut_transfer_payment**](PaymentsApi.md#p_ut_transfer_payment) | **PUT** /v1/payments/{paymentId}/transfer | Transfer payment
+[**p_ut_unapply_payment**](PaymentsApi.md#p_ut_unapply_payment) | **PUT** /v1/payments/{paymentId}/unapply | Unapply payment
+[**p_ut_update_payment**](PaymentsApi.md#p_ut_update_payment) | **PUT** /v1/payments/{paymentId} | Update payment
 
 
-# **delete_payment**
-> CommonResponseType delete_payment(payment_id, opts)
+# **d_elete_payment**
+> CommonResponseType d_elete_payment(payment_id, opts)
 
 Delete payment
 
@@ -38,19 +38,18 @@ require 'zuora'
 
 api_instance = Zuora::PaymentsApi.new
 
-payment_id = "payment_id_example" # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
+payment_id = 'payment_id_example' # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Delete payment
-  result = api_instance.delete_payment(payment_id, opts)
+  result = api_instance.d_elete_payment(payment_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->delete_payment: #{e}"
+  puts "Exception when calling PaymentsApi->d_elete_payment: #{e}"
 end
 ```
 
@@ -59,8 +58,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **payment_id** | **String**| The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -77,8 +75,8 @@ No authorization required
 
 
 
-# **get_payment**
-> GETARPaymentType get_payment(payment_id, opts)
+# **g_et_payment**
+> GETARPaymentType g_et_payment(payment_id, opts)
 
 Get payment
 
@@ -91,19 +89,18 @@ require 'zuora'
 
 api_instance = Zuora::PaymentsApi.new
 
-payment_id = "payment_id_example" # String | The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
+payment_id = 'payment_id_example' # String | The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get payment
-  result = api_instance.get_payment(payment_id, opts)
+  result = api_instance.g_et_payment(payment_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->get_payment: #{e}"
+  puts "Exception when calling PaymentsApi->g_et_payment: #{e}"
 end
 ```
 
@@ -112,8 +109,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **payment_id** | **String**| The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -130,8 +126,8 @@ No authorization required
 
 
 
-# **get_payment_item_part**
-> GETPaymentItemPartType get_payment_item_part(partid, itempartid, payment_id, opts)
+# **g_et_payment_item_part**
+> GETPaymentItemPartType g_et_payment_item_part(partid, itempartid, payment_id, opts)
 
 Get payment part item
 
@@ -144,23 +140,22 @@ require 'zuora'
 
 api_instance = Zuora::PaymentsApi.new
 
-partid = "partid_example" # String | The unique ID of a specific payment part. You can get the payment part ID from the response of [Get payment parts](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts). 
+partid = 'partid_example' # String | The unique ID of a specific payment part. You can get the payment part ID from the response of [Get payment parts](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts). 
 
-itempartid = "itempartid_example" # String | The unique ID of a specific payment part item. You can get the payment part item ID from the response of [Get payment part items](https://www.zuora.com/developer/api-reference/#operation/GET_PayemntItemParts). 
+itempartid = 'itempartid_example' # String | The unique ID of a specific payment part item. You can get the payment part item ID from the response of [Get payment part items](https://www.zuora.com/developer/api-reference/#operation/GET_PayemntItemParts). 
 
-payment_id = "payment_id_example" # String | The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
+payment_id = 'payment_id_example' # String | The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get payment part item
-  result = api_instance.get_payment_item_part(partid, itempartid, payment_id, opts)
+  result = api_instance.g_et_payment_item_part(partid, itempartid, payment_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->get_payment_item_part: #{e}"
+  puts "Exception when calling PaymentsApi->g_et_payment_item_part: #{e}"
 end
 ```
 
@@ -171,8 +166,7 @@ Name | Type | Description  | Notes
  **partid** | **String**| The unique ID of a specific payment part. You can get the payment part ID from the response of [Get payment parts](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts).  | 
  **itempartid** | **String**| The unique ID of a specific payment part item. You can get the payment part item ID from the response of [Get payment part items](https://www.zuora.com/developer/api-reference/#operation/GET_PayemntItemParts).  | 
  **payment_id** | **String**| The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -189,8 +183,8 @@ No authorization required
 
 
 
-# **get_payment_item_parts**
-> GETPaymentItemPartCollectionType get_payment_item_parts(partid, payment_id, opts)
+# **g_et_payment_item_parts**
+> GETPaymentItemPartCollectionType g_et_payment_item_parts(partid, payment_id, opts)
 
 Get payment part items
 
@@ -203,22 +197,21 @@ require 'zuora'
 
 api_instance = Zuora::PaymentsApi.new
 
-partid = "partid_example" # String | The unique ID of a specific payment part. You can get the payment part ID from the response of [Get payment parts](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts). 
+partid = 'partid_example' # String | The unique ID of a specific payment part. You can get the payment part ID from the response of [Get payment parts](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts). 
 
-payment_id = "payment_id_example" # String | The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
+payment_id = 'payment_id_example' # String | The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 20 # Integer | Number of rows returned per page. 
 }
 
 begin
   #Get payment part items
-  result = api_instance.get_payment_item_parts(partid, payment_id, opts)
+  result = api_instance.g_et_payment_item_parts(partid, payment_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->get_payment_item_parts: #{e}"
+  puts "Exception when calling PaymentsApi->g_et_payment_item_parts: #{e}"
 end
 ```
 
@@ -228,8 +221,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partid** | **String**| The unique ID of a specific payment part. You can get the payment part ID from the response of [Get payment parts](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts).  | 
  **payment_id** | **String**| The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type
@@ -247,8 +239,8 @@ No authorization required
 
 
 
-# **get_payment_part**
-> GETPaymentPartType get_payment_part(partid, payment_id, opts)
+# **g_et_payment_part**
+> GETPaymentPartType g_et_payment_part(partid, payment_id, opts)
 
 Get payment part
 
@@ -261,21 +253,20 @@ require 'zuora'
 
 api_instance = Zuora::PaymentsApi.new
 
-partid = "partid_example" # String | The unique ID of a specific payment part. You can get the payment part ID from the response of [Get payment parts](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts). 
+partid = 'partid_example' # String | The unique ID of a specific payment part. You can get the payment part ID from the response of [Get payment parts](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts). 
 
-payment_id = "payment_id_example" # String | The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
+payment_id = 'payment_id_example' # String | The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get payment part
-  result = api_instance.get_payment_part(partid, payment_id, opts)
+  result = api_instance.g_et_payment_part(partid, payment_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->get_payment_part: #{e}"
+  puts "Exception when calling PaymentsApi->g_et_payment_part: #{e}"
 end
 ```
 
@@ -285,8 +276,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partid** | **String**| The unique ID of a specific payment part. You can get the payment part ID from the response of [Get payment parts](https://www.zuora.com/developer/api-reference/#operation/GET_PaymentParts).  | 
  **payment_id** | **String**| The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -303,8 +293,8 @@ No authorization required
 
 
 
-# **get_payment_parts**
-> GETPaymentPartsCollectionType get_payment_parts(payment_id, opts)
+# **g_et_payment_parts**
+> GETPaymentPartsCollectionType g_et_payment_parts(payment_id, opts)
 
 Get payment parts
 
@@ -317,20 +307,19 @@ require 'zuora'
 
 api_instance = Zuora::PaymentsApi.new
 
-payment_id = "payment_id_example" # String | The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
+payment_id = 'payment_id_example' # String | The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 20 # Integer | Number of rows returned per page. 
 }
 
 begin
   #Get payment parts
-  result = api_instance.get_payment_parts(payment_id, opts)
+  result = api_instance.g_et_payment_parts(payment_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->get_payment_parts: #{e}"
+  puts "Exception when calling PaymentsApi->g_et_payment_parts: #{e}"
 end
 ```
 
@@ -339,8 +328,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **payment_id** | **String**| The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type
@@ -358,8 +346,8 @@ No authorization required
 
 
 
-# **get_retrieve_all_payments**
-> PaymentCollectionResponseType get_retrieve_all_payments(opts)
+# **g_et_retrieve_all_payments**
+> PaymentCollectionResponseType g_et_retrieve_all_payments(opts)
 
 Get all payments
 
@@ -373,19 +361,18 @@ require 'zuora'
 api_instance = Zuora::PaymentsApi.new
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 20 # Integer | Number of rows returned per page. 
-  fields_filterable: "fields_filterable_example", # String | This parameter restricts the data returned in the response. You can use this parameter to supply a dimension you want to filter on.   A single filter uses the following form:   *fieldsFilterable* `=` *field_value*              Filters can be combined by using `&`. For example: *fieldsFilterable* `=` *field_value* & *fieldsFilterable* `=` *field_value*  *fieldsFilterable* indicates the name of a supported field that you can use to filter the response data. The supported filterable fields of this operation are as below:    - number   - status   - type   - accountId   - amount   - appliedAmount   - unappliedAmount   - refundAmount   - creditBalanceAmount   - currency   - effectiveDate   - createdDate   - createdById   - updatedDate   - updatedById   *field_value* indicates a valid value of the filterable field. If the type of the field value is string, you can set the field to `null` value for filtering. Then, you can get the response data with this field value being 'null'. For more information about these fields, see the field descriptions in the **Responses** section.     Examples:  - /payments?status=Processed  - /payments?currency=USD&status=Processed  - /payments?status=Processed&type=External&sort=+number 
-  sort: "sort_example" # String | This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.  A sortable field uses the following form:   *operator* *field_name*  You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*    *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.    - The `-` operator indicates an ascending order.   - The `+` operator indicates a descending order.  By default, the response data is displayed in descending order by payment number.  *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:    - number   - accountId   - amount   - appliedAmount   - unappliedAmount   - refundAmount   - creditBalanceAmount   - effectiveDate   - createdDate   - createdById   - updatedDate   - updatedById    Examples:  - /payments?sort=+number  - /payments?status=Processed&sort=-number,+amount 
+  fields_filterable: 'fields_filterable_example', # String | This parameter restricts the data returned in the response. You can use this parameter to supply a dimension you want to filter on.   A single filter uses the following form:   *fieldsFilterable* `=` *field_value*              Filters can be combined by using `&`. For example: *fieldsFilterable* `=` *field_value* & *fieldsFilterable* `=` *field_value*  *fieldsFilterable* indicates the name of a supported field that you can use to filter the response data. The supported filterable fields of this operation are as below:    - number   - status   - type   - accountId   - amount   - appliedAmount   - unappliedAmount   - refundAmount   - creditBalanceAmount   - currency   - effectiveDate   - createdDate   - createdById   - updatedDate   - updatedById   *field_value* indicates a valid value of the filterable field. If the type of the field value is string, you can set the field to `null` value for filtering. Then, you can get the response data with this field value being 'null'. For more information about these fields, see the field descriptions in the **Responses** section.     Examples:  - /payments?status=Processed  - /payments?currency=USD&status=Processed  - /payments?status=Processed&type=External&sort=+number 
+  sort: 'sort_example' # String | This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.  A sortable field uses the following form:   *operator* *field_name*  You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*    *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.    - The `-` operator indicates an ascending order.   - The `+` operator indicates a descending order.  By default, the response data is displayed in descending order by payment number.  *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:    - number   - accountId   - amount   - appliedAmount   - unappliedAmount   - refundAmount   - creditBalanceAmount   - effectiveDate   - createdDate   - createdById   - updatedDate   - updatedById    Examples:  - /payments?sort=+number  - /payments?status=Processed&sort=-number,+amount 
 }
 
 begin
   #Get all payments
-  result = api_instance.get_retrieve_all_payments(opts)
+  result = api_instance.g_et_retrieve_all_payments(opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->get_retrieve_all_payments: #{e}"
+  puts "Exception when calling PaymentsApi->g_et_retrieve_all_payments: #{e}"
 end
 ```
 
@@ -393,8 +380,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
  **fields_filterable** | **String**| This parameter restricts the data returned in the response. You can use this parameter to supply a dimension you want to filter on.   A single filter uses the following form:   *fieldsFilterable* &#x60;&#x3D;&#x60; *field_value*              Filters can be combined by using &#x60;&amp;&#x60;. For example: *fieldsFilterable* &#x60;&#x3D;&#x60; *field_value* &amp; *fieldsFilterable* &#x60;&#x3D;&#x60; *field_value*  *fieldsFilterable* indicates the name of a supported field that you can use to filter the response data. The supported filterable fields of this operation are as below:    - number   - status   - type   - accountId   - amount   - appliedAmount   - unappliedAmount   - refundAmount   - creditBalanceAmount   - currency   - effectiveDate   - createdDate   - createdById   - updatedDate   - updatedById   *field_value* indicates a valid value of the filterable field. If the type of the field value is string, you can set the field to &#x60;null&#x60; value for filtering. Then, you can get the response data with this field value being &#39;null&#39;. For more information about these fields, see the field descriptions in the **Responses** section.     Examples:  - /payments?status&#x3D;Processed  - /payments?currency&#x3D;USD&amp;status&#x3D;Processed  - /payments?status&#x3D;Processed&amp;type&#x3D;External&amp;sort&#x3D;+number  | [optional] 
  **sort** | **String**| This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.  A sortable field uses the following form:   *operator* *field_name*  You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*    *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.    - The &#x60;-&#x60; operator indicates an ascending order.   - The &#x60;+&#x60; operator indicates a descending order.  By default, the response data is displayed in descending order by payment number.  *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:    - number   - accountId   - amount   - appliedAmount   - unappliedAmount   - refundAmount   - creditBalanceAmount   - effectiveDate   - createdDate   - createdById   - updatedDate   - updatedById    Examples:  - /payments?sort&#x3D;+number  - /payments?status&#x3D;Processed&amp;sort&#x3D;-number,+amount  | [optional] 
@@ -428,11 +414,10 @@ require 'zuora'
 
 api_instance = Zuora::PaymentsApi.new
 
-id = "id_example" # String | The unique ID of the payment to be deleted. For example, 2c92c0f85d4e95ae015d4f7e5d690622. 
+id = 'id_example' # String | The unique ID of the payment to be deleted. For example, 2c92c0f85d4e95ae015d4f7e5d690622. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
@@ -449,8 +434,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The unique ID of the payment to be deleted. For example, 2c92c0f85d4e95ae015d4f7e5d690622.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -481,11 +465,10 @@ require 'zuora'
 
 api_instance = Zuora::PaymentsApi.new
 
-id = "id_example" # String | The unique ID of a payment. For example, 2c92c095592623ea01596621ada84352. 
+id = 'id_example' # String | The unique ID of a payment. For example, 2c92c095592623ea01596621ada84352. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
@@ -502,8 +485,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The unique ID of a payment. For example, 2c92c095592623ea01596621ada84352.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -537,8 +519,7 @@ api_instance = Zuora::PaymentsApi.new
 create_request = Zuora::ProxyCreatePayment.new # ProxyCreatePayment | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
@@ -555,8 +536,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **create_request** | [**ProxyCreatePayment**](ProxyCreatePayment.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -587,13 +567,12 @@ require 'zuora'
 
 api_instance = Zuora::PaymentsApi.new
 
-id = "id_example" # String | The unique ID of a payment. For example, 2c92c095592623ea01596621ada84352. 
+id = 'id_example' # String | The unique ID of a payment. For example, 2c92c095592623ea01596621ada84352. 
 
 modify_request = Zuora::ProxyModifyPayment.new # ProxyModifyPayment | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
@@ -611,8 +590,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The unique ID of a payment. For example, 2c92c095592623ea01596621ada84352.  | 
  **modify_request** | [**ProxyModifyPayment**](ProxyModifyPayment.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -629,8 +607,8 @@ No authorization required
 
 
 
-# **post_create_payment**
-> GETARPaymentType post_create_payment(body, opts)
+# **p_ost_create_payment**
+> GETARPaymentType p_ost_create_payment(body, opts)
 
 Create payment
 
@@ -646,16 +624,15 @@ api_instance = Zuora::PaymentsApi.new
 body = Zuora::CreatePaymentType.new # CreatePaymentType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create payment
-  result = api_instance.post_create_payment(body, opts)
+  result = api_instance.p_ost_create_payment(body, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->post_create_payment: #{e}"
+  puts "Exception when calling PaymentsApi->p_ost_create_payment: #{e}"
 end
 ```
 
@@ -664,8 +641,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**CreatePaymentType**](CreatePaymentType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -682,8 +658,8 @@ No authorization required
 
 
 
-# **post_refund_payment**
-> GETRefundPaymentType post_refund_payment(body, payment_id, opts)
+# **p_ost_refund_payment**
+> GETRefundPaymentType p_ost_refund_payment(body, payment_id, opts)
 
 Refund payment
 
@@ -698,19 +674,18 @@ api_instance = Zuora::PaymentsApi.new
 
 body = Zuora::PostRefundType.new # PostRefundType | 
 
-payment_id = "payment_id_example" # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
+payment_id = 'payment_id_example' # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Refund payment
-  result = api_instance.post_refund_payment(body, payment_id, opts)
+  result = api_instance.p_ost_refund_payment(body, payment_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->post_refund_payment: #{e}"
+  puts "Exception when calling PaymentsApi->p_ost_refund_payment: #{e}"
 end
 ```
 
@@ -720,8 +695,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**PostRefundType**](PostRefundType.md)|  | 
  **payment_id** | **String**| The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -738,8 +712,8 @@ No authorization required
 
 
 
-# **put_apply_payment**
-> GETARPaymentType put_apply_payment(body, payment_id, opts)
+# **p_ut_apply_payment**
+> GETARPaymentType p_ut_apply_payment(body, payment_id, opts)
 
 Apply payment
 
@@ -754,19 +728,18 @@ api_instance = Zuora::PaymentsApi.new
 
 body = Zuora::ApplyPaymentType.new # ApplyPaymentType | 
 
-payment_id = "payment_id_example" # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
+payment_id = 'payment_id_example' # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Apply payment
-  result = api_instance.put_apply_payment(body, payment_id, opts)
+  result = api_instance.p_ut_apply_payment(body, payment_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->put_apply_payment: #{e}"
+  puts "Exception when calling PaymentsApi->p_ut_apply_payment: #{e}"
 end
 ```
 
@@ -776,8 +749,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**ApplyPaymentType**](ApplyPaymentType.md)|  | 
  **payment_id** | **String**| The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -794,8 +766,8 @@ No authorization required
 
 
 
-# **put_cancel_payment**
-> GETARPaymentType put_cancel_payment(payment_id, opts)
+# **p_ut_cancel_payment**
+> GETARPaymentType p_ut_cancel_payment(payment_id, opts)
 
 Cancel payment
 
@@ -808,19 +780,18 @@ require 'zuora'
 
 api_instance = Zuora::PaymentsApi.new
 
-payment_id = "payment_id_example" # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
+payment_id = 'payment_id_example' # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Cancel payment
-  result = api_instance.put_cancel_payment(payment_id, opts)
+  result = api_instance.p_ut_cancel_payment(payment_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->put_cancel_payment: #{e}"
+  puts "Exception when calling PaymentsApi->p_ut_cancel_payment: #{e}"
 end
 ```
 
@@ -829,8 +800,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **payment_id** | **String**| The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -847,8 +817,8 @@ No authorization required
 
 
 
-# **put_transfer_payment**
-> GETARPaymentType put_transfer_payment(body, payment_id, opts)
+# **p_ut_transfer_payment**
+> GETARPaymentType p_ut_transfer_payment(body, payment_id, opts)
 
 Transfer payment
 
@@ -863,19 +833,18 @@ api_instance = Zuora::PaymentsApi.new
 
 body = Zuora::TransferPaymentType.new # TransferPaymentType | 
 
-payment_id = "payment_id_example" # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
+payment_id = 'payment_id_example' # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Transfer payment
-  result = api_instance.put_transfer_payment(body, payment_id, opts)
+  result = api_instance.p_ut_transfer_payment(body, payment_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->put_transfer_payment: #{e}"
+  puts "Exception when calling PaymentsApi->p_ut_transfer_payment: #{e}"
 end
 ```
 
@@ -885,8 +854,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**TransferPaymentType**](TransferPaymentType.md)|  | 
  **payment_id** | **String**| The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -903,8 +871,8 @@ No authorization required
 
 
 
-# **put_unapply_payment**
-> GETARPaymentType put_unapply_payment(body, payment_id, opts)
+# **p_ut_unapply_payment**
+> GETARPaymentType p_ut_unapply_payment(body, payment_id, opts)
 
 Unapply payment
 
@@ -919,19 +887,18 @@ api_instance = Zuora::PaymentsApi.new
 
 body = Zuora::UnapplyPaymentType.new # UnapplyPaymentType | 
 
-payment_id = "payment_id_example" # String | The unique ID of an applied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
+payment_id = 'payment_id_example' # String | The unique ID of an applied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Unapply payment
-  result = api_instance.put_unapply_payment(body, payment_id, opts)
+  result = api_instance.p_ut_unapply_payment(body, payment_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->put_unapply_payment: #{e}"
+  puts "Exception when calling PaymentsApi->p_ut_unapply_payment: #{e}"
 end
 ```
 
@@ -941,8 +908,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**UnapplyPaymentType**](UnapplyPaymentType.md)|  | 
  **payment_id** | **String**| The unique ID of an applied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -959,8 +925,8 @@ No authorization required
 
 
 
-# **put_update_payment**
-> GETARPaymentType put_update_payment(body, payment_id, opts)
+# **p_ut_update_payment**
+> GETARPaymentType p_ut_update_payment(body, payment_id, opts)
 
 Update payment
 
@@ -975,19 +941,18 @@ api_instance = Zuora::PaymentsApi.new
 
 body = Zuora::UpdatePaymentType.new # UpdatePaymentType | 
 
-payment_id = "payment_id_example" # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
+payment_id = 'payment_id_example' # String | The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Update payment
-  result = api_instance.put_update_payment(body, payment_id, opts)
+  result = api_instance.p_ut_update_payment(body, payment_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling PaymentsApi->put_update_payment: #{e}"
+  puts "Exception when calling PaymentsApi->p_ut_update_payment: #{e}"
 end
 ```
 
@@ -997,8 +962,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**UpdatePaymentType**](UpdatePaymentType.md)|  | 
  **payment_id** | **String**| The unique ID of an unapplied payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 

@@ -4,22 +4,25 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_order**](OrdersApi.md#delete_order) | **DELETE** /v1/orders/{orderNumber} | Delete order
-[**get_all_orders**](OrdersApi.md#get_all_orders) | **GET** /v1/orders | Get all orders
-[**get_order**](OrdersApi.md#get_order) | **GET** /v1/orders/{orderNumber} | Get an order
-[**get_order_billing_info**](OrdersApi.md#get_order_billing_info) | **GET** /v1/orders/{orderNumber}/billingInfo | Get billing information for order
-[**get_order_metricsfor_evergreen_subscription**](OrdersApi.md#get_order_metricsfor_evergreen_subscription) | **GET** /v1/orders/{orderNumber}/evergreenMetrics/{subscriptionNumber} | Get order metrics for evergreen subscription
-[**get_order_rated_result**](OrdersApi.md#get_order_rated_result) | **GET** /v1/orders/{orderNumber}/ratedResults | Get rated result for order
-[**get_orders_by_invoice_owner**](OrdersApi.md#get_orders_by_invoice_owner) | **GET** /v1/orders/invoiceOwner/{accountNumber} | Get orders by invoice owner
-[**get_orders_by_subscription_number**](OrdersApi.md#get_orders_by_subscription_number) | **GET** /v1/orders/subscription/{subscriptionNumber} | Get orders by subscription number
-[**get_orders_by_subscription_owner**](OrdersApi.md#get_orders_by_subscription_owner) | **GET** /v1/orders/subscriptionOwner/{accountNumber} | Get orders by subscription owner
-[**post_order**](OrdersApi.md#post_order) | **POST** /v1/orders | Create and activate order
-[**post_preview_order**](OrdersApi.md#post_preview_order) | **POST** /v1/orders/preview | Preview order
-[**put_update_order_custom_fields**](OrdersApi.md#put_update_order_custom_fields) | **PUT** /v1/orders/{orderNumber}/customFields | Update order custom fields
+[**d_elete_order**](OrdersApi.md#d_elete_order) | **DELETE** /v1/orders/{orderNumber} | Delete order
+[**g_et_all_orders**](OrdersApi.md#g_et_all_orders) | **GET** /v1/orders | Get all orders
+[**g_et_breakdown_invoice_by_order**](OrdersApi.md#g_et_breakdown_invoice_by_order) | **GET** /v1/invoices/{invoiceNumber}/amountBreakdownByOrder | Get breakdown of invoice by order
+[**g_et_order**](OrdersApi.md#g_et_order) | **GET** /v1/orders/{orderNumber} | Get an order
+[**g_et_order_billing_info**](OrdersApi.md#g_et_order_billing_info) | **GET** /v1/orders/{orderNumber}/billingInfo | Get billing information for order
+[**g_et_order_metricsfor_evergreen_subscription**](OrdersApi.md#g_et_order_metricsfor_evergreen_subscription) | **GET** /v1/orders/{orderNumber}/evergreenMetrics/{subscriptionNumber} | Get order metrics for evergreen subscription
+[**g_et_order_rated_result**](OrdersApi.md#g_et_order_rated_result) | **GET** /v1/orders/{orderNumber}/ratedResults | Get rated result for order
+[**g_et_orders_by_invoice_owner**](OrdersApi.md#g_et_orders_by_invoice_owner) | **GET** /v1/orders/invoiceOwner/{accountNumber} | Get orders by invoice owner
+[**g_et_orders_by_subscription_number**](OrdersApi.md#g_et_orders_by_subscription_number) | **GET** /v1/orders/subscription/{subscriptionNumber} | Get orders by subscription number
+[**g_et_orders_by_subscription_owner**](OrdersApi.md#g_et_orders_by_subscription_owner) | **GET** /v1/orders/subscriptionOwner/{accountNumber} | Get orders by subscription owner
+[**g_et_subscription_term_info**](OrdersApi.md#g_et_subscription_term_info) | **GET** /v1/orders/term/{subscriptionNumber} | Get term information for subscription
+[**p_ost_order**](OrdersApi.md#p_ost_order) | **POST** /v1/orders | Create and activate order
+[**p_ost_preview_order**](OrdersApi.md#p_ost_preview_order) | **POST** /v1/orders/preview | Preview order
+[**p_ut_update_order_custom_fields**](OrdersApi.md#p_ut_update_order_custom_fields) | **PUT** /v1/orders/{orderNumber}/customFields | Update order custom fields
+[**p_ut_update_subscription_custom_fields**](OrdersApi.md#p_ut_update_subscription_custom_fields) | **PUT** /v1/subscriptions/{subscriptionNumber}/customFields | Update subscription custom fields
 
 
-# **delete_order**
-> CommonResponse delete_order(order_number, opts)
+# **d_elete_order**
+> CommonResponseType d_elete_order(order_number, opts)
 
 Delete order
 
@@ -32,19 +35,18 @@ require 'zuora'
 
 api_instance = Zuora::OrdersApi.new
 
-order_number = "order_number_example" # String | The number of the order to be deleted.
+order_number = 'order_number_example' # String | The number of the order to be deleted.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Delete order
-  result = api_instance.delete_order(order_number, opts)
+  result = api_instance.d_elete_order(order_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling OrdersApi->delete_order: #{e}"
+  puts "Exception when calling OrdersApi->d_elete_order: #{e}"
 end
 ```
 
@@ -53,12 +55,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_number** | **String**| The number of the order to be deleted. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CommonResponseType**](CommonResponseType.md)
 
 ### Authorization
 
@@ -71,8 +72,8 @@ No authorization required
 
 
 
-# **get_all_orders**
-> GetAllOrdersResponseType get_all_orders(opts)
+# **g_et_all_orders**
+> GetAllOrdersResponseType g_et_all_orders(opts)
 
 Get all orders
 
@@ -86,21 +87,20 @@ require 'zuora'
 api_instance = Zuora::OrdersApi.new
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page: 1, # Integer | The page number of the orders retrieved.  
   page_size: 20 # Integer | Number of rows returned per page. 
-  date_filter_option: "date_filter_option_example", # String | The date type to filter on.This field value can be orderDate or updatedDate. Default is orderDate. 
-  start_date: Date.parse("2013-10-20"), # Date | The result will only contain the orders with the date of dateFilterOption later than or equal to this date. 
-  end_date: Date.parse("2013-10-20") # Date | The result will only contains orders with the date of dateFilterOption earlier than or equal to this date. 
+  date_filter_option: 'date_filter_option_example', # String | The date type to filter on.This field value can be orderDate or updatedDate. Default is orderDate. 
+  start_date: Date.parse('2013-10-20'), # Date | The result will only contain the orders with the date of dateFilterOption later than or equal to this date. 
+  end_date: Date.parse('2013-10-20') # Date | The result will only contains orders with the date of dateFilterOption earlier than or equal to this date. 
 }
 
 begin
   #Get all orders
-  result = api_instance.get_all_orders(opts)
+  result = api_instance.g_et_all_orders(opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling OrdersApi->get_all_orders: #{e}"
+  puts "Exception when calling OrdersApi->g_et_all_orders: #{e}"
 end
 ```
 
@@ -108,8 +108,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page** | **Integer**| The page number of the orders retrieved.   | [optional] [default to 1]
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
  **date_filter_option** | **String**| The date type to filter on.This field value can be orderDate or updatedDate. Default is orderDate.  | [optional] 
@@ -131,8 +130,59 @@ No authorization required
 
 
 
-# **get_order**
-> GetOrderResponse get_order(order_number, opts)
+# **g_et_breakdown_invoice_by_order**
+> GetInvoiceAmountBreakdownByOrderResponse g_et_breakdown_invoice_by_order(invoice_number, opts)
+
+Get breakdown of invoice by order
+
+**Note:** This feature is only available if you have the [Order Metrics](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/Orders_Generation_for_Subscriptions_and_Amendments) feature enabled. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/). We will investigate your use cases and data before enabling this feature for you. If you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders) feature enabled, you already have the Order Metrics feature enabled.   Retrieves a specified invoice that is broken down by orders. The invoice items might be broken down into a list of order rated items. 
+
+### Example
+```ruby
+# load the gem
+require 'zuora'
+
+api_instance = Zuora::OrdersApi.new
+
+invoice_number = 'invoice_number_example' # String | Number of invoice to be broken down.
+
+opts = { 
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
+}
+
+begin
+  #Get breakdown of invoice by order
+  result = api_instance.g_et_breakdown_invoice_by_order(invoice_number, opts)
+  p result
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->g_et_breakdown_invoice_by_order: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **invoice_number** | **String**| Number of invoice to be broken down. | 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
+
+### Return type
+
+[**GetInvoiceAmountBreakdownByOrderResponse**](GetInvoiceAmountBreakdownByOrderResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
+
+
+
+# **g_et_order**
+> GetOrderResponse g_et_order(order_number, opts)
 
 Get an order
 
@@ -145,19 +195,18 @@ require 'zuora'
 
 api_instance = Zuora::OrdersApi.new
 
-order_number = "order_number_example" # String | The order number to be retrieved.
+order_number = 'order_number_example' # String | The order number to be retrieved.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get an order
-  result = api_instance.get_order(order_number, opts)
+  result = api_instance.g_et_order(order_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling OrdersApi->get_order: #{e}"
+  puts "Exception when calling OrdersApi->g_et_order: #{e}"
 end
 ```
 
@@ -166,8 +215,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_number** | **String**| The order number to be retrieved. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -184,8 +232,8 @@ No authorization required
 
 
 
-# **get_order_billing_info**
-> GetOrderBillingInfoResponseType get_order_billing_info(order_number, opts)
+# **g_et_order_billing_info**
+> GetOrderBillingInfoResponseType g_et_order_billing_info(order_number, opts)
 
 Get billing information for order
 
@@ -198,20 +246,19 @@ require 'zuora'
 
 api_instance = Zuora::OrdersApi.new
 
-order_number = "order_number_example" # String | The order number.
+order_number = 'order_number_example' # String | The order number.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  as_of_date: Date.parse("2013-10-20") # Date | Billing states of the order will be calculated as of this date. Invoices with the invoice date later than this date will not be counted into the billed amount. The default value is today.
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
+  as_of_date: Date.parse('2013-10-20') # Date | Billing states of the order will be calculated as of this date. Invoices with the invoice date later than this date will not be counted into the billed amount. The default value is today.
 }
 
 begin
   #Get billing information for order
-  result = api_instance.get_order_billing_info(order_number, opts)
+  result = api_instance.g_et_order_billing_info(order_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling OrdersApi->get_order_billing_info: #{e}"
+  puts "Exception when calling OrdersApi->g_et_order_billing_info: #{e}"
 end
 ```
 
@@ -220,8 +267,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_number** | **String**| The order number. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **as_of_date** | **Date**| Billing states of the order will be calculated as of this date. Invoices with the invoice date later than this date will not be counted into the billed amount. The default value is today. | [optional] 
 
 ### Return type
@@ -239,8 +285,8 @@ No authorization required
 
 
 
-# **get_order_metricsfor_evergreen_subscription**
-> GetOrderResponse get_order_metricsfor_evergreen_subscription(order_number, subscription_number, start_date, end_date, opts)
+# **g_et_order_metricsfor_evergreen_subscription**
+> GetOrderResponse g_et_order_metricsfor_evergreen_subscription(order_number, subscription_number, start_date, end_date, opts)
 
 Get order metrics for evergreen subscription
 
@@ -253,25 +299,24 @@ require 'zuora'
 
 api_instance = Zuora::OrdersApi.new
 
-order_number = "order_number_example" # String | The order number. 
+order_number = 'order_number_example' # String | The order number. 
 
-subscription_number = "subscription_number_example" # String | The subscription number you want to get the metrics for. 
+subscription_number = 'subscription_number_example' # String | The subscription number you want to get the metrics for. 
 
-start_date = Date.parse("2013-10-20") # Date | The start date of the date range for which you want to get the metrics. The date must be in yyyy-mm-dd format. For example, 2017-12-03. 
+start_date = Date.parse('2013-10-20') # Date | The start date of the date range for which you want to get the metrics. The date must be in yyyy-mm-dd format. For example, 2017-12-03. 
 
-end_date = Date.parse("2013-10-20") # Date | The end date of the date range for which you want to get the metrics. The date must be in yyyy-mm-dd format. For example, 2017-12-03. 
+end_date = Date.parse('2013-10-20') # Date | The end date of the date range for which you want to get the metrics. The date must be in yyyy-mm-dd format. For example, 2017-12-03. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get order metrics for evergreen subscription
-  result = api_instance.get_order_metricsfor_evergreen_subscription(order_number, subscription_number, start_date, end_date, opts)
+  result = api_instance.g_et_order_metricsfor_evergreen_subscription(order_number, subscription_number, start_date, end_date, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling OrdersApi->get_order_metricsfor_evergreen_subscription: #{e}"
+  puts "Exception when calling OrdersApi->g_et_order_metricsfor_evergreen_subscription: #{e}"
 end
 ```
 
@@ -283,8 +328,7 @@ Name | Type | Description  | Notes
  **subscription_number** | **String**| The subscription number you want to get the metrics for.  | 
  **start_date** | **Date**| The start date of the date range for which you want to get the metrics. The date must be in yyyy-mm-dd format. For example, 2017-12-03.  | 
  **end_date** | **Date**| The end date of the date range for which you want to get the metrics. The date must be in yyyy-mm-dd format. For example, 2017-12-03.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -301,8 +345,8 @@ No authorization required
 
 
 
-# **get_order_rated_result**
-> GetOrderRatedResultResponseType get_order_rated_result(order_number, opts)
+# **g_et_order_rated_result**
+> GetOrderRatedResultResponseType g_et_order_rated_result(order_number, opts)
 
 Get rated result for order
 
@@ -315,19 +359,18 @@ require 'zuora'
 
 api_instance = Zuora::OrdersApi.new
 
-order_number = "order_number_example" # String | The order number.
+order_number = 'order_number_example' # String | The order number.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get rated result for order
-  result = api_instance.get_order_rated_result(order_number, opts)
+  result = api_instance.g_et_order_rated_result(order_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling OrdersApi->get_order_rated_result: #{e}"
+  puts "Exception when calling OrdersApi->g_et_order_rated_result: #{e}"
 end
 ```
 
@@ -336,8 +379,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_number** | **String**| The order number. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -354,8 +396,8 @@ No authorization required
 
 
 
-# **get_orders_by_invoice_owner**
-> GetOrdersResponse get_orders_by_invoice_owner(account_number, opts)
+# **g_et_orders_by_invoice_owner**
+> GetOrdersResponse g_et_orders_by_invoice_owner(account_number, opts)
 
 Get orders by invoice owner
 
@@ -368,24 +410,23 @@ require 'zuora'
 
 api_instance = Zuora::OrdersApi.new
 
-account_number = "account_number_example" # String | The invoice owner account number.
+account_number = 'account_number_example' # String | The invoice owner account number.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page: 56, # Integer | The page number of the orders retrieved. The default is 1. 
   page_size: 20 # Integer | Number of rows returned per page. 
-  date_filter_option: "date_filter_option_example", # String | The date type to filter on. This field value can be orderDate or updatedDate. Default is orderDate. 
-  start_date: Date.parse("2013-10-20"), # Date | The result will only contain the orders with the date of dateFilterOption later than or equal to this date. 
-  end_date: Date.parse("2013-10-20") # Date | The result will only contain the orders with the date of dateFilterOption earlier than or equal to this date. 
+  date_filter_option: 'date_filter_option_example', # String | The date type to filter on. This field value can be orderDate or updatedDate. Default is orderDate. 
+  start_date: Date.parse('2013-10-20'), # Date | The result will only contain the orders with the date of dateFilterOption later than or equal to this date. 
+  end_date: Date.parse('2013-10-20') # Date | The result will only contain the orders with the date of dateFilterOption earlier than or equal to this date. 
 }
 
 begin
   #Get orders by invoice owner
-  result = api_instance.get_orders_by_invoice_owner(account_number, opts)
+  result = api_instance.g_et_orders_by_invoice_owner(account_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling OrdersApi->get_orders_by_invoice_owner: #{e}"
+  puts "Exception when calling OrdersApi->g_et_orders_by_invoice_owner: #{e}"
 end
 ```
 
@@ -394,8 +435,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_number** | **String**| The invoice owner account number. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page** | **Integer**| The page number of the orders retrieved. The default is 1.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
  **date_filter_option** | **String**| The date type to filter on. This field value can be orderDate or updatedDate. Default is orderDate.  | [optional] 
@@ -417,8 +457,8 @@ No authorization required
 
 
 
-# **get_orders_by_subscription_number**
-> GetOrdersResponse get_orders_by_subscription_number(subscription_number, opts)
+# **g_et_orders_by_subscription_number**
+> GetOrdersResponse g_et_orders_by_subscription_number(subscription_number, opts)
 
 Get orders by subscription number
 
@@ -431,24 +471,23 @@ require 'zuora'
 
 api_instance = Zuora::OrdersApi.new
 
-subscription_number = "subscription_number_example" # String | The subscription number.
+subscription_number = 'subscription_number_example' # String | The subscription number.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page: 56, # Integer | The page number of the orders retrieved. The default is '1'. 
   page_size: 20 # Integer | Number of rows returned per page. 
-  date_filter_option: "date_filter_option_example", # String | The date type to filter on. This field value can be 'orderDate' or 'updatedDate'. Default is orderDate. 
-  start_date: Date.parse("2013-10-20"), # Date | The result will only contain the orders with the date of 'dateFilterOption' later than or equal to this date. 
-  end_date: Date.parse("2013-10-20") # Date | The result will only contain the orders with the date of 'dateFilterOption' earlier than or equal to this date. 
+  date_filter_option: 'date_filter_option_example', # String | The date type to filter on. This field value can be 'orderDate' or 'updatedDate'. Default is orderDate. 
+  start_date: Date.parse('2013-10-20'), # Date | The result will only contain the orders with the date of 'dateFilterOption' later than or equal to this date. 
+  end_date: Date.parse('2013-10-20') # Date | The result will only contain the orders with the date of 'dateFilterOption' earlier than or equal to this date. 
 }
 
 begin
   #Get orders by subscription number
-  result = api_instance.get_orders_by_subscription_number(subscription_number, opts)
+  result = api_instance.g_et_orders_by_subscription_number(subscription_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling OrdersApi->get_orders_by_subscription_number: #{e}"
+  puts "Exception when calling OrdersApi->g_et_orders_by_subscription_number: #{e}"
 end
 ```
 
@@ -457,8 +496,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscription_number** | **String**| The subscription number. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page** | **Integer**| The page number of the orders retrieved. The default is &#39;1&#39;.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
  **date_filter_option** | **String**| The date type to filter on. This field value can be &#39;orderDate&#39; or &#39;updatedDate&#39;. Default is orderDate.  | [optional] 
@@ -480,8 +518,8 @@ No authorization required
 
 
 
-# **get_orders_by_subscription_owner**
-> GetOrdersResponse get_orders_by_subscription_owner(account_number, opts)
+# **g_et_orders_by_subscription_owner**
+> GetOrdersResponse g_et_orders_by_subscription_owner(account_number, opts)
 
 Get orders by subscription owner
 
@@ -494,24 +532,23 @@ require 'zuora'
 
 api_instance = Zuora::OrdersApi.new
 
-account_number = "account_number_example" # String | The subscription owner account number.
+account_number = 'account_number_example' # String | The subscription owner account number.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page: 56, # Integer | The page number of the orders retrieved. The default is 1. 
   page_size: 20 # Integer | Number of rows returned per page. 
-  date_filter_option: "date_filter_option_example", # String | The date type to filter on. This field value can be 'orderDate' or 'updatedDate'. Default is orderDate. 
-  start_date: Date.parse("2013-10-20"), # Date | The result will only contain the orders with the date of 'dateFilterOption' later than or equal to this date. 
-  end_date: Date.parse("2013-10-20") # Date | The result will only contain the orders with the date of 'dateFilterOption' earlier than or equal to this date. 
+  date_filter_option: 'date_filter_option_example', # String | The date type to filter on. This field value can be 'orderDate' or 'updatedDate'. Default is orderDate. 
+  start_date: Date.parse('2013-10-20'), # Date | The result will only contain the orders with the date of 'dateFilterOption' later than or equal to this date. 
+  end_date: Date.parse('2013-10-20') # Date | The result will only contain the orders with the date of 'dateFilterOption' earlier than or equal to this date. 
 }
 
 begin
   #Get orders by subscription owner
-  result = api_instance.get_orders_by_subscription_owner(account_number, opts)
+  result = api_instance.g_et_orders_by_subscription_owner(account_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling OrdersApi->get_orders_by_subscription_owner: #{e}"
+  puts "Exception when calling OrdersApi->g_et_orders_by_subscription_owner: #{e}"
 end
 ```
 
@@ -520,8 +557,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_number** | **String**| The subscription owner account number. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page** | **Integer**| The page number of the orders retrieved. The default is 1.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
  **date_filter_option** | **String**| The date type to filter on. This field value can be &#39;orderDate&#39; or &#39;updatedDate&#39;. Default is orderDate.  | [optional] 
@@ -543,12 +579,69 @@ No authorization required
 
 
 
-# **post_order**
-> PostOrderResponseType post_order(body, opts)
+# **g_et_subscription_term_info**
+> GetSubscriptionTermInfoResponseType g_et_subscription_term_info(subscription_number, opts)
+
+Get term information for subscription
+
+**Note:** This feature is only available if you have the [Order Metrics](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/Orders_Generation_for_Subscriptions_and_Amendments) feature enabled. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/). We will investigate your use cases and data before enabling this feature for you. If you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders) feature enabled, you already have the Order Metrics feature enabled.  Retrieves the terms of the specified subscription. 
+
+### Example
+```ruby
+# load the gem
+require 'zuora'
+
+api_instance = Zuora::OrdersApi.new
+
+subscription_number = 'subscription_number_example' # String | The number of the subscription to retrieve terms for. For example, A-S00000001. 
+
+opts = { 
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
+  version: 56, # Integer | The version of the subscription to retrieve terms for. If you do not specify this parameter, Zuora returns the terms for the latest version of the subscription. 
+  page: 1, # Integer | The page number of the terms retrieved. 
+  page_size: 20 # Integer | Number of rows returned per page. 
+}
+
+begin
+  #Get term information for subscription
+  result = api_instance.g_et_subscription_term_info(subscription_number, opts)
+  p result
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->g_et_subscription_term_info: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_number** | **String**| The number of the subscription to retrieve terms for. For example, A-S00000001.  | 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
+ **version** | **Integer**| The version of the subscription to retrieve terms for. If you do not specify this parameter, Zuora returns the terms for the latest version of the subscription.  | [optional] 
+ **page** | **Integer**| The page number of the terms retrieved.  | [optional] [default to 1]
+ **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
+
+### Return type
+
+[**GetSubscriptionTermInfoResponseType**](GetSubscriptionTermInfoResponseType.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
+
+
+
+# **p_ost_order**
+> PostOrderResponseType p_ost_order(body, opts)
 
 Create and activate order
 
-**Note:** This feature is only available if you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders) feature enabled. We are actively soliciting feedback from a small set of early adopters. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).    Creates and activates an order. You can create subscriptions and make changes to subscriptions by creating orders. Creating a draft order is currently not supported.  See [Known Limitations in Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/C_Known_Limitations_in_Orders) for more information. 
+**Note:** This feature is only available if you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders) feature enabled. We are actively soliciting feedback from a small set of early adopters. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).   You can use this operation to create subscriptions and make changes to subscriptions by creating orders. The following tutorials demonstrate how to use this operation:   * [Add a Product to a Subscription](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AC_Orders_Tutorials/A_Add_a_Product_to_a_Subscription)  * [Create a Ramp Deal](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AC_Orders_Tutorials/A_Create_a_Ramp_Deal)  * [Create a Subscription](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AC_Orders_Tutorials/A_Create_a_Subscription)  * [Change the Owner of a Subscription](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AC_Orders_Tutorials/C_Change_the_Owner_of_a_Subscription)  * [Change the Terms and Conditions of a Subscription](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AC_Orders_Tutorials/C_Change_the_Terms_and_Conditions_of_a_Subscription)  * [Renew a Subscription](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AC_Orders_Tutorials/C_Renew_a_Subscription)  * [Renew a Subscription and Upgrade a Product](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AC_Orders_Tutorials/C_Renew_a_Subscription_and_Upgrade_a_Product)  * [Replace a Product in a Subscription](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AC_Orders_Tutorials/C_Replace_a_Product_in_a_Subscription)  * [Update a Product in a Subscription](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AC_Orders_Tutorials/C_Update_a_Product_in_a_Subscription)  * [Cancel a Subscription](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AC_Orders_Tutorials/D_Cancel_a_Subscription)  * [Remove a Product from a Subscription](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/AC_Orders_Tutorials/D_Remove_a_Product_from_a_Subscription)  Creating a draft order is currently not supported. See [Known Limitations in Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders/C_Known_Limitations_in_Orders) for additional limitations. 
 
 ### Example
 ```ruby
@@ -560,16 +653,15 @@ api_instance = Zuora::OrdersApi.new
 body = Zuora::POSTOrderRequestType.new # POSTOrderRequestType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create and activate order
-  result = api_instance.post_order(body, opts)
+  result = api_instance.p_ost_order(body, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling OrdersApi->post_order: #{e}"
+  puts "Exception when calling OrdersApi->p_ost_order: #{e}"
 end
 ```
 
@@ -578,8 +670,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**POSTOrderRequestType**](POSTOrderRequestType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -596,8 +687,8 @@ No authorization required
 
 
 
-# **post_preview_order**
-> PostOrderPreviewResponseType post_preview_order(body, opts)
+# **p_ost_preview_order**
+> PostOrderPreviewResponseType p_ost_preview_order(body, opts)
 
 Preview order
 
@@ -613,16 +704,15 @@ api_instance = Zuora::OrdersApi.new
 body = Zuora::POSTOrderPreviewRequestType.new # POSTOrderPreviewRequestType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Preview order
-  result = api_instance.post_preview_order(body, opts)
+  result = api_instance.p_ost_preview_order(body, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling OrdersApi->post_preview_order: #{e}"
+  puts "Exception when calling OrdersApi->p_ost_preview_order: #{e}"
 end
 ```
 
@@ -631,8 +721,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**POSTOrderPreviewRequestType**](POSTOrderPreviewRequestType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -649,8 +738,8 @@ No authorization required
 
 
 
-# **put_update_order_custom_fields**
-> CommonResponse put_update_order_custom_fields(order_number, body, opts)
+# **p_ut_update_order_custom_fields**
+> CommonResponseType p_ut_update_order_custom_fields(order_number, body, opts)
 
 Update order custom fields
 
@@ -663,21 +752,20 @@ require 'zuora'
 
 api_instance = Zuora::OrdersApi.new
 
-order_number = "order_number_example" # String | The order number.
+order_number = 'order_number_example' # String | The order number.
 
 body = Zuora::PUTOrderPatchRequestType.new # PUTOrderPatchRequestType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Update order custom fields
-  result = api_instance.put_update_order_custom_fields(order_number, body, opts)
+  result = api_instance.p_ut_update_order_custom_fields(order_number, body, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling OrdersApi->put_update_order_custom_fields: #{e}"
+  puts "Exception when calling OrdersApi->p_ut_update_order_custom_fields: #{e}"
 end
 ```
 
@@ -687,12 +775,65 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_number** | **String**| The order number. | 
  **body** | [**PUTOrderPatchRequestType**](PUTOrderPatchRequestType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CommonResponseType**](CommonResponseType.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
+
+
+
+# **p_ut_update_subscription_custom_fields**
+> CommonResponseType p_ut_update_subscription_custom_fields(subscription_number, body, opts)
+
+Update subscription custom fields
+
+**Note:** This feature is only available if you have the [Orders](https://knowledgecenter.zuora.com/BC_Subscription_Management/Orders) feature enabled. We are actively soliciting feedback from a small set of early adopters. If you wish to have access to the feature, submit a request at [Zuora Global Support](http://support.zuora.com/).    Updates the custom fields of a specified subscription. 
+
+### Example
+```ruby
+# load the gem
+require 'zuora'
+
+api_instance = Zuora::OrdersApi.new
+
+subscription_number = 'subscription_number_example' # String | The subscription number to be updated.
+
+body = Zuora::PUTSubscriptionPatchRequestType.new # PUTSubscriptionPatchRequestType | 
+
+opts = { 
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
+}
+
+begin
+  #Update subscription custom fields
+  result = api_instance.p_ut_update_subscription_custom_fields(subscription_number, body, opts)
+  p result
+rescue Zuora::ApiError => e
+  puts "Exception when calling OrdersApi->p_ut_update_subscription_custom_fields: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_number** | **String**| The subscription number to be updated. | 
+ **body** | [**PUTSubscriptionPatchRequestType**](PUTSubscriptionPatchRequestType.md)|  | 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
+
+### Return type
+
+[**CommonResponseType**](CommonResponseType.md)
 
 ### Authorization
 

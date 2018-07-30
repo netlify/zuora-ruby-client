@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **add_product** | [**RatePlanOverride**](RatePlanOverride.md) |  | [optional] 
 **cancel_subscription** | [**CancelSubscription**](CancelSubscription.md) |  | [optional] 
 **create_subscription** | [**CreateSubscription**](CreateSubscription.md) |  | [optional] 
-**custom_fields** | [**CustomFields**](CustomFields.md) |  | [optional] 
+**custom_fields** | [**ObjectCustomFields**](ObjectCustomFields.md) |  | [optional] 
 **owner_transfer** | [**OwnerTransfer**](OwnerTransfer.md) |  | [optional] 
 **remove_product** | [**RemoveProduct**](RemoveProduct.md) |  | [optional] 
 **terms_and_conditions** | [**TermsAndConditions**](TermsAndConditions.md) |  | [optional] 

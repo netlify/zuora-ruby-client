@@ -4,12 +4,12 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_catalog**](CatalogApi.md#get_catalog) | **GET** /v1/catalog/products | Get product catalog
-[**put_catalog**](CatalogApi.md#put_catalog) | **PUT** /v1/catalog/products/{product-id}/share | Multi-entity: Share a Product with an Entity
+[**g_et_catalog**](CatalogApi.md#g_et_catalog) | **GET** /v1/catalog/products | Get product catalog
+[**p_ut_catalog**](CatalogApi.md#p_ut_catalog) | **PUT** /v1/catalog/products/{product-id}/share | Multi-entity: Share a Product with an Entity
 
 
-# **get_catalog**
-> GETCatalogType get_catalog(opts)
+# **g_et_catalog**
+> GETCatalogType g_et_catalog(opts)
 
 Get product catalog
 
@@ -23,17 +23,16 @@ require 'zuora'
 api_instance = Zuora::CatalogApi.new
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 10 # Integer | Number of rows returned per page. 
 }
 
 begin
   #Get product catalog
-  result = api_instance.get_catalog(opts)
+  result = api_instance.g_et_catalog(opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CatalogApi->get_catalog: #{e}"
+  puts "Exception when calling CatalogApi->g_et_catalog: #{e}"
 end
 ```
 
@@ -41,8 +40,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 10]
 
 ### Return type
@@ -60,8 +58,8 @@ No authorization required
 
 
 
-# **put_catalog**
-> CommonResponseType put_catalog(product_id, request, opts)
+# **p_ut_catalog**
+> CommonResponseType p_ut_catalog(product_id, request, opts)
 
 Multi-entity: Share a Product with an Entity
 
@@ -74,21 +72,20 @@ require 'zuora'
 
 api_instance = Zuora::CatalogApi.new
 
-product_id = "product_id_example" # String | The Id of the product you want to share. For example, 8a808255575bdae4015774e9602e16fe.
+product_id = 'product_id_example' # String | The Id of the product you want to share. For example, 8a808255575bdae4015774e9602e16fe.
 
 request = Zuora::PUTCatalogType.new # PUTCatalogType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Multi-entity: Share a Product with an Entity
-  result = api_instance.put_catalog(product_id, request, opts)
+  result = api_instance.p_ut_catalog(product_id, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CatalogApi->put_catalog: #{e}"
+  puts "Exception when calling CatalogApi->p_ut_catalog: #{e}"
 end
 ```
 
@@ -98,8 +95,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **product_id** | **String**| The Id of the product you want to share. For example, 8a808255575bdae4015774e9602e16fe. | 
  **request** | [**PUTCatalogType**](PUTCatalogType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 

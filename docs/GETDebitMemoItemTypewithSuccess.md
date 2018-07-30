@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **comment** | **String** | Comments about the debit memo item.  | [optional] 
 **created_by_id** | **String** | The ID of the Zuora user who created the debit memo item.  | [optional] 
 **created_date** | **DateTime** | The date and time when the debit memo item was created, in &#x60;yyyy-mm-dd hh:mm:ss&#x60; format. For example, 2017-03-01 15:31:10.  | [optional] 
+**custom_field__c** | **String** | Any custom fields defined for this object. The custom field name is case-sensitive.  | [optional] 
 **finance_information** | [**GETDebitMemoItemTypeFinanceInformation**](GETDebitMemoItemTypeFinanceInformation.md) |  | [optional] 
 **id** | **String** | The ID of the debit memo item.  | [optional] 
 **service_end_date** | **Date** | The end date of the service period associated with this debit memo item. Service ends one second before the date specified in this field.  | [optional] 

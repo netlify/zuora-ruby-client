@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **subscriptions** | [**Array&lt;GETAccountSummarySubscriptionType&gt;**](GETAccountSummarySubscriptionType.md) | Container for subscriptions.  | [optional] 
 **success** | **BOOLEAN** | Returns &#x60;true&#x60; if the request was processed successfully.  | [optional] 
 **tax_info** | [**GETAccountSummaryTypeTaxInfo**](GETAccountSummaryTypeTaxInfo.md) |  | [optional] 
-**usage** | [**Array&lt;GETAccountSummaryUsageType&gt;**](GETAccountSummaryUsageType.md) | Container for usage data. Only returns the last 6 months of usage.  | [optional] 
+**usage** | [**Array&lt;GETAccountSummaryUsageType&gt;**](GETAccountSummaryUsageType.md) | Container for usage data. Only returns the last 6 months of usage.  **Note:** If the [Real-Time Usage Rating](https://knowledgecenter.zuora.com/CB_Billing/J_Billing_Operations/Real-Time_Usage_Rating) feature is enabled, no usage data is returned in the response body field. To retrive usage data information, you can use the [Usage Rating](https://www.zuora.com/developer/api-reference/#tag/Usage-Rating) operations.  | [optional] 
 
 

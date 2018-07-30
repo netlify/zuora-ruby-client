@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **created_by_id** | **String** | The ID of the Zuora user who created the credit memo item.  | [optional] 
 **created_date** | **DateTime** | The date and time when the credit memo item was created, in &#x60;yyyy-mm-dd hh:mm:ss&#x60; format. For example, 2017-03-01 15:31:10.  | [optional] 
 **credit_tax_items** | [**Array&lt;GETCMTaxItemType&gt;**](GETCMTaxItemType.md) | Container for credit memo taxation items.  | [optional] 
+**custom_field__c** | **String** | Any custom fields defined for this object. The custom field name is case-sensitive.  | [optional] 
 **finance_information** | [**GETCreditMemoItemTypewithSuccessFinanceInformation**](GETCreditMemoItemTypewithSuccessFinanceInformation.md) |  | [optional] 
 **id** | **String** | The ID of the credit memo item.  | [optional] 
 **refund_amount** | **Float** | The amount of the refund on the credit memo item.  | [optional] 

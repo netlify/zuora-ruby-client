@@ -4,7 +4,59 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**object_delete_payment_method_snapshot**](PaymentMethodSnapshotsApi.md#object_delete_payment_method_snapshot) | **DELETE** /v1/object/payment-method-snapshot/{id} | CRUD: Delete PaymentMethodSnapshot
 [**object_get_payment_method_snapshot**](PaymentMethodSnapshotsApi.md#object_get_payment_method_snapshot) | **GET** /v1/object/payment-method-snapshot/{id} | CRUD: Retrieve PaymentMethodSnapshot
+
+
+# **object_delete_payment_method_snapshot**
+> ProxyDeleteResponse object_delete_payment_method_snapshot(id, opts)
+
+CRUD: Delete PaymentMethodSnapshot
+
+This REST API reference describes how to delete a Payment Method Snapshot. 
+
+### Example
+```ruby
+# load the gem
+require 'zuora'
+
+api_instance = Zuora::PaymentMethodSnapshotsApi.new
+
+id = 'id_example' # String | Object id
+
+opts = { 
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
+}
+
+begin
+  #CRUD: Delete PaymentMethodSnapshot
+  result = api_instance.object_delete_payment_method_snapshot(id, opts)
+  p result
+rescue Zuora::ApiError => e
+  puts "Exception when calling PaymentMethodSnapshotsApi->object_delete_payment_method_snapshot: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Object id | 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
+
+### Return type
+
+[**ProxyDeleteResponse**](ProxyDeleteResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
+
 
 
 # **object_get_payment_method_snapshot**
@@ -21,12 +73,11 @@ require 'zuora'
 
 api_instance = Zuora::PaymentMethodSnapshotsApi.new
 
-id = "id_example" # String | Object id
+id = 'id_example' # String | Object id
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  fields: "fields_example" # String | Object fields to return
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
+  fields: 'fields_example' # String | Object fields to return
 }
 
 begin
@@ -43,8 +94,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Object id | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **fields** | **String**| Object fields to return | [optional] 
 
 ### Return type

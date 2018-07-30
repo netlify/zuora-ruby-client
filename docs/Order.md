@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **currency** | **String** |  | [optional] 
-**custom_fields** | [**CustomFields**](CustomFields.md) |  | [optional] 
+**custom_fields** | [**ObjectCustomFields**](ObjectCustomFields.md) |  | [optional] 
 **existing_account_number** | **String** |  | [optional] 
 **order_date** | **Date** |  | [optional] 
 **order_number** | **String** |  | [optional] 

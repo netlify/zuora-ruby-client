@@ -4,30 +4,30 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_credit_memo**](CreditMemosApi.md#delete_credit_memo) | **DELETE** /v1/creditmemos/{creditMemoId} | Delete credit memo
-[**get_breakdown_credit_memo_by_order**](CreditMemosApi.md#get_breakdown_credit_memo_by_order) | **GET** /v1/creditmemos/{creditMemoNumber}/amountBreakdownByOrder | Get breakdown of credit memo by order
-[**get_credit_memo**](CreditMemosApi.md#get_credit_memo) | **GET** /v1/creditmemos/{creditMemoId} | Get credit memo
-[**get_credit_memo_item**](CreditMemosApi.md#get_credit_memo_item) | **GET** /v1/creditmemos/{creditMemoId}/items/{cmitemid} | Get credit memo item
-[**get_credit_memo_item_part**](CreditMemosApi.md#get_credit_memo_item_part) | **GET** /v1/creditmemos/{creditMemoId}/parts/{partid}/itemparts/{itempartid} | Get credit memo part item
-[**get_credit_memo_item_parts**](CreditMemosApi.md#get_credit_memo_item_parts) | **GET** /v1/creditmemos/{creditMemoId}/parts/{partid}/itemparts | Get credit memo part items
-[**get_credit_memo_items**](CreditMemosApi.md#get_credit_memo_items) | **GET** /v1/creditmemos/{creditMemoId}/items | Get credit memo items
-[**get_credit_memo_part**](CreditMemosApi.md#get_credit_memo_part) | **GET** /v1/creditmemos/{creditMemoId}/parts/{partid} | Get credit memo part
-[**get_credit_memo_parts**](CreditMemosApi.md#get_credit_memo_parts) | **GET** /v1/creditmemos/{creditMemoId}/parts | Get credit memo parts
-[**get_credit_memos**](CreditMemosApi.md#get_credit_memos) | **GET** /v1/creditmemos | Get credit memos
-[**post_credit_memo_from_prpc**](CreditMemosApi.md#post_credit_memo_from_prpc) | **POST** /v1/creditmemos | Create credit memo from charge
-[**post_credit_memo_pdf**](CreditMemosApi.md#post_credit_memo_pdf) | **POST** /v1/creditmemos/{creditMemoId}/pdfs | Create credit memo PDF
-[**post_email_credit_memo**](CreditMemosApi.md#post_email_credit_memo) | **POST** /v1/creditmemos/{creditMemoId}/emails | Email credit memo
-[**post_refund_credit_memo**](CreditMemosApi.md#post_refund_credit_memo) | **POST** /v1/creditmemos/{creditmemoId}/refunds | Refund credit memo
-[**post_cm_taxation_items**](CreditMemosApi.md#post_cm_taxation_items) | **POST** /v1/creditmemos/{creditMemoId}/taxationitems | Create taxation items for credit memo
-[**put_apply_credit_memo**](CreditMemosApi.md#put_apply_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/apply | Apply credit memo
-[**put_cancel_credit_memo**](CreditMemosApi.md#put_cancel_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/cancel | Cancel credit memo
-[**put_post_credit_memo**](CreditMemosApi.md#put_post_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/post | Post credit memo
-[**put_unapply_credit_memo**](CreditMemosApi.md#put_unapply_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/unapply | Unapply credit memo
-[**put_update_credit_memo**](CreditMemosApi.md#put_update_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId} | Update credit memo
+[**d_elete_credit_memo**](CreditMemosApi.md#d_elete_credit_memo) | **DELETE** /v1/creditmemos/{creditMemoId} | Delete credit memo
+[**g_et_breakdown_credit_memo_by_order**](CreditMemosApi.md#g_et_breakdown_credit_memo_by_order) | **GET** /v1/creditmemos/{creditMemoNumber}/amountBreakdownByOrder | Get breakdown of credit memo by order
+[**g_et_credit_memo**](CreditMemosApi.md#g_et_credit_memo) | **GET** /v1/creditmemos/{creditMemoId} | Get credit memo
+[**g_et_credit_memo_item**](CreditMemosApi.md#g_et_credit_memo_item) | **GET** /v1/creditmemos/{creditMemoId}/items/{cmitemid} | Get credit memo item
+[**g_et_credit_memo_item_part**](CreditMemosApi.md#g_et_credit_memo_item_part) | **GET** /v1/creditmemos/{creditMemoId}/parts/{partid}/itemparts/{itempartid} | Get credit memo part item
+[**g_et_credit_memo_item_parts**](CreditMemosApi.md#g_et_credit_memo_item_parts) | **GET** /v1/creditmemos/{creditMemoId}/parts/{partid}/itemparts | Get credit memo part items
+[**g_et_credit_memo_items**](CreditMemosApi.md#g_et_credit_memo_items) | **GET** /v1/creditmemos/{creditMemoId}/items | Get credit memo items
+[**g_et_credit_memo_part**](CreditMemosApi.md#g_et_credit_memo_part) | **GET** /v1/creditmemos/{creditMemoId}/parts/{partid} | Get credit memo part
+[**g_et_credit_memo_parts**](CreditMemosApi.md#g_et_credit_memo_parts) | **GET** /v1/creditmemos/{creditMemoId}/parts | Get credit memo parts
+[**g_et_credit_memos**](CreditMemosApi.md#g_et_credit_memos) | **GET** /v1/creditmemos | Get credit memos
+[**p_ost_credit_memo_from_prpc**](CreditMemosApi.md#p_ost_credit_memo_from_prpc) | **POST** /v1/creditmemos | Create credit memo from charge
+[**p_ost_credit_memo_pdf**](CreditMemosApi.md#p_ost_credit_memo_pdf) | **POST** /v1/creditmemos/{creditMemoId}/pdfs | Create credit memo PDF
+[**p_ost_email_credit_memo**](CreditMemosApi.md#p_ost_email_credit_memo) | **POST** /v1/creditmemos/{creditMemoId}/emails | Email credit memo
+[**p_ost_refund_credit_memo**](CreditMemosApi.md#p_ost_refund_credit_memo) | **POST** /v1/creditmemos/{creditmemoId}/refunds | Refund credit memo
+[**p_ostcm_taxation_items**](CreditMemosApi.md#p_ostcm_taxation_items) | **POST** /v1/creditmemos/{creditMemoId}/taxationitems | Create taxation items for credit memo
+[**p_ut_apply_credit_memo**](CreditMemosApi.md#p_ut_apply_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/apply | Apply credit memo
+[**p_ut_cancel_credit_memo**](CreditMemosApi.md#p_ut_cancel_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/cancel | Cancel credit memo
+[**p_ut_post_credit_memo**](CreditMemosApi.md#p_ut_post_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/post | Post credit memo
+[**p_ut_unapply_credit_memo**](CreditMemosApi.md#p_ut_unapply_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId}/unapply | Unapply credit memo
+[**p_ut_update_credit_memo**](CreditMemosApi.md#p_ut_update_credit_memo) | **PUT** /v1/creditmemos/{creditMemoId} | Update credit memo
 
 
-# **delete_credit_memo**
-> CommonResponseType delete_credit_memo(credit_memo_id, opts)
+# **d_elete_credit_memo**
+> CommonResponseType d_elete_credit_memo(credit_memo_id, opts)
 
 Delete credit memo
 
@@ -40,19 +40,18 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Delete credit memo
-  result = api_instance.delete_credit_memo(credit_memo_id, opts)
+  result = api_instance.d_elete_credit_memo(credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->delete_credit_memo: #{e}"
+  puts "Exception when calling CreditMemosApi->d_elete_credit_memo: #{e}"
 end
 ```
 
@@ -61,8 +60,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -79,8 +77,8 @@ No authorization required
 
 
 
-# **get_breakdown_credit_memo_by_order**
-> GetCreditMemoAmountBreakdownByOrderResponse get_breakdown_credit_memo_by_order(credit_memo_number, opts)
+# **g_et_breakdown_credit_memo_by_order**
+> GetCreditMemoAmountBreakdownByOrderResponse g_et_breakdown_credit_memo_by_order(credit_memo_number, opts)
 
 Get breakdown of credit memo by order
 
@@ -93,19 +91,18 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-credit_memo_number = "credit_memo_number_example" # String | Number of credit memo to be broken down.
+credit_memo_number = 'credit_memo_number_example' # String | Number of credit memo to be broken down.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get breakdown of credit memo by order
-  result = api_instance.get_breakdown_credit_memo_by_order(credit_memo_number, opts)
+  result = api_instance.g_et_breakdown_credit_memo_by_order(credit_memo_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->get_breakdown_credit_memo_by_order: #{e}"
+  puts "Exception when calling CreditMemosApi->g_et_breakdown_credit_memo_by_order: #{e}"
 end
 ```
 
@@ -114,8 +111,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_memo_number** | **String**| Number of credit memo to be broken down. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -132,8 +128,8 @@ No authorization required
 
 
 
-# **get_credit_memo**
-> GETCreditMemoType get_credit_memo(credit_memo_id, opts)
+# **g_et_credit_memo**
+> GETCreditMemoType g_et_credit_memo(credit_memo_id, opts)
 
 Get credit memo
 
@@ -146,19 +142,18 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get credit memo
-  result = api_instance.get_credit_memo(credit_memo_id, opts)
+  result = api_instance.g_et_credit_memo(credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->get_credit_memo: #{e}"
+  puts "Exception when calling CreditMemosApi->g_et_credit_memo: #{e}"
 end
 ```
 
@@ -167,8 +162,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -185,8 +179,8 @@ No authorization required
 
 
 
-# **get_credit_memo_item**
-> GETCreditMemoItemType get_credit_memo_item(cmitemid, credit_memo_id, opts)
+# **g_et_credit_memo_item**
+> GETCreditMemoItemType g_et_credit_memo_item(cmitemid, credit_memo_id, opts)
 
 Get credit memo item
 
@@ -199,21 +193,20 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-cmitemid = "cmitemid_example" # String | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
+cmitemid = 'cmitemid_example' # String | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get credit memo item
-  result = api_instance.get_credit_memo_item(cmitemid, credit_memo_id, opts)
+  result = api_instance.g_et_credit_memo_item(cmitemid, credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->get_credit_memo_item: #{e}"
+  puts "Exception when calling CreditMemosApi->g_et_credit_memo_item: #{e}"
 end
 ```
 
@@ -223,8 +216,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cmitemid** | **String**| The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems).  | 
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -241,8 +233,8 @@ No authorization required
 
 
 
-# **get_credit_memo_item_part**
-> GETCreditMemoItemPartType get_credit_memo_item_part(partid, itempartid, credit_memo_id, opts)
+# **g_et_credit_memo_item_part**
+> GETCreditMemoItemPartType g_et_credit_memo_item_part(partid, itempartid, credit_memo_id, opts)
 
 Get credit memo part item
 
@@ -255,23 +247,22 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-partid = "partid_example" # String | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). 
+partid = 'partid_example' # String | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). 
 
-itempartid = "itempartid_example" # String | The unique ID of a specific credit memo part item. You can get the credit memo part item ID from the response of [Get credit memo part items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItemParts). 
+itempartid = 'itempartid_example' # String | The unique ID of a specific credit memo part item. You can get the credit memo part item ID from the response of [Get credit memo part items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItemParts). 
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get credit memo part item
-  result = api_instance.get_credit_memo_item_part(partid, itempartid, credit_memo_id, opts)
+  result = api_instance.g_et_credit_memo_item_part(partid, itempartid, credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->get_credit_memo_item_part: #{e}"
+  puts "Exception when calling CreditMemosApi->g_et_credit_memo_item_part: #{e}"
 end
 ```
 
@@ -282,8 +273,7 @@ Name | Type | Description  | Notes
  **partid** | **String**| The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts).  | 
  **itempartid** | **String**| The unique ID of a specific credit memo part item. You can get the credit memo part item ID from the response of [Get credit memo part items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItemParts).  | 
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -300,8 +290,8 @@ No authorization required
 
 
 
-# **get_credit_memo_item_parts**
-> GETCreditMemoItemPartsCollectionType get_credit_memo_item_parts(partid, credit_memo_id, opts)
+# **g_et_credit_memo_item_parts**
+> GETCreditMemoItemPartsCollectionType g_et_credit_memo_item_parts(partid, credit_memo_id, opts)
 
 Get credit memo part items
 
@@ -314,22 +304,21 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-partid = "partid_example" # String | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). . 
+partid = 'partid_example' # String | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). . 
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 20 # Integer | Number of rows returned per page. 
 }
 
 begin
   #Get credit memo part items
-  result = api_instance.get_credit_memo_item_parts(partid, credit_memo_id, opts)
+  result = api_instance.g_et_credit_memo_item_parts(partid, credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->get_credit_memo_item_parts: #{e}"
+  puts "Exception when calling CreditMemosApi->g_et_credit_memo_item_parts: #{e}"
 end
 ```
 
@@ -339,8 +328,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partid** | **String**| The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). .  | 
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type
@@ -358,8 +346,8 @@ No authorization required
 
 
 
-# **get_credit_memo_items**
-> GETCreditMemoItemsListType get_credit_memo_items(credit_memo_id, opts)
+# **g_et_credit_memo_items**
+> GETCreditMemoItemsListType g_et_credit_memo_items(credit_memo_id, opts)
 
 Get credit memo items
 
@@ -372,22 +360,21 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 20 # Integer | Number of rows returned per page. 
-  fields_filterable: "fields_filterable_example", # String | This parameter restricts the data returned in the response. You can use this parameter to supply a dimension you want to filter on.   A single filter uses the following form:   *fieldsFilterable* `=` *field_value*              Filters can be combined by using `&`. For example: *fieldsFilterable* `=` *field_value* `&` *fieldsFilterable* `=` *field_value*  *fieldsFilterable* indicates the name of a supported field that you can use to filter the response data. The supported filterable fields of this operation are as below:    - id   - amount   - appliedAmount   - refundAmount   - sku   - skuName   - serviceStartDate   - serviceEndDate   - sourceItemId   - createdDate   - createdById   - updatedDate   - updatedById   - subscriptionId   *field_value* indicates a valid value of the filterable field. If the type of the field value is string, you can set the field to `null` value for filtering. Then, you can get the response data with this field value being 'null'. For more information about these fields, see the field descriptions in the **Responses** section.     Examples:  - /creditmemos/402890245c7ca371015c7cb40ac30015/items?amount=100  - /creditmemos/402890245c7ca371015c7cb40ac30015/items?amount=100&sort=createdDate 
-  sort: "sort_example" # String | This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.  A sortable field uses the following form:   *operator* *field_name*  You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*    *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.    - The `-` operator indicates an ascending order.   - The `+` operator indicates a descending order.  By default, the response data is displayed in descending order by updated date.  *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:    - id   - amount   - appliedAmount   - refundAmount   - sku   - skuName   - serviceStartDate   - serviceEndDate   - sourceItemId   - createdDate   - createdById   - updatedDate   - updatedById   - subscriptionId    Examples:  - /creditmemos/402890245c7ca371015c7cb40ac30015/items?sort=createdDate  - /creditmemos/402890245c7ca371015c7cb40ac30015/items?amount=100&sort=createdDate 
+  fields_filterable: 'fields_filterable_example', # String | This parameter restricts the data returned in the response. You can use this parameter to supply a dimension you want to filter on.   A single filter uses the following form:   *fieldsFilterable* `=` *field_value*              Filters can be combined by using `&`. For example: *fieldsFilterable* `=` *field_value* `&` *fieldsFilterable* `=` *field_value*  *fieldsFilterable* indicates the name of a supported field that you can use to filter the response data. The supported filterable fields of this operation are as below:    - id   - amount   - appliedAmount   - refundAmount   - sku   - skuName   - serviceStartDate   - serviceEndDate   - sourceItemId   - createdDate   - createdById   - updatedDate   - updatedById   - subscriptionId   *field_value* indicates a valid value of the filterable field. If the type of the field value is string, you can set the field to `null` value for filtering. Then, you can get the response data with this field value being 'null'. For more information about these fields, see the field descriptions in the **Responses** section.     Examples:  - /creditmemos/402890245c7ca371015c7cb40ac30015/items?amount=100  - /creditmemos/402890245c7ca371015c7cb40ac30015/items?amount=100&sort=createdDate 
+  sort: 'sort_example' # String | This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.  A sortable field uses the following form:   *operator* *field_name*  You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*    *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.    - The `-` operator indicates an ascending order.   - The `+` operator indicates a descending order.  By default, the response data is displayed in descending order by updated date.  *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:    - id   - amount   - appliedAmount   - refundAmount   - sku   - skuName   - serviceStartDate   - serviceEndDate   - sourceItemId   - createdDate   - createdById   - updatedDate   - updatedById   - subscriptionId    Examples:  - /creditmemos/402890245c7ca371015c7cb40ac30015/items?sort=createdDate  - /creditmemos/402890245c7ca371015c7cb40ac30015/items?amount=100&sort=createdDate 
 }
 
 begin
   #Get credit memo items
-  result = api_instance.get_credit_memo_items(credit_memo_id, opts)
+  result = api_instance.g_et_credit_memo_items(credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->get_credit_memo_items: #{e}"
+  puts "Exception when calling CreditMemosApi->g_et_credit_memo_items: #{e}"
 end
 ```
 
@@ -396,8 +383,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
  **fields_filterable** | **String**| This parameter restricts the data returned in the response. You can use this parameter to supply a dimension you want to filter on.   A single filter uses the following form:   *fieldsFilterable* &#x60;&#x3D;&#x60; *field_value*              Filters can be combined by using &#x60;&amp;&#x60;. For example: *fieldsFilterable* &#x60;&#x3D;&#x60; *field_value* &#x60;&amp;&#x60; *fieldsFilterable* &#x60;&#x3D;&#x60; *field_value*  *fieldsFilterable* indicates the name of a supported field that you can use to filter the response data. The supported filterable fields of this operation are as below:    - id   - amount   - appliedAmount   - refundAmount   - sku   - skuName   - serviceStartDate   - serviceEndDate   - sourceItemId   - createdDate   - createdById   - updatedDate   - updatedById   - subscriptionId   *field_value* indicates a valid value of the filterable field. If the type of the field value is string, you can set the field to &#x60;null&#x60; value for filtering. Then, you can get the response data with this field value being &#39;null&#39;. For more information about these fields, see the field descriptions in the **Responses** section.     Examples:  - /creditmemos/402890245c7ca371015c7cb40ac30015/items?amount&#x3D;100  - /creditmemos/402890245c7ca371015c7cb40ac30015/items?amount&#x3D;100&amp;sort&#x3D;createdDate  | [optional] 
  **sort** | **String**| This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.  A sortable field uses the following form:   *operator* *field_name*  You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*    *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.    - The &#x60;-&#x60; operator indicates an ascending order.   - The &#x60;+&#x60; operator indicates a descending order.  By default, the response data is displayed in descending order by updated date.  *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:    - id   - amount   - appliedAmount   - refundAmount   - sku   - skuName   - serviceStartDate   - serviceEndDate   - sourceItemId   - createdDate   - createdById   - updatedDate   - updatedById   - subscriptionId    Examples:  - /creditmemos/402890245c7ca371015c7cb40ac30015/items?sort&#x3D;createdDate  - /creditmemos/402890245c7ca371015c7cb40ac30015/items?amount&#x3D;100&amp;sort&#x3D;createdDate  | [optional] 
@@ -417,8 +403,8 @@ No authorization required
 
 
 
-# **get_credit_memo_part**
-> GETCreditMemoPartType get_credit_memo_part(partid, credit_memo_id, opts)
+# **g_et_credit_memo_part**
+> GETCreditMemoPartType g_et_credit_memo_part(partid, credit_memo_id, opts)
 
 Get credit memo part
 
@@ -431,21 +417,20 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-partid = "partid_example" # String | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). 
+partid = 'partid_example' # String | The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts). 
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get credit memo part
-  result = api_instance.get_credit_memo_part(partid, credit_memo_id, opts)
+  result = api_instance.g_et_credit_memo_part(partid, credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->get_credit_memo_part: #{e}"
+  puts "Exception when calling CreditMemosApi->g_et_credit_memo_part: #{e}"
 end
 ```
 
@@ -455,8 +440,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **partid** | **String**| The unique ID of a specific credit memo part. You can get the credit memo part ID from the response of [Get credit memo parts](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoParts).  | 
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -473,8 +457,8 @@ No authorization required
 
 
 
-# **get_credit_memo_parts**
-> GETCreditMemoPartsCollectionType get_credit_memo_parts(credit_memo_id, opts)
+# **g_et_credit_memo_parts**
+> GETCreditMemoPartsCollectionType g_et_credit_memo_parts(credit_memo_id, opts)
 
 Get credit memo parts
 
@@ -487,20 +471,19 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 20 # Integer | Number of rows returned per page. 
 }
 
 begin
   #Get credit memo parts
-  result = api_instance.get_credit_memo_parts(credit_memo_id, opts)
+  result = api_instance.g_et_credit_memo_parts(credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->get_credit_memo_parts: #{e}"
+  puts "Exception when calling CreditMemosApi->g_et_credit_memo_parts: #{e}"
 end
 ```
 
@@ -509,8 +492,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type
@@ -528,8 +510,8 @@ No authorization required
 
 
 
-# **get_credit_memos**
-> GETCreditMemoCollectionType get_credit_memos(opts)
+# **g_et_credit_memos**
+> GETCreditMemoCollectionType g_et_credit_memos(opts)
 
 Get credit memos
 
@@ -543,19 +525,18 @@ require 'zuora'
 api_instance = Zuora::CreditMemosApi.new
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 20 # Integer | Number of rows returned per page. 
-  fields_filterable: "fields_filterable_example", # String | This parameter restricts the data returned in the response. You can use this parameter to supply a dimension you want to filter on.   A single filter uses the following form:   *fieldsFilterable* `=` *field_value*              Filters can be combined by using `&`. For example: *fieldsFilterable* `=` *field_value* `&` *fieldsFilterable* `=` *field_value*  *fieldsFilterable* indicates the name of a supported field that you can use to filter the response data. The supported filterable fields of this operation are as below:    - number   - accountId    - currency   - creditMemoDate   - targetDate   - status   - amount   - taxAmount   - totalTaxExemptAmount   - unappliedAmount   - refundAmount   - appliedAmount   - referredInvoiceId   - transferredToAccounting   - createdDate   - createdById   - updatedDate   - updatedById   - autoApplyUponPosting   - excludeFromAutoApplyRules   *field_value* indicates a valid value of the filterable field. If the type of the field value is string, you can set the field to `null` value for filtering. Then, you can get the response data with this field value being 'null'. For more information about these fields, see the field descriptions in the **Responses** section.     Examples:  - /creditmemos?status=Processed  - /creditmemos?referredInvoiceId=null&status=Draft  - /creditmemos?status=Processed&type=External&sort=+number 
-  sort: "sort_example" # String | This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.  A sortable field uses the following form:   *operator* *field_name*  You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*    *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.    - The `-` operator indicates an ascending order.   - The `+` operator indicates a descending order.  By default, the response data is displayed in descending order by credit memo number.  *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:    - number   - accountId    - creditMemoDate   - targetDate   - status   - amount   - taxAmount   - totalTaxExemptAmount   - unappliedAmount   - refundAmount   - appliedAmount   - referredInvoiceId   - transferredToAccounting   - createdDate   - createdById   - updatedDate     Examples:  - /creditmemos?sort=+number  - /creditmemos?status=Processed&sort=-number,+amount 
+  fields_filterable: 'fields_filterable_example', # String | This parameter restricts the data returned in the response. You can use this parameter to supply a dimension you want to filter on.   A single filter uses the following form:   *fieldsFilterable* `=` *field_value*              Filters can be combined by using `&`. For example: *fieldsFilterable* `=` *field_value* `&` *fieldsFilterable* `=` *field_value*  *fieldsFilterable* indicates the name of a supported field that you can use to filter the response data. The supported filterable fields of this operation are as below:    - number   - accountId    - currency   - creditMemoDate   - targetDate   - status   - amount   - taxAmount   - totalTaxExemptAmount   - unappliedAmount   - refundAmount   - appliedAmount   - referredInvoiceId   - transferredToAccounting   - createdDate   - createdById   - updatedDate   - updatedById   - autoApplyUponPosting   - excludeFromAutoApplyRules   *field_value* indicates a valid value of the filterable field. If the type of the field value is string, you can set the field to `null` value for filtering. Then, you can get the response data with this field value being 'null'. For more information about these fields, see the field descriptions in the **Responses** section.     Examples:  - /creditmemos?status=Processed  - /creditmemos?referredInvoiceId=null&status=Draft  - /creditmemos?status=Processed&type=External&sort=+number 
+  sort: 'sort_example' # String | This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.  A sortable field uses the following form:   *operator* *field_name*  You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*    *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.    - The `-` operator indicates an ascending order.   - The `+` operator indicates a descending order.  By default, the response data is displayed in descending order by credit memo number.  *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:    - number   - accountId    - creditMemoDate   - targetDate   - status   - amount   - taxAmount   - totalTaxExemptAmount   - unappliedAmount   - refundAmount   - appliedAmount   - referredInvoiceId   - transferredToAccounting   - createdDate   - createdById   - updatedDate     Examples:  - /creditmemos?sort=+number  - /creditmemos?status=Processed&sort=-number,+amount 
 }
 
 begin
   #Get credit memos
-  result = api_instance.get_credit_memos(opts)
+  result = api_instance.g_et_credit_memos(opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->get_credit_memos: #{e}"
+  puts "Exception when calling CreditMemosApi->g_et_credit_memos: #{e}"
 end
 ```
 
@@ -563,8 +544,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
  **fields_filterable** | **String**| This parameter restricts the data returned in the response. You can use this parameter to supply a dimension you want to filter on.   A single filter uses the following form:   *fieldsFilterable* &#x60;&#x3D;&#x60; *field_value*              Filters can be combined by using &#x60;&amp;&#x60;. For example: *fieldsFilterable* &#x60;&#x3D;&#x60; *field_value* &#x60;&amp;&#x60; *fieldsFilterable* &#x60;&#x3D;&#x60; *field_value*  *fieldsFilterable* indicates the name of a supported field that you can use to filter the response data. The supported filterable fields of this operation are as below:    - number   - accountId    - currency   - creditMemoDate   - targetDate   - status   - amount   - taxAmount   - totalTaxExemptAmount   - unappliedAmount   - refundAmount   - appliedAmount   - referredInvoiceId   - transferredToAccounting   - createdDate   - createdById   - updatedDate   - updatedById   - autoApplyUponPosting   - excludeFromAutoApplyRules   *field_value* indicates a valid value of the filterable field. If the type of the field value is string, you can set the field to &#x60;null&#x60; value for filtering. Then, you can get the response data with this field value being &#39;null&#39;. For more information about these fields, see the field descriptions in the **Responses** section.     Examples:  - /creditmemos?status&#x3D;Processed  - /creditmemos?referredInvoiceId&#x3D;null&amp;status&#x3D;Draft  - /creditmemos?status&#x3D;Processed&amp;type&#x3D;External&amp;sort&#x3D;+number  | [optional] 
  **sort** | **String**| This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.  A sortable field uses the following form:   *operator* *field_name*  You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*    *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.    - The &#x60;-&#x60; operator indicates an ascending order.   - The &#x60;+&#x60; operator indicates a descending order.  By default, the response data is displayed in descending order by credit memo number.  *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:    - number   - accountId    - creditMemoDate   - targetDate   - status   - amount   - taxAmount   - totalTaxExemptAmount   - unappliedAmount   - refundAmount   - appliedAmount   - referredInvoiceId   - transferredToAccounting   - createdDate   - createdById   - updatedDate     Examples:  - /creditmemos?sort&#x3D;+number  - /creditmemos?status&#x3D;Processed&amp;sort&#x3D;-number,+amount  | [optional] 
@@ -584,8 +564,8 @@ No authorization required
 
 
 
-# **post_credit_memo_from_prpc**
-> GETCreditMemoType post_credit_memo_from_prpc(body, opts)
+# **p_ost_credit_memo_from_prpc**
+> GETCreditMemoType p_ost_credit_memo_from_prpc(body, opts)
 
 Create credit memo from charge
 
@@ -601,16 +581,15 @@ api_instance = Zuora::CreditMemosApi.new
 body = Zuora::CreditMemoFromChargeType.new # CreditMemoFromChargeType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create credit memo from charge
-  result = api_instance.post_credit_memo_from_prpc(body, opts)
+  result = api_instance.p_ost_credit_memo_from_prpc(body, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->post_credit_memo_from_prpc: #{e}"
+  puts "Exception when calling CreditMemosApi->p_ost_credit_memo_from_prpc: #{e}"
 end
 ```
 
@@ -619,8 +598,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**CreditMemoFromChargeType**](CreditMemoFromChargeType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -637,8 +615,8 @@ No authorization required
 
 
 
-# **post_credit_memo_pdf**
-> POSTMemoPdfResponse post_credit_memo_pdf(credit_memo_id, opts)
+# **p_ost_credit_memo_pdf**
+> POSTMemoPdfResponse p_ost_credit_memo_pdf(credit_memo_id, opts)
 
 Create credit memo PDF
 
@@ -651,19 +629,18 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of the credit memo that you want to create PDF for. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of the credit memo that you want to create PDF for. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create credit memo PDF
-  result = api_instance.post_credit_memo_pdf(credit_memo_id, opts)
+  result = api_instance.p_ost_credit_memo_pdf(credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->post_credit_memo_pdf: #{e}"
+  puts "Exception when calling CreditMemosApi->p_ost_credit_memo_pdf: #{e}"
 end
 ```
 
@@ -672,8 +649,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_memo_id** | **String**| The unique ID of the credit memo that you want to create PDF for. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -690,8 +666,8 @@ No authorization required
 
 
 
-# **post_email_credit_memo**
-> CommonResponseType post_email_credit_memo(request, credit_memo_id, opts)
+# **p_ost_email_credit_memo**
+> CommonResponseType p_ost_email_credit_memo(request, credit_memo_id, opts)
 
 Email credit memo
 
@@ -706,19 +682,18 @@ api_instance = Zuora::CreditMemosApi.new
 
 request = Zuora::PostCreditMemoEmailRequestType.new # PostCreditMemoEmailRequestType | 
 
-credit_memo_id = "credit_memo_id_example" # String | The ID of a posted credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The ID of a posted credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Email credit memo
-  result = api_instance.post_email_credit_memo(request, credit_memo_id, opts)
+  result = api_instance.p_ost_email_credit_memo(request, credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->post_email_credit_memo: #{e}"
+  puts "Exception when calling CreditMemosApi->p_ost_email_credit_memo: #{e}"
 end
 ```
 
@@ -728,8 +703,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**PostCreditMemoEmailRequestType**](PostCreditMemoEmailRequestType.md)|  | 
  **credit_memo_id** | **String**| The ID of a posted credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -746,8 +720,8 @@ No authorization required
 
 
 
-# **post_refund_credit_memo**
-> GETRefundCreditMemoType post_refund_credit_memo(body, creditmemo_id, opts)
+# **p_ost_refund_credit_memo**
+> GETRefundCreditMemoType p_ost_refund_credit_memo(body, creditmemo_id, opts)
 
 Refund credit memo
 
@@ -762,19 +736,18 @@ api_instance = Zuora::CreditMemosApi.new
 
 body = Zuora::PostNonRefRefundType.new # PostNonRefRefundType | 
 
-creditmemo_id = "creditmemo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+creditmemo_id = 'creditmemo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Refund credit memo
-  result = api_instance.post_refund_credit_memo(body, creditmemo_id, opts)
+  result = api_instance.p_ost_refund_credit_memo(body, creditmemo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->post_refund_credit_memo: #{e}"
+  puts "Exception when calling CreditMemosApi->p_ost_refund_credit_memo: #{e}"
 end
 ```
 
@@ -784,8 +757,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**PostNonRefRefundType**](PostNonRefRefundType.md)|  | 
  **creditmemo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -802,8 +774,8 @@ No authorization required
 
 
 
-# **post_cm_taxation_items**
-> GETTaxationItemListType post_cm_taxation_items(credit_memo_id, body, opts)
+# **p_ostcm_taxation_items**
+> GETTaxationItemListType p_ostcm_taxation_items(credit_memo_id, body, opts)
 
 Create taxation items for credit memo
 
@@ -816,21 +788,20 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 body = Zuora::POSTTaxationItemListForCMType.new # POSTTaxationItemListForCMType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create taxation items for credit memo
-  result = api_instance.post_cm_taxation_items(credit_memo_id, body, opts)
+  result = api_instance.p_ostcm_taxation_items(credit_memo_id, body, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->post_cm_taxation_items: #{e}"
+  puts "Exception when calling CreditMemosApi->p_ostcm_taxation_items: #{e}"
 end
 ```
 
@@ -840,8 +811,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
  **body** | [**POSTTaxationItemListForCMType**](POSTTaxationItemListForCMType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -858,8 +828,8 @@ No authorization required
 
 
 
-# **put_apply_credit_memo**
-> GETCreditMemoType put_apply_credit_memo(body, credit_memo_id, opts)
+# **p_ut_apply_credit_memo**
+> GETCreditMemoType p_ut_apply_credit_memo(body, credit_memo_id, opts)
 
 Apply credit memo
 
@@ -874,19 +844,18 @@ api_instance = Zuora::CreditMemosApi.new
 
 body = Zuora::ApplyCreditMemoType.new # ApplyCreditMemoType | 
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Apply credit memo
-  result = api_instance.put_apply_credit_memo(body, credit_memo_id, opts)
+  result = api_instance.p_ut_apply_credit_memo(body, credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->put_apply_credit_memo: #{e}"
+  puts "Exception when calling CreditMemosApi->p_ut_apply_credit_memo: #{e}"
 end
 ```
 
@@ -896,8 +865,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**ApplyCreditMemoType**](ApplyCreditMemoType.md)|  | 
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -914,8 +882,8 @@ No authorization required
 
 
 
-# **put_cancel_credit_memo**
-> GETCreditMemoType put_cancel_credit_memo(credit_memo_id, opts)
+# **p_ut_cancel_credit_memo**
+> GETCreditMemoType p_ut_cancel_credit_memo(credit_memo_id, opts)
 
 Cancel credit memo
 
@@ -928,19 +896,18 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Cancel credit memo
-  result = api_instance.put_cancel_credit_memo(credit_memo_id, opts)
+  result = api_instance.p_ut_cancel_credit_memo(credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->put_cancel_credit_memo: #{e}"
+  puts "Exception when calling CreditMemosApi->p_ut_cancel_credit_memo: #{e}"
 end
 ```
 
@@ -949,8 +916,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -967,8 +933,8 @@ No authorization required
 
 
 
-# **put_post_credit_memo**
-> GETCreditMemoType put_post_credit_memo(credit_memo_id, opts)
+# **p_ut_post_credit_memo**
+> GETCreditMemoType p_ut_post_credit_memo(credit_memo_id, opts)
 
 Post credit memo
 
@@ -981,19 +947,18 @@ require 'zuora'
 
 api_instance = Zuora::CreditMemosApi.new
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Post credit memo
-  result = api_instance.put_post_credit_memo(credit_memo_id, opts)
+  result = api_instance.p_ut_post_credit_memo(credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->put_post_credit_memo: #{e}"
+  puts "Exception when calling CreditMemosApi->p_ut_post_credit_memo: #{e}"
 end
 ```
 
@@ -1002,8 +967,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -1020,8 +984,8 @@ No authorization required
 
 
 
-# **put_unapply_credit_memo**
-> GETCreditMemoType put_unapply_credit_memo(body, credit_memo_id, opts)
+# **p_ut_unapply_credit_memo**
+> GETCreditMemoType p_ut_unapply_credit_memo(body, credit_memo_id, opts)
 
 Unapply credit memo
 
@@ -1036,19 +1000,18 @@ api_instance = Zuora::CreditMemosApi.new
 
 body = Zuora::UnapplyCreditMemoType.new # UnapplyCreditMemoType | 
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Unapply credit memo
-  result = api_instance.put_unapply_credit_memo(body, credit_memo_id, opts)
+  result = api_instance.p_ut_unapply_credit_memo(body, credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->put_unapply_credit_memo: #{e}"
+  puts "Exception when calling CreditMemosApi->p_ut_unapply_credit_memo: #{e}"
 end
 ```
 
@@ -1058,8 +1021,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**UnapplyCreditMemoType**](UnapplyCreditMemoType.md)|  | 
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -1076,8 +1038,8 @@ No authorization required
 
 
 
-# **put_update_credit_memo**
-> GETCreditMemoType put_update_credit_memo(body, credit_memo_id, opts)
+# **p_ut_update_credit_memo**
+> GETCreditMemoType p_ut_update_credit_memo(body, credit_memo_id, opts)
 
 Update credit memo
 
@@ -1092,19 +1054,18 @@ api_instance = Zuora::CreditMemosApi.new
 
 body = Zuora::PUTCreditMemoType.new # PUTCreditMemoType | 
 
-credit_memo_id = "credit_memo_id_example" # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  
+credit_memo_id = 'credit_memo_id_example' # String | The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.  
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Update credit memo
-  result = api_instance.put_update_credit_memo(body, credit_memo_id, opts)
+  result = api_instance.p_ut_update_credit_memo(body, credit_memo_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling CreditMemosApi->put_update_credit_memo: #{e}"
+  puts "Exception when calling CreditMemosApi->p_ut_update_credit_memo: #{e}"
 end
 ```
 
@@ -1114,8 +1075,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**PUTCreditMemoType**](PUTCreditMemoType.md)|  | 
  **credit_memo_id** | **String**| The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.   | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 

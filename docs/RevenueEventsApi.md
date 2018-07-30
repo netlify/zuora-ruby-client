@@ -4,12 +4,12 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_revenue_event_details**](RevenueEventsApi.md#get_revenue_event_details) | **GET** /v1/revenue-events/{event-number} | Get revenue event details
-[**get_revenue_event_for_revenue_schedule**](RevenueEventsApi.md#get_revenue_event_for_revenue_schedule) | **GET** /v1/revenue-events/revenue-schedules/{rs-number} | Get revenue events for a revenue schedule
+[**g_et_revenue_event_details**](RevenueEventsApi.md#g_et_revenue_event_details) | **GET** /v1/revenue-events/{event-number} | Get revenue event details
+[**g_et_revenue_event_for_revenue_schedule**](RevenueEventsApi.md#g_et_revenue_event_for_revenue_schedule) | **GET** /v1/revenue-events/revenue-schedules/{rs-number} | Get revenue events for a revenue schedule
 
 
-# **get_revenue_event_details**
-> GETRevenueEventDetailType get_revenue_event_details(event_number, opts)
+# **g_et_revenue_event_details**
+> GETRevenueEventDetailType g_et_revenue_event_details(event_number, opts)
 
 Get revenue event details
 
@@ -22,19 +22,18 @@ require 'zuora'
 
 api_instance = Zuora::RevenueEventsApi.new
 
-event_number = "event_number_example" # String | The number associated with the revenue event.
+event_number = 'event_number_example' # String | The number associated with the revenue event.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get revenue event details
-  result = api_instance.get_revenue_event_details(event_number, opts)
+  result = api_instance.g_et_revenue_event_details(event_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueEventsApi->get_revenue_event_details: #{e}"
+  puts "Exception when calling RevenueEventsApi->g_et_revenue_event_details: #{e}"
 end
 ```
 
@@ -43,8 +42,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **event_number** | **String**| The number associated with the revenue event. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -61,8 +59,8 @@ No authorization required
 
 
 
-# **get_revenue_event_for_revenue_schedule**
-> GETRevenueEventDetailsType get_revenue_event_for_revenue_schedule(rs_number, opts)
+# **g_et_revenue_event_for_revenue_schedule**
+> GETRevenueEventDetailsType g_et_revenue_event_for_revenue_schedule(rs_number, opts)
 
 Get revenue events for a revenue schedule
 
@@ -75,20 +73,19 @@ require 'zuora'
 
 api_instance = Zuora::RevenueEventsApi.new
 
-rs_number = "rs_number_example" # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\".
+rs_number = 'rs_number_example' # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\".
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 8 # Integer | Number of rows returned per page. 
 }
 
 begin
   #Get revenue events for a revenue schedule
-  result = api_instance.get_revenue_event_for_revenue_schedule(rs_number, opts)
+  result = api_instance.g_et_revenue_event_for_revenue_schedule(rs_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueEventsApi->get_revenue_event_for_revenue_schedule: #{e}"
+  puts "Exception when calling RevenueEventsApi->g_et_revenue_event_for_revenue_schedule: #{e}"
 end
 ```
 
@@ -97,8 +94,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rs_number** | **String**| Revenue schedule number. The revenue schedule number is always prefixed with \&quot;RS\&quot;, for example, \&quot;RS-00000001\&quot;. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 8]
 
 ### Return type

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **country** | **String** | Country; must be a valid country name or abbreviation.  | [optional] 
 **default_payment_method** | **BOOLEAN** | Specify \&quot;true\&quot; to make this card the default payment method; otherwise, omit this parameter to keep the current default payment method.  | [optional] 
 **email** | **String** | Card holder&#39;s email address, 80 characters or less.  | [optional] 
-**expiration_month** | **String** | Two-digit expiration month (01-12).  | [optional] 
+**expiration_month** | **String** | One or two digit(s) expiration month (1-12).  | [optional] 
 **expiration_year** | **String** | Four-digit expiration year.  | [optional] 
 **num_consecutive_failures** | **Integer** | The number of consecutive failed payments for this payment method. It is reset to &#x60;0&#x60; upon successful payment.   | [optional] 
 **phone** | **String** | Phone number, 40 characters or less.  | [optional] 

@@ -4,16 +4,16 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_summary_journal_entry**](SummaryJournalEntriesApi.md#delete_summary_journal_entry) | **DELETE** /v1/journal-entries/{je-number} | Delete summary journal entry
-[**get_all_summary_journal_entries**](SummaryJournalEntriesApi.md#get_all_summary_journal_entries) | **GET** /v1/journal-entries/journal-runs/{jr-number} | Get all summary journal entries in a journal run
-[**get_summary_journal_entry**](SummaryJournalEntriesApi.md#get_summary_journal_entry) | **GET** /v1/journal-entries/{je-number} | Get summary journal entry
-[**post_summary_journal_entry**](SummaryJournalEntriesApi.md#post_summary_journal_entry) | **POST** /v1/journal-entries | Create summary journal entry
-[**put_basic_summary_journal_entry**](SummaryJournalEntriesApi.md#put_basic_summary_journal_entry) | **PUT** /v1/journal-entries/{je-number}/basic-information | Update basic information of a summary journal entry
-[**put_summary_journal_entry**](SummaryJournalEntriesApi.md#put_summary_journal_entry) | **PUT** /v1/journal-entries/{je-number}/cancel | Cancel summary journal entry
+[**d_elete_summary_journal_entry**](SummaryJournalEntriesApi.md#d_elete_summary_journal_entry) | **DELETE** /v1/journal-entries/{je-number} | Delete summary journal entry
+[**g_et_all_summary_journal_entries**](SummaryJournalEntriesApi.md#g_et_all_summary_journal_entries) | **GET** /v1/journal-entries/journal-runs/{jr-number} | Get all summary journal entries in a journal run
+[**g_et_summary_journal_entry**](SummaryJournalEntriesApi.md#g_et_summary_journal_entry) | **GET** /v1/journal-entries/{je-number} | Get summary journal entry
+[**p_ost_summary_journal_entry**](SummaryJournalEntriesApi.md#p_ost_summary_journal_entry) | **POST** /v1/journal-entries | Create summary journal entry
+[**p_ut_basic_summary_journal_entry**](SummaryJournalEntriesApi.md#p_ut_basic_summary_journal_entry) | **PUT** /v1/journal-entries/{je-number}/basic-information | Update basic information of a summary journal entry
+[**p_ut_summary_journal_entry**](SummaryJournalEntriesApi.md#p_ut_summary_journal_entry) | **PUT** /v1/journal-entries/{je-number}/cancel | Cancel summary journal entry
 
 
-# **delete_summary_journal_entry**
-> CommonResponseType delete_summary_journal_entry(je_number, opts)
+# **d_elete_summary_journal_entry**
+> CommonResponseType d_elete_summary_journal_entry(je_number, opts)
 
 Delete summary journal entry
 
@@ -26,19 +26,18 @@ require 'zuora'
 
 api_instance = Zuora::SummaryJournalEntriesApi.new
 
-je_number = "je_number_example" # String | Journal entry number in the format JE-00000001.
+je_number = 'je_number_example' # String | Journal entry number in the format JE-00000001.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Delete summary journal entry
-  result = api_instance.delete_summary_journal_entry(je_number, opts)
+  result = api_instance.d_elete_summary_journal_entry(je_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling SummaryJournalEntriesApi->delete_summary_journal_entry: #{e}"
+  puts "Exception when calling SummaryJournalEntriesApi->d_elete_summary_journal_entry: #{e}"
 end
 ```
 
@@ -47,8 +46,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **je_number** | **String**| Journal entry number in the format JE-00000001. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -65,8 +63,8 @@ No authorization required
 
 
 
-# **get_all_summary_journal_entries**
-> GETJournalEntriesInJournalRunType get_all_summary_journal_entries(jr_number, opts)
+# **g_et_all_summary_journal_entries**
+> GETJournalEntriesInJournalRunType g_et_all_summary_journal_entries(jr_number, opts)
 
 Get all summary journal entries in a journal run
 
@@ -79,20 +77,19 @@ require 'zuora'
 
 api_instance = Zuora::SummaryJournalEntriesApi.new
 
-jr_number = "jr_number_example" # String | Journal run number.
+jr_number = 'jr_number_example' # String | Journal run number.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 8 # Integer | Number of rows returned per page. 
 }
 
 begin
   #Get all summary journal entries in a journal run
-  result = api_instance.get_all_summary_journal_entries(jr_number, opts)
+  result = api_instance.g_et_all_summary_journal_entries(jr_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling SummaryJournalEntriesApi->get_all_summary_journal_entries: #{e}"
+  puts "Exception when calling SummaryJournalEntriesApi->g_et_all_summary_journal_entries: #{e}"
 end
 ```
 
@@ -101,8 +98,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **jr_number** | **String**| Journal run number. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 8]
 
 ### Return type
@@ -120,8 +116,8 @@ No authorization required
 
 
 
-# **get_summary_journal_entry**
-> GETJournalEntryDetailType get_summary_journal_entry(je_number, opts)
+# **g_et_summary_journal_entry**
+> GETJournalEntryDetailType g_et_summary_journal_entry(je_number, opts)
 
 Get summary journal entry
 
@@ -134,19 +130,18 @@ require 'zuora'
 
 api_instance = Zuora::SummaryJournalEntriesApi.new
 
-je_number = "je_number_example" # String | 
+je_number = 'je_number_example' # String | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get summary journal entry
-  result = api_instance.get_summary_journal_entry(je_number, opts)
+  result = api_instance.g_et_summary_journal_entry(je_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling SummaryJournalEntriesApi->get_summary_journal_entry: #{e}"
+  puts "Exception when calling SummaryJournalEntriesApi->g_et_summary_journal_entry: #{e}"
 end
 ```
 
@@ -155,8 +150,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **je_number** | **String**|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -173,8 +167,8 @@ No authorization required
 
 
 
-# **post_summary_journal_entry**
-> POSTJournalEntryResponseType post_summary_journal_entry(request, opts)
+# **p_ost_summary_journal_entry**
+> POSTJournalEntryResponseType p_ost_summary_journal_entry(request, opts)
 
 Create summary journal entry
 
@@ -190,16 +184,15 @@ api_instance = Zuora::SummaryJournalEntriesApi.new
 request = Zuora::POSTJournalEntryType.new # POSTJournalEntryType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create summary journal entry
-  result = api_instance.post_summary_journal_entry(request, opts)
+  result = api_instance.p_ost_summary_journal_entry(request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling SummaryJournalEntriesApi->post_summary_journal_entry: #{e}"
+  puts "Exception when calling SummaryJournalEntriesApi->p_ost_summary_journal_entry: #{e}"
 end
 ```
 
@@ -208,8 +201,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**POSTJournalEntryType**](POSTJournalEntryType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -226,8 +218,8 @@ No authorization required
 
 
 
-# **put_basic_summary_journal_entry**
-> CommonResponseType put_basic_summary_journal_entry(je_number, request, opts)
+# **p_ut_basic_summary_journal_entry**
+> CommonResponseType p_ut_basic_summary_journal_entry(je_number, request, opts)
 
 Update basic information of a summary journal entry
 
@@ -240,21 +232,20 @@ require 'zuora'
 
 api_instance = Zuora::SummaryJournalEntriesApi.new
 
-je_number = "je_number_example" # String | Journal entry number in the format JE-00000001.
+je_number = 'je_number_example' # String | Journal entry number in the format JE-00000001.
 
 request = Zuora::PUTBasicSummaryJournalEntryType.new # PUTBasicSummaryJournalEntryType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Update basic information of a summary journal entry
-  result = api_instance.put_basic_summary_journal_entry(je_number, request, opts)
+  result = api_instance.p_ut_basic_summary_journal_entry(je_number, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling SummaryJournalEntriesApi->put_basic_summary_journal_entry: #{e}"
+  puts "Exception when calling SummaryJournalEntriesApi->p_ut_basic_summary_journal_entry: #{e}"
 end
 ```
 
@@ -264,8 +255,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **je_number** | **String**| Journal entry number in the format JE-00000001. | 
  **request** | [**PUTBasicSummaryJournalEntryType**](PUTBasicSummaryJournalEntryType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -282,8 +272,8 @@ No authorization required
 
 
 
-# **put_summary_journal_entry**
-> CommonResponseType put_summary_journal_entry(je_number, opts)
+# **p_ut_summary_journal_entry**
+> CommonResponseType p_ut_summary_journal_entry(je_number, opts)
 
 Cancel summary journal entry
 
@@ -296,19 +286,18 @@ require 'zuora'
 
 api_instance = Zuora::SummaryJournalEntriesApi.new
 
-je_number = "je_number_example" # String | Journal entry number in the format JE-00000001.
+je_number = 'je_number_example' # String | Journal entry number in the format JE-00000001.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Cancel summary journal entry
-  result = api_instance.put_summary_journal_entry(je_number, opts)
+  result = api_instance.p_ut_summary_journal_entry(je_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling SummaryJournalEntriesApi->put_summary_journal_entry: #{e}"
+  puts "Exception when calling SummaryJournalEntriesApi->p_ut_summary_journal_entry: #{e}"
 end
 ```
 
@@ -317,8 +306,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **je_number** | **String**| Journal entry number in the format JE-00000001. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 

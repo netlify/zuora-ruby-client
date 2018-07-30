@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **charge_number** | **String** |  | [optional] 
-**custom_fields** | [**CustomFields**](CustomFields.md) |  | [optional] 
+**custom_fields** | [**ObjectCustomFields**](ObjectCustomFields.md) |  | [optional] 
 
 

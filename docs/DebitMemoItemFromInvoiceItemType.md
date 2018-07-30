@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amount** | **Float** | The amount of the invoice item.  | 
 **comment** | **String** | Comments about the invoice item.  | [optional] 
+**custom_field__c** | **String** | Any custom fields defined for this object. The custom field name is case-sensitive.  | [optional] 
 **finance_information** | [**DebitMemoItemFromInvoiceItemTypeFinanceInformation**](DebitMemoItemFromInvoiceItemTypeFinanceInformation.md) |  | [optional] 
 **invoice_item_id** | **String** | The ID of the invoice item.  | [optional] 
 **service_end_date** | **Date** | The service end date of the debit memo item.  | [optional] 

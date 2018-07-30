@@ -4,12 +4,12 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**post_decrypt_rsa_signatures**](RSASignaturesApi.md#post_decrypt_rsa_signatures) | **POST** /v1/rsa-signatures/decrypt | Decrypt RSA signature
-[**post_rsa_signatures**](RSASignaturesApi.md#post_rsa_signatures) | **POST** /v1/rsa-signatures | Generate RSA signature
+[**p_ost_decrypt_rsa_signatures**](RSASignaturesApi.md#p_ost_decrypt_rsa_signatures) | **POST** /v1/rsa-signatures/decrypt | Decrypt RSA signature
+[**p_ostrsa_signatures**](RSASignaturesApi.md#p_ostrsa_signatures) | **POST** /v1/rsa-signatures | Generate RSA signature
 
 
-# **post_decrypt_rsa_signatures**
-> POSTDecryptResponseType post_decrypt_rsa_signatures(request, opts)
+# **p_ost_decrypt_rsa_signatures**
+> POSTDecryptResponseType p_ost_decrypt_rsa_signatures(request, opts)
 
 Decrypt RSA signature
 
@@ -25,16 +25,15 @@ api_instance = Zuora::RSASignaturesApi.new
 request = Zuora::POSTDecryptionType.new # POSTDecryptionType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Decrypt RSA signature
-  result = api_instance.post_decrypt_rsa_signatures(request, opts)
+  result = api_instance.p_ost_decrypt_rsa_signatures(request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RSASignaturesApi->post_decrypt_rsa_signatures: #{e}"
+  puts "Exception when calling RSASignaturesApi->p_ost_decrypt_rsa_signatures: #{e}"
 end
 ```
 
@@ -43,8 +42,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**POSTDecryptionType**](POSTDecryptionType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -61,8 +59,8 @@ No authorization required
 
 
 
-# **post_rsa_signatures**
-> POSTRSASignatureResponseType post_rsa_signatures(request, opts)
+# **p_ostrsa_signatures**
+> POSTRSASignatureResponseType p_ostrsa_signatures(request, opts)
 
 Generate RSA signature
 
@@ -78,16 +76,15 @@ api_instance = Zuora::RSASignaturesApi.new
 request = Zuora::POSTRSASignatureType.new # POSTRSASignatureType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Generate RSA signature
-  result = api_instance.post_rsa_signatures(request, opts)
+  result = api_instance.p_ostrsa_signatures(request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RSASignaturesApi->post_rsa_signatures: #{e}"
+  puts "Exception when calling RSASignaturesApi->p_ostrsa_signatures: #{e}"
 end
 ```
 
@@ -96,8 +93,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**POSTRSASignatureType**](POSTRSASignatureType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 

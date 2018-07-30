@@ -4,12 +4,12 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_transaction_invoice**](TransactionsApi.md#get_transaction_invoice) | **GET** /v1/transactions/invoices/accounts/{account-key} | Get invoices
-[**get_transaction_payment**](TransactionsApi.md#get_transaction_payment) | **GET** /v1/transactions/payments/accounts/{account-key} | Get payments
+[**g_et_transaction_invoice**](TransactionsApi.md#g_et_transaction_invoice) | **GET** /v1/transactions/invoices/accounts/{account-key} | Get invoices
+[**g_et_transaction_payment**](TransactionsApi.md#g_et_transaction_payment) | **GET** /v1/transactions/payments/accounts/{account-key} | Get payments
 
 
-# **get_transaction_invoice**
-> GETInvoiceFileWrapper get_transaction_invoice(account_key, opts)
+# **g_et_transaction_invoice**
+> GETInvoiceFileWrapper g_et_transaction_invoice(account_key, opts)
 
 Get invoices
 
@@ -22,20 +22,19 @@ require 'zuora'
 
 api_instance = Zuora::TransactionsApi.new
 
-account_key = "account_key_example" # String | Account number or account ID. 
+account_key = 'account_key_example' # String | Account number or account ID. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 20 # Integer | Number of rows returned per page. 
 }
 
 begin
   #Get invoices
-  result = api_instance.get_transaction_invoice(account_key, opts)
+  result = api_instance.g_et_transaction_invoice(account_key, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling TransactionsApi->get_transaction_invoice: #{e}"
+  puts "Exception when calling TransactionsApi->g_et_transaction_invoice: #{e}"
 end
 ```
 
@@ -44,8 +43,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_key** | **String**| Account number or account ID.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type
@@ -63,8 +61,8 @@ No authorization required
 
 
 
-# **get_transaction_payment**
-> GETPaymentsType get_transaction_payment(account_key, opts)
+# **g_et_transaction_payment**
+> GETPaymentsType g_et_transaction_payment(account_key, opts)
 
 Get payments
 
@@ -77,20 +75,19 @@ require 'zuora'
 
 api_instance = Zuora::TransactionsApi.new
 
-account_key = "account_key_example" # String | Account number or account ID.
+account_key = 'account_key_example' # String | Account number or account ID.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 20 # Integer | Number of rows returned per page. 
 }
 
 begin
   #Get payments
-  result = api_instance.get_transaction_payment(account_key, opts)
+  result = api_instance.g_et_transaction_payment(account_key, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling TransactionsApi->get_transaction_payment: #{e}"
+  puts "Exception when calling TransactionsApi->g_et_transaction_payment: #{e}"
 end
 ```
 
@@ -99,8 +96,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_key** | **String**| Account number or account ID. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 20]
 
 ### Return type

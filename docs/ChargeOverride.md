@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **billing** | [**BillingOverride**](BillingOverride.md) |  | [optional] 
 **charge_number** | **String** |  | [optional] 
-**custom_fields** | [**CustomFields**](CustomFields.md) |  | [optional] 
+**custom_fields** | [**ObjectCustomFields**](ObjectCustomFields.md) |  | [optional] 
 **description** | **String** |  | [optional] 
 **end_date** | [**EndConditions**](EndConditions.md) |  | [optional] 
 **pricing** | [**PricingOverride**](PricingOverride.md) |  | [optional] 

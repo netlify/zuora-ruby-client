@@ -4,31 +4,31 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_rs**](RevenueSchedulesApi.md#delete_rs) | **DELETE** /v1/revenue-schedules/{rs-number} | Delete revenue schedule
-[**get_r_sby_credit_memo_item**](RevenueSchedulesApi.md#get_r_sby_credit_memo_item) | **GET** /v1/revenue-schedules/credit-memo-items/{cmi-id} | Get revenue schedule by credit memo item ID 
-[**get_r_sby_debit_memo_item**](RevenueSchedulesApi.md#get_r_sby_debit_memo_item) | **GET** /v1/revenue-schedules/debit-memo-items/{dmi-id} | Get revenue schedule by debit memo item ID 
-[**get_r_sby_invoice_item**](RevenueSchedulesApi.md#get_r_sby_invoice_item) | **GET** /v1/revenue-schedules/invoice-items/{invoice-item-id} | Get revenue schedule by invoice item ID
-[**get_r_sby_invoice_item_adjustment**](RevenueSchedulesApi.md#get_r_sby_invoice_item_adjustment) | **GET** /v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-id}/ | Get revenue schedule by invoice item adjustment
-[**get_r_sby_product_charge_and_billing_account**](RevenueSchedulesApi.md#get_r_sby_product_charge_and_billing_account) | **GET** /v1/revenue-schedules/product-charges/{charge-key}/{account-key} | Get all revenue schedules of product charge by charge ID and billing account ID 
-[**get_r_sfor_subsc_charge**](RevenueSchedulesApi.md#get_r_sfor_subsc_charge) | **GET** /v1/revenue-schedules/subscription-charges/{charge-key} | Get revenue schedule by subscription charge
-[**get_rs**](RevenueSchedulesApi.md#get_rs) | **GET** /v1/revenue-schedules/{rs-number} | Get revenue schedule details
-[**post_r_sfor_credit_memo_item_distribute_by_date_range**](RevenueSchedulesApi.md#post_r_sfor_credit_memo_item_distribute_by_date_range) | **POST** /v1/revenue-schedules/credit-memo-items/{cmi-id}/distribute-revenue-with-date-range | Create revenue schedule for credit memo item (distribute by date range) 
-[**post_r_sfor_credit_memo_item_manual_distribution**](RevenueSchedulesApi.md#post_r_sfor_credit_memo_item_manual_distribution) | **POST** /v1/revenue-schedules/credit-memo-items/{cmi-id} | Create revenue schedule for credit memo item (manual distribution) 
-[**post_r_sfor_debit_memo_item_distribute_by_date_range**](RevenueSchedulesApi.md#post_r_sfor_debit_memo_item_distribute_by_date_range) | **POST** /v1/revenue-schedules/debit-memo-items/{dmi-id}/distribute-revenue-with-date-range | Create revenue schedule for debit memo item (distribute by date range) 
-[**post_r_sfor_debit_memo_item_manual_distribution**](RevenueSchedulesApi.md#post_r_sfor_debit_memo_item_manual_distribution) | **POST** /v1/revenue-schedules/debit-memo-items/{dmi-id} | Create revenue schedule for debit memo item (manual distribution) 
-[**post_r_sfor_invoice_item_adjustment_distribute_by_date_range**](RevenueSchedulesApi.md#post_r_sfor_invoice_item_adjustment_distribute_by_date_range) | **POST** /v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}/distribute-revenue-with-date-range | Create revenue schedule for Invoice Item Adjustment (distribute by date range)
-[**post_r_sfor_invoice_item_adjustment_manual_distribution**](RevenueSchedulesApi.md#post_r_sfor_invoice_item_adjustment_manual_distribution) | **POST** /v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key} | Create revenue schedule for Invoice Item Adjustment (manual distribution)
-[**post_r_sfor_invoice_item_distribute_by_date_range**](RevenueSchedulesApi.md#post_r_sfor_invoice_item_distribute_by_date_range) | **POST** /v1/revenue-schedules/invoice-items/{invoice-item-id}/distribute-revenue-with-date-range | Create revenue schedule for Invoice Item (distribute by date range)
-[**post_r_sfor_invoice_item_manual_distribution**](RevenueSchedulesApi.md#post_r_sfor_invoice_item_manual_distribution) | **POST** /v1/revenue-schedules/invoice-items/{invoice-item-id} | Create revenue schedule for Invoice Item (manual distribution)
-[**post_r_sfor_subsc_charge**](RevenueSchedulesApi.md#post_r_sfor_subsc_charge) | **POST** /v1/revenue-schedules/subscription-charges/{charge-key} | Create revenue schedule on subscription charge
-[**put_revenue_across_ap**](RevenueSchedulesApi.md#put_revenue_across_ap) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-across-accounting-periods | Distribute revenue across accounting periods
-[**put_revenue_by_recognition_startand_end_dates**](RevenueSchedulesApi.md#put_revenue_by_recognition_startand_end_dates) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-with-date-range | Distribute revenue by recognition start and end dates
-[**put_revenue_specific_date**](RevenueSchedulesApi.md#put_revenue_specific_date) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-on-specific-date | Distribute revenue on specific date
-[**put_rs_basic_info**](RevenueSchedulesApi.md#put_rs_basic_info) | **PUT** /v1/revenue-schedules/{rs-number}/basic-information | Update revenue schedule basic information
+[**d_eleters**](RevenueSchedulesApi.md#d_eleters) | **DELETE** /v1/revenue-schedules/{rs-number} | Delete revenue schedule
+[**g_etr_sby_credit_memo_item**](RevenueSchedulesApi.md#g_etr_sby_credit_memo_item) | **GET** /v1/revenue-schedules/credit-memo-items/{cmi-id} | Get revenue schedule by credit memo item ID 
+[**g_etr_sby_debit_memo_item**](RevenueSchedulesApi.md#g_etr_sby_debit_memo_item) | **GET** /v1/revenue-schedules/debit-memo-items/{dmi-id} | Get revenue schedule by debit memo item ID 
+[**g_etr_sby_invoice_item**](RevenueSchedulesApi.md#g_etr_sby_invoice_item) | **GET** /v1/revenue-schedules/invoice-items/{invoice-item-id} | Get revenue schedule by invoice item ID
+[**g_etr_sby_invoice_item_adjustment**](RevenueSchedulesApi.md#g_etr_sby_invoice_item_adjustment) | **GET** /v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-id} | Get revenue schedule by invoice item adjustment
+[**g_etr_sby_product_charge_and_billing_account**](RevenueSchedulesApi.md#g_etr_sby_product_charge_and_billing_account) | **GET** /v1/revenue-schedules/product-charges/{charge-key}/{account-key} | Get all revenue schedules of product charge by charge ID and billing account ID 
+[**g_etr_sfor_subsc_charge**](RevenueSchedulesApi.md#g_etr_sfor_subsc_charge) | **GET** /v1/revenue-schedules/subscription-charges/{charge-key} | Get revenue schedule by subscription charge
+[**g_etrs**](RevenueSchedulesApi.md#g_etrs) | **GET** /v1/revenue-schedules/{rs-number} | Get revenue schedule details
+[**p_ostr_sfor_credit_memo_item_distribute_by_date_range**](RevenueSchedulesApi.md#p_ostr_sfor_credit_memo_item_distribute_by_date_range) | **POST** /v1/revenue-schedules/credit-memo-items/{cmi-id}/distribute-revenue-with-date-range | Create revenue schedule for credit memo item (distribute by date range) 
+[**p_ostr_sfor_credit_memo_item_manual_distribution**](RevenueSchedulesApi.md#p_ostr_sfor_credit_memo_item_manual_distribution) | **POST** /v1/revenue-schedules/credit-memo-items/{cmi-id} | Create revenue schedule for credit memo item (manual distribution) 
+[**p_ostr_sfor_debit_memo_item_distribute_by_date_range**](RevenueSchedulesApi.md#p_ostr_sfor_debit_memo_item_distribute_by_date_range) | **POST** /v1/revenue-schedules/debit-memo-items/{dmi-id}/distribute-revenue-with-date-range | Create revenue schedule for debit memo item (distribute by date range) 
+[**p_ostr_sfor_debit_memo_item_manual_distribution**](RevenueSchedulesApi.md#p_ostr_sfor_debit_memo_item_manual_distribution) | **POST** /v1/revenue-schedules/debit-memo-items/{dmi-id} | Create revenue schedule for debit memo item (manual distribution) 
+[**p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range**](RevenueSchedulesApi.md#p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range) | **POST** /v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}/distribute-revenue-with-date-range | Create revenue schedule for Invoice Item Adjustment (distribute by date range)
+[**p_ostr_sfor_invoice_item_adjustment_manual_distribution**](RevenueSchedulesApi.md#p_ostr_sfor_invoice_item_adjustment_manual_distribution) | **POST** /v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key} | Create revenue schedule for Invoice Item Adjustment (manual distribution)
+[**p_ostr_sfor_invoice_item_distribute_by_date_range**](RevenueSchedulesApi.md#p_ostr_sfor_invoice_item_distribute_by_date_range) | **POST** /v1/revenue-schedules/invoice-items/{invoice-item-id}/distribute-revenue-with-date-range | Create revenue schedule for Invoice Item (distribute by date range)
+[**p_ostr_sfor_invoice_item_manual_distribution**](RevenueSchedulesApi.md#p_ostr_sfor_invoice_item_manual_distribution) | **POST** /v1/revenue-schedules/invoice-items/{invoice-item-id} | Create revenue schedule for Invoice Item (manual distribution)
+[**p_ostr_sfor_subsc_charge**](RevenueSchedulesApi.md#p_ostr_sfor_subsc_charge) | **POST** /v1/revenue-schedules/subscription-charges/{charge-key} | Create revenue schedule on subscription charge
+[**p_ut_revenue_across_ap**](RevenueSchedulesApi.md#p_ut_revenue_across_ap) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-across-accounting-periods | Distribute revenue across accounting periods
+[**p_ut_revenue_by_recognition_startand_end_dates**](RevenueSchedulesApi.md#p_ut_revenue_by_recognition_startand_end_dates) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-with-date-range | Distribute revenue by recognition start and end dates
+[**p_ut_revenue_specific_date**](RevenueSchedulesApi.md#p_ut_revenue_specific_date) | **PUT** /v1/revenue-schedules/{rs-number}/distribute-revenue-on-specific-date | Distribute revenue on specific date
+[**p_utrs_basic_info**](RevenueSchedulesApi.md#p_utrs_basic_info) | **PUT** /v1/revenue-schedules/{rs-number}/basic-information | Update revenue schedule basic information
 
 
-# **delete_rs**
-> CommonResponseType delete_rs(rs_number, opts)
+# **d_eleters**
+> CommonResponseType d_eleters(rs_number, opts)
 
 Delete revenue schedule
 
@@ -41,19 +41,18 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-rs_number = "rs_number_example" # String |  Revenue schedule number of the revenue schedule you want to delete, for example, RS-00000256. To be deleted, the revenue schedule: * Must be using a custom unlimited recognition rule. * Cannot have any revenue in a closed accounting period. * Cannot be included in a summary journal entry. * Cannot have a revenue schedule date in a closed accounting period. 
+rs_number = 'rs_number_example' # String |  Revenue schedule number of the revenue schedule you want to delete, for example, RS-00000256. To be deleted, the revenue schedule: * Must be using a custom unlimited recognition rule. * Cannot have any revenue in a closed accounting period. * Cannot be included in a summary journal entry. * Cannot have a revenue schedule date in a closed accounting period. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Delete revenue schedule
-  result = api_instance.delete_rs(rs_number, opts)
+  result = api_instance.d_eleters(rs_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->delete_rs: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->d_eleters: #{e}"
 end
 ```
 
@@ -62,8 +61,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rs_number** | **String**|  Revenue schedule number of the revenue schedule you want to delete, for example, RS-00000256. To be deleted, the revenue schedule: * Must be using a custom unlimited recognition rule. * Cannot have any revenue in a closed accounting period. * Cannot be included in a summary journal entry. * Cannot have a revenue schedule date in a closed accounting period.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -80,8 +78,8 @@ No authorization required
 
 
 
-# **get_r_sby_credit_memo_item**
-> GETRSDetailType get_r_sby_credit_memo_item(cmi_id)
+# **g_etr_sby_credit_memo_item**
+> GETRSDetailType g_etr_sby_credit_memo_item(cmi_id)
 
 Get revenue schedule by credit memo item ID 
 
@@ -94,15 +92,15 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-cmi_id = "cmi_id_example" # String | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
+cmi_id = 'cmi_id_example' # String | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 
 
 begin
   #Get revenue schedule by credit memo item ID 
-  result = api_instance.get_r_sby_credit_memo_item(cmi_id)
+  result = api_instance.g_etr_sby_credit_memo_item(cmi_id)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->get_r_sby_credit_memo_item: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->g_etr_sby_credit_memo_item: #{e}"
 end
 ```
 
@@ -127,8 +125,8 @@ No authorization required
 
 
 
-# **get_r_sby_debit_memo_item**
-> GETRSDetailType get_r_sby_debit_memo_item(dmi_id)
+# **g_etr_sby_debit_memo_item**
+> GETRSDetailType g_etr_sby_debit_memo_item(dmi_id)
 
 Get revenue schedule by debit memo item ID 
 
@@ -141,15 +139,15 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-dmi_id = "dmi_id_example" # String | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
+dmi_id = 'dmi_id_example' # String | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
 
 
 begin
   #Get revenue schedule by debit memo item ID 
-  result = api_instance.get_r_sby_debit_memo_item(dmi_id)
+  result = api_instance.g_etr_sby_debit_memo_item(dmi_id)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->get_r_sby_debit_memo_item: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->g_etr_sby_debit_memo_item: #{e}"
 end
 ```
 
@@ -174,8 +172,8 @@ No authorization required
 
 
 
-# **get_r_sby_invoice_item**
-> GETRSDetailType get_r_sby_invoice_item(invoice_item_id, opts)
+# **g_etr_sby_invoice_item**
+> GETRSDetailType g_etr_sby_invoice_item(invoice_item_id, opts)
 
 Get revenue schedule by invoice item ID
 
@@ -188,19 +186,18 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-invoice_item_id = "invoice_item_id_example" # String | A valid Invoice Item ID.
+invoice_item_id = 'invoice_item_id_example' # String | A valid Invoice Item ID.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get revenue schedule by invoice item ID
-  result = api_instance.get_r_sby_invoice_item(invoice_item_id, opts)
+  result = api_instance.g_etr_sby_invoice_item(invoice_item_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->get_r_sby_invoice_item: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->g_etr_sby_invoice_item: #{e}"
 end
 ```
 
@@ -209,8 +206,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoice_item_id** | **String**| A valid Invoice Item ID. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -227,8 +223,8 @@ No authorization required
 
 
 
-# **get_r_sby_invoice_item_adjustment**
-> GETRSDetailType get_r_sby_invoice_item_adjustment(invoice_item_adj_id, opts)
+# **g_etr_sby_invoice_item_adjustment**
+> GETRSDetailType g_etr_sby_invoice_item_adjustment(invoice_item_adj_id, opts)
 
 Get revenue schedule by invoice item adjustment
 
@@ -241,19 +237,18 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-invoice_item_adj_id = "invoice_item_adj_id_example" # String | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72.
+invoice_item_adj_id = 'invoice_item_adj_id_example' # String | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get revenue schedule by invoice item adjustment
-  result = api_instance.get_r_sby_invoice_item_adjustment(invoice_item_adj_id, opts)
+  result = api_instance.g_etr_sby_invoice_item_adjustment(invoice_item_adj_id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->get_r_sby_invoice_item_adjustment: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->g_etr_sby_invoice_item_adjustment: #{e}"
 end
 ```
 
@@ -262,8 +257,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoice_item_adj_id** | **String**| ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -280,8 +274,8 @@ No authorization required
 
 
 
-# **get_r_sby_product_charge_and_billing_account**
-> GETRSDetailsByProductChargeType get_r_sby_product_charge_and_billing_account(account_key, charge_key, opts)
+# **g_etr_sby_product_charge_and_billing_account**
+> GETRSDetailsByProductChargeType g_etr_sby_product_charge_and_billing_account(account_key, charge_key, opts)
 
 Get all revenue schedules of product charge by charge ID and billing account ID 
 
@@ -294,9 +288,9 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-account_key = "account_key_example" # String | The account number or account ID. 
+account_key = 'account_key_example' # String | The account number or account ID. 
 
-charge_key = "charge_key_example" # String | The unique ID of a product rate plan charge. For example, 8a8082e65ba86084015bb323d3c61d82. 
+charge_key = 'charge_key_example' # String | The unique ID of a product rate plan charge. For example, 8a8082e65ba86084015bb323d3c61d82. 
 
 opts = { 
   page_size: 8 # Integer | Number of rows returned per page. 
@@ -304,10 +298,10 @@ opts = {
 
 begin
   #Get all revenue schedules of product charge by charge ID and billing account ID 
-  result = api_instance.get_r_sby_product_charge_and_billing_account(account_key, charge_key, opts)
+  result = api_instance.g_etr_sby_product_charge_and_billing_account(account_key, charge_key, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->get_r_sby_product_charge_and_billing_account: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->g_etr_sby_product_charge_and_billing_account: #{e}"
 end
 ```
 
@@ -334,8 +328,8 @@ No authorization required
 
 
 
-# **get_r_sfor_subsc_charge**
-> GETRSDetailsByChargeType get_r_sfor_subsc_charge(charge_key, opts)
+# **g_etr_sfor_subsc_charge**
+> GETRSDetailsByChargeType g_etr_sfor_subsc_charge(charge_key, opts)
 
 Get revenue schedule by subscription charge
 
@@ -348,20 +342,19 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-charge_key = "charge_key_example" # String | ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012.
+charge_key = 'charge_key_example' # String | ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
   page_size: 8 # Integer | Number of rows returned per page. 
 }
 
 begin
   #Get revenue schedule by subscription charge
-  result = api_instance.get_r_sfor_subsc_charge(charge_key, opts)
+  result = api_instance.g_etr_sfor_subsc_charge(charge_key, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->get_r_sfor_subsc_charge: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->g_etr_sfor_subsc_charge: #{e}"
 end
 ```
 
@@ -370,8 +363,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **charge_key** | **String**| ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **page_size** | **Integer**| Number of rows returned per page.  | [optional] [default to 8]
 
 ### Return type
@@ -389,8 +381,8 @@ No authorization required
 
 
 
-# **get_rs**
-> GETRSDetailType get_rs(rs_number, opts)
+# **g_etrs**
+> GETRSDetailType g_etrs(rs_number, opts)
 
 Get revenue schedule details
 
@@ -403,19 +395,18 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-rs_number = "rs_number_example" # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
+rs_number = 'rs_number_example' # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get revenue schedule details
-  result = api_instance.get_rs(rs_number, opts)
+  result = api_instance.g_etrs(rs_number, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->get_rs: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->g_etrs: #{e}"
 end
 ```
 
@@ -424,8 +415,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rs_number** | **String**| Revenue schedule number. The revenue schedule number is always prefixed with \&quot;RS\&quot;, for example, \&quot;RS-00000001\&quot;.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -442,8 +432,8 @@ No authorization required
 
 
 
-# **post_r_sfor_credit_memo_item_distribute_by_date_range**
-> POSTRevenueScheduleByTransactionResponseType post_r_sfor_credit_memo_item_distribute_by_date_range(cmi_id, body)
+# **p_ostr_sfor_credit_memo_item_distribute_by_date_range**
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_credit_memo_item_distribute_by_date_range(cmi_id, body)
 
 Create revenue schedule for credit memo item (distribute by date range) 
 
@@ -456,17 +446,17 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-cmi_id = "cmi_id_example" # String | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
+cmi_id = 'cmi_id_example' # String | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 
 body = Zuora::POSTRevenueScheduleByTransactionRatablyType.new # POSTRevenueScheduleByTransactionRatablyType | 
 
 
 begin
   #Create revenue schedule for credit memo item (distribute by date range) 
-  result = api_instance.post_r_sfor_credit_memo_item_distribute_by_date_range(cmi_id, body)
+  result = api_instance.p_ostr_sfor_credit_memo_item_distribute_by_date_range(cmi_id, body)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_credit_memo_item_distribute_by_date_range: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_credit_memo_item_distribute_by_date_range: #{e}"
 end
 ```
 
@@ -492,8 +482,8 @@ No authorization required
 
 
 
-# **post_r_sfor_credit_memo_item_manual_distribution**
-> POSTRevenueScheduleByTransactionResponseType post_r_sfor_credit_memo_item_manual_distribution(cmi_id, body)
+# **p_ostr_sfor_credit_memo_item_manual_distribution**
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_credit_memo_item_manual_distribution(cmi_id, body)
 
 Create revenue schedule for credit memo item (manual distribution) 
 
@@ -506,17 +496,17 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-cmi_id = "cmi_id_example" # String | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
+cmi_id = 'cmi_id_example' # String | The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems). 
 
 body = Zuora::POSTRevenueScheduleByTransactionType.new # POSTRevenueScheduleByTransactionType | 
 
 
 begin
   #Create revenue schedule for credit memo item (manual distribution) 
-  result = api_instance.post_r_sfor_credit_memo_item_manual_distribution(cmi_id, body)
+  result = api_instance.p_ostr_sfor_credit_memo_item_manual_distribution(cmi_id, body)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_credit_memo_item_manual_distribution: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_credit_memo_item_manual_distribution: #{e}"
 end
 ```
 
@@ -542,8 +532,8 @@ No authorization required
 
 
 
-# **post_r_sfor_debit_memo_item_distribute_by_date_range**
-> POSTRevenueScheduleByTransactionResponseType post_r_sfor_debit_memo_item_distribute_by_date_range(dmi_id, body)
+# **p_ostr_sfor_debit_memo_item_distribute_by_date_range**
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_debit_memo_item_distribute_by_date_range(dmi_id, body)
 
 Create revenue schedule for debit memo item (distribute by date range) 
 
@@ -556,17 +546,17 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-dmi_id = "dmi_id_example" # String | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
+dmi_id = 'dmi_id_example' # String | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
 
 body = Zuora::POSTRevenueScheduleByTransactionRatablyType.new # POSTRevenueScheduleByTransactionRatablyType | 
 
 
 begin
   #Create revenue schedule for debit memo item (distribute by date range) 
-  result = api_instance.post_r_sfor_debit_memo_item_distribute_by_date_range(dmi_id, body)
+  result = api_instance.p_ostr_sfor_debit_memo_item_distribute_by_date_range(dmi_id, body)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_debit_memo_item_distribute_by_date_range: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_debit_memo_item_distribute_by_date_range: #{e}"
 end
 ```
 
@@ -592,8 +582,8 @@ No authorization required
 
 
 
-# **post_r_sfor_debit_memo_item_manual_distribution**
-> POSTRevenueScheduleByTransactionResponseType post_r_sfor_debit_memo_item_manual_distribution(dmi_id, body)
+# **p_ostr_sfor_debit_memo_item_manual_distribution**
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_debit_memo_item_manual_distribution(dmi_id, body)
 
 Create revenue schedule for debit memo item (manual distribution) 
 
@@ -606,17 +596,17 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-dmi_id = "dmi_id_example" # String | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
+dmi_id = 'dmi_id_example' # String | The unique ID of a debit memo item. You can get the debit memo item ID from the response of [Get debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems). 
 
 body = Zuora::POSTRevenueScheduleByTransactionType.new # POSTRevenueScheduleByTransactionType | 
 
 
 begin
   #Create revenue schedule for debit memo item (manual distribution) 
-  result = api_instance.post_r_sfor_debit_memo_item_manual_distribution(dmi_id, body)
+  result = api_instance.p_ostr_sfor_debit_memo_item_manual_distribution(dmi_id, body)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_debit_memo_item_manual_distribution: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_debit_memo_item_manual_distribution: #{e}"
 end
 ```
 
@@ -642,8 +632,8 @@ No authorization required
 
 
 
-# **post_r_sfor_invoice_item_adjustment_distribute_by_date_range**
-> POSTRevenueScheduleByTransactionResponseType post_r_sfor_invoice_item_adjustment_distribute_by_date_range(invoice_item_adj_key, request, opts)
+# **p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range**
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range(invoice_item_adj_key, request, opts)
 
 Create revenue schedule for Invoice Item Adjustment (distribute by date range)
 
@@ -656,21 +646,20 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-invoice_item_adj_key = "invoice_item_adj_key_example" # String | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail. 
+invoice_item_adj_key = 'invoice_item_adj_key_example' # String | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail. 
 
 request = Zuora::POSTRevenueScheduleByDateRangeType.new # POSTRevenueScheduleByDateRangeType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create revenue schedule for Invoice Item Adjustment (distribute by date range)
-  result = api_instance.post_r_sfor_invoice_item_adjustment_distribute_by_date_range(invoice_item_adj_key, request, opts)
+  result = api_instance.p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range(invoice_item_adj_key, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_invoice_item_adjustment_distribute_by_date_range: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_invoice_item_adjustment_distribute_by_date_range: #{e}"
 end
 ```
 
@@ -680,8 +669,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoice_item_adj_key** | **String**| ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail.  | 
  **request** | [**POSTRevenueScheduleByDateRangeType**](POSTRevenueScheduleByDateRangeType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -698,8 +686,8 @@ No authorization required
 
 
 
-# **post_r_sfor_invoice_item_adjustment_manual_distribution**
-> POSTRevenueScheduleByTransactionResponseType post_r_sfor_invoice_item_adjustment_manual_distribution(invoice_item_adj_key, request, opts)
+# **p_ostr_sfor_invoice_item_adjustment_manual_distribution**
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_adjustment_manual_distribution(invoice_item_adj_key, request, opts)
 
 Create revenue schedule for Invoice Item Adjustment (manual distribution)
 
@@ -712,21 +700,20 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-invoice_item_adj_key = "invoice_item_adj_key_example" # String | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail. 
+invoice_item_adj_key = 'invoice_item_adj_key_example' # String | ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail. 
 
 request = Zuora::POSTRevenueScheduleByTransactionType.new # POSTRevenueScheduleByTransactionType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create revenue schedule for Invoice Item Adjustment (manual distribution)
-  result = api_instance.post_r_sfor_invoice_item_adjustment_manual_distribution(invoice_item_adj_key, request, opts)
+  result = api_instance.p_ostr_sfor_invoice_item_adjustment_manual_distribution(invoice_item_adj_key, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_invoice_item_adjustment_manual_distribution: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_invoice_item_adjustment_manual_distribution: #{e}"
 end
 ```
 
@@ -736,8 +723,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoice_item_adj_key** | **String**| ID or number of the Invoice Item Adjustment, for example, e20b07fd416dcfcf0141c81164fd0a72. If the specified Invoice Item Adjustment is already associated with a revenue schedule, the call will fail.  | 
  **request** | [**POSTRevenueScheduleByTransactionType**](POSTRevenueScheduleByTransactionType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -754,8 +740,8 @@ No authorization required
 
 
 
-# **post_r_sfor_invoice_item_distribute_by_date_range**
-> POSTRevenueScheduleByTransactionResponseType post_r_sfor_invoice_item_distribute_by_date_range(invoice_item_id, request, opts)
+# **p_ostr_sfor_invoice_item_distribute_by_date_range**
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_distribute_by_date_range(invoice_item_id, request, opts)
 
 Create revenue schedule for Invoice Item (distribute by date range)
 
@@ -768,21 +754,20 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-invoice_item_id = "invoice_item_id_example" # String | ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail. 
+invoice_item_id = 'invoice_item_id_example' # String | ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail. 
 
 request = Zuora::POSTRevenueScheduleByDateRangeType.new # POSTRevenueScheduleByDateRangeType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create revenue schedule for Invoice Item (distribute by date range)
-  result = api_instance.post_r_sfor_invoice_item_distribute_by_date_range(invoice_item_id, request, opts)
+  result = api_instance.p_ostr_sfor_invoice_item_distribute_by_date_range(invoice_item_id, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_invoice_item_distribute_by_date_range: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_invoice_item_distribute_by_date_range: #{e}"
 end
 ```
 
@@ -792,8 +777,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoice_item_id** | **String**| ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail.  | 
  **request** | [**POSTRevenueScheduleByDateRangeType**](POSTRevenueScheduleByDateRangeType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -810,8 +794,8 @@ No authorization required
 
 
 
-# **post_r_sfor_invoice_item_manual_distribution**
-> POSTRevenueScheduleByTransactionResponseType post_r_sfor_invoice_item_manual_distribution(invoice_item_id, request, opts)
+# **p_ostr_sfor_invoice_item_manual_distribution**
+> POSTRevenueScheduleByTransactionResponseType p_ostr_sfor_invoice_item_manual_distribution(invoice_item_id, request, opts)
 
 Create revenue schedule for Invoice Item (manual distribution)
 
@@ -824,21 +808,20 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-invoice_item_id = "invoice_item_id_example" # String | ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail. 
+invoice_item_id = 'invoice_item_id_example' # String | ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail. 
 
 request = Zuora::POSTRevenueScheduleByTransactionType.new # POSTRevenueScheduleByTransactionType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create revenue schedule for Invoice Item (manual distribution)
-  result = api_instance.post_r_sfor_invoice_item_manual_distribution(invoice_item_id, request, opts)
+  result = api_instance.p_ostr_sfor_invoice_item_manual_distribution(invoice_item_id, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_invoice_item_manual_distribution: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_invoice_item_manual_distribution: #{e}"
 end
 ```
 
@@ -848,8 +831,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **invoice_item_id** | **String**| ID of the Invoice Item, for example, e20b07fd416dcfcf0141c81164fd0a75. If the specified Invoice Item is already associated with a revenue schedule, the call will fail.  | 
  **request** | [**POSTRevenueScheduleByTransactionType**](POSTRevenueScheduleByTransactionType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -866,8 +848,8 @@ No authorization required
 
 
 
-# **post_r_sfor_subsc_charge**
-> POSTRevenueScheduleByChargeResponseType post_r_sfor_subsc_charge(charge_key, request, opts)
+# **p_ostr_sfor_subsc_charge**
+> POSTRevenueScheduleByChargeResponseType p_ostr_sfor_subsc_charge(charge_key, request, opts)
 
 Create revenue schedule on subscription charge
 
@@ -880,21 +862,20 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-charge_key = "charge_key_example" # String | ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012.
+charge_key = 'charge_key_example' # String | ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012.
 
 request = Zuora::POSTRevenueScheduleByChargeType.new # POSTRevenueScheduleByChargeType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Create revenue schedule on subscription charge
-  result = api_instance.post_r_sfor_subsc_charge(charge_key, request, opts)
+  result = api_instance.p_ostr_sfor_subsc_charge(charge_key, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->post_r_sfor_subsc_charge: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_ostr_sfor_subsc_charge: #{e}"
 end
 ```
 
@@ -904,8 +885,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **charge_key** | **String**| ID of the subscription rate plan charge; for example, 402892793e173340013e173b81000012. | 
  **request** | [**POSTRevenueScheduleByChargeType**](POSTRevenueScheduleByChargeType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -922,8 +902,8 @@ No authorization required
 
 
 
-# **put_revenue_across_ap**
-> PUTRevenueScheduleResponseType put_revenue_across_ap(rs_number, request, opts)
+# **p_ut_revenue_across_ap**
+> PUTRevenueScheduleResponseType p_ut_revenue_across_ap(rs_number, request, opts)
 
 Distribute revenue across accounting periods
 
@@ -936,21 +916,20 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-rs_number = "rs_number_example" # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
+rs_number = 'rs_number_example' # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 
 request = Zuora::PUTAllocateManuallyType.new # PUTAllocateManuallyType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Distribute revenue across accounting periods
-  result = api_instance.put_revenue_across_ap(rs_number, request, opts)
+  result = api_instance.p_ut_revenue_across_ap(rs_number, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->put_revenue_across_ap: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_ut_revenue_across_ap: #{e}"
 end
 ```
 
@@ -960,8 +939,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rs_number** | **String**| Revenue schedule number. The revenue schedule number is always prefixed with \&quot;RS\&quot;, for example, \&quot;RS-00000001\&quot;.  | 
  **request** | [**PUTAllocateManuallyType**](PUTAllocateManuallyType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -978,8 +956,8 @@ No authorization required
 
 
 
-# **put_revenue_by_recognition_startand_end_dates**
-> PUTRevenueScheduleResponseType put_revenue_by_recognition_startand_end_dates(rs_number, request, opts)
+# **p_ut_revenue_by_recognition_startand_end_dates**
+> PUTRevenueScheduleResponseType p_ut_revenue_by_recognition_startand_end_dates(rs_number, request, opts)
 
 Distribute revenue by recognition start and end dates
 
@@ -992,21 +970,20 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-rs_number = "rs_number_example" # String | Revenue schedule number. Specify the revenue schedule whose revenue you want to distribute.    The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
+rs_number = 'rs_number_example' # String | Revenue schedule number. Specify the revenue schedule whose revenue you want to distribute.    The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 
 request = Zuora::PUTRSTermType.new # PUTRSTermType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Distribute revenue by recognition start and end dates
-  result = api_instance.put_revenue_by_recognition_startand_end_dates(rs_number, request, opts)
+  result = api_instance.p_ut_revenue_by_recognition_startand_end_dates(rs_number, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->put_revenue_by_recognition_startand_end_dates: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_ut_revenue_by_recognition_startand_end_dates: #{e}"
 end
 ```
 
@@ -1016,8 +993,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rs_number** | **String**| Revenue schedule number. Specify the revenue schedule whose revenue you want to distribute.    The revenue schedule number is always prefixed with \&quot;RS\&quot;, for example, \&quot;RS-00000001\&quot;.  | 
  **request** | [**PUTRSTermType**](PUTRSTermType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -1034,8 +1010,8 @@ No authorization required
 
 
 
-# **put_revenue_specific_date**
-> PUTRevenueScheduleResponseType put_revenue_specific_date(rs_number, request, opts)
+# **p_ut_revenue_specific_date**
+> PUTRevenueScheduleResponseType p_ut_revenue_specific_date(rs_number, request, opts)
 
 Distribute revenue on specific date
 
@@ -1048,21 +1024,20 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-rs_number = "rs_number_example" # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
+rs_number = 'rs_number_example' # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 
 request = Zuora::PUTSpecificDateAllocationType.new # PUTSpecificDateAllocationType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Distribute revenue on specific date
-  result = api_instance.put_revenue_specific_date(rs_number, request, opts)
+  result = api_instance.p_ut_revenue_specific_date(rs_number, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->put_revenue_specific_date: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_ut_revenue_specific_date: #{e}"
 end
 ```
 
@@ -1072,8 +1047,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rs_number** | **String**| Revenue schedule number. The revenue schedule number is always prefixed with \&quot;RS\&quot;, for example, \&quot;RS-00000001\&quot;.  | 
  **request** | [**PUTSpecificDateAllocationType**](PUTSpecificDateAllocationType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -1090,8 +1064,8 @@ No authorization required
 
 
 
-# **put_rs_basic_info**
-> CommonResponseType put_rs_basic_info(rs_number, request, opts)
+# **p_utrs_basic_info**
+> CommonResponseType p_utrs_basic_info(rs_number, request, opts)
 
 Update revenue schedule basic information
 
@@ -1104,21 +1078,20 @@ require 'zuora'
 
 api_instance = Zuora::RevenueSchedulesApi.new
 
-rs_number = "rs_number_example" # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
+rs_number = 'rs_number_example' # String | Revenue schedule number. The revenue schedule number is always prefixed with \"RS\", for example, \"RS-00000001\". 
 
 request = Zuora::PUTRSBasicInfoType.new # PUTRSBasicInfoType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Update revenue schedule basic information
-  result = api_instance.put_rs_basic_info(rs_number, request, opts)
+  result = api_instance.p_utrs_basic_info(rs_number, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueSchedulesApi->put_rs_basic_info: #{e}"
+  puts "Exception when calling RevenueSchedulesApi->p_utrs_basic_info: #{e}"
 end
 ```
 
@@ -1128,8 +1101,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rs_number** | **String**| Revenue schedule number. The revenue schedule number is always prefixed with \&quot;RS\&quot;, for example, \&quot;RS-00000001\&quot;.  | 
  **request** | [**PUTRSBasicInfoType**](PUTRSBasicInfoType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 

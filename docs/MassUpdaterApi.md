@@ -4,13 +4,13 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_mass_updater**](MassUpdaterApi.md#get_mass_updater) | **GET** /v1/bulk/{bulk-key} | Get mass action result
-[**post_mass_updater**](MassUpdaterApi.md#post_mass_updater) | **POST** /v1/bulk | Perform mass action
-[**put_mass_updater**](MassUpdaterApi.md#put_mass_updater) | **PUT** /v1/bulk/{bulk-key}/stop | Stop mass action
+[**g_et_mass_updater**](MassUpdaterApi.md#g_et_mass_updater) | **GET** /v1/bulk/{bulk-key} | Get mass action result
+[**p_ost_mass_updater**](MassUpdaterApi.md#p_ost_mass_updater) | **POST** /v1/bulk | Perform mass action
+[**p_ut_mass_updater**](MassUpdaterApi.md#p_ut_mass_updater) | **PUT** /v1/bulk/{bulk-key}/stop | Stop mass action
 
 
-# **get_mass_updater**
-> GETMassUpdateType get_mass_updater(bulk_key, opts)
+# **g_et_mass_updater**
+> GETMassUpdateType g_et_mass_updater(bulk_key, opts)
 
 Get mass action result
 
@@ -23,19 +23,18 @@ require 'zuora'
 
 api_instance = Zuora::MassUpdaterApi.new
 
-bulk_key = "bulk_key_example" # String | String of 32 characters that identifies a mass action. You get the bulk-key after performing a mass action through the REST API. 
+bulk_key = 'bulk_key_example' # String | String of 32 characters that identifies a mass action. You get the bulk-key after performing a mass action through the REST API. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get mass action result
-  result = api_instance.get_mass_updater(bulk_key, opts)
+  result = api_instance.g_et_mass_updater(bulk_key, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling MassUpdaterApi->get_mass_updater: #{e}"
+  puts "Exception when calling MassUpdaterApi->g_et_mass_updater: #{e}"
 end
 ```
 
@@ -44,8 +43,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **bulk_key** | **String**| String of 32 characters that identifies a mass action. You get the bulk-key after performing a mass action through the REST API.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -62,8 +60,8 @@ No authorization required
 
 
 
-# **post_mass_updater**
-> POSTMassUpdateResponseType post_mass_updater(content_type, request, opts)
+# **p_ost_mass_updater**
+> POSTMassUpdateResponseType p_ost_mass_updater(file, params, opts)
 
 Perform mass action
 
@@ -76,21 +74,20 @@ require 'zuora'
 
 api_instance = Zuora::MassUpdaterApi.new
 
-content_type = "content_type_example" # String | Must be multipart/form-data. 
+file = File.new('/path/to/file.txt') # File | File containing data about the mass action you want to perform. The file requirements are the same as when uploading a file through the Mass Updater in the Zuora UI. The file must be a .csv file or a zipped .csv file.  The maximum file size is 4 MB.  The data in the file must be formatted according to the mass action type you want to perform. 
 
-request = Zuora::POSTMassUpdateType.new # POSTMassUpdateType | 
+params = 'params_example' # String | Container for the following fields. You must format this parameter as a JSON object.  * `actionType` (string, **Required**) - Type of mass action you want to perform. The following mass actions are supported: `UpdateAccountingCode`, `CreateRevenueSchedule`, `UpdateRevenueSchedule`, `DeleteRevenueSchedule`, `ImportFXRate`, and `MPU`.  * `checksum` (string) - An MD5 checksum that is used to validate the integrity of   the uploaded file. The checksum is a 32-character string. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Perform mass action
-  result = api_instance.post_mass_updater(content_type, request, opts)
+  result = api_instance.p_ost_mass_updater(file, params, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling MassUpdaterApi->post_mass_updater: #{e}"
+  puts "Exception when calling MassUpdaterApi->p_ost_mass_updater: #{e}"
 end
 ```
 
@@ -98,10 +95,9 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content_type** | **String**| Must be multipart/form-data.  | 
- **request** | [**POSTMassUpdateType**](POSTMassUpdateType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **file** | **File**| File containing data about the mass action you want to perform. The file requirements are the same as when uploading a file through the Mass Updater in the Zuora UI. The file must be a .csv file or a zipped .csv file.  The maximum file size is 4 MB.  The data in the file must be formatted according to the mass action type you want to perform.  | 
+ **params** | **String**| Container for the following fields. You must format this parameter as a JSON object.  * &#x60;actionType&#x60; (string, **Required**) - Type of mass action you want to perform. The following mass actions are supported: &#x60;UpdateAccountingCode&#x60;, &#x60;CreateRevenueSchedule&#x60;, &#x60;UpdateRevenueSchedule&#x60;, &#x60;DeleteRevenueSchedule&#x60;, &#x60;ImportFXRate&#x60;, and &#x60;MPU&#x60;.  * &#x60;checksum&#x60; (string) - An MD5 checksum that is used to validate the integrity of   the uploaded file. The checksum is a 32-character string.  | 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -113,13 +109,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json; charset=utf-8
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json; charset=utf-8
 
 
 
-# **put_mass_updater**
-> CommonResponseType put_mass_updater(bulk_key, opts)
+# **p_ut_mass_updater**
+> CommonResponseType p_ut_mass_updater(bulk_key, opts)
 
 Stop mass action
 
@@ -132,19 +128,18 @@ require 'zuora'
 
 api_instance = Zuora::MassUpdaterApi.new
 
-bulk_key = "bulk_key_example" # String | String of 32 characters that identifies a mass action. You get the bulk-key after performing a mass action through the REST API. 
+bulk_key = 'bulk_key_example' # String | String of 32 characters that identifies a mass action. You get the bulk-key after performing a mass action through the REST API. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Stop mass action
-  result = api_instance.put_mass_updater(bulk_key, opts)
+  result = api_instance.p_ut_mass_updater(bulk_key, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling MassUpdaterApi->put_mass_updater: #{e}"
+  puts "Exception when calling MassUpdaterApi->p_ut_mass_updater: #{e}"
 end
 ```
 
@@ -153,8 +148,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **bulk_key** | **String**| String of 32 characters that identifies a mass action. You get the bulk-key after performing a mass action through the REST API.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 

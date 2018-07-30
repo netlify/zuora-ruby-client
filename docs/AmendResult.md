@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amendment_ids** | **Array&lt;String&gt;** | A list of the IDs of the associated amendments. There can be as many as three amendment IDs. Use a comma to separate each amendment ID.  | [optional] 
 **charge_metrics_data** | [**ChargeMetricsData**](ChargeMetricsData.md) |  | [optional] 
-**errors** | [**Array&lt;Error&gt;**](Error.md) |  | [optional] 
+**errors** | [**Array&lt;ActionsErrorResponse&gt;**](ActionsErrorResponse.md) |  | [optional] 
 **gateway_response** | **String** |  | [optional] 
 **gateway_response_code** | **String** |  | [optional] 
 **invoice_datas** | [**Array&lt;InvoiceData&gt;**](InvoiceData.md) |  | [optional] 

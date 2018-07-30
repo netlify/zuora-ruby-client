@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**custom_fields** | [**CustomFields**](CustomFields.md) |  | [optional] 
+**custom_fields** | [**ObjectCustomFields**](ObjectCustomFields.md) |  | [optional] 
 **subscriptions** | [**Array&lt;PUTOrderPatchRequestTypeSubscriptions&gt;**](PUTOrderPatchRequestTypeSubscriptions.md) |  | [optional] 
 
 

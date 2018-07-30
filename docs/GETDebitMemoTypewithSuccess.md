@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **account_id** | **String** | The ID of the customer account associated with the debit memo.  | [optional] 
 **amount** | **Float** | The total amount of the debit memo.  | [optional] 
+**auto_pay** | **BOOLEAN** | Whether debit memos are automatically picked up for processing in the corresponding payment run.   By default, debit memos are automatically picked up for processing in the corresponding payment run.        | [optional] 
 **balance** | **Float** | The balance of the debit memo.  | [optional] 
 **be_applied_amount** | **Float** | The applied amount of the debit memo.  | [optional] 
 **cancelled_by_id** | **String** | The ID of the Zuora user who cancelled the debit memo.  | [optional] 

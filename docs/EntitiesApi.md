@@ -4,16 +4,16 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_entities**](EntitiesApi.md#delete_entities) | **DELETE** /v1/entities/{id} | Multi-entity: Delete entity
-[**get_entities**](EntitiesApi.md#get_entities) | **GET** /v1/entities | Multi-entity: Get entities
-[**get_entity_by_id**](EntitiesApi.md#get_entity_by_id) | **GET** /v1/entities/{id} | Multi-entity: Get entity by Id
-[**post_entities**](EntitiesApi.md#post_entities) | **POST** /v1/entities | Multi-entity: Create entity
-[**put_entities**](EntitiesApi.md#put_entities) | **PUT** /v1/entities/{id} | Multi-entity: Update entity
-[**put_provision_entity**](EntitiesApi.md#put_provision_entity) | **PUT** /v1/entities/{id}/provision | Multi-entity: Provision entity
+[**d_elete_entities**](EntitiesApi.md#d_elete_entities) | **DELETE** /v1/entities/{id} | Multi-entity: Delete entity
+[**g_et_entities**](EntitiesApi.md#g_et_entities) | **GET** /v1/entities | Multi-entity: Get entities
+[**g_et_entity_by_id**](EntitiesApi.md#g_et_entity_by_id) | **GET** /v1/entities/{id} | Multi-entity: Get entity by Id
+[**p_ost_entities**](EntitiesApi.md#p_ost_entities) | **POST** /v1/entities | Multi-entity: Create entity
+[**p_ut_entities**](EntitiesApi.md#p_ut_entities) | **PUT** /v1/entities/{id} | Multi-entity: Update entity
+[**p_ut_provision_entity**](EntitiesApi.md#p_ut_provision_entity) | **PUT** /v1/entities/{id}/provision | Multi-entity: Provision entity
 
 
-# **delete_entities**
-> DELETEntityResponseType delete_entities(id, opts)
+# **d_elete_entities**
+> DELETEntityResponseType d_elete_entities(id, opts)
 
 Multi-entity: Delete entity
 
@@ -26,19 +26,18 @@ require 'zuora'
 
 api_instance = Zuora::EntitiesApi.new
 
-id = "id_example" # String | Specify the Id of the entity that you want to delete. You can get the entity Id from the GET Entities call.
+id = 'id_example' # String | Specify the Id of the entity that you want to delete. You can get the entity Id from the GET Entities call.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Multi-entity: Delete entity
-  result = api_instance.delete_entities(id, opts)
+  result = api_instance.d_elete_entities(id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling EntitiesApi->delete_entities: #{e}"
+  puts "Exception when calling EntitiesApi->d_elete_entities: #{e}"
 end
 ```
 
@@ -47,8 +46,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Specify the Id of the entity that you want to delete. You can get the entity Id from the GET Entities call. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -65,8 +63,8 @@ No authorization required
 
 
 
-# **get_entities**
-> GETEntitiesResponseType get_entities(opts)
+# **g_et_entities**
+> GETEntitiesResponseType g_et_entities(opts)
 
 Multi-entity: Get entities
 
@@ -80,17 +78,16 @@ require 'zuora'
 api_instance = Zuora::EntitiesApi.new
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  provisioned: "provisioned_example" # String | Specify whether to retrieve provisioned or unprovisioned entities:  - `true`: Provisioned entities  - `false`: Unprovisioned entities   If you do not specify this field in the request, both the provisioned and unprovisioned entities are returned. 
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
+  provisioned: 'provisioned_example' # String | Specify whether to retrieve provisioned or unprovisioned entities:  - `true`: Provisioned entities  - `false`: Unprovisioned entities   If you do not specify this field in the request, both the provisioned and unprovisioned entities are returned. 
 }
 
 begin
   #Multi-entity: Get entities
-  result = api_instance.get_entities(opts)
+  result = api_instance.g_et_entities(opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling EntitiesApi->get_entities: #{e}"
+  puts "Exception when calling EntitiesApi->g_et_entities: #{e}"
 end
 ```
 
@@ -98,8 +95,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
  **provisioned** | **String**| Specify whether to retrieve provisioned or unprovisioned entities:  - &#x60;true&#x60;: Provisioned entities  - &#x60;false&#x60;: Unprovisioned entities   If you do not specify this field in the request, both the provisioned and unprovisioned entities are returned.  | [optional] 
 
 ### Return type
@@ -117,8 +113,8 @@ No authorization required
 
 
 
-# **get_entity_by_id**
-> GETEntitiesResponseTypeWithId get_entity_by_id(id, opts)
+# **g_et_entity_by_id**
+> GETEntitiesResponseTypeWithId g_et_entity_by_id(id, opts)
 
 Multi-entity: Get entity by Id
 
@@ -131,19 +127,18 @@ require 'zuora'
 
 api_instance = Zuora::EntitiesApi.new
 
-id = "id_example" # String | Specify the Id of the entity that you want to retrieve. You can get the entity Id from the GET Entities call.
+id = 'id_example' # String | Specify the Id of the entity that you want to retrieve. You can get the entity Id from the GET Entities call.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Multi-entity: Get entity by Id
-  result = api_instance.get_entity_by_id(id, opts)
+  result = api_instance.g_et_entity_by_id(id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling EntitiesApi->get_entity_by_id: #{e}"
+  puts "Exception when calling EntitiesApi->g_et_entity_by_id: #{e}"
 end
 ```
 
@@ -152,8 +147,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Specify the Id of the entity that you want to retrieve. You can get the entity Id from the GET Entities call. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -170,8 +164,8 @@ No authorization required
 
 
 
-# **post_entities**
-> CreateEntityResponseType post_entities(request, opts)
+# **p_ost_entities**
+> CreateEntityResponseType p_ost_entities(request, opts)
 
 Multi-entity: Create entity
 
@@ -187,16 +181,15 @@ api_instance = Zuora::EntitiesApi.new
 request = Zuora::CreateEntityType.new # CreateEntityType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Multi-entity: Create entity
-  result = api_instance.post_entities(request, opts)
+  result = api_instance.p_ost_entities(request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling EntitiesApi->post_entities: #{e}"
+  puts "Exception when calling EntitiesApi->p_ost_entities: #{e}"
 end
 ```
 
@@ -205,8 +198,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**CreateEntityType**](CreateEntityType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -223,8 +215,8 @@ No authorization required
 
 
 
-# **put_entities**
-> UpdateEntityResponseType put_entities(id, request, opts)
+# **p_ut_entities**
+> UpdateEntityResponseType p_ut_entities(id, request, opts)
 
 Multi-entity: Update entity
 
@@ -237,21 +229,20 @@ require 'zuora'
 
 api_instance = Zuora::EntitiesApi.new
 
-id = "id_example" # String | The Id of the entity that you want to edit. You can get the entity Id from the GET Entities call.
+id = 'id_example' # String | The Id of the entity that you want to edit. You can get the entity Id from the GET Entities call.
 
 request = Zuora::UpdateEntityType.new # UpdateEntityType | 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Multi-entity: Update entity
-  result = api_instance.put_entities(id, request, opts)
+  result = api_instance.p_ut_entities(id, request, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling EntitiesApi->put_entities: #{e}"
+  puts "Exception when calling EntitiesApi->p_ut_entities: #{e}"
 end
 ```
 
@@ -261,8 +252,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The Id of the entity that you want to edit. You can get the entity Id from the GET Entities call. | 
  **request** | [**UpdateEntityType**](UpdateEntityType.md)|  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 
@@ -279,8 +269,8 @@ No authorization required
 
 
 
-# **put_provision_entity**
-> ProvisionEntityResponseType put_provision_entity(id, opts)
+# **p_ut_provision_entity**
+> ProvisionEntityResponseType p_ut_provision_entity(id, opts)
 
 Multi-entity: Provision entity
 
@@ -293,19 +283,18 @@ require 'zuora'
 
 api_instance = Zuora::EntitiesApi.new
 
-id = "id_example" # String | Specify the Id of the entity that you want to provision.  You can get the entity Id from the GET Entities call.
+id = 'id_example' # String | Specify the Id of the entity that you want to provision.  You can get the entity Id from the GET Entities call.
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Multi-entity: Provision entity
-  result = api_instance.put_provision_entity(id, opts)
+  result = api_instance.p_ut_provision_entity(id, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling EntitiesApi->put_provision_entity: #{e}"
+  puts "Exception when calling EntitiesApi->p_ut_provision_entity: #{e}"
 end
 ```
 
@@ -314,8 +303,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Specify the Id of the entity that you want to provision.  You can get the entity Id from the GET Entities call. | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 

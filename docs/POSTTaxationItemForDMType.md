@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**custom_field__c** | **String** | Any custom fields defined for this object. The custom field name is case-sensitive.  | [optional] 
 **exempt_amount** | **Float** | The amount of taxes or VAT for which the customer has an exemption.  | [optional] 
 **finance_information** | [**POSTTaxationItemForDMTypeFinanceInformation**](POSTTaxationItemForDMTypeFinanceInformation.md) |  | [optional] 
 **jurisdiction** | **String** | The jurisdiction that applies the tax or VAT. This value is typically a state, province, county, or city.  | 

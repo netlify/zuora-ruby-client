@@ -4,12 +4,12 @@ All URIs are relative to *https://rest.zuora.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_revenue_rec_ruleby_product_rate_plan_charge**](RevenueRulesApi.md#get_revenue_rec_ruleby_product_rate_plan_charge) | **GET** /v1/revenue-recognition-rules/product-charges/{charge-key} | Get revenue recognition rule by product rate plan charge
-[**get_revenue_rec_rules**](RevenueRulesApi.md#get_revenue_rec_rules) | **GET** /v1/revenue-recognition-rules/subscription-charges/{charge-key} | Get revenue recognition rule by subscription charge
+[**g_et_revenue_rec_ruleby_product_rate_plan_charge**](RevenueRulesApi.md#g_et_revenue_rec_ruleby_product_rate_plan_charge) | **GET** /v1/revenue-recognition-rules/product-charges/{charge-key} | Get revenue recognition rule by product rate plan charge
+[**g_et_revenue_rec_rules**](RevenueRulesApi.md#g_et_revenue_rec_rules) | **GET** /v1/revenue-recognition-rules/subscription-charges/{charge-key} | Get revenue recognition rule by subscription charge
 
 
-# **get_revenue_rec_ruleby_product_rate_plan_charge**
-> GETRevenueRecognitionRuleAssociationType get_revenue_rec_ruleby_product_rate_plan_charge(charge_key)
+# **g_et_revenue_rec_ruleby_product_rate_plan_charge**
+> GETRevenueRecognitionRuleAssociationType g_et_revenue_rec_ruleby_product_rate_plan_charge(charge_key)
 
 Get revenue recognition rule by product rate plan charge
 
@@ -22,15 +22,15 @@ require 'zuora'
 
 api_instance = Zuora::RevenueRulesApi.new
 
-charge_key = "charge_key_example" # String | The unique ID of a product rate plan charge. For example, 8a8082e65ba86084015bb323d3c61d82. 
+charge_key = 'charge_key_example' # String | The unique ID of a product rate plan charge. For example, 8a8082e65ba86084015bb323d3c61d82. 
 
 
 begin
   #Get revenue recognition rule by product rate plan charge
-  result = api_instance.get_revenue_rec_ruleby_product_rate_plan_charge(charge_key)
+  result = api_instance.g_et_revenue_rec_ruleby_product_rate_plan_charge(charge_key)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueRulesApi->get_revenue_rec_ruleby_product_rate_plan_charge: #{e}"
+  puts "Exception when calling RevenueRulesApi->g_et_revenue_rec_ruleby_product_rate_plan_charge: #{e}"
 end
 ```
 
@@ -55,8 +55,8 @@ No authorization required
 
 
 
-# **get_revenue_rec_rules**
-> GETRevenueRecognitionRuleAssociationType get_revenue_rec_rules(charge_key, opts)
+# **g_et_revenue_rec_rules**
+> GETRevenueRecognitionRuleAssociationType g_et_revenue_rec_rules(charge_key, opts)
 
 Get revenue recognition rule by subscription charge
 
@@ -69,19 +69,18 @@ require 'zuora'
 
 api_instance = Zuora::RevenueRulesApi.new
 
-charge_key = "charge_key_example" # String | The unique ID of the subscription rate plan charge. For example, 402892793e173340013e173b81000012. 
+charge_key = 'charge_key_example' # String | The unique ID of the subscription rate plan charge. For example, 402892793e173340013e173b81000012. 
 
 opts = { 
-  entity_id: "entity_id_example", # String | The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
-  entity_name: "entity_name_example" # String | The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name).
+  zuora_entity_ids: 'zuora_entity_ids_example' # String | An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header. 
 }
 
 begin
   #Get revenue recognition rule by subscription charge
-  result = api_instance.get_revenue_rec_rules(charge_key, opts)
+  result = api_instance.g_et_revenue_rec_rules(charge_key, opts)
   p result
 rescue Zuora::ApiError => e
-  puts "Exception when calling RevenueRulesApi->get_revenue_rec_rules: #{e}"
+  puts "Exception when calling RevenueRulesApi->g_et_revenue_rec_rules: #{e}"
 end
 ```
 
@@ -90,8 +89,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **charge_key** | **String**| The unique ID of the subscription rate plan charge. For example, 402892793e173340013e173b81000012.  | 
- **entity_id** | **String**| The Id of the entity that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
- **entity_name** | **String**| The [name of the entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity/B_Introduction_to_Entity_and_Entity_Hierarchy#Name_and_Display_Name) that you want to access. Note that you must have permission to access the entity. For more information, see [REST Authentication](https://www.zuora.com/developer/api-reference/#section/Authentication/Entity-Id-and-Entity-Name). | [optional] 
+ **zuora_entity_ids** | **String**| An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.  | [optional] 
 
 ### Return type
 

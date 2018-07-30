@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **account_id** | **String** |  | [optional] 
 **account_number** | **String** |  | [optional] 
 **charge_metrics_data** | [**SubscribeResultChargeMetricsData**](SubscribeResultChargeMetricsData.md) |  | [optional] 
-**errors** | [**Array&lt;Error&gt;**](Error.md) |  | [optional] 
+**errors** | [**Array&lt;ActionsErrorResponse&gt;**](ActionsErrorResponse.md) |  | [optional] 
 **gateway_response** | **String** |  | [optional] 
 **gateway_response_code** | **String** |  | [optional] 
 **invoice_data** | [**Array&lt;InvoiceData&gt;**](InvoiceData.md) |  | [optional] 
