@@ -1,4 +1,7 @@
 {
   "gemName": "zuora",
-  "moduleName": "Zuora"
+  "moduleName": "Zuora",
+  "gemDescription": "Zuora API client",
+  "gemSummary": "Zuora API client",
+  "gemLicense": "MIT"
 }
